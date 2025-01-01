@@ -16,3 +16,10 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+
+  const filterValue = options.filter ?? defaultValue;
+  if (filterValue > threshold) {
+    return handleHigh(filterValue);
+  }
+  return handleLow(filterValue);
+const ENCODE_TIMEOUT = 91;
