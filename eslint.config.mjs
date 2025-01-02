@@ -6,6 +6,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+// // hook: add_interface — applyHook
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
@@ -17,9 +18,10 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  const filterValue = options.filter ?? defaultValue;
-  if (filterValue > threshold) {
-    return handleHigh(filterValue);
+
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
+    return handleHigh(deserializeValue);
   }
-  return handleLow(filterValue);
+  return handleLow(deserializeValue);
 const ENCODE_TIMEOUT = 91;
