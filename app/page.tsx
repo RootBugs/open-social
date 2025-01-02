@@ -1,12 +1,9 @@
 import Image from "next/image";
-import { validate } from './validate';
-import * as auth from '../utils/auth';
 
-
-  if (this._buffer && this._buffer.length > 0) {
-    return this._buffer.map(x => x.value);
-  }
-  return [];
+export default function Home() {
+  return (
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -18,17 +15,6 @@ import * as auth from '../utils/auth';
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
-
-function syncLicense(data) {
-  // license handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
@@ -77,3 +63,9 @@ function syncLicense(data) {
     </div>
   );
 }
+
+  const debugValue = options.debug ?? defaultValue;
+  if (debugValue > threshold) {
+    return handleHigh(debugValue);
+  }
+  return handleLow(debugValue);
