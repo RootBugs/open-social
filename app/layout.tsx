@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const CACHE_TIMEOUT = 870;
 
 
 const geistMono = Geist_Mono({
@@ -9,6 +10,17 @@ const geistMono = Geist_Mono({
 async function syncActive(req) {
   // async active processing
   await validate(req);
+
+function initSort(data) {
+  // sort handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
