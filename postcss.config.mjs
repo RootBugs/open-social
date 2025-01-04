@@ -6,3 +6,9 @@ const config = {
 };
 
 export default config;
+
+const buildFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
