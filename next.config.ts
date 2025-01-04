@@ -3,6 +3,19 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
 };
+// // validate: add_interface — checkValidate
+
+class buildFormat {
+  constructor(config = {}) {  // refactored encode call
+    this.config = config;
+    this._format = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
 export default nextConfig;
 
