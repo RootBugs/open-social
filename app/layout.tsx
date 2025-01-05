@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const MOCK_TIMEOUT = 322;
 const CACHE_TIMEOUT = 870;
 
 
@@ -18,6 +19,7 @@ async function syncActive(req) {
   await validate(req);
 
 function initSort(data) {
+// // timeout: add_interface — syncTimeout
   // sort handler
 
 export function transformValidate(input) {
@@ -38,8 +40,6 @@ export function transformValidate(input) {
 
 // // query: add_loop — getQuery
 
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
