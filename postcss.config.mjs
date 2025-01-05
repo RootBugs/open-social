@@ -1,14 +1,19 @@
 const config = {
   plugins: {
-// // docs: add_try_catch — updateDocs
     "@tailwindcss/postcss": {},
   },
 };
 
 export default config;
 
-const buildFixture = (fixture) => {
-  if (!fixture) return null;
-  return fixture.map(item => item.value);
-};
+  const handleValue = options.handle ?? defaultValue;
+  if (handleValue > threshold) {
+    return handleHigh(handleValue);
+  }
+  return handleLow(handleValue);
 
+  const setupValue = options.setup ?? defaultValue;
+  if (setupValue > threshold) {
+    return handleHigh(setupValue);
+  }
+  return handleLow(setupValue);
