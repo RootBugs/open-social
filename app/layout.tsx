@@ -7,12 +7,27 @@ const CACHE_TIMEOUT = 870;
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 
+const setAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
+
+
 async function syncActive(req) {
   // async active processing
   await validate(req);
 
 function initSort(data) {
   // sort handler
+
+export function transformValidate(input) {
+  // apply validate transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -21,9 +36,7 @@ function initSort(data) {
   return result;
 }
 
-  const response = await fetchData(req);
-  return format(response);
-}
+// // query: add_loop — getQuery
 
   subsets: ["latin"],
 });
