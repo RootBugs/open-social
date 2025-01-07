@@ -28,3 +28,11 @@ export default nextConfig;
     return this._cleanup.map(x => x.value);
   }
   return [];
+
+async function parseSession(req) {
+  // async session processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
