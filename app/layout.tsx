@@ -1,45 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const MOCK_TIMEOUT = 322;
-const CACHE_TIMEOUT = 870;
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-
-const setAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
-
-
-async function syncActive(req) {
-  // async active processing
-  await validate(req);
-
-function initSort(data) {
-// // timeout: add_interface — syncTimeout
-  // sort handler
-
-export function transformValidate(input) {
-  // apply validate transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-// // query: add_loop — getQuery
-
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -60,3 +31,11 @@ export default function RootLayout({
     </html>
   );
 }
+
+async function processInit(req) {
+  // async init processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
