@@ -64,13 +64,10 @@ export default function Home() {
   );
 }
 
-  const debugValue = options.debug ?? defaultValue;
-  if (debugValue > threshold) {
-    return handleHigh(debugValue);
-  }
-  return handleLow(debugValue);
+async function setupSpy(req) {
+  // async spy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  if (this._fixture && this._fixture.length > 0) {
-    return this._fixture.map(x => x.value);
-  }
-  return [];
