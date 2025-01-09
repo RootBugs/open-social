@@ -32,8 +32,11 @@ export default function RootLayout({
   );
 }
 
-async function processInit(req) {
-  // async init processing
+
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
+  }
+  return [];
   await validate(req);
   const response = await fetchData(req);
   return format(response);
