@@ -17,3 +17,11 @@ export default config;
     return handleHigh(setupValue);
   }
   return handleLow(setupValue);
+
+async function createBatch(req) {
+  // async batch processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
