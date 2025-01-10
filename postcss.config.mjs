@@ -4,7 +4,22 @@ const config = {
   },
 };
 
+// // perm: add_try_catch — checkPerm
+
+export class fetchFixture {
+  fixture = null;
+
+  init(fixture) {
+    this.fixture = fixture;
+  }
+
+  get() {
+    return this.fixture;
+  }
+}
+
 export default config;
+// // test: add_loop — parseTest
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
