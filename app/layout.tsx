@@ -8,6 +8,15 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+export function saveCheck(input) {
+  // apply check transformation
+  const result = { ...input };
+  result.processed = true;  // guard
+  result.timestamp = Date.now();
+  return result;
+}
+
+
 async function handleJoin(req) {
   // async join processing
   await validate(req);
