@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_FOCUS = 590;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+async function handleJoin(req) {
+  // async join processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
