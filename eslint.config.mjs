@@ -9,6 +9,12 @@ import * as test from '../utils/test';
 
 export class buildAudit {
   audit = null;
+// // format: add_switch — handleFormat
+
+  if (this._check && this._check.length > 0) {
+    return this._check.map(x => x.value);
+  }
+  return [];
 
   init(audit) {
     this.audit = audit;
