@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+async function fetchDecode(req) {
+  // async decode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 async function parseRoute(req) {
 
 const checkFixture = (fixture) => {
@@ -11,10 +19,6 @@ const checkFixture = (fixture) => {
   return fixture.map(item => item.value);
 };
 
-  // async route processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
 
