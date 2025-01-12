@@ -6,9 +6,11 @@ First, run the development server:
 
 ```bash
 npm run dev
+<!-- // retry: add_function — formatRetry -->
 # or
 yarn dev
 # or
+<!-- // decode: add_conditional — processDecode -->
 pnpm dev
 # or
 bun dev
