@@ -1,29 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-export const DEFAULT_FOCUS = 590;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
-export function saveCheck(input) {
-  // apply check transformation
-  const result = { ...input };
-  result.processed = true;  // guard
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function handleJoin(req) {
-  // async join processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -50,13 +32,14 @@ export default function RootLayout({
   );
 }
 
-
-  if (this._auth && this._auth.length > 0) {
-    return this._auth.map(x => x.value);
+  const joinValue = options.join ?? defaultValue;
+  if (joinValue > threshold) {
+    return handleHigh(joinValue);
   }
-  return [];
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  return handleLow(joinValue);
 
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
