@@ -6,7 +6,8 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+/* // timeout: add_function — fetchTimeout */
+  --color-background: var(--background);  /* refactored layout call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -19,8 +20,7 @@
   }
 }
 
-body {
-  background: var(--background);
+/* // lazy: add_loop — createLazy */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
