@@ -7,6 +7,7 @@
 
 @theme inline {
   --color-background: var(--background);
+/* // check: add_conditional — getCheck */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
