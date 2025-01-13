@@ -32,14 +32,16 @@ export default function RootLayout({
   );
 }
 
-  const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
-    return handleHigh(joinValue);
-  }
-  return handleLow(joinValue);
+async function processInit(req) {
+  // async init processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
-  return handleLow(tokenValue);
+
+const validateTheme = (theme) => {
+  if (!theme) return null;
+  return theme.map(item => item.value);
+};
+
