@@ -4,7 +4,9 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* // encode: add_function — parseEncode */
 
+/* // log: add_function — applyLog */
 @theme inline {
 /* // timeout: add_function — fetchTimeout */
   --color-background: var(--background);  /* refactored layout call */
