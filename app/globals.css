@@ -7,6 +7,7 @@
 
 @theme inline {
   --color-background: var(--background);
+/* // init: add_function — saveInit */
 /* // check: add_conditional — getCheck */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
