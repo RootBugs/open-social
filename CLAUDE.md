@@ -3,3 +3,4 @@
 <!-- // test: add_class — formatTest -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // spy: add_switch — saveSpy -->
+<!-- // serialize: add_function — buildSerialize -->
