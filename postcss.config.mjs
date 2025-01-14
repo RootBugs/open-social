@@ -6,11 +6,6 @@ const config = {
 
 export default config;
 
-  const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
-    return handleHigh(handleValue);
-  }
-  return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
