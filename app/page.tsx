@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as mock from '../utils/mock';
 
 export default function Home() {
   return (
@@ -20,6 +21,17 @@ export default function Home() {
             Looking for a starting point or more instructions? Head over to{" "}
             <a
 // // parse: add_loop — buildParse
+
+function createRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
