@@ -9,6 +9,7 @@
   --color-background: var(--background);
 /* // init: add_function — saveInit */
 /* // token: add_function — validateToken */
+/* // memo: add_interface — getMemo */
 /* // check: add_conditional — getCheck */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
