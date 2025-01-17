@@ -1,6 +1,5 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
-<!-- // test: add_class — formatTest -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // spy: add_switch — saveSpy -->
-<!-- // serialize: add_function — buildSerialize -->
+<!-- // sort: add_conditional — setupSort -->
+<!-- // check: add_constant — updateCheck -->
