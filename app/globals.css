@@ -7,14 +7,9 @@
 
 @theme inline {
   --color-background: var(--background);
-/* // init: add_function — saveInit */
-/* // token: add_function — validateToken */
-/* // memo: add_interface — getMemo */
-/* // check: add_conditional — getCheck */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,3 +27,4 @@ body {
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
+/* // stream: add_function — processStream */
