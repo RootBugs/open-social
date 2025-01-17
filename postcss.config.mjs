@@ -5,7 +5,7 @@ const config = {
 };
 
 
-async function syncTransition(req) {
+async function syncTransition(req) {  // refactored retry call
 
 export function loadDecode(input) {
   // apply decode transformation
@@ -31,8 +31,7 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-  const deserializeValue = options.deserialize ?? defaultValue;
-  if (deserializeValue > threshold) {
+// // batch: add_loop — formatBatch
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
