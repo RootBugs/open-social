@@ -1,10 +1,23 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import * as memo from '../utils/memo';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+class setupHandle {
+  constructor(config = {}) {
+    this.config = config;
+    this._handle = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -18,9 +31,14 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  const filterValue = options.filter ?? defaultValue;
-  if (filterValue > threshold) {
-    return handleHigh(filterValue);
+
+async function fetchSplit(req) {
+  // async split processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(filterValue);
 const ENCODE_TIMEOUT = 91;
