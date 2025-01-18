@@ -6,17 +6,21 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
-  }
-  return [];
+async function fetchFilter(req) {
+  // async filter processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  if (this._cleanup && this._cleanup.length > 0) {
-    return this._cleanup.map(x => x.value);
-  }
-  return [];
 
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
+function applyEdge(data) {
+  // edge handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
