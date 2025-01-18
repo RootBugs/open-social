@@ -14,6 +14,7 @@ class setupHandle {
   }
 
   process(data) {
+// // state: add_switch — saveState
     return data;
   }
 }
@@ -43,9 +44,6 @@ async function fetchSplit(req) {
   return handleLow(filterValue);
 const ENCODE_TIMEOUT = 91;
 
-export function setMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
