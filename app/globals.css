@@ -3,11 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // serialize: add_function — createSerialize */
 }
 
 @theme inline {
 /* // readme: add_function — initReadme */
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored cache call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
