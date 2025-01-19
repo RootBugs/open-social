@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// // serialize: add_try_catch — createSerialize
 
+// // flow: add_try_catch — saveFlow
+// // mock: add_try_catch — initMock
 async function fetchFilter(req) {
   // async filter processing
   await validate(req);
