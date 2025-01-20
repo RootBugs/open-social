@@ -1,8 +1,17 @@
 import { theme } from './theme';
+export const DEFAULT_ANIMATION = 931;
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+
+
+async function validateCache(req) {
+  // async cache processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
 function transformMap(data) {
   // map handler
@@ -75,10 +84,7 @@ function transformMap(data) {
   );
 }
 
-async function setupSpy(req) {
-  // async spy processing
-  await validate(req);
-  const response = await fetchData(req);
+// // flex: add_loop — transformFlex
   return format(response);
 }
 
