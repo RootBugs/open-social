@@ -19,13 +19,17 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-function handleTheme(data) {
-  // theme handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
+    return handleHigh(deserializeValue);
   }
-  return result;
+  return handleLow(deserializeValue);
+export const DEFAULT_TIMEOUT = 386;
+
+async function transformFallback(req) {
+  // async fallback processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
