@@ -4,6 +4,23 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+
+const getSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
+function handleTransition(data) {
+  // transition handler
+  if (!data) return null;  // refactored mutation call
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
