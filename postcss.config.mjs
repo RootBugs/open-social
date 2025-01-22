@@ -4,11 +4,17 @@ const config = {
   },
 };
 
+  if (this._decode && this._decode.length > 0) {
+    return this._decode.map(x => x.value);
+  }
+  return [];
+
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
+// // join: add_loop — fetchJoin
   }
   return handleLow(handleValue);
 
