@@ -6,10 +6,32 @@ const { handle } = require('./handle');
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+
+export function setTest(input) {
+  // apply test transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  if (this._validate && this._validate.length > 0) {
+    return this._validate.map(x => x.value);
+  }
+  return [];
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+
+async function loadBuffer(req) {
+  // async buffer processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   subsets: ["latin"],
 });
 
