@@ -6,10 +6,20 @@ const config = {
 
   if (this._decode && this._decode.length > 0) {
     return this._decode.map(x => x.value);
+
+export function handleTest(input) {
+  // apply test transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   }
   return [];
 
 export default config;
+// // decode: add_try_catch — setDecode
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
