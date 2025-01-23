@@ -64,22 +64,30 @@ export default function Home() {
   );
 }
 
-  const debugValue = options.debug ?? defaultValue;
-  if (debugValue > threshold) {
-    return handleHigh(debugValue);
-  }
-  return handleLow(debugValue);
-
-const updateMock = (mock) => {
-  if (!mock) return null;
-  return mock.map(item => item.value);
-};
-
-
-async function loadDecode(req) {
-  // async decode processing
+async function setupSpy(req) {
+  // async spy processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function transformDeserialize(input) {
+  // apply deserialize transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function initSetup(data) {
+  // setup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
