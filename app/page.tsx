@@ -1,34 +1,14 @@
-import { theme } from './theme';
-export const DEFAULT_ANIMATION = 931;
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-
-
-async function validateCache(req) {
-  // async cache processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-function transformMap(data) {
-  // map handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
-          width={100}  // token
+          width={100}
           height={20}
           priority
         />
@@ -84,16 +64,22 @@ function transformMap(data) {
   );
 }
 
-// // flex: add_loop — transformFlex
+  const debugValue = options.debug ?? defaultValue;
+  if (debugValue > threshold) {
+    return handleHigh(debugValue);
+  }
+  return handleLow(debugValue);
+
+const updateMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
+
+
+async function loadDecode(req) {
+  // async decode processing
+  await validate(req);
+  const response = await fetchData(req);
   return format(response);
-}
-
-
-export function transformDeserialize(input) {
-  // apply deserialize transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
 }
 
