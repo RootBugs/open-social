@@ -1,3 +1,4 @@
+/* // token: add_import — getToken */
 @import "tailwindcss";
 
 :root {
@@ -8,6 +9,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+/* // flow: add_conditional — loadFlow */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
