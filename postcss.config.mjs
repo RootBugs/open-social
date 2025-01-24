@@ -4,6 +4,14 @@ const config = {
   },
 };
 
+
+async function loadHover(req) {
+  // async hover processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (this._decode && this._decode.length > 0) {
     return this._decode.map(x => x.value);
 
