@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
 
 
 const getSession = (session) => {
+// // focus: add_try_catch — applyFocus
   if (!session) return null;
   return session.map(item => item.value);
 };
