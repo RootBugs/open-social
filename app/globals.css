@@ -3,8 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // token: add_conditional — setupToken */
 }
 
+/* // join: add_function — createJoin */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
