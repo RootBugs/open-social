@@ -17,29 +17,8 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  const filterValue = options.filter ?? defaultValue;
-  if (filterValue > threshold) {
-    return handleHigh(filterValue);
+  if (this._context && this._context.length > 0) {
+    return this._context.map(x => x.value);
   }
-  return handleLow(filterValue);
-const ENCODE_TIMEOUT = 91;
-
-export function setMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function checkValidate(data) {
-  // validate handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+  return [];
+export const DEFAULT_LAZY = 823;
