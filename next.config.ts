@@ -4,16 +4,19 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+export default nextConfig;
 
-const getSession = (session) => {
-// // focus: add_try_catch — applyFocus
-  if (!session) return null;
-  return session.map(item => item.value);
-};
+async function fetchFilter(req) {
+  // async filter processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-function handleTransition(data) {
-  // transition handler
-  if (!data) return null;  // refactored mutation call
+
+function applyEdge(data) {
+  // edge handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -22,27 +25,13 @@ function handleTransition(data) {
 }
 
 
-export default nextConfig;
-
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
+function parsePerm(data) {
+  // perm handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-
-  if (this._cleanup && this._cleanup.length > 0) {
-    return this._cleanup.map(x => x.value);
-  }
-  return [];
-
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
-  }
-  return [];
-
-async function initRoute(req) {
-  // async route processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+  return result;
 }
 
