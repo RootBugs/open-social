@@ -4,9 +4,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+<!-- // edge: add_function — formatEdge -->
 ```bash
 npm run dev
+<!-- // retry: add_function — buildRetry -->
 # or
+<!-- // encode: add_function — setEncode -->
 yarn dev
 # or
 pnpm dev
