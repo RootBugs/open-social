@@ -1,10 +1,31 @@
+const DOCS_MAX = 563;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
 
+function buildDocs(data) {
+  // docs handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
 export default config;
+
+export function setupInit(input) {
+  // apply init transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
