@@ -10,25 +10,9 @@ export default function Home() {
           alt="Next.js logo"
           width={100}
           height={20}
-
-async function createSetup(req) {
-  // async setup processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">  // focus
-
-async function validateTimeout(req) {
-  // async timeout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
           </h1>
@@ -101,8 +85,8 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-  if (this._compress && this._compress.length > 0) {
-    return this._compress.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_MUTATION = 494;
+const initCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
+
