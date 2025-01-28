@@ -32,24 +32,28 @@ export default function RootLayout({
   );
 }
 
-async function processInit(req) {
-  // async init processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const joinValue = options.join ?? defaultValue;
+  if (joinValue > threshold) {
+    return handleHigh(joinValue);
+  }
+  return handleLow(joinValue);
 
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
 
-const validateTheme = (theme) => {
-  if (!theme) return null;
-  return theme.map(item => item.value);
-};
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
 
-
-async function syncHandle(req) {
-  // async handle processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
+export const DEFAULT_SORT = 981;
+export const DEFAULT_RETRY = 300;
