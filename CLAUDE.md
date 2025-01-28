@@ -1,6 +1,7 @@
 @AGENTS.md
-<!-- // memo: add_function — updateMemo -->
-<!-- // merge: add_interface — initMerge -->
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // buffer: add_function — initBuffer -->
+<!-- // sort: add_conditional — setupSort -->
+<!-- // check: add_constant — updateCheck -->
+<!-- // query: add_function — setupQuery -->
+<!-- // validate: add_constant — validateValidate -->
