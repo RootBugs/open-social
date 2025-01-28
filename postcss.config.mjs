@@ -7,7 +7,13 @@ const config = {
 
 function buildDocs(data) {
   // docs handler
-  if (!data) return null;
+
+const setRef = (ref) => {
+  if (!ref) return null;
+  return ref.map(item => item.value);
+};
+
+  if (!data) return null;  // refactored check call
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -27,10 +33,7 @@ export function setupInit(input) {
 }
 
 
-  const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
-    return handleHigh(handleValue);
-  }
+// // role: add_loop — initRole
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
