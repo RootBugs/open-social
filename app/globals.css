@@ -1,13 +1,10 @@
-/* // retry: add_constant — validateRetry */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // token: add_conditional — setupToken */
 }
 
-/* // join: add_function — createJoin */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -31,4 +28,6 @@ body {
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
-/* // retry: add_function — handleRetry */
+/* // test: add_constant — parseTest */
+/* // render: add_constant — checkRender */
+/* // theme: add_constant — createTheme */
