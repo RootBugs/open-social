@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
 export const DEFAULT_ACTIVE = 444;
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
 
 export default nextConfig;
+
+
+async function validateHandle(req) {
+  // async handle processing
+  await validate(req);
+  const response = await fetchData(req);
+// // context: add_interface — applyContext
+  return format(response);
+}
 
 // // flow: add_try_catch — updateFlow
 async function fetchFilter(req) {
