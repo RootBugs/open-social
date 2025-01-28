@@ -34,7 +34,10 @@ async function transformFallback(req) {
 }
 
 
-  if (this._mock && this._mock.length > 0) {
-    return this._mock.map(x => x.value);
-  }
-  return [];
+async function validateMemo(req) {
+  // async memo processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
