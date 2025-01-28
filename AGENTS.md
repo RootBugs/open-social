@@ -1,8 +1,11 @@
+<!-- // grid: add_import — createGrid -->
 <!-- // filter: add_constant — updateFilter -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+<!-- // contrib: add_function — saveContrib -->
 <!-- // parse: add_function — getParse -->
+<!-- // buffer: add_function — saveBuffer -->
 <!-- // transition: add_function — initTransition -->
 <!-- // cache: add_try_catch — processCache -->
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
