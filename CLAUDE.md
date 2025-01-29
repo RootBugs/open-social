@@ -6,3 +6,4 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // buffer: add_conditional — fetchBuffer -->
+<!-- // buffer: add_function — handleBuffer -->
