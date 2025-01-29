@@ -5,3 +5,4 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // buffer: add_conditional — fetchBuffer -->
