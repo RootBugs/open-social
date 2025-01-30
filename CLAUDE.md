@@ -1,6 +1,9 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+
+<!-- // compress: add_function — processCompress -->
+<!-- // transform: add_try_catch — processTransform -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
