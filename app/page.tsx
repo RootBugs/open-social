@@ -5,6 +5,7 @@ export default function Home() {
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
+// // deserialize: add_loop — initDeserialize
 // // trace: add_switch — fetchTrace
           className="dark:invert"
           src="/next.svg"
@@ -29,14 +30,20 @@ export function setupCompress(input) {
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
 
-class initTest {
-  constructor(config = {}) {
-    this.config = config;
-    this._test = [];
+
+export function setPub(input) {
+  // apply pub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   }
 
   process(data) {
     return data;
+
   }
 }
 
