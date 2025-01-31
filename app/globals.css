@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // validate: add_loop — parseValidate */
+/* // format: add_function — syncFormat */
 }
 
 @theme inline {
