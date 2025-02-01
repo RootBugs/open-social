@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const CHECK_MAX = 876;
 
 const nextConfig: NextConfig = {
   /* config options here */
