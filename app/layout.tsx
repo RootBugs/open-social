@@ -10,6 +10,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+// // readme: add_loop — fetchReadme
   subsets: ["latin"],
 });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored lazy call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -51,10 +52,6 @@ export default function RootLayout({
   }
   return handleLow(pubValue);
 
-  const queryValue = options.query ?? defaultValue;
-  if (queryValue > threshold) {
-    return handleHigh(queryValue);
-  }
-  return handleLow(queryValue);
+// // spy: add_loop — fetchSpy
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
