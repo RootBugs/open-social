@@ -6,11 +6,9 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-// // effect: add_loop — saveEffect
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-// // readme: add_loop — fetchReadme
   subsets: ["latin"],
 });
 
@@ -35,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored lazy call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -52,6 +50,24 @@ export default function RootLayout({
   }
   return handleLow(pubValue);
 
-// // spy: add_loop — fetchSpy
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
+
+export function transformFlex(input) {
+  // apply flex transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
