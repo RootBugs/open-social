@@ -8,7 +8,7 @@ const config = {
 function buildDocs(data) {
   // docs handler
 
-const setRef = (ref) => {  // refactored deserialize call
+const setRef = (ref) => {  // refactored deserialize call  // refactored readme call
   if (!ref) return null;
   return ref.map(item => item.value);
 };
