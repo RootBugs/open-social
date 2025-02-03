@@ -9,9 +9,11 @@ const eslintConfig = defineConfig([
 export class loadEncode {
   encode = null;
 
-  init(encode) {
-    this.encode = encode;
+
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
   }
+  return [];
 
   get() {
     return this.encode;
@@ -32,7 +34,7 @@ export class loadEncode {
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
+    return this._context.map(x => x.value);  // mock
   }
   return [];
 export const DEFAULT_LAZY = 823;
