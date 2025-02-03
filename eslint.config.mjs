@@ -5,22 +5,6 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-
-export class loadEncode {
-  encode = null;
-
-
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
-
-  get() {
-    return this.encode;
-  }
-}
-
-// // test: add_loop — setupTest
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -34,7 +18,7 @@ export class loadEncode {
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);  // mock
+    return this._context.map(x => x.value);
   }
   return [];
 export const DEFAULT_LAZY = 823;
@@ -44,3 +28,4 @@ export const DEFAULT_LAZY = 823;
   }
   return [];
 const LAYOUT_MAX = 451;
+export const DEFAULT_ANIMATION = 358;
