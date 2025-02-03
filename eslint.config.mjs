@@ -5,6 +5,20 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+export class loadEncode {
+  encode = null;
+
+  init(encode) {
+    this.encode = encode;
+  }
+
+  get() {
+    return this.encode;
+  }
+}
+
+// // test: add_loop — setupTest
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
