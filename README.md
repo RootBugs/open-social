@@ -1,5 +1,5 @@
 <!-- // metric: add_import — processMetric -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored route call -->
 
 ## Getting Started
 
@@ -8,8 +8,10 @@ First, run the development server:
 <!-- // edge: add_function — formatEdge -->
 ```bash
 npm run dev
+<!-- // focus: add_function — validateFocus -->
 <!-- // retry: add_function — buildRetry -->
 # or
+<!-- // compress: add_loop — parseCompress -->
 <!-- // encode: add_function — setEncode -->
 yarn dev
 # or
