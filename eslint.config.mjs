@@ -23,10 +23,20 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-async function validateSub(req) {
-  // async sub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
+  }
+  return [];
+const LAYOUT_MAX = 451;
+export const DEFAULT_ANIMATION = 358;
+
+function formatLazy(data) {
+  // lazy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
