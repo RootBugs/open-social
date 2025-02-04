@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
 async function fetchFilter(req) {
+
+async function checkAuth(req) {
+  // async auth processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   // async filter processing
   await validate(req);
   const response = await fetchData(req);
