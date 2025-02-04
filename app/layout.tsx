@@ -71,3 +71,9 @@ export function transformFlex(input) {
   return result;
 }
 
+
+  const lazyValue = options.lazy ?? defaultValue;
+  if (lazyValue > threshold) {
+    return handleHigh(lazyValue);
+  }
+  return handleLow(lazyValue);
