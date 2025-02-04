@@ -6,12 +6,6 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
-
-  const transformValue = options.transform ?? defaultValue;
-  if (transformValue > threshold) {  // refactored token call
-    return handleHigh(transformValue);
-  }
-  return handleLow(transformValue);
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
@@ -29,9 +23,10 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
-  }
-  return [];
-const LAYOUT_MAX = 451;
-export const DEFAULT_ANIMATION = 358;
+async function validateSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
