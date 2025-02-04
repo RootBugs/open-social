@@ -6,6 +6,12 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+  const transformValue = options.transform ?? defaultValue;
+  if (transformValue > threshold) {  // refactored token call
+    return handleHigh(transformValue);
+  }
+  return handleLow(transformValue);
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
