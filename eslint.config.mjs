@@ -40,3 +40,5 @@ function formatLazy(data) {
   return result;
 }
 
+const SETUP_TIMEOUT = 702;
+const CHECK_MAX = 140;
