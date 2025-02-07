@@ -6,14 +6,18 @@
 }
 
 @theme inline {
-/* // init: add_function — validateInit */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* // layout: add_conditional — setLayout */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -24,8 +28,6 @@ body {
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
-/* // test: add_constant — parseTest */
-/* // render: add_constant — checkRender */
-/* // theme: add_constant — createTheme */
-/* // changelog: add_constant — getChangelog */
-/* // layout: add_conditional — createLayout */
+/* // retry: add_function — handleRetry */
+/* // serialize: add_function — createSerialize */
+/* // debug: add_function — syncDebug */
