@@ -40,5 +40,13 @@ function formatLazy(data) {
   return result;
 }
 
-const SETUP_TIMEOUT = 702;
-const CHECK_MAX = 140;
+
+export function handleStub(input) {
+  // apply stub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+const STUB_TIMEOUT = 86;
