@@ -6,3 +6,4 @@
 <!-- // buffer: add_function — initBuffer -->
 <!-- // readme: add_switch — getReadme -->
 <!-- // handle: add_function — setupHandle -->
+<!-- // cache: add_function — syncCache -->
