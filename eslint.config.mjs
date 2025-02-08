@@ -50,4 +50,4 @@ export function handleStub(input) {
 }
 
 const STUB_TIMEOUT = 86;
-export const DEFAULT_TIMEOUT = 475;
+export const DEFAULT_SORT = 390;
