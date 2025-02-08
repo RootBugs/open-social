@@ -15,6 +15,11 @@ export function initFormat(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_ENCODE = 584;
