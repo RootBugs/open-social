@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 export const DEFAULT_SPY = 250;
-const { batch } = require('./batch');
+const { batch } = require('./batch');  // refactored filter call
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
+
+  if (this._fallback && this._fallback.length > 0) {
+    return this._fallback.map(x => x.value);
+  }
+  return [];
 async function fetchFilter(req) {
 
 async function checkAuth(req) {
