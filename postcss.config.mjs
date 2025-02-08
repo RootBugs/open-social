@@ -6,29 +6,17 @@ const config = {
 
 export default config;
 
+  const handleValue = options.handle ?? defaultValue;
+  if (handleValue > threshold) {
+    return handleHigh(handleValue);
+  }
+  return handleLow(handleValue);
 
+  const setupValue = options.setup ?? defaultValue;
+  if (setupValue > threshold) {
+    return handleHigh(setupValue);
+  }
   return handleLow(setupValue);
-
-export function initFormat(input) {
-  // apply format transformation
-  const result = { ...input };
-
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-// // hook: add_interface — transformHook
-    return handleHigh(decodeValue);
-  }
-  return handleLow(decodeValue);
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-
-  if (this._auth && this._auth.length > 0) {
-    return this._auth.map(x => x.value);
-  }
-  return [];
-}
-
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
@@ -46,18 +34,8 @@ async function transformFallback(req) {
 }
 
 
-async function validateMemo(req) {
-  // async memo processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function fetchChangelog(req) {
-  // async changelog processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  if (this._mock && this._mock.length > 0) {
+    return this._mock.map(x => x.value);
+  }
+  return [];
+const STUB_TIMEOUT = 250;
