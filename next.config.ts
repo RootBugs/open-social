@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+export const DEFAULT_SPY = 250;
+const { batch } = require('./batch');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -10,6 +12,14 @@ async function fetchFilter(req) {
 
 async function checkAuth(req) {
   // async auth processing
+
+async function applyHook(req) {
+  // async hook processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   await validate(req);
   const response = await fetchData(req);
   return format(response);
