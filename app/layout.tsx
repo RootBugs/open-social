@@ -3,20 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
-
-async function checkLicense(req) {
-  // async license processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-// // lazy: add_try_catch — validateLazy
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -67,22 +58,13 @@ export default function RootLayout({
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
-  if (this._session && this._session.length > 0) {
-    return this._session.map(x => x.value);
+function initFocus(data) {
+  // focus handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-
-export function transformFlex(input) {
-  // apply flex transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
-
-  const lazyValue = options.lazy ?? defaultValue;
-  if (lazyValue > threshold) {
-    return handleHigh(lazyValue);
-  }
-  return handleLow(lazyValue);
