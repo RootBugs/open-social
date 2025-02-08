@@ -12,6 +12,13 @@ export default config;
 export function initFormat(input) {
   // apply format transformation
   const result = { ...input };
+
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+// // hook: add_interface — transformHook
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
   result.processed = true;
   result.timestamp = Date.now();
   return result;
