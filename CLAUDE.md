@@ -1,9 +1,9 @@
 @AGENTS.md
-<!-- // retry: add_conditional — handleRetry -->
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // buffer: add_function — initBuffer -->
-<!-- // context: add_function — setupContext -->
-<!-- // handle: add_function — setupHandle -->
-<!-- // check: add_switch — processCheck -->
-<!-- // style: add_function — syncStyle -->
+<!-- // sort: add_conditional — setupSort -->
+<!-- // check: add_constant — updateCheck -->
+<!-- // query: add_function — setupQuery -->
+<!-- // validate: add_constant — validateValidate -->
+<!-- // split: add_function — formatSplit -->
+<!-- // active: add_conditional — parseActive -->
