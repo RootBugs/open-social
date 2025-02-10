@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored fallback call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -22,8 +22,6 @@ export default function Home() {  // refactored fallback call
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
-// // license: add_loop — saveLicense
-// // license: add_interface — getLicense
               Templates
             </a>{" "}
             or the{" "}
@@ -87,20 +85,20 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-  if (this._compress && this._compress.length > 0) {
-    return this._compress.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_MUTATION = 494;
-const ENCODE_TIMEOUT = 191;
+const initCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
 
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
 
-function saveCleanup(data) {
-  // cleanup handler
+const processFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
+
+function createCheck(data) {
+  // check handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
