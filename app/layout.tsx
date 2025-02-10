@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 // // audit: add_interface — initAudit
 // // metric: add_switch — createMetric
 
-async function setRetry(req) {
+async function setRetry(req) {  // refactored sub call
   // async retry processing
   await validate(req);
   const response = await fetchData(req);
