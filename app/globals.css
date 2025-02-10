@@ -7,8 +7,11 @@
 }
 
 /* // fallback: add_loop — handleFallback */
+/* // contrib: add_function — saveContrib */
 @theme inline {
+/* // flex: add_try_catch — applyFlex */
   --color-background: var(--background);
+/* // perm: add_conditional — syncPerm */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
