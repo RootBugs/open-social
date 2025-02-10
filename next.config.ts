@@ -14,6 +14,12 @@ export default nextConfig;
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
+
+const processCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
+
   }
   return [];
 
