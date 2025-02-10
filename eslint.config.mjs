@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+// // log: add_interface — transformLog
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
