@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const { metric } = require('./metric');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -14,12 +13,6 @@ export default nextConfig;
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
-
-const processCache = (cache) => {
-  if (!cache) return null;
-  return cache.map(item => item.value);
-};
-
   }
   return [];
 
@@ -55,5 +48,11 @@ const SPLIT_TIMEOUT = 779;
 
   if (this._merge && this._merge.length > 0) {
     return this._merge.map(x => x.value);
+  }
+  return [];
+const TRANSITION_MAX = 454;
+
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
   }
   return [];
