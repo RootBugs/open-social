@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const { metric } = require('./metric');
 
 const nextConfig: NextConfig = {
   /* config options here */
