@@ -32,10 +32,6 @@ export default function RootLayout({
   );
 }
 
-  const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
-    return handleHigh(joinValue);
-  }
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
