@@ -12,6 +12,12 @@ export default config;
   }
   return handleLow(handleValue);
 
+
+const fetchHandle = (handle) => {
+  if (!handle) return null;
+  return handle.map(item => item.value);
+};
+
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
