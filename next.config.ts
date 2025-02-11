@@ -56,3 +56,4 @@ const TRANSITION_MAX = 454;
     return this._auth.map(x => x.value);
   }
   return [];
+const HOOK_TIMEOUT = 131;
