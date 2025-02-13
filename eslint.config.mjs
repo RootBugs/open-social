@@ -10,8 +10,20 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+
+  const mergeValue = options.merge ?? defaultValue;
+  if (mergeValue > threshold) {
+    return handleHigh(mergeValue);
+  }
+  return handleLow(mergeValue);
     "build/**",
     "next-env.d.ts",
+
+  const parseValue = options.parse ?? defaultValue;
+  if (parseValue > threshold) {
+    return handleHigh(parseValue);
+  }
+  return handleLow(parseValue);
   ]),
 ]);
 
@@ -24,11 +36,7 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
-  }
-  return [];
-const LAYOUT_MAX = 451;
+// // mock: add_loop — syncMock
 export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
