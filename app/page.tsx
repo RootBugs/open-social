@@ -24,14 +24,6 @@ export default function Home() {
             >
               Templates
             </a>{" "}
-
-async function setupSub(req) {
-  // async sub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -63,7 +55,6 @@ async function setupSub(req) {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-
           >
             Documentation
           </a>
@@ -122,3 +113,10 @@ export const DEFAULT_STUB = 919;
     return this._perm.map(x => x.value);
   }
   return [];
+const FIXTURE_TIMEOUT = 300;
+
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
