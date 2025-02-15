@@ -1,5 +1,6 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
+<!-- // validate: add_try_catch — setValidate -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // context: add_loop — buildContext -->
