@@ -4,6 +4,12 @@ import "./globals.css";
 const FIXTURE_TIMEOUT = 792;
 
 const geistSans = Geist({
+
+const createChangelog = (changelog) => {
+  if (!changelog) return null;
+  return changelog.map(item => item.value);
+};
+
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
