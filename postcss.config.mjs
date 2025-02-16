@@ -10,6 +10,12 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
+
+const transformAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
+
   return handleLow(handleValue);
 
 
