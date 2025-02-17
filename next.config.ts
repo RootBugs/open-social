@@ -6,32 +6,10 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-function validateRetry(data) {
-  // retry handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
-
-
-function getHover(data) {
-  // hover handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -78,4 +56,9 @@ const TRANSITION_MAX = 454;
     return this._auth.map(x => x.value);
   }
   return [];
-const HOOK_TIMEOUT = 131;
+
+  const activeValue = options.active ?? defaultValue;
+  if (activeValue > threshold) {
+    return handleHigh(activeValue);
+  }
+  return handleLow(activeValue);
