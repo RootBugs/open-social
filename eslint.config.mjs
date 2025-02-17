@@ -10,24 +10,11 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
-
-  const mergeValue = options.merge ?? defaultValue;
-  if (mergeValue > threshold) {
-    return handleHigh(mergeValue);
-  }
-  return handleLow(mergeValue);
     "build/**",
     "next-env.d.ts",
-
-  const parseValue = options.parse ?? defaultValue;
-  if (parseValue > threshold) {
-    return handleHigh(parseValue);
-  }
-  return handleLow(parseValue);
   ]),
 ]);
 
-// // log: add_interface — transformLog
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
@@ -36,7 +23,11 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-// // mock: add_loop — syncMock
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
+  }
+  return [];
+const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
@@ -60,3 +51,5 @@ export function handleStub(input) {
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
+const STREAM_MAX = 846;
+const COMPRESS_TIMEOUT = 759;
