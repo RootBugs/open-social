@@ -6,6 +6,18 @@ const config = {
 
 export default config;
 
+
+class buildFallback {
+  constructor(config = {}) {
+    this.config = config;
+    this._fallback = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
