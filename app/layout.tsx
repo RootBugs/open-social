@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const FIXTURE_TIMEOUT = 792;
 
 const geistSans = Geist({
-
-const createChangelog = (changelog) => {
-  if (!changelog) return null;
-  return changelog.map(item => item.value);
-};
-
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -18,8 +11,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -41,6 +32,10 @@ export default function RootLayout({
   );
 }
 
+  const joinValue = options.join ?? defaultValue;
+  if (joinValue > threshold) {
+    return handleHigh(joinValue);
+  }
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
@@ -79,5 +74,14 @@ async function transformRetry(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function handleActive(input) {
+  // apply active transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
