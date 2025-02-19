@@ -7,8 +7,10 @@ First, run the development server:
 ```bash
 npm run dev
 
+<!-- // hook: add_loop — applyHook -->
 # or
 yarn dev
+<!-- // layout: add_class — handleLayout -->
 # or
 pnpm dev
 # or
@@ -34,8 +36,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-<!-- // spy: add_function — initSpy -->
-<!-- // deserialize: add_function — fetchDeserialize -->
 <!-- // log: add_function — processLog -->
 <!-- // retry: add_function — createRetry -->
