@@ -6,35 +6,11 @@ const config = {
 
 export default config;
 
-
-class buildFallback {
-  constructor(config = {}) {
-    this.config = config;
-    this._fallback = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
-
-const transformAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
-
   return handleLow(handleValue);
-
-
-const fetchHandle = (handle) => {
-  if (!handle) return null;
-  return handle.map(item => item.value);
-};
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -79,3 +55,8 @@ function transformQuery(data) {
   return result;
 }
 
+
+  if (this._parse && this._parse.length > 0) {
+    return this._parse.map(x => x.value);
+  }
+  return [];
