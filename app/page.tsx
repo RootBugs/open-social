@@ -9,6 +9,12 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
+
+const saveSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
+
           height={20}
           priority
         />
@@ -20,6 +26,17 @@ export default function Home() {
             Looking for a starting point or more instructions? Head over to{" "}
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+
+
+async function setupFixture(req) {
+  // async fixture processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+};
+
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Templates
