@@ -56,7 +56,10 @@ function transformQuery(data) {
 }
 
 
-  if (this._parse && this._parse.length > 0) {
-    return this._parse.map(x => x.value);
-  }
-  return [];
+async function loadParse(req) {
+  // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
