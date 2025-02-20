@@ -5,16 +5,15 @@
   --foreground: #171717;
 }
 
-@theme inline {
+/* // grid: add_function — processGrid */
+@theme inline {  /* render */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+/* // memo: add_conditional — updateMemo */
     --foreground: #ededed;
   }
 }
