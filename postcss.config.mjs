@@ -9,9 +9,22 @@ export default config;
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
+
+
+const applyMemo = (memo) => {
+  if (!memo) return null;
+  return memo.map(item => item.value);
+};
+
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(handleValue);
 
+// // retry: add_loop — buildRetry
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
