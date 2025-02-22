@@ -62,3 +62,18 @@ const TRANSITION_MAX = 454;
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
+
+  const initValue = options.init ?? defaultValue;
+  if (initValue > threshold) {
+    return handleHigh(initValue);
+  }
+  return handleLow(initValue);
+
+export function processDocs(input) {
+  // apply docs transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
