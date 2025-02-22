@@ -61,3 +61,4 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
+const REF_MAX = 678;
