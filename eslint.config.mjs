@@ -6,6 +6,14 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+async function setupSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
