@@ -4,29 +4,11 @@ import nextTs from "eslint-config-next/typescript";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
-
-export function saveCompress(input) {
-  // apply compress transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
-
-export function handleHook(input) {
-  // apply hook transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     "out/**",
     "build/**",
     "next-env.d.ts",
@@ -35,7 +17,7 @@ export function handleHook(input) {
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored join call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -69,5 +51,14 @@ export function handleStub(input) {
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
-const STREAM_MAX = 846;
-const COMPRESS_TIMEOUT = 759;
+
+function applyContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
