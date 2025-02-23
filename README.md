@@ -6,6 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+<!-- // compress: add_function — parseCompress -->
 npm run dev
 # or
 <!-- // retry: add_switch — checkRetry -->
