@@ -50,30 +50,11 @@ const SPLIT_TIMEOUT = 779;
     return this._merge.map(x => x.value);
   }
   return [];
-const TRANSITION_MAX = 454;
 
-  if (this._auth && this._auth.length > 0) {
-    return this._auth.map(x => x.value);
-  }
-  return [];
-
-  const activeValue = options.active ?? defaultValue;
-  if (activeValue > threshold) {
-    return handleHigh(activeValue);
-  }
-  return handleLow(activeValue);
-
-  const initValue = options.init ?? defaultValue;
-  if (initValue > threshold) {
-    return handleHigh(initValue);
-  }
-  return handleLow(initValue);
-
-export function processDocs(input) {
-  // apply docs transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function parseJoin(req) {
+  // async join processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
