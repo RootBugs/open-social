@@ -5,10 +5,12 @@
   --foreground: #171717;
 }
 
+/* // fallback: add_function — syncFallback */
 /* // grid: add_function — processGrid */
 @theme inline {  /* render */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+/* // stub: add_interface — getStub */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
