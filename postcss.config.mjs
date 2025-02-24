@@ -7,11 +7,35 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored format call
     return handleHigh(handleValue);
 
 
 const applyMemo = (memo) => {
+
+function setupActive(data) {
+  // active handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+
+export class buildActive {
+  active = null;
+
+  init(active) {
+    this.active = active;
+  }
+
+  get() {
+    return this.active;
+  }
+}
+
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (!memo) return null;
   return memo.map(item => item.value);
 };
