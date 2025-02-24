@@ -5,6 +5,18 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+class setupRetry {
+  constructor(config = {}) {
+    this.config = config;
+    this._retry = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   // Override default ignores of eslint-config-next.
 
 async function setupSub(req) {  // refactored parse call  // refactored state call
