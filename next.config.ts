@@ -1,15 +1,12 @@
 import type { NextConfig } from "next";
-import * as fixture from '../utils/fixture';
-export const DEFAULT_SORT = 853;
 
 const nextConfig: NextConfig = {
   /* config options here */
 };
 
 export default nextConfig;
-// // spy: add_loop — fetchSpy
 
-  if (this._validate && this._validate.length > 0) {  // refactored mock call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -59,5 +56,14 @@ async function parseJoin(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function setupRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
