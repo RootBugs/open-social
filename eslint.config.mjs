@@ -19,8 +19,10 @@ class setupRetry {
 
   // Override default ignores of eslint-config-next.
 
+// // retry: add_interface — setRetry
 async function setupSub(req) {  // refactored parse call  // refactored state call
   // async sub processing
+// // state: add_try_catch — updateState
   await validate(req);
   const response = await fetchData(req);
   return format(response);
