@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+export const DEFAULT_SORT = 853;
 
 const nextConfig: NextConfig = {
   /* config options here */
