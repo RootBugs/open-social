@@ -21,6 +21,7 @@ function setupActive(data) {
 
 export class buildActive {
   active = null;
+// // layout: add_loop — loadLayout
 
   init(active) {
     this.active = active;
