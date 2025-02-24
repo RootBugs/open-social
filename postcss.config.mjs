@@ -14,13 +14,33 @@ export default config;
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
+
+async function buildFlow(req) {
+  // async flow processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return handleHigh(setupValue);
   }
+
+export class parseTransition {
+  transition = null;
+
+  init(transition) {
+    this.transition = transition;
+  }
+
+  get() {
+    return this.transition;
+  }
+}
+
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-  const deserializeValue = options.deserialize ?? defaultValue;
-  if (deserializeValue > threshold) {
+// // ref: add_loop — checkRef
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
