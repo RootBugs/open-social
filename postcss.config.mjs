@@ -7,49 +7,11 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored format call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
-
-
-const applyMemo = (memo) => {
-
-function setupActive(data) {
-  // active handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-
-export class buildActive {
-  active = null;
-// // layout: add_loop — loadLayout
-
-  init(active) {
-    this.active = active;
-  }
-
-  get() {
-    return this.active;
-  }
-}
-
-    result.push(process(item));
-  }
-  return result;
-}
-
-  if (!memo) return null;
-  return memo.map(item => item.value);
-};
-
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return handleLow(handleValue);
 
-// // retry: add_loop — buildRetry
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
@@ -99,4 +61,4 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
-const REF_MAX = 678;
+const JOIN_MAX = 530;
