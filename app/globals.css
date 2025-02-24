@@ -1,9 +1,6 @@
+/* // focus: add_constant — buildFocus */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 /* // fallback: add_function — syncFallback */
 /* // grid: add_function — processGrid */
