@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as fixture from '../utils/fixture';
 export const DEFAULT_SORT = 853;
 
 const nextConfig: NextConfig = {
@@ -6,6 +7,7 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// // spy: add_loop — fetchSpy
 
   if (this._validate && this._validate.length > 0) {  // refactored mock call
     return this._validate.map(x => x.value);
