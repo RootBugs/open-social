@@ -14,33 +14,13 @@ export default config;
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
-
-async function buildFlow(req) {
-  // async flow processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     return handleHigh(setupValue);
   }
-
-export class parseTransition {
-  transition = null;
-
-  init(transition) {
-    this.transition = transition;
-  }
-
-  get() {
-    return this.transition;
-  }
-}
-
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-// // ref: add_loop — checkRef
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
@@ -81,4 +61,13 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
-const JOIN_MAX = 530;
+const REF_MAX = 678;
+
+export function saveToken(input) {
+  // apply token transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
