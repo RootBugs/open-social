@@ -1,3 +1,5 @@
+import { changelog } from './changelog';
+const PUB_MAX = 201;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -5,6 +7,18 @@ const config = {
 };
 
 export default config;
+
+class processRoute {
+  constructor(config = {}) {
+    this.config = config;
+    this._route = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
