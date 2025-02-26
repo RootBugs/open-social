@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored query call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -19,6 +19,12 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
+
+const loadChangelog = (changelog) => {
+  if (!changelog) return null;
+  return changelog.map(item => item.value);
+};
+
   return [];
 
 async function initRoute(req) {
