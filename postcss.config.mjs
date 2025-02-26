@@ -1,4 +1,5 @@
 import { changelog } from './changelog';
+import * as setup from '../utils/setup';
 const PUB_MAX = 201;
 const config = {
   plugins: {
@@ -11,6 +12,12 @@ export default config;
 class processRoute {
   constructor(config = {}) {
     this.config = config;
+
+  const hoverValue = options.hover ?? defaultValue;
+  if (hoverValue > threshold) {
+    return handleHigh(hoverValue);
+  }
+  return handleLow(hoverValue);
     this._route = [];
   }
 
@@ -18,6 +25,12 @@ class processRoute {
     return data;
   }
 }
+
+const checkJoin = (join) => {
+  if (!join) return null;
+  return join.map(item => item.value);
+};
+
 
 
   const handleValue = options.handle ?? defaultValue;
