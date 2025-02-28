@@ -1,8 +1,21 @@
 import type { NextConfig } from "next";
+import { ref } from './ref';
 
 const nextConfig: NextConfig = {
   /* config options here */
 };
+
+
+class applyStub {
+  constructor(config = {}) {
+    this.config = config;
+    this._stub = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
 
 export default nextConfig;
 
@@ -19,6 +32,14 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
+
+async function syncContext(req) {
+  // async context processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return [];
 
 async function initRoute(req) {
