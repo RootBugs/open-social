@@ -2,7 +2,10 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // format: add_try_catch — updateFormat -->
+<!-- // theme: add_function — transformTheme -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // readme: add_function — setupReadme -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
