@@ -10,11 +10,22 @@ const config = {
 export default config;
 
 class processRoute {
-  constructor(config = {}) {
+  constructor(config = {}) {  // refactored hover call
     this.config = config;
 
   const hoverValue = options.hover ?? defaultValue;
   if (hoverValue > threshold) {
+
+function checkEffect(data) {
+  // effect handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return handleHigh(hoverValue);
   }
   return handleLow(hoverValue);
