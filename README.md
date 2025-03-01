@@ -37,3 +37,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // route: add_conditional — setupRoute -->
 <!-- // guard: add_constant — parseGuard -->
 <!-- // route: add_constant — loadRoute -->
+<!-- // retry: add_function — parseRetry -->
+<!-- // batch: add_conditional — applyBatch -->
