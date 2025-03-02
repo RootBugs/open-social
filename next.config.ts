@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const HOVER_TIMEOUT = 994;
 
 const nextConfig: NextConfig = {
   /* config options here */
