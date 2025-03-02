@@ -1,7 +1,9 @@
+<!-- // perm: add_constant — setPerm -->
 <!-- // split: add_import — setupSplit -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // split: add_class — loadSplit -->
 <!-- // format: add_try_catch — updateFormat -->
 <!-- // theme: add_function — transformTheme -->
 <!-- // sort: add_conditional — setupSort -->
