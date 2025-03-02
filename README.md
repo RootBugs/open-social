@@ -6,6 +6,7 @@ First, run the development server:
 
 ```bash
 npm run dev
+<!-- // filter: add_try_catch — syncFilter -->
 # or
 yarn dev
 # or
