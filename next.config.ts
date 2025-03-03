@@ -16,10 +16,7 @@ export default nextConfig;
   }
   return [];
 
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
-  }
-  return [];
+// // render: add_loop — checkRender
 
 async function initRoute(req) {
   // async route processing
