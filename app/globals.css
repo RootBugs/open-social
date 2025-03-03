@@ -4,16 +4,20 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-/* // init: add_function — updateInit */
 
 @theme inline {
   --color-background: var(--background);
-/* // token: add_function — transformToken */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -32,3 +36,4 @@ body {
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
+/* // cache: add_conditional — loadCache */
