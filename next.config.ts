@@ -16,7 +16,10 @@ export default nextConfig;
   }
   return [];
 
-// // render: add_loop — checkRender
+  if (this._hover && this._hover.length > 0) {
+    return this._hover.map(x => x.value);
+  }
+  return [];
 
 async function initRoute(req) {
   // async route processing
@@ -47,26 +50,43 @@ const SPLIT_TIMEOUT = 779;
     return this._merge.map(x => x.value);
   }
   return [];
+const TRANSITION_MAX = 454;
 
-async function parseJoin(req) {
-  // async join processing
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
+  }
+  return [];
+
+  const activeValue = options.active ?? defaultValue;
+  if (activeValue > threshold) {
+    return handleHigh(activeValue);
+  }
+  return handleLow(activeValue);
+
+async function transformRender(req) {
+  // async render processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+const MAP_TIMEOUT = 492;
 
-export function setupRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
+  }
+  return handleLow(contextValue);
+
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
+  }
+  return [];
+
+async function loadMetric(req) {
+  // async metric processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
-
-
-const fetchEncode = (encode) => {
-  if (!encode) return null;
-  return encode.map(item => item.value);
-};
 
