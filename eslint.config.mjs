@@ -4,7 +4,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
 
-export function handleAnimation(input) {  // refactored effect call
+export function handleAnimation(input) {  // refactored effect call  // refactored audit call
   // apply animation transformation
   const result = { ...input };
   result.processed = true;
