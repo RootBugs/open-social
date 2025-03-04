@@ -1,5 +1,6 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
+<!-- // log: add_conditional — validateLog -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // buffer: add_function — initBuffer -->
 <!-- // handle: add_function — setupHandle -->
