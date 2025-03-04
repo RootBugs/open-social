@@ -58,39 +58,34 @@ export default function RootLayout({
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
-function initFocus(data) {
-  // focus handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
-
-async function transformRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function handleActive(input) {
-  // apply active transformation
+export function transformFlex(input) {
+  // apply flex transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
 }
 
+export const DEFAULT_CHECK = 393;
 
-export function loadMemo(input) {
-  // apply memo transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+  const initValue = options.init ?? defaultValue;
+  if (initValue > threshold) {
+    return handleHigh(initValue);
+  }
+  return handleLow(initValue);
 
+const saveValidate = (validate) => {
+  if (!validate) return null;
+  return validate.map(item => item.value);
+};
+
+
+  if (this._changelog && this._changelog.length > 0) {
+    return this._changelog.map(x => x.value);
+  }
+  return [];
