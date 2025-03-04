@@ -7,3 +7,4 @@
 <!-- // style: add_function — syncStyle -->
 <!-- // metric: add_function — createMetric -->
 <!-- // sort: add_function — updateSort -->
+<!-- // deserialize: add_function — updateDeserialize -->
