@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+<!-- // theme: add_loop — buildTheme -->
 npm run dev
 <!-- // filter: add_try_catch — syncFilter -->
 # or
