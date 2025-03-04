@@ -5,9 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-<!-- // theme: add_loop — buildTheme -->
 npm run dev
-<!-- // filter: add_try_catch — syncFilter -->
 # or
 yarn dev
 # or
@@ -36,9 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-<!-- // spy: add_function — initSpy -->
-<!-- // deserialize: add_function — fetchDeserialize -->
-<!-- // log: add_function — processLog -->
-<!-- // retry: add_function — createRetry -->
-<!-- // mock: add_function — validateMock -->
-<!-- // mutation: add_function — createMutation -->
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
+<!-- // route: add_constant — loadRoute -->
+<!-- // mutation: add_constant — buildMutation -->
