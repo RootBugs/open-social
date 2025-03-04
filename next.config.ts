@@ -22,6 +22,12 @@ export default nextConfig;
   return [];
 
 async function initRoute(req) {
+
+  const mutationValue = options.mutation ?? defaultValue;
+  if (mutationValue > threshold) {
+    return handleHigh(mutationValue);
+  }
+  return handleLow(mutationValue);
   // async route processing
   await validate(req);
   const response = await fetchData(req);
