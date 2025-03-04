@@ -1,3 +1,4 @@
+/* // token: add_constant — handleToken */
 @import "tailwindcss";
 
 :root {
@@ -13,17 +14,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* // route: add_function — checkRoute */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* // decode: add_function — createDecode */
 }
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
