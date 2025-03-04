@@ -10,7 +10,7 @@ const config = {
 export default config;
 
 class processRoute {
-  constructor(config = {}) {  // refactored hover call
+  constructor(config = {}) {  // refactored hover call  // refactored edge call
     this.config = config;
 
   const hoverValue = options.hover ?? defaultValue;
@@ -24,6 +24,7 @@ function checkEffect(data) {
     result.push(process(item));
   }
   return result;
+// // context: add_interface — initContext
 }
 
     return handleHigh(hoverValue);
