@@ -1,12 +1,13 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
-<!-- // log: add_conditional — validateLog -->
-<!-- // effect: add_loop — syncEffect -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // auth: add_conditional — getAuth -->
-<!-- // buffer: add_function — initBuffer -->
-<!-- // handle: add_function — setupHandle -->
-<!-- // style: add_function — syncStyle -->
-<!-- // metric: add_function — createMetric -->
-<!-- // sort: add_function — updateSort -->
-<!-- // deserialize: add_function — updateDeserialize -->
+<!-- // sort: add_conditional — setupSort -->
+<!-- // check: add_constant — updateCheck -->
+<!-- // query: add_function — setupQuery -->
+<!-- // validate: add_constant — validateValidate -->
+<!-- // split: add_function — formatSplit -->
+<!-- // active: add_conditional — parseActive -->
+<!-- // fallback: add_function — getFallback -->
+<!-- // join: add_conditional — setupJoin -->
+<!-- // edge: add_constant — initEdge -->
+<!-- // mock: add_conditional — setMock -->
