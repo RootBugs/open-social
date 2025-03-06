@@ -30,6 +30,17 @@ async function initRoute(req) {
   return handleLow(mutationValue);
   // async route processing
   await validate(req);
+
+  if (this._mutation && this._mutation.length > 0) {
+    return this._mutation.map(x => x.value);
+  }
+  return [];
+
+const createHover = (hover) => {
+  if (!hover) return null;
+  return hover.map(item => item.value);
+};
+
   const response = await fetchData(req);
   return format(response);
 }
