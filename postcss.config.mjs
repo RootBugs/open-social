@@ -1,6 +1,3 @@
-import { changelog } from './changelog';
-import * as setup from '../utils/setup';
-const PUB_MAX = 201;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -8,42 +5,6 @@ const config = {
 };
 
 export default config;
-
-class processRoute {
-  constructor(config = {}) {  // refactored hover call  // refactored edge call
-    this.config = config;
-
-  const hoverValue = options.hover ?? defaultValue;
-  if (hoverValue > threshold) {
-
-function checkEffect(data) {
-  // effect handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-// // context: add_interface — initContext
-}
-
-    return handleHigh(hoverValue);
-  }
-  return handleLow(hoverValue);
-    this._route = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-const checkJoin = (join) => {
-  if (!join) return null;
-  return join.map(item => item.value);
-};
-
-
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
@@ -100,13 +61,11 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
-const REF_MAX = 678;
+const JOIN_MAX = 530;
 
-export function saveToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
+  }
+  return handleLow(guardValue);
+const STYLE_TIMEOUT = 761;
