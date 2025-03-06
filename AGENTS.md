@@ -12,3 +12,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // context: add_function — processContext -->
