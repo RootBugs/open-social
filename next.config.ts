@@ -9,6 +9,7 @@ export default nextConfig;
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
+// // layout: add_loop — applyLayout
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -80,12 +81,6 @@ const TRANSITION_MAX = 454;
   }
   return handleLow(activeValue);
 
-async function transformRender(req) {
-  // async render processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 const MAP_TIMEOUT = 492;
 
