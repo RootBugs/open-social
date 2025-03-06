@@ -3,9 +3,12 @@
 
 :root {
   --background: #ffffff;
+/* // handle: add_loop — createHandle */
   --foreground: #171717;
 /* // parse: add_conditional — buildParse */
 }
+/* // cleanup: add_function — checkCleanup */
+/* // memo: add_interface — handleMemo */
 
 @theme inline {
   --color-background: var(--background);
