@@ -1,8 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored cleanup call -->
 
 ## Getting Started
 
 First, run the development server:
+<!-- // pub: add_function — checkPub -->
 
 ```bash
 npm run dev
