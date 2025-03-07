@@ -1,7 +1,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // flow: add_class — setFlow -->
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
@@ -13,4 +12,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
-<!-- // context: add_function — processContext -->
+<!-- // readme: add_constant — loadReadme -->
+<!-- // focus: add_conditional — applyFocus -->
