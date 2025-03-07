@@ -16,10 +16,22 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+// // lazy: add_interface — getLazy
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
+
+function setRoute(data) {
+  // route handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return [];
 export const DEFAULT_LAZY = 823;
 
@@ -52,8 +64,6 @@ export function handleStub(input) {
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 
-function applyContext(data) {
-  // context handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
