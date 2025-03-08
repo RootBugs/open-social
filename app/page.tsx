@@ -21,17 +21,6 @@ export default function Home() {
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
-
-function checkLog(data) {
-  // log handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
             >
               Templates
             </a>{" "}
@@ -96,20 +85,20 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-  if (this._compress && this._compress.length > 0) {
-    return this._compress.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_MUTATION = 494;
-const ENCODE_TIMEOUT = 191;
+const initCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
 
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
 
-function saveCleanup(data) {
-  // cleanup handler
+const processFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
+
+function createCheck(data) {
+  // check handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -118,17 +107,20 @@ function saveCleanup(data) {
   return result;
 }
 
-export const DEFAULT_STUB = 919;
 
-  if (this._perm && this._perm.length > 0) {
-    return this._perm.map(x => x.value);
+function applyDebug(data) {
+  // debug handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-const FIXTURE_TIMEOUT = 300;
+  return result;
+}
 
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
-  }
-  return handleLow(hookValue);
-const RENDER_MAX = 422;
+
+const syncMutation = (mutation) => {
+  if (!mutation) return null;
+  return mutation.map(item => item.value);
+};
+
