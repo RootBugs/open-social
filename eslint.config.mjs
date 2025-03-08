@@ -18,18 +18,10 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 // // lazy: add_interface — getLazy
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored sub call
     return this._context.map(x => x.value);
   }
 
-function setRoute(data) {
-  // route handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
 }
 
   return [];
