@@ -1,22 +1,28 @@
-/* // token: add_constant — handleToken */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-/* // handle: add_loop — createHandle */
   --foreground: #171717;
-/* // parse: add_conditional — buildParse */
 }
-/* // cleanup: add_function — checkCleanup */
-/* // sub: add_function — buildSub */
-/* // memo: add_interface — handleMemo */
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* // route: add_function — checkRoute */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
-/* // decode: add_function — createDecode */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
@@ -28,3 +34,4 @@
 /* // hook: add_function — getHook */
 /* // readme: add_function — checkReadme */
 /* // audit: add_function — checkAudit */
+/* // log: add_function — buildLog */
