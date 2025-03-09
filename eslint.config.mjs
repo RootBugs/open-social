@@ -16,14 +16,10 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
-// // lazy: add_interface — getLazy
 
-  if (this._context && this._context.length > 0) {  // refactored sub call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
-
-}
-
   return [];
 export const DEFAULT_LAZY = 823;
 
@@ -55,29 +51,17 @@ export function handleStub(input) {
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
+const STREAM_MAX = 846;
+const COMPRESS_TIMEOUT = 759;
 
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
-  return result;
-}
+  return handleLow(transitionValue);
 
-
-export function processMemo(input) {
-  // apply memo transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function saveTransition(req) {
-  // async transition processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+const setSub = (sub) => {
+  if (!sub) return null;
+  return sub.map(item => item.value);
+};
 
