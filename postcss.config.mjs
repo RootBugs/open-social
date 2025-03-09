@@ -24,6 +24,17 @@ export const DEFAULT_ENCODE = 584;
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
+
+function updateAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
