@@ -1,4 +1,3 @@
-export const DEFAULT_FORMAT = 995;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -25,17 +24,6 @@ export const DEFAULT_ENCODE = 584;
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
-
-function updateAnimation(data) {
-  // animation handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
@@ -73,23 +61,12 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
-const REF_MAX = 678;
+const JOIN_MAX = 530;
 
-
-  const cacheValue = options.cache ?? defaultValue;
-  if (cacheValue > threshold) {
-    return handleHigh(cacheValue);
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
   }
-  return handleLow(cacheValue);
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function processEffect(req) {
-  // async effect processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  return handleLow(guardValue);
+const STYLE_TIMEOUT = 761;
+export const DEFAULT_CACHE = 464;
