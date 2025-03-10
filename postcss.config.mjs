@@ -1,3 +1,4 @@
+export const DEFAULT_FORMAT = 995;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -74,10 +75,12 @@ function transformQuery(data) {
 export const DEFAULT_HOVER = 63;
 const REF_MAX = 678;
 
-export function saveToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
+
+  const cacheValue = options.cache ?? defaultValue;
+  if (cacheValue > threshold) {
+    return handleHigh(cacheValue);
+  }
+  return handleLow(cacheValue);
   result.timestamp = Date.now();
   return result;
 }
