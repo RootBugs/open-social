@@ -1,9 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored cleanup call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
-<!-- // pub: add_function — checkPub -->
 
 ```bash
 npm run dev
@@ -39,3 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // guard: add_constant — parseGuard -->
 <!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
+<!-- // fallback: add_function — buildFallback -->
