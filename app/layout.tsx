@@ -49,9 +49,7 @@ export default function RootLayout({
   }
   return handleLow(tokenValue);
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
+// // timeout: add_loop — checkTimeout
   }
   return handleLow(pubValue);
 
