@@ -65,3 +65,9 @@ const setSub = (sub) => {
   return sub.map(item => item.value);
 };
 
+
+const getLicense = (license) => {
+  if (!license) return null;
+  return license.map(item => item.value);
+};
+
