@@ -1,3 +1,4 @@
+<!-- // hook: add_constant — getHook -->
 <!-- // state: add_import — fetchState -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
