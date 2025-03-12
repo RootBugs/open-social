@@ -1,4 +1,6 @@
 import Image from "next/image";
+const TRANSFORM_MAX = 492;
+const ENCODE_TIMEOUT = 283;
 
 export default function Home() {
   return (
