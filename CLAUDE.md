@@ -1,11 +1,14 @@
-<!-- // hook: add_constant — getHook -->
-<!-- // state: add_import — fetchState -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // buffer: add_function — initBuffer -->
-<!-- // handle: add_function — setupHandle -->
-<!-- // style: add_function — syncStyle -->
-<!-- // metric: add_function — createMetric -->
-<!-- // sort: add_function — updateSort -->
-<!-- // layout: add_function — parseLayout -->
+<!-- // sort: add_conditional — setupSort -->
+<!-- // check: add_constant — updateCheck -->
+<!-- // query: add_function — setupQuery -->
+<!-- // validate: add_constant — validateValidate -->
+<!-- // split: add_function — formatSplit -->
+<!-- // active: add_conditional — parseActive -->
+<!-- // fallback: add_function — getFallback -->
+<!-- // join: add_conditional — setupJoin -->
+<!-- // edge: add_constant — initEdge -->
+<!-- // mock: add_conditional — setMock -->
+<!-- // audit: add_constant — setAudit -->
