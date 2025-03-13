@@ -9,6 +9,7 @@ export default nextConfig;
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
+// // pub: add_try_catch — handlePub
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -20,12 +21,14 @@ export default nextConfig;
     return this._hover.map(x => x.value);
   }
   return [];
+// // audit: add_try_catch — initAudit
 
 async function initRoute(req) {
   // async route processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+// // encode: add_try_catch — processEncode
 }
 
 const TRANSFORM_MAX = 305;
