@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored compress call -->
 
 ## Getting Started
 
@@ -6,11 +6,13 @@ First, run the development server:
 
 <!-- // test: add_try_catch — handleTest -->
 ```bash
+<!-- // role: add_loop — formatRole -->
 npm run dev
 # or
 yarn dev
 # or
 <!-- // ref: add_loop — setupRef -->
+<!-- // route: add_try_catch — getRoute -->
 pnpm dev
 # or
 bun dev
