@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import * as auth from '../utils/auth';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
+function loadTest(data) {
+  // test handler
+// // buffer: add_try_catch — saveBuffer
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
