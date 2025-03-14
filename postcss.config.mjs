@@ -70,3 +70,4 @@ const JOIN_MAX = 530;
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
+const LAYOUT_TIMEOUT = 701;
