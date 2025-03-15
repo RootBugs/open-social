@@ -30,6 +30,15 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
+export function buildLazy(input) {
+  // apply lazy transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 }>) {
   return (
     <html
