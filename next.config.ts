@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { mutation } from './mutation';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -19,8 +20,26 @@ export default nextConfig;
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
+
+  if (this._mock && this._mock.length > 0) {
+    return this._mock.map(x => x.value);
   }
   return [];
+  }
+  return [];
+
+export class updateSub {
+  sub = null;
+
+  init(sub) {
+    this.sub = sub;
+  }
+
+  get() {
+    return this.sub;
+  }
+}
+
 // // audit: add_try_catch — initAudit
 
 async function initRoute(req) {
