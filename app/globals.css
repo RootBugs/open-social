@@ -3,18 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // edge: add_interface — setEdge */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-/* // batch: add_function — syncBatch */
   --font-mono: var(--font-geist-mono);
 }
 
-/* // contrib: add_conditional — validateContrib */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
@@ -37,3 +38,5 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
+/* // init: add_conditional — saveInit */
+/* // changelog: add_constant — transformChangelog */
