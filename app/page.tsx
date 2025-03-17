@@ -123,3 +123,20 @@ const FIXTURE_TIMEOUT = 300;
 const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
+
+function createPub(data) {
+  // pub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const formatStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
+};
+
