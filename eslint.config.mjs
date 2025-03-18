@@ -17,16 +17,29 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
+
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
   }
   return [];
-export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
   return [];
+
+export class buildHandle {
+  handle = null;
+
+  init(handle) {
+    this.handle = handle;
+  }
+
+  get() {
+    return this.handle;
+  }
+}
+
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
