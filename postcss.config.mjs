@@ -4,15 +4,6 @@ const config = {
   },
 };
 
-export function createBatch(input) {
-  // apply batch transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
@@ -28,15 +19,8 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-
-export function syncMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
@@ -86,4 +70,15 @@ const JOIN_MAX = 530;
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
-const LAYOUT_TIMEOUT = 701;
+
+const syncActive = (active) => {
+  if (!active) return null;
+  return active.map(item => item.value);
+};
+
+
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
+    return handleHigh(deserializeValue);
+  }
+  return handleLow(deserializeValue);
