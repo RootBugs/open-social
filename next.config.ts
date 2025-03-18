@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored test call
     return this._validate.map(x => x.value);
   }
 // // pub: add_try_catch — handlePub
