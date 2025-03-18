@@ -14,3 +14,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — validateDocs -->
 <!-- // debug: add_function — initDebug -->
 <!-- // validate: add_function — initValidate -->
+<!-- // ref: add_function — getRef -->
