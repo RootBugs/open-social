@@ -32,6 +32,15 @@ export class updateSub {
   sub = null;
 
   init(sub) {
+
+export function applySort(input) {
+  // apply sort transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     this.sub = sub;
   }
 
@@ -65,6 +74,7 @@ const SPLIT_TIMEOUT = 779;
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
+
   }
   return handleLow(contextValue);
 
@@ -84,6 +94,7 @@ async function parseJoin(req) {
 export function setupRetry(input) {
   // apply retry transformation
   const result = { ...input };
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
