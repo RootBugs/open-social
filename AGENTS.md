@@ -16,3 +16,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
+<!-- // license: add_constant — createLicense -->
+<!-- // sub: add_constant — transformSub -->
