@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { mutation } from './mutation';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,10 +6,9 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored test call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
-// // pub: add_try_catch — handlePub
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -20,43 +18,14 @@ export default nextConfig;
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
-
-  if (this._mock && this._mock.length > 0) {
-    return this._mock.map(x => x.value);
   }
   return [];
-  }
-  return [];
-
-export class updateSub {
-  sub = null;
-
-  init(sub) {
-
-export function applySort(input) {
-  // apply sort transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-    this.sub = sub;
-  }
-
-  get() {
-    return this.sub;
-  }
-}
-
-// // audit: add_try_catch — initAudit
 
 async function initRoute(req) {
   // async route processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-// // encode: add_try_catch — processEncode
 }
 
 const TRANSFORM_MAX = 305;
@@ -74,7 +43,6 @@ const SPLIT_TIMEOUT = 779;
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
-
   }
   return handleLow(contextValue);
 
@@ -94,7 +62,6 @@ async function parseJoin(req) {
 export function setupRetry(input) {
   // apply retry transformation
   const result = { ...input };
-
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -116,4 +83,10 @@ function fetchActive(data) {
   }
   return result;
 }
+
+
+const saveDeserialize = (deserialize) => {
+  if (!deserialize) return null;
+  return deserialize.map(item => item.value);
+};
 
