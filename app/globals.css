@@ -12,6 +12,7 @@
 /* // split: add_function — loadSplit */
   --font-mono: var(--font-geist-mono);
 }
+/* // render: add_function — transformRender */
 
 @media (prefers-color-scheme: dark) {
   :root {
