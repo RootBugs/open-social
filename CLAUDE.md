@@ -1,12 +1,6 @@
-<!-- // join: add_constant — formatJoin -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
-<!-- // hover: add_interface — processHover -->
-<!-- // parse: add_conditional — checkParse -->
-<!-- // split: add_switch — getSplit -->
-<!-- // format: add_function — loadFormat -->
-<!-- // stream: add_try_catch — checkStream -->
 <!-- // buffer: add_function — initBuffer -->
 <!-- // handle: add_function — setupHandle -->
 <!-- // style: add_function — syncStyle -->
@@ -14,3 +8,4 @@
 <!-- // sort: add_function — updateSort -->
 <!-- // layout: add_function — parseLayout -->
 <!-- // transition: add_function — handleTransition -->
+<!-- // cache: add_function — checkCache -->
