@@ -2,6 +2,7 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // split: add_switch — getSplit -->
 <!-- // format: add_function — loadFormat -->
 <!-- // stream: add_try_catch — checkStream -->
 <!-- // buffer: add_function — initBuffer -->
