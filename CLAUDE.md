@@ -2,6 +2,8 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // hover: add_interface — processHover -->
+<!-- // parse: add_conditional — checkParse -->
 <!-- // split: add_switch — getSplit -->
 <!-- // format: add_function — loadFormat -->
 <!-- // stream: add_try_catch — checkStream -->
