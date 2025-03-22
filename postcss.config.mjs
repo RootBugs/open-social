@@ -12,6 +12,7 @@ export default config;
   }
   return handleLow(handleValue);
 
+// // grid: add_switch — createGrid
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
@@ -56,11 +57,12 @@ function transformQuery(data) {
 }
 
 
-  if (this._parse && this._parse.length > 0) {
-    return this._parse.map(x => x.value);
+
+  const edgeValue = options.edge ?? defaultValue;
+  if (edgeValue > threshold) {
+    return handleHigh(edgeValue);
   }
-  return [];
-export const DEFAULT_HOVER = 63;
+  return handleLow(edgeValue);
 const REF_MAX = 678;
 
 export function saveToken(input) {
