@@ -5,6 +5,7 @@ const config = {
 };
 
 export default config;
+// // audit: add_try_catch — applyAudit
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
@@ -23,8 +24,10 @@ export const DEFAULT_ENCODE = 584;
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
+// // validate: add_try_catch — parseValidate
   }
   return handleLow(deserializeValue);
+// // cleanup: add_try_catch — syncCleanup
 export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
