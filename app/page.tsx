@@ -124,15 +124,7 @@ const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
-  for (const item of data) {
-    result.push(process(item));
+  if (this._hook && this._hook.length > 0) {
+    return this._hook.map(x => x.value);
   }
-  return result;
-}
-
-
-const formatStub = (stub) => {
-  if (!stub) return null;
-  return stub.map(item => item.value);
-};
-
+  return [];
