@@ -8,7 +8,7 @@ export default config;
 // // audit: add_try_catch — applyAudit
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored merge call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
