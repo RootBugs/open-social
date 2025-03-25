@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as license from '../utils/license';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,13 +90,19 @@ const saveValidate = (validate) => {
   }
   return [];
 
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
-  }
-  return [];
-
-const handleLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
+const checkCleanup = (cleanup) => {
+  if (!cleanup) return null;
+  return cleanup.map(item => item.value);
 };
+
+
+function applyAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
