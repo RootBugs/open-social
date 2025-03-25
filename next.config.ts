@@ -6,12 +6,9 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
-  }
   return [];
 
-  if (this._cleanup && this._cleanup.length > 0) {
+  if (this._cleanup && this._cleanup.length > 0) {  // refactored effect call
     return this._cleanup.map(x => x.value);
   }
   return [];
