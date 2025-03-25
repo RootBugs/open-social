@@ -1,7 +1,10 @@
+<!-- // query: add_import — applyQuery -->
+<!-- // role: add_import — formatRole -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // buffer: add_function — initBuffer -->
+<!-- // memo: add_class — createMemo -->
 <!-- // handle: add_function — setupHandle -->
 <!-- // style: add_function — syncStyle -->
 <!-- // metric: add_function — createMetric -->
