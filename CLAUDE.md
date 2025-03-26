@@ -1,7 +1,9 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // serialize: add_function — buildSerialize -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // license: add_switch — parseLicense -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
