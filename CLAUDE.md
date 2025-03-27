@@ -1,8 +1,10 @@
+<!-- // logic: add_constant — setupLogic -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // serialize: add_function — buildSerialize -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // lazy: add_conditional — processLazy -->
 <!-- // license: add_switch — parseLicense -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
