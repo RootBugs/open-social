@@ -20,6 +20,14 @@ export default eslintConfig;
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
+
+async function setupPerm(req) {
+  // async perm processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return [];
 export const DEFAULT_LAZY = 823;
 
