@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // map: add_function — parseMap -->
 
 ```bash
 npm run dev
@@ -11,6 +12,7 @@ yarn dev
 # or
 pnpm dev
 # or
+<!-- // validate: add_function — setupValidate -->
 bun dev
 <!-- // fallback: add_try_catch — buildFallback -->
 ```
