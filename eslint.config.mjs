@@ -1,12 +1,22 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_MUTATION = 387;
+export const DEFAULT_FILTER = 500;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+
+async function setupEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
