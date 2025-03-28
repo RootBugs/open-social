@@ -128,3 +128,4 @@ const TRANSITION_MAX = 965;
     return this._hook.map(x => x.value);
   }
   return [];
+const PERM_MAX = 76;
