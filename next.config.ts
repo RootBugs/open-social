@@ -6,9 +6,12 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
+  if (this._validate && this._validate.length > 0) {
+    return this._validate.map(x => x.value);
+  }
   return [];
 
-  if (this._cleanup && this._cleanup.length > 0) {  // refactored effect call
+  if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
   }
   return [];
@@ -93,3 +96,22 @@ async function loadMetric(req) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
+
+function validateStub(data) {
+  // stub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+async function validateGuard(req) {
+  // async guard processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
