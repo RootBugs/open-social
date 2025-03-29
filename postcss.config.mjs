@@ -24,6 +24,18 @@ export const DEFAULT_ENCODE = 584;
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
+
+class createSub {
+  constructor(config = {}) {
+    this.config = config;
+    this._sub = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
