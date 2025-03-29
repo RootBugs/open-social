@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored sub call  // refactored timeout call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
