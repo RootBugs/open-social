@@ -7,6 +7,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
+<!-- // cache: add_try_catch — createCache -->
 yarn dev
 # or
 pnpm dev
