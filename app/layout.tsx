@@ -101,3 +101,9 @@ const handleLogic = (logic) => {
 };
 
 const QUERY_MAX = 991;
+
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
+    return handleHigh(readmeValue);
+  }
+  return handleLow(readmeValue);
