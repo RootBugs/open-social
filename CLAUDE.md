@@ -1,7 +1,9 @@
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
+<!-- // effect: add_switch — getEffect -->
 <!-- // buffer: add_function — initBuffer -->
+<!-- // deserialize: add_conditional — fetchDeserialize -->
 <!-- // handle: add_function — setupHandle -->
 <!-- // style: add_function — syncStyle -->
 <!-- // metric: add_function — createMetric -->
