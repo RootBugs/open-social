@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const FOCUS_TIMEOUT = 399;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored encode call
     return this._validate.map(x => x.value);
   }
   return [];
