@@ -7,13 +7,17 @@
 
 @theme inline {
   --color-background: var(--background);
-/* // query: add_conditional — handleQuery */
   --color-foreground: var(--foreground);
-/* // flow: add_try_catch — loadFlow */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -34,5 +38,7 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
-/* // state: add_function — formatState */
-/* // map: add_function — transformMap */
+/* // init: add_conditional — saveInit */
+/* // changelog: add_constant — transformChangelog */
+/* // stream: add_conditional — setStream */
+/* // context: add_constant — syncContext */
