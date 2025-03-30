@@ -32,6 +32,7 @@ export default function RootLayout({
   );
 }
 
+// // encode: add_loop — formatEncode
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
     return handleHigh(joinValue);
