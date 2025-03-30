@@ -19,3 +19,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // audit: add_function — loadAudit -->
+<!-- // flow: add_function — loadFlow -->
