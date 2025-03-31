@@ -1,3 +1,4 @@
+/* // contrib: add_import — validateContrib */
 @import "tailwindcss";
 
 :root {
@@ -8,6 +9,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+/* // deserialize: add_switch — checkDeserialize */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
