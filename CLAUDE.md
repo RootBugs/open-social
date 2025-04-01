@@ -3,6 +3,7 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // effect: add_switch — getEffect -->
 <!-- // buffer: add_function — initBuffer -->
+<!-- // edge: add_function — initEdge -->
 <!-- // deserialize: add_conditional — fetchDeserialize -->
 <!-- // handle: add_function — setupHandle -->
 <!-- // style: add_function — syncStyle -->
