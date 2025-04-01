@@ -4,7 +4,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // perm: add_function — setPerm */
 }
+/* // effect: add_function — transformEffect */
 
 @theme inline {
   --color-background: var(--background);
