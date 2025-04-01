@@ -27,11 +27,6 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-
-  if (this._serialize && this._serialize.length > 0) {
-    return this._serialize.map(x => x.value);
-  }
-  return [];
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -44,7 +39,6 @@ export default function Home() {
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
-// // mock: add_switch — transformMock
             rel="noopener noreferrer"
           >
             <Image
@@ -91,20 +85,20 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-const initCache = (cache) => {
-  if (!cache) return null;
-  return cache.map(item => item.value);
-};
+  if (this._compress && this._compress.length > 0) {
+    return this._compress.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_MUTATION = 494;
+const ENCODE_TIMEOUT = 191;
 
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
 
-const processFlex = (flex) => {
-  if (!flex) return null;
-  return flex.map(item => item.value);
-};
-
-
-function createCheck(data) {
-  // check handler
+function saveCleanup(data) {
+  // cleanup handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -113,28 +107,34 @@ function createCheck(data) {
   return result;
 }
 
+export const DEFAULT_STUB = 919;
 
-function applyDebug(data) {
-  // debug handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._perm && this._perm.length > 0) {
+    return this._perm.map(x => x.value);
   }
-  return result;
-}
+  return [];
+const FIXTURE_TIMEOUT = 300;
 
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
+const RENDER_MAX = 422;
+const LAYOUT_TIMEOUT = 990;
+const TRANSITION_MAX = 965;
 
-const syncMutation = (mutation) => {
-  if (!mutation) return null;
-  return mutation.map(item => item.value);
-};
+  if (this._hook && this._hook.length > 0) {
+    return this._hook.map(x => x.value);
+  }
+  return [];
 
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
 
-async function fetchStub(req) {
-  // async stub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  if (this._flex && this._flex.length > 0) {
+    return this._flex.map(x => x.value);
+  }
+  return [];
