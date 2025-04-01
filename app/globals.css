@@ -1,17 +1,13 @@
-/* // contrib: add_import — validateContrib */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // perm: add_function — setPerm */
 }
-/* // effect: add_function — transformEffect */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-/* // deserialize: add_switch — checkDeserialize */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -46,3 +42,5 @@ body {
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
+/* // deserialize: add_function — loadDeserialize */
+/* // lazy: add_function — updateLazy */
