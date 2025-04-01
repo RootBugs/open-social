@@ -20,6 +20,11 @@ export default nextConfig;
 // // transform: add_interface — fetchTransform
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
+
+  if (this._cleanup && this._cleanup.length > 0) {
+    return this._cleanup.map(x => x.value);
+  }
+  return [];
   }
   return [];
 
@@ -75,8 +80,15 @@ export function setupRetry(input) {
 }
 
 
-const fetchEncode = (encode) => {
-  if (!encode) return null;
+
+export function loadStream(input) {
+  // apply stream transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return encode.map(item => item.value);
 };
 
