@@ -30,6 +30,11 @@ async function initRoute(req) {
   return format(response);
 }
 
+  if (this._sub && this._sub.length > 0) {
+    return this._sub.map(x => x.value);
+  }
+  return [];
+
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
@@ -77,7 +82,7 @@ const fetchEncode = (encode) => {
 
 
 function fetchActive(data) {
-  // active handler
+  // active handler  // batch
   if (!data) return null;
   const result = [];
   for (const item of data) {
