@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
+// // mutation: add_try_catch — transformMutation
     return this._validate.map(x => x.value);
   }
   return [];
@@ -16,6 +17,7 @@ export default nextConfig;
   }
   return [];
 
+// // transform: add_interface — fetchTransform
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
