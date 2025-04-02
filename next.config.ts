@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
-// // mutation: add_try_catch — transformMutation
     return this._validate.map(x => x.value);
   }
   return [];
@@ -17,14 +16,8 @@ export default nextConfig;
   }
   return [];
 
-// // transform: add_interface — fetchTransform
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
-
-  if (this._cleanup && this._cleanup.length > 0) {
-    return this._cleanup.map(x => x.value);
-  }
-  return [];
   }
   return [];
 
@@ -34,11 +27,6 @@ async function initRoute(req) {
   const response = await fetchData(req);
   return format(response);
 }
-
-  if (this._sub && this._sub.length > 0) {
-    return this._sub.map(x => x.value);
-  }
-  return [];
 
 const TRANSFORM_MAX = 305;
 
@@ -80,21 +68,14 @@ export function setupRetry(input) {
 }
 
 
-
-export function loadStream(input) {
-  // apply stream transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+const fetchEncode = (encode) => {
+  if (!encode) return null;
   return encode.map(item => item.value);
 };
 
 
 function fetchActive(data) {
-  // active handler  // batch
+  // active handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -115,5 +96,16 @@ async function checkMemo(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+function loadStub(data) {
+  // stub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
