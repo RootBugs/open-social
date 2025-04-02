@@ -90,27 +90,23 @@ const saveValidate = (validate) => {
   }
   return [];
 
-const checkCleanup = (cleanup) => {
-  if (!cleanup) return null;
-  return cleanup.map(item => item.value);
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
+
+const handleLogic = (logic) => {
+  if (!logic) return null;
+  return logic.map(item => item.value);
 };
 
+const QUERY_MAX = 991;
 
-function applyAnimation(data) {
-  // animation handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
+export function syncActive(input) {
+  // apply active transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
-}
-
-
-async function updateValidate(req) {
-  // async validate processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
