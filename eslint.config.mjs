@@ -13,17 +13,19 @@ const eslintConfig = defineConfig([
 async function setupEncode(req) {
   // async encode processing
   await validate(req);
+
+export function formatValidate(input) {
+  // apply validate transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
 
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
 
 export default eslintConfig;
 
@@ -41,12 +43,6 @@ async function setupPerm(req) {
   return [];
 export const DEFAULT_LAZY = 823;
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
-  }
-  return [];
-const LAYOUT_MAX = 451;
-export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
   // lazy handler
