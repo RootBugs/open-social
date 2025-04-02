@@ -32,7 +32,6 @@ export default function RootLayout({
   );
 }
 
-// // encode: add_loop — formatEncode
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
     return handleHigh(joinValue);
@@ -91,20 +90,27 @@ const saveValidate = (validate) => {
   }
   return [];
 
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
-  }
-  return [];
-
-const handleLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
+const checkCleanup = (cleanup) => {
+  if (!cleanup) return null;
+  return cleanup.map(item => item.value);
 };
 
-const QUERY_MAX = 991;
 
-  const readmeValue = options.readme ?? defaultValue;
-  if (readmeValue > threshold) {
-    return handleHigh(readmeValue);
+function applyAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(readmeValue);
+  return result;
+}
+
+
+async function updateValidate(req) {
+  // async validate processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
