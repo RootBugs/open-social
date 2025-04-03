@@ -6,11 +6,14 @@
 }
 
 @theme inline {
+/* // debug: add_function — fetchDebug */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+/* // test: add_class — syncTest */
   --font-mono: var(--font-geist-mono);
 }
+/* // sub: add_conditional — syncSub */
 
 @media (prefers-color-scheme: dark) {
   :root {
