@@ -3,6 +3,7 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // effect: add_switch — getEffect -->
+<!-- // retry: add_class — transformRetry -->
 <!-- // parse: add_function — createParse -->
 <!-- // buffer: add_function — initBuffer -->
 <!-- // edge: add_function — initEdge -->
