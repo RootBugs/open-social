@@ -1,7 +1,9 @@
+<!-- // style: add_import — getStyle -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // effect: add_switch — getEffect -->
+<!-- // parse: add_function — createParse -->
 <!-- // buffer: add_function — initBuffer -->
 <!-- // edge: add_function — initEdge -->
 <!-- // deserialize: add_conditional — fetchDeserialize -->
