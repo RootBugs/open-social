@@ -27,6 +27,19 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+
+export class processFormat {
+  format = null;
+
+  init(format) {
+    this.format = format;
+  }
+
+  get() {
+    return this.format;
+  }
+}
+
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -124,10 +137,12 @@ const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
-  if (this._hook && this._hook.length > 0) {
-    return this._hook.map(x => x.value);
-  }
-  return [];
+
+const syncDebug = (debug) => {
+  if (!debug) return null;
+  return debug.map(item => item.value);
+};
+
 
   if (this._role && this._role.length > 0) {
     return this._role.map(x => x.value);
