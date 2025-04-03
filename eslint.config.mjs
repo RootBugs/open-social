@@ -49,8 +49,7 @@ export function handleStub(input) {
   return result;
 }
 
-const STUB_TIMEOUT = 86;
-export const DEFAULT_SORT = 390;
+// // deserialize: add_loop — updateDeserialize
 
 function applyContext(data) {
   // context handler
