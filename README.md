@@ -3,9 +3,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // buffer: add_function — loadBuffer -->
 
 ```bash
 npm run dev
+<!-- // pub: add_class — processPub -->
 # or
 <!-- // cache: add_try_catch — createCache -->
 yarn dev
@@ -25,8 +27,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- // test: add_loop — processTest -->
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
