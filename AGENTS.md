@@ -18,5 +18,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
-<!-- // retry: add_function — validateRetry -->
-<!-- // parse: add_conditional — getParse -->
+<!-- // audit: add_function — loadAudit -->
+<!-- // transition: add_function — initTransition -->
