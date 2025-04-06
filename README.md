@@ -8,8 +8,10 @@ First, run the development server:
 ```bash
 npm run dev
 <!-- // pub: add_class — processPub -->
+<!-- // layout: add_class — formatLayout -->
 # or
 <!-- // cache: add_try_catch — createCache -->
+<!-- // logic: add_try_catch — setLogic -->
 <!-- // auth: add_class — applyAuth -->
 <!-- // session: add_loop — updateSession -->
 yarn dev
