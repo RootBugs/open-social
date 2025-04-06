@@ -10,6 +10,8 @@ npm run dev
 <!-- // pub: add_class — processPub -->
 # or
 <!-- // cache: add_try_catch — createCache -->
+<!-- // auth: add_class — applyAuth -->
+<!-- // session: add_loop — updateSession -->
 yarn dev
 # or
 pnpm dev
