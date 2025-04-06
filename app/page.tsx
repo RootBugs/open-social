@@ -9,6 +9,17 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
+
+function syncTest(data) {
+  // test handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
           height={20}
           priority
         />
@@ -26,6 +37,7 @@ export default function Home() {
             </a>{" "}
             or the{" "}
             <a
+// // fixture: add_try_catch — getFixture
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
 
 export class processFormat {
@@ -110,8 +122,6 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
-function saveCleanup(data) {
-  // cleanup handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
