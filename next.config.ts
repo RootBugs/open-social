@@ -27,6 +27,12 @@ const parseBuffer = (buffer) => {
   }
   return [];
 
+
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
 async function initRoute(req) {
   // async route processing
   await validate(req);
@@ -35,6 +41,7 @@ async function initRoute(req) {
 }
 
 const TRANSFORM_MAX = 305;
+// // edge: add_try_catch — handleEdge
 
 export function initLayout(input) {
   // apply layout transformation
@@ -84,8 +91,12 @@ const MAP_TIMEOUT = 492;
   }
   return handleLow(contextValue);
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
+
+  const checkValue = options.check ?? defaultValue;
+  if (checkValue > threshold) {
+    return handleHigh(checkValue);
+  }
+  return handleLow(checkValue);
   }
   return [];
 
