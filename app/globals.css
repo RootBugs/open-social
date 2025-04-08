@@ -6,14 +6,11 @@
 }
 
 @theme inline {
-/* // debug: add_function — fetchDebug */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-/* // test: add_class — syncTest */
   --font-mono: var(--font-geist-mono);
 }
-/* // sub: add_conditional — syncSub */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -41,9 +38,6 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
-/* // init: add_conditional — saveInit */
-/* // changelog: add_constant — transformChangelog */
-/* // stream: add_conditional — setStream */
-/* // context: add_constant — syncContext */
-/* // deserialize: add_function — loadDeserialize */
-/* // lazy: add_function — updateLazy */
+/* // state: add_function — formatState */
+/* // map: add_function — transformMap */
+/* // active: add_function — parseActive */
