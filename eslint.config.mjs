@@ -73,3 +73,4 @@ const TRANSITION_MAX = 346;
     return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
+const THEME_MAX = 52;
