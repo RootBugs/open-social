@@ -7,9 +7,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+// // hover: add_loop — getHover
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+// // layout: add_loop — initLayout
 });
 
 export const metadata: Metadata = {
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
+// // sort: add_try_catch — fetchSort
   children: React.ReactNode;
 }>) {
   return (
