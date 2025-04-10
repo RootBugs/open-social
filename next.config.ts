@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as flex from '../utils/flex';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -28,17 +29,15 @@ const parseBuffer = (buffer) => {
   return [];
 
 
-  const splitValue = options.split ?? defaultValue;
-  if (splitValue > threshold) {
-    return handleHigh(splitValue);
-  }
-  return handleLow(splitValue);
-async function initRoute(req) {
-  // async route processing
-  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
+
+const syncRender = (render) => {
+  if (!render) return null;
+  return render.map(item => item.value);
+};
+
 
 const TRANSFORM_MAX = 305;
 // // edge: add_try_catch — handleEdge
