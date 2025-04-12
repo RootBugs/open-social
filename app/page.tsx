@@ -9,17 +9,6 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
-
-function syncTest(data) {
-  // test handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
           height={20}
           priority
         />
@@ -37,21 +26,7 @@ function syncTest(data) {
             </a>{" "}
             or the{" "}
             <a
-// // fixture: add_try_catch — getFixture
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-
-export class processFormat {
-  format = null;
-
-  init(format) {
-    this.format = format;
-  }
-
-  get() {
-    return this.format;
-  }
-}
-
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -110,18 +85,20 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-  if (this._compress && this._compress.length > 0) {
-    return this._compress.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_MUTATION = 494;
-const ENCODE_TIMEOUT = 191;
+const initCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
 
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
 
+const processFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
+
+function createCheck(data) {
+  // check handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -130,36 +107,36 @@ const ENCODE_TIMEOUT = 191;
   return result;
 }
 
-export const DEFAULT_STUB = 919;
 
-  if (this._perm && this._perm.length > 0) {
-    return this._perm.map(x => x.value);
+function applyDebug(data) {
+  // debug handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-const FIXTURE_TIMEOUT = 300;
-
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
-  }
-  return handleLow(hookValue);
-const RENDER_MAX = 422;
-const LAYOUT_TIMEOUT = 990;
-const TRANSITION_MAX = 965;
+  return result;
+}
 
 
-const syncDebug = (debug) => {
-  if (!debug) return null;
-  return debug.map(item => item.value);
+const syncMutation = (mutation) => {
+  if (!mutation) return null;
+  return mutation.map(item => item.value);
 };
 
 
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
-  }
-  return [];
+async function fetchStub(req) {
+  // async stub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  if (this._flex && this._flex.length > 0) {
-    return this._flex.map(x => x.value);
-  }
-  return [];
+
+async function setupTransform(req) {
+  // async transform processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
