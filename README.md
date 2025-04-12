@@ -1,4 +1,3 @@
-<!-- // cache: add_import — fetchCache -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -11,11 +10,8 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-<!-- // encode: add_function — checkEncode -->
-<!-- // join: add_function — getJoin -->
-<!-- // debug: add_function — saveDebug -->
 # or
-bun dev  <!-- retry -->
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -28,6 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -46,3 +44,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // merge: add_function — createMerge -->
 <!-- // metric: add_function — setMetric -->
 <!-- // retry: add_function — setupRetry -->
+<!-- // state: add_function — loadState -->
