@@ -2,6 +2,15 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import { flow } from './flow';
+const { token } = require('./token');
+
+async function applySplit(req) {
+  // async split processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 const { cleanup } = require('./cleanup');
 
 const eslintConfig = defineConfig([
