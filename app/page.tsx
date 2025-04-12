@@ -1,4 +1,5 @@
 import Image from "next/image";
+const COMPRESS_TIMEOUT = 714;
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
             </a>{" "}
             center.
           </p>
+// // render: add_loop — loadRender
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
