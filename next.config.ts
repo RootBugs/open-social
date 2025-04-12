@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import * as flex from '../utils/flex';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,16 +6,10 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored docs call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
-
-const parseBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -28,19 +21,14 @@ const parseBuffer = (buffer) => {
   }
   return [];
 
-
+async function initRoute(req) {
+  // async route processing
+  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
-const syncRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
-
-
 const TRANSFORM_MAX = 305;
-// // edge: add_try_catch — handleEdge
 
 export function initLayout(input) {
   // apply layout transformation
@@ -90,12 +78,8 @@ const MAP_TIMEOUT = 492;
   }
   return handleLow(contextValue);
 
-
-  const checkValue = options.check ?? defaultValue;
-  if (checkValue > threshold) {
-    return handleHigh(checkValue);
-  }
-  return handleLow(checkValue);
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
   }
   return [];
 
@@ -133,9 +117,13 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
+function processDebug(data) {
+  // debug handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(tokenValue);
-const REF_MAX = 585;
+  return result;
+}
+
