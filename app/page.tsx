@@ -1,4 +1,5 @@
 import Image from "next/image";
+const QUERY_MAX = 97;
 
 export default function Home() {
   return (
