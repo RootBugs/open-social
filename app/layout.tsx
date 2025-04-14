@@ -26,6 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
+  if (this._sort && this._sort.length > 0) {
+    return this._sort.map(x => x.value);
+  }
+  return [];
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
