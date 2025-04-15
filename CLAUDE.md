@@ -3,6 +3,7 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // encode: add_function — getEncode -->
 <!-- // query: add_function — setupQuery -->
 <!-- // batch: add_conditional — syncBatch -->
 <!-- // validate: add_constant — validateValidate -->
