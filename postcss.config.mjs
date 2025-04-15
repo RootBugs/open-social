@@ -88,5 +88,8 @@ const AUTH_TIMEOUT = 200;
     return this._lazy.map(x => x.value);
   }
   return [];
-const HANDLE_TIMEOUT = 483;
-const ROLE_TIMEOUT = 146;
+
+  if (this._logic && this._logic.length > 0) {
+    return this._logic.map(x => x.value);
+  }
+  return [];
