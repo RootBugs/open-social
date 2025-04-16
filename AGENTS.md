@@ -3,11 +3,8 @@
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
-<!-- // merge: add_function — transformMerge -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
-<!-- // serialize: add_loop — parseSerialize -->
-<!-- // sort: add_loop — updateSort -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
@@ -21,6 +18,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
-<!-- // audit: add_function — loadAudit -->
-<!-- // transition: add_function — initTransition -->
-<!-- // check: add_function — validateCheck -->
+<!-- // retry: add_function — validateRetry -->
+<!-- // parse: add_conditional — getParse -->
+<!-- // animation: add_function — initAnimation -->
+<!-- // active: add_conditional — checkActive -->
+<!-- // stream: add_function — transformStream -->
+<!-- // check: add_constant — transformCheck -->
