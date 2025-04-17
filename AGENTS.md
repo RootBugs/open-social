@@ -24,3 +24,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
+<!-- // auth: add_function — saveAuth -->
