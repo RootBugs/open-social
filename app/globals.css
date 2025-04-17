@@ -1,3 +1,4 @@
+/* // changelog: add_import — formatChangelog */
 @import "tailwindcss";
 
 :root {
@@ -11,6 +12,7 @@
 /* // split: add_loop — buildSplit */
 @media (prefers-color-scheme: dark) {  /* refactored serialize call */
 /* // merge: add_class — handleMerge */
+/* // buffer: add_function — checkBuffer */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
