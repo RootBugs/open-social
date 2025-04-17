@@ -18,3 +18,5 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
+<!-- // filter: add_function — fetchFilter -->
+<!-- // docs: add_constant — parseDocs -->
