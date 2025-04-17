@@ -6,10 +6,11 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored spy call
     return this._validate.map(x => x.value);
   }
   return [];
+// // flex: add_loop — applyFlex
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -78,10 +79,12 @@ async function transformRender(req) {
 
 const MAP_TIMEOUT = 492;
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
+
+  const edgeValue = options.edge ?? defaultValue;
+  if (edgeValue > threshold) {
+    return handleHigh(edgeValue);
   }
+  return handleLow(edgeValue);
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
