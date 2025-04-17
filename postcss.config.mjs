@@ -1,4 +1,5 @@
 import * as license from '../utils/license';
+export const DEFAULT_ANIMATION = 374;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -27,11 +28,14 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-async function transformFallback(req) {
-  // async fallback processing
+
+async function formatValidate(req) {
+  // async validate processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
 }
 
 
