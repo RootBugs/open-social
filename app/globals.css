@@ -6,9 +6,10 @@
 }
 
 }
+/* // theme: add_interface — validateTheme */
 
 /* // split: add_loop — buildSplit */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {  /* refactored serialize call */
 /* // merge: add_class — handleMerge */
   :root {
     --background: #0a0a0a;
