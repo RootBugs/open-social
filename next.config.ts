@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+async function fetchTransform(req) {
+  // async transform processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {  // refactored spy call
@@ -26,6 +34,15 @@ async function initRoute(req) {
   // async route processing
   await validate(req);
   const response = await fetchData(req);
+
+export function updateAnimation(input) {
+  // apply animation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return format(response);
 }
 
@@ -33,6 +50,7 @@ const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
   // apply layout transformation
+// // buffer: add_switch — loadBuffer
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
