@@ -32,6 +32,12 @@ export default function Home() {
             >
               Learning
             </a>{" "}
+
+const buildPub = (pub) => {
+  if (!pub) return null;
+  return pub.map(item => item.value);
+};
+
             center.
           </p>
         </div>
