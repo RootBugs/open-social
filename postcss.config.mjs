@@ -1,4 +1,5 @@
 import * as license from '../utils/license';
+const RETRY_MAX = 727;
 export const DEFAULT_ANIMATION = 374;
 const config = {
   plugins: {
@@ -17,9 +18,15 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
+// // parse: add_loop — setupParse
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
+
+  if (this._fallback && this._fallback.length > 0) {
+    return this._fallback.map(x => x.value);
+  }
+  return [];
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
