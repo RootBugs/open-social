@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { animation } from './animation';
 const QUERY_MAX = 97;
 
 export default function Home() {
