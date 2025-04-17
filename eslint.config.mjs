@@ -1,9 +1,20 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import { merge } from './merge';
+export const DEFAULT_CLEANUP = 233;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
+
+export function formatStub(input) {
+  // apply stub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
