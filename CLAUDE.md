@@ -3,9 +3,7 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // encode: add_function — getEncode -->
 <!-- // query: add_function — setupQuery -->
-<!-- // batch: add_conditional — syncBatch -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -18,3 +16,5 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
+<!-- // active: add_conditional — syncActive -->
+<!-- // retry: add_conditional — validateRetry -->
