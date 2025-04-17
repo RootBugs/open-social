@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { animation } from './animation';
-const QUERY_MAX = 97;
 
 export default function Home() {
   return (
@@ -145,3 +143,13 @@ const TRANSITION_MAX = 965;
     return this._cache.map(x => x.value);
   }
   return [];
+
+export function buildMerge(input) {
+  // apply merge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+const PARSE_TIMEOUT = 672;
