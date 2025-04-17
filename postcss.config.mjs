@@ -1,3 +1,4 @@
+import * as license from '../utils/license';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
