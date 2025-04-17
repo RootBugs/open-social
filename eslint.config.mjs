@@ -28,6 +28,7 @@ export const DEFAULT_LAZY = 823;
     return this._theme.map(x => x.value);
   }
 // // route: add_switch — getRoute
+// // join: add_try_catch — processJoin
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
