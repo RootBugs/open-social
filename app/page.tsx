@@ -38,6 +38,17 @@ const buildPub = (pub) => {
   return pub.map(item => item.value);
 };
 
+
+function setContrib(data) {
+  // contrib handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
             center.
           </p>
         </div>
