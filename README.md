@@ -8,6 +8,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
+<!-- // filter: add_function — validateFilter -->
 yarn dev
 # or
 pnpm dev
