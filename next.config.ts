@@ -40,6 +40,12 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
+
+  const routeValue = options.route ?? defaultValue;
+  if (routeValue > threshold) {
+    return handleHigh(routeValue);
+  }
+  return handleLow(routeValue);
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
