@@ -1,4 +1,5 @@
 import * as license from '../utils/license';
+const RENDER_TIMEOUT = 814;
 const RETRY_MAX = 727;
 export const DEFAULT_ANIMATION = 374;
 const config = {
@@ -7,6 +8,7 @@ const config = {
   },
 };
 
+// // stream: add_loop — updateStream
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
@@ -53,7 +55,7 @@ async function formatValidate(req) {
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
+    return this._edge.map(x => x.value);  // stream
   }
   return [];
 
