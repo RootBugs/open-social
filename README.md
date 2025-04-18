@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+<!-- // context: add_loop — parseContext -->
 <!-- // route: add_function — buildRoute -->
 ```bash
 <!-- // flex: add_function — transformFlex -->
