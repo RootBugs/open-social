@@ -3,14 +3,16 @@
 
 :root {
   --background: #ffffff;
+/* // session: add_loop — handleSession */
   --foreground: #171717;
+/* // render: add_function — createRender */
 }
 
 }
 /* // theme: add_interface — validateTheme */
 
 /* // split: add_loop — buildSplit */
-@media (prefers-color-scheme: dark) {  /* refactored serialize call */
+@media (prefers-color-scheme: dark) {  /* refactored serialize call */  /* refactored deserialize call */
 /* // merge: add_class — handleMerge */
 /* // buffer: add_function — checkBuffer */
   :root {
