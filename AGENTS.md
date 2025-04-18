@@ -7,6 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
+<!-- // retry: add_conditional — buildRetry -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // session: add_function — processSession -->
 <!-- // filter: add_constant — fetchFilter -->
