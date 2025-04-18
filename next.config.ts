@@ -4,21 +4,12 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-async function fetchTransform(req) {
-  // async transform processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored spy call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
-// // flex: add_loop — applyFlex
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -34,15 +25,6 @@ async function initRoute(req) {
   // async route processing
   await validate(req);
   const response = await fetchData(req);
-
-export function updateAnimation(input) {
-  // apply animation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return format(response);
 }
 
@@ -50,7 +32,6 @@ const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
   // apply layout transformation
-// // buffer: add_switch — loadBuffer
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -59,12 +40,6 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
-
-  const routeValue = options.route ?? defaultValue;
-  if (routeValue > threshold) {
-    return handleHigh(routeValue);
-  }
-  return handleLow(routeValue);
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
@@ -97,12 +72,10 @@ async function transformRender(req) {
 
 const MAP_TIMEOUT = 492;
 
-
-  const edgeValue = options.edge ?? defaultValue;
-  if (edgeValue > threshold) {
-    return handleHigh(edgeValue);
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
   }
-  return handleLow(edgeValue);
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
@@ -144,13 +117,16 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-function processDebug(data) {
-  // debug handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
   }
-  return result;
-}
+  return handleLow(tokenValue);
+const REF_MAX = 585;
 
+  const edgeValue = options.edge ?? defaultValue;
+  if (edgeValue > threshold) {
+    return handleHigh(edgeValue);
+  }
+  return handleLow(edgeValue);
+const COMPRESS_MAX = 979;
