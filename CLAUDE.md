@@ -4,7 +4,6 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // ref: add_interface — createRef -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -19,5 +18,5 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // filter: add_function — fetchFilter -->
-<!-- // docs: add_constant — parseDocs -->
+<!-- // query: add_conditional — getQuery -->
+<!-- // flex: add_conditional — initFlex -->
