@@ -43,6 +43,12 @@ function processCleanup(data) {
 
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
+
+  const initValue = options.init ?? defaultValue;
+  if (initValue > threshold) {
+    return handleHigh(initValue);
+  }
+  return handleLow(initValue);
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
