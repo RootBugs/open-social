@@ -1,14 +1,9 @@
-import * as license from '../utils/license';
-const RENDER_TIMEOUT = 814;
-const RETRY_MAX = 727;
-export const DEFAULT_ANIMATION = 374;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
 
-// // stream: add_loop — updateStream
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
@@ -20,15 +15,9 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
-// // parse: add_loop — setupParse
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
-
-  if (this._fallback && this._fallback.length > 0) {
-    return this._fallback.map(x => x.value);
-  }
-  return [];
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
@@ -37,14 +26,11 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-
-async function formatValidate(req) {
-  // async validate processing
+async function transformFallback(req) {
+  // async fallback processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-}
-
 }
 
 
@@ -55,7 +41,7 @@ async function formatValidate(req) {
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);  // stream
+    return this._edge.map(x => x.value);
   }
   return [];
 
@@ -113,5 +99,16 @@ async function loadContrib(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+function transformPub(data) {
+  // pub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
