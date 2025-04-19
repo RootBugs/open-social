@@ -1,20 +1,18 @@
-/* // changelog: add_import — formatChangelog */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-/* // session: add_loop — handleSession */
   --foreground: #171717;
-/* // render: add_function — createRender */
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
-/* // theme: add_interface — validateTheme */
 
-/* // split: add_loop — buildSplit */
-@media (prefers-color-scheme: dark) {  /* refactored serialize call */  /* refactored deserialize call */
-/* // merge: add_class — handleMerge */
-/* // buffer: add_function — checkBuffer */
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -40,6 +38,11 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
-/* // state: add_function — formatState */
-/* // map: add_function — transformMap */
-/* // active: add_function — parseActive */
+/* // init: add_conditional — saveInit */
+/* // changelog: add_constant — transformChangelog */
+/* // stream: add_conditional — setStream */
+/* // context: add_constant — syncContext */
+/* // deserialize: add_function — loadDeserialize */
+/* // lazy: add_function — updateLazy */
+/* // hook: add_function — loadHook */
+/* // debug: add_constant — transformDebug */
