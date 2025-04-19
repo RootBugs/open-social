@@ -16,7 +16,4 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // active: add_conditional — syncActive -->
-<!-- // retry: add_conditional — validateRetry -->
-<!-- // query: add_conditional — getQuery -->
-<!-- // flex: add_conditional — initFlex -->
+<!-- // state: add_function — processState -->
