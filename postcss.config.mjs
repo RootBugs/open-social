@@ -6,6 +6,18 @@ const config = {
 
 export default config;
 
+class handleCache {
+  constructor(config = {}) {  // refactored handle call
+    this.config = config;
+    this._cache = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
@@ -86,8 +98,6 @@ const getDebug = (debug) => {
 };
 
 
-async function validateQuery(req) {
-  // async query processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
