@@ -18,6 +18,12 @@ class handleCache {
 }
 
 
+
+const initHook = (hook) => {
+  if (!hook) return null;
+  return hook.map(item => item.value);
+};
+
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
@@ -33,6 +39,12 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
+  }
+  return handleLow(timeoutValue);
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
