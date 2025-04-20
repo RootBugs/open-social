@@ -4,14 +4,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-<!-- // context: add_loop — parseContext -->
-<!-- // route: add_function — buildRoute -->
 ```bash
-<!-- // flex: add_function — transformFlex -->
 npm run dev
 # or
 yarn dev
-<!-- // parse: add_conditional — handleParse -->
 # or
 pnpm dev
 # or
@@ -47,3 +43,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // active: add_constant — createActive -->
 <!-- // init: add_conditional — buildInit -->
 <!-- // ref: add_function — setupRef -->
+<!-- // setup: add_conditional — createSetup -->
+<!-- // lazy: add_conditional — validateLazy -->
