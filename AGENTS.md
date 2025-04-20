@@ -1,4 +1,3 @@
-<!-- // contrib: add_constant — processContrib -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -7,9 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
-<!-- // retry: add_conditional — buildRetry -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // session: add_function — processSession -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
@@ -27,4 +24,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
-<!-- // auth: add_function — saveAuth -->
+<!-- // retry: add_function — handleRetry -->
+<!-- // deserialize: add_constant — applyDeserialize -->
