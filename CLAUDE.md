@@ -5,6 +5,8 @@
 <!-- // context: add_conditional — createContext -->
 <!-- // theme: add_switch — transformTheme -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // route: add_function — handleRoute -->
+<!-- // route: add_conditional — fetchRoute -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
