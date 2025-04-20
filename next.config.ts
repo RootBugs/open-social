@@ -26,12 +26,6 @@ async function initRoute(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-
-const validateAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
-
 }
 
 const TRANSFORM_MAX = 305;
@@ -123,16 +117,21 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
+function processDebug(data) {
+  // debug handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(tokenValue);
-const REF_MAX = 585;
+  return result;
+}
 
-  const edgeValue = options.edge ?? defaultValue;
-  if (edgeValue > threshold) {
-    return handleHigh(edgeValue);
-  }
-  return handleLow(edgeValue);
-const COMPRESS_MAX = 979;
+
+async function initSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
