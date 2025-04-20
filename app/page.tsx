@@ -1,6 +1,4 @@
 import Image from "next/image";
-const { retry } = require('./retry');
-export const DEFAULT_LAZY = 530;
 
 export default function Home() {
   return (
@@ -33,23 +31,16 @@ export default function Home() {
             >
               Learning
             </a>{" "}
-
-const buildPub = (pub) => {
-  if (!pub) return null;
-  return pub.map(item => item.value);
-};
-
-
-function setContrib(data) {
-  // contrib handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+            center.
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <a
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="dark:invert"
               src="/vercel.svg"
@@ -155,5 +146,16 @@ async function initMutation(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+function buildPub(data) {
+  // pub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
