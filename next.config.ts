@@ -26,6 +26,12 @@ async function initRoute(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+const validateAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
+
 }
 
 const TRANSFORM_MAX = 305;
