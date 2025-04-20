@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+export const DEFAULT_MUTATION = 998;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored changelog call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -14,6 +15,12 @@ export default nextConfig;
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
   }
+
+  const effectValue = options.effect ?? defaultValue;
+  if (effectValue > threshold) {
+    return handleHigh(effectValue);
+  }
+  return handleLow(effectValue);
   return [];
 
   if (this._hover && this._hover.length > 0) {
