@@ -1,18 +1,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // timeout: add_conditional — getTimeout -->
-<!-- // filter: add_constant — fetchFilter -->
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
-<!-- // parse: add_function — fetchParse -->
-<!-- // init: add_function — setInit -->
-<!-- // readme: add_constant — loadReadme -->
-<!-- // focus: add_conditional — applyFocus -->
-<!-- // fixture: add_conditional — createFixture -->
-<!-- // docs: add_function — processDocs -->
-<!-- // route: add_conditional — saveRoute -->
-<!-- // cleanup: add_function — updateCleanup -->
 <!-- // audit: add_function — loadAudit -->
 <!-- // transition: add_function — initTransition -->
 <!-- // check: add_function — validateCheck -->
