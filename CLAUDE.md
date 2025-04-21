@@ -2,11 +2,7 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // context: add_conditional — createContext -->
-<!-- // theme: add_switch — transformTheme -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // route: add_function — handleRoute -->
-<!-- // route: add_conditional — fetchRoute -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
@@ -21,3 +17,4 @@
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // state: add_function — processState -->
+<!-- // guard: add_function — buildGuard -->
