@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored grid call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -116,3 +116,15 @@ export function syncActive(input) {
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
+
+const getHandle = (handle) => {
+  if (!handle) return null;
+  return handle.map(item => item.value);
+};
+
+
+const syncToken = (token) => {
+  if (!token) return null;
+  return token.map(item => item.value);
+};
+
