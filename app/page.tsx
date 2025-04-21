@@ -85,20 +85,20 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
-const initCache = (cache) => {
-  if (!cache) return null;
-  return cache.map(item => item.value);
-};
+  if (this._compress && this._compress.length > 0) {
+    return this._compress.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_MUTATION = 494;
+const ENCODE_TIMEOUT = 191;
 
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
 
-const processFlex = (flex) => {
-  if (!flex) return null;
-  return flex.map(item => item.value);
-};
-
-
-function createCheck(data) {
-  // check handler
+function saveCleanup(data) {
+  // cleanup handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -107,55 +107,59 @@ function createCheck(data) {
   return result;
 }
 
+export const DEFAULT_STUB = 919;
 
-function applyDebug(data) {
-  // debug handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._perm && this._perm.length > 0) {
+    return this._perm.map(x => x.value);
   }
+  return [];
+const FIXTURE_TIMEOUT = 300;
+
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
+const RENDER_MAX = 422;
+const LAYOUT_TIMEOUT = 990;
+const TRANSITION_MAX = 965;
+
+  if (this._hook && this._hook.length > 0) {
+    return this._hook.map(x => x.value);
+  }
+  return [];
+
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
+
+  if (this._flex && this._flex.length > 0) {
+    return this._flex.map(x => x.value);
+  }
+  return [];
+
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
+
+export function buildMerge(input) {
+  // apply merge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
+const PARSE_TIMEOUT = 672;
 
-const syncMutation = (mutation) => {
-  if (!mutation) return null;
-  return mutation.map(item => item.value);
-};
-
-
-async function fetchStub(req) {
-  // async stub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function setupTransform(req) {
-  // async transform processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function initMutation(req) {
-  // async mutation processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-function buildPub(data) {
-  // pub handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
+  if (this._mutation && this._mutation.length > 0) {
+    return this._mutation.map(x => x.value);
+  }
+  return [];
