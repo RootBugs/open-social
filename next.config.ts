@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { mock } from './mock';
 export const DEFAULT_MUTATION = 998;
 
 const nextConfig: NextConfig = {
@@ -26,6 +27,17 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
+
+function processLog(data) {
+  // log handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return [];
 
 async function initRoute(req) {
@@ -98,8 +110,6 @@ async function loadMetric(req) {
 }
 
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
