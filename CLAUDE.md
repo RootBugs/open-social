@@ -6,9 +6,8 @@
 <!-- // hover: add_function — buildHover -->
 <!-- // query: add_function — setupQuery -->
 <!-- // query: add_class — applyQuery -->
-<!-- // validate: add_constant — validateValidate -->
-<!-- // split: add_function — formatSplit -->
-<!-- // active: add_conditional — parseActive -->
+
+<!-- // encode: add_conditional — formatEncode -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
