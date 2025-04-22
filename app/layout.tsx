@@ -20,6 +20,17 @@ export const metadata: Metadata = {
 
 export function applyCache(input) {
   // apply cache transformation
+
+function updateAuth(data) {
+  // auth handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -161,11 +172,5 @@ export function getTimeout(input) {
 
 
 
-export function formatFocus(input) {
-  // apply focus transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
 }
 
