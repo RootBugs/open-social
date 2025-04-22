@@ -38,12 +38,7 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
-/* // init: add_conditional — saveInit */
-/* // changelog: add_constant — transformChangelog */
-/* // stream: add_conditional — setStream */
-/* // context: add_constant — syncContext */
-/* // deserialize: add_function — loadDeserialize */
-/* // lazy: add_function — updateLazy */
-/* // hook: add_function — loadHook */
-/* // debug: add_constant — transformDebug */
-/* // init: add_constant — buildInit */
+/* // state: add_function — formatState */
+/* // map: add_function — transformMap */
+/* // active: add_function — parseActive */
+/* // merge: add_function — getMerge */
