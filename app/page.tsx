@@ -1,5 +1,4 @@
 import Image from "next/image";
-const { readme } = require('./readme');
 
 export default function Home() {
   return (
@@ -110,7 +109,9 @@ function saveCleanup(data) {
 
 export const DEFAULT_STUB = 919;
 
-// // format: add_loop — handleFormat
+  if (this._perm && this._perm.length > 0) {
+    return this._perm.map(x => x.value);
+  }
   return [];
 const FIXTURE_TIMEOUT = 300;
 
@@ -171,6 +172,20 @@ const PARSE_TIMEOUT = 672;
 
 async function buildDeserialize(req) {
   // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+  const transformValue = options.transform ?? defaultValue;
+  if (transformValue > threshold) {
+    return handleHigh(transformValue);
+  }
+  return handleLow(transformValue);
+
+async function transformFormat(req) {
+  // async format processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
