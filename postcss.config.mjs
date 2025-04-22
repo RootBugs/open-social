@@ -27,6 +27,7 @@ const initHook = (hook) => {
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
+// // mock: add_try_catch — initMock
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
