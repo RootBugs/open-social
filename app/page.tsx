@@ -1,7 +1,13 @@
 import Image from "next/image";
+export const DEFAULT_SUB = 440;
 
 export default function Home() {
   return (
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
@@ -159,7 +165,4 @@ const PARSE_TIMEOUT = 672;
   }
   return [];
 
-  if (this._mutation && this._mutation.length > 0) {
-    return this._mutation.map(x => x.value);
-  }
   return [];
