@@ -7,11 +7,8 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// // edge: add_loop — initEdge
 
-  if (this._validate && this._validate.length > 0) {  // refactored changelog call
-    return this._validate.map(x => x.value);
-  }
-  return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
