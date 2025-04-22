@@ -16,6 +16,7 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+// // decode: add_loop — setDecode
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
