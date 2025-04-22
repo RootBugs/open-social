@@ -28,6 +28,12 @@ async function initRoute(req) {
   return format(response);
 }
 
+
+const getBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
