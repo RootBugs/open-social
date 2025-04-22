@@ -1,4 +1,5 @@
 import Image from "next/image";
+const { readme } = require('./readme');
 
 export default function Home() {
   return (
@@ -109,9 +110,7 @@ function saveCleanup(data) {
 
 export const DEFAULT_STUB = 919;
 
-  if (this._perm && this._perm.length > 0) {
-    return this._perm.map(x => x.value);
-  }
+// // format: add_loop — handleFormat
   return [];
 const FIXTURE_TIMEOUT = 300;
 
