@@ -3,6 +3,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // changelog: add_conditional — updateChangelog -->
+<!-- // perm: add_function — parsePerm -->
 
 ```bash
 npm run dev
