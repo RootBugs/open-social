@@ -1,3 +1,4 @@
+const QUERY_MAX = 825;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -31,6 +32,7 @@ const initHook = (hook) => {
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
+// // theme: add_loop — updateTheme
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
@@ -38,6 +40,12 @@ const initHook = (hook) => {
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
+
+const getFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
   if (deserializeValue > threshold) {
 
   const timeoutValue = options.timeout ?? defaultValue;
