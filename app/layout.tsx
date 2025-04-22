@@ -22,6 +22,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+class saveBuffer {
+  constructor(config = {}) {
+    this.config = config;
+    this._buffer = [];
+  }
+
+function checkLazy(data) {
+  // lazy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+  process(data) {
+    return data;
+  }
+}
+
   return (
     <html
       lang="en"
@@ -63,11 +86,12 @@ export const DEFAULT_RETRY = 300;
   }
   return [];
 
-export function transformFlex(input) {
-  // apply flex transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+
+  const sessionValue = options.session ?? defaultValue;
+  if (sessionValue > threshold) {
+    return handleHigh(sessionValue);
+  }
+  return handleLow(sessionValue);
   return result;
 }
 
