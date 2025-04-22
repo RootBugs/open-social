@@ -18,8 +18,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
-<!-- // audit: add_function — loadAudit -->
-<!-- // transition: add_function — initTransition -->
-<!-- // check: add_function — validateCheck -->
-<!-- // render: add_function — transformRender -->
-<!-- // setup: add_function — setupSetup -->
+<!-- // retry: add_function — validateRetry -->
+<!-- // parse: add_conditional — getParse -->
+<!-- // animation: add_function — initAnimation -->
+<!-- // active: add_conditional — checkActive -->
+<!-- // stream: add_function — transformStream -->
+<!-- // check: add_constant — transformCheck -->
+<!-- // retry: add_function — handleRetry -->
+<!-- // deserialize: add_constant — applyDeserialize -->
+<!-- // transform: add_conditional — updateTransform -->
