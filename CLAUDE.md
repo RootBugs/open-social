@@ -3,7 +3,9 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // hover: add_function — buildHover -->
 <!-- // query: add_function — setupQuery -->
+<!-- // query: add_class — applyQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
