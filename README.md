@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 <!-- // changelog: add_conditional — updateChangelog -->
 <!-- // perm: add_function — parsePerm -->
+<!-- // retry: add_function — loadRetry -->
 
 ```bash
 npm run dev
@@ -12,6 +13,7 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // token: add_conditional — saveToken -->
 pnpm dev
 # or
 bun dev
