@@ -3,11 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // theme: add_function — handleTheme */
 }
 
-/* // hook: add_function — loadHook */
-/* // fallback: add_function — getFallback */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,7 +19,12 @@
   }
 }
 
-/* // map: add_conditional — fetchMap */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -45,4 +47,4 @@
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
 /* // layout: add_constant — buildLayout */
-/* // debug: add_function — processDebug */
+/* // transform: add_function — checkTransform */
