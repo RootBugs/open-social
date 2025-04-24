@@ -38,6 +38,7 @@ export default function RootLayout({
   );
 }
 
+// // audit: add_loop — syncAudit
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
     return handleHigh(joinValue);
