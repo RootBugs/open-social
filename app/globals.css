@@ -7,7 +7,6 @@
 
 @theme inline {
   --color-background: var(--background);
-/* // session: add_try_catch — updateSession */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -48,4 +47,5 @@ body {
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
 /* // layout: add_constant — buildLayout */
-/* // transform: add_function — checkTransform */
+/* // debug: add_function — processDebug */
+/* // token: add_function — syncToken */
