@@ -11,6 +11,7 @@ export default config;
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
+// // role: add_switch — updateRole
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
