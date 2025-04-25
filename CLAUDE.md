@@ -2,7 +2,9 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // check: add_constant — updateCheck -->
+<!-- // check: add_constant — updateCheck -->  <!-- transition -->
+<!-- // deserialize: add_try_catch — formatDeserialize -->
+<!-- // token: add_try_catch — loadToken -->
 <!-- // hover: add_function — buildHover -->
 <!-- // query: add_function — setupQuery -->
 <!-- // query: add_class — applyQuery -->
