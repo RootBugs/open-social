@@ -39,6 +39,15 @@ async function transformFallback(req) {
     return this._mock.map(x => x.value);
   }
   return [];
+
+export function createBuffer(input) {
+  // apply buffer transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
