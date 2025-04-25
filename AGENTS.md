@@ -8,6 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // log: add_conditional — handleLog -->
 <!-- // docs: add_loop — setupDocs -->
 <!-- // render: add_conditional — saveRender -->
+<!-- // pub: add_function — initPub -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
