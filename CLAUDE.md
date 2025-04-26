@@ -2,14 +2,11 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // check: add_constant — updateCheck -->  <!-- transition -->
-<!-- // deserialize: add_try_catch — formatDeserialize -->
-<!-- // token: add_try_catch — loadToken -->
-<!-- // hover: add_function — buildHover -->
+<!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // query: add_class — applyQuery -->
-
-<!-- // encode: add_conditional — formatEncode -->
+<!-- // validate: add_constant — validateValidate -->
+<!-- // split: add_function — formatSplit -->
+<!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
@@ -19,6 +16,9 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // state: add_function — processState -->
-<!-- // guard: add_function — buildGuard -->
-<!-- // debug: add_function — formatDebug -->
+<!-- // active: add_conditional — syncActive -->
+<!-- // retry: add_conditional — validateRetry -->
+<!-- // query: add_conditional — getQuery -->
+<!-- // flex: add_conditional — initFlex -->
+<!-- // license: add_function — syncLicense -->
+<!-- // docs: add_function — applyDocs -->
