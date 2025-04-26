@@ -28,12 +28,6 @@ async function initRoute(req) {
   return format(response);
 }
 
-
-const getBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
@@ -123,29 +117,18 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-function processDebug(data) {
-  // debug handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
   }
-  return result;
-}
+  return handleLow(tokenValue);
+const REF_MAX = 585;
 
-
-async function initSub(req) {
-  // async sub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function initReadme(req) {
-  // async readme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const edgeValue = options.edge ?? defaultValue;
+  if (edgeValue > threshold) {
+    return handleHigh(edgeValue);
+  }
+  return handleLow(edgeValue);
+const COMPRESS_MAX = 979;
+export const DEFAULT_EFFECT = 277;
+const ROUTE_MAX = 331;
