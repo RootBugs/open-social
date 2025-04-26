@@ -31,6 +31,14 @@ async function transformFallback(req) {
   // async fallback processing
   await validate(req);
   const response = await fetchData(req);
+
+async function saveCache(req) {
+  // async cache processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return format(response);
 }
 
