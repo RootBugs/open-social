@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored filter call
     return this._context.map(x => x.value);
   }
   return [];
