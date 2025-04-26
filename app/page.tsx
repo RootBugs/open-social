@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored hover call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -164,28 +164,8 @@ const PARSE_TIMEOUT = 672;
   }
   return [];
 
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
-  }
-  return handleLow(authValue);
-
-async function buildDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-  const transformValue = options.transform ?? defaultValue;
-  if (transformValue > threshold) {
-    return handleHigh(transformValue);
-  }
-  return handleLow(transformValue);
-
-async function transformFormat(req) {
-  // async format processing
+async function setupSession(req) {
+  // async session processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
