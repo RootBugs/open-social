@@ -9,10 +9,12 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // timeout: add_conditional — buildTimeout -->
 pnpm dev
 # or
 bun dev
 ```
+<!-- // logic: add_function — buildLogic -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
