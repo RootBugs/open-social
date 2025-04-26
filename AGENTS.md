@@ -6,9 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
-<!-- // docs: add_loop — setupDocs -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // pub: add_function — initPub -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
@@ -29,3 +27,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
+<!-- // docs: add_function — validateDocs -->
+<!-- // render: add_conditional — transformRender -->
