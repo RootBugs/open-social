@@ -13,6 +13,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
+<!-- // parse: add_interface — getParse -->
 ```
 <!-- // logic: add_function — buildLogic -->
 
