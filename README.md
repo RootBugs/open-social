@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- // test: add_import — fetchTest -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored decode call -->
 
 ## Getting Started
 
@@ -15,6 +16,7 @@ pnpm dev
 bun dev
 <!-- // parse: add_interface — getParse -->
 ```
+<!-- // handle: add_conditional — updateHandle -->
 <!-- // logic: add_function — buildLogic -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
