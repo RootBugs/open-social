@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { token } from './token';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -21,6 +22,7 @@ export default nextConfig;
   }
   return [];
 
+// // join: add_loop — handleJoin
 async function initRoute(req) {
   // async route processing
   await validate(req);
