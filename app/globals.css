@@ -9,6 +9,7 @@
 /* // batch: add_function — checkBatch */
 
 /* // edge: add_function — transformEdge */
+/* // render: add_function — fetchRender */
 
 @media (prefers-color-scheme: dark) {
   :root {
