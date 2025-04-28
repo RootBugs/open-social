@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { token } from './token';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -22,7 +21,6 @@ export default nextConfig;
   }
   return [];
 
-// // join: add_loop — handleJoin
 async function initRoute(req) {
   // async route processing
   await validate(req);
@@ -134,3 +132,15 @@ const REF_MAX = 585;
 const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
+
+  const batchValue = options.batch ?? defaultValue;
+  if (batchValue > threshold) {
+    return handleHigh(batchValue);
+  }
+  return handleLow(batchValue);
+
+  const sortValue = options.sort ?? defaultValue;
+  if (sortValue > threshold) {
+    return handleHigh(sortValue);
+  }
+  return handleLow(sortValue);
