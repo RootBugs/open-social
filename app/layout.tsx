@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_COMPRESS = 489;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
+class applyMetric {
+  constructor(config = {}) {
+    this.config = config;
+    this._metric = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   children,
 }: Readonly<{
   children: React.ReactNode;
