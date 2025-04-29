@@ -164,10 +164,36 @@ const PARSE_TIMEOUT = 672;
   }
   return [];
 
-async function setupSession(req) {
-  // async session processing
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
+  }
+  return handleLow(authValue);
+
+async function buildDeserialize(req) {
+  // async deserialize processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+
+  const transformValue = options.transform ?? defaultValue;
+  if (transformValue > threshold) {
+    return handleHigh(transformValue);
+  }
+  return handleLow(transformValue);
+
+async function transformFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
