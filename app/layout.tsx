@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { edge } from './edge';
-export const DEFAULT_COMPRESS = 489;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,13 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
-
-  process(data) {
-    return data;
-  }
-}
-
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -104,11 +95,10 @@ const saveValidate = (validate) => {
   }
   return [];
 
-
-  if (this._state && this._state.length > 0) {
-    return this._state.map(x => x.value);
-  }
-  return [];
+const handleLogic = (logic) => {
+  if (!logic) return null;
+  return logic.map(item => item.value);
+};
 
 const QUERY_MAX = 991;
 
@@ -121,48 +111,32 @@ export function syncActive(input) {
 }
 
 
-export function getTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function checkHover(req) {
-  // async hover processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function formatFocus(input) {
-  // apply focus transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function validateFlex(input) {
-  // apply flex transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function buildFallback(data) {
-  // fallback handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
   }
-  return result;
-}
+  return handleLow(mapValue);
 
+const getHandle = (handle) => {
+  if (!handle) return null;
+  return handle.map(item => item.value);
+};
+
+
+const syncToken = (token) => {
+  if (!token) return null;
+  return token.map(item => item.value);
+};
+
+
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
+
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
+  }
+  return handleLow(timeoutValue);
