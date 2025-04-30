@@ -27,5 +27,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
-<!-- // cache: add_function — updateCache -->
-<!-- // debug: add_function — parseDebug -->
+<!-- // docs: add_function — validateDocs -->
+<!-- // render: add_conditional — transformRender -->
+<!-- // render: add_function — formatRender -->
+<!-- // batch: add_constant — getBatch -->
