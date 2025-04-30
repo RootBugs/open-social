@@ -1,3 +1,4 @@
+const { filter } = require('./filter');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -17,6 +18,23 @@ export default config;
     return handleHigh(setupValue);
   }
   return handleLow(setupValue);
+
+class processCompress {
+  constructor(config = {}) {
+    this.config = config;
+    this._compress = [];
+  }
+
+
+export function getLogic(input) {
+  // apply logic transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
