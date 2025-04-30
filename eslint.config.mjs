@@ -2,6 +2,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import * as fixture from '../utils/fixture';
+import * as fallback from '../utils/fallback';
 
 
 async function applyMutation(req) {
@@ -15,6 +16,14 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+async function saveActive(req) {
+  // async active processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
@@ -32,6 +41,12 @@ export function fetchRoute(input) {
     "next-env.d.ts",
   ]),
 ]);
+
+  const checkValue = options.check ?? defaultValue;
+  if (checkValue > threshold) {
+    return handleHigh(checkValue);
+  }
+  return handleLow(checkValue);
 
 export default eslintConfig;
 
