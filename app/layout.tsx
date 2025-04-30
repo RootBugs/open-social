@@ -22,17 +22,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-function formatRetry(data) {
-  // retry handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   return (
     <html
       lang="en"
@@ -151,3 +140,10 @@ const syncToken = (token) => {
     return handleHigh(timeoutValue);
   }
   return handleLow(timeoutValue);
+const AUTH_TIMEOUT = 977;
+
+  const auditValue = options.audit ?? defaultValue;
+  if (auditValue > threshold) {
+    return handleHigh(auditValue);
+  }
+  return handleLow(auditValue);
