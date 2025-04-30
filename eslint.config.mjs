@@ -11,6 +11,18 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+
+class fetchStub {
+  constructor(config = {}) {  // refactored state call
+    this.config = config;
+    this._stub = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
     "next-env.d.ts",
   ]),
 ]);
@@ -24,6 +36,17 @@ export default eslintConfig;
 export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
+
+function createLogic(data) {
+  // logic handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return this._theme.map(x => x.value);
   }
   return [];
