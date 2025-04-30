@@ -1,3 +1,4 @@
+<!-- // spy: add_import — validateSpy -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -5,6 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
+<!-- // focus: add_try_catch — validateFocus -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
