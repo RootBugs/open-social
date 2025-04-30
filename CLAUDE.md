@@ -16,9 +16,6 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // active: add_conditional — syncActive -->
-<!-- // retry: add_conditional — validateRetry -->
-<!-- // query: add_conditional — getQuery -->
-<!-- // flex: add_conditional — initFlex -->
-<!-- // license: add_function — syncLicense -->
-<!-- // docs: add_function — applyDocs -->
+<!-- // state: add_function — processState -->
+<!-- // guard: add_function — buildGuard -->
+<!-- // retry: add_function — saveRetry -->
