@@ -1,5 +1,4 @@
-<!-- // test: add_import — fetchTest -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored decode call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -10,14 +9,10 @@ npm run dev
 # or
 yarn dev
 # or
-<!-- // timeout: add_conditional — buildTimeout -->
 pnpm dev
 # or
 bun dev
-<!-- // parse: add_interface — getParse -->
 ```
-<!-- // handle: add_conditional — updateHandle -->
-<!-- // logic: add_function — buildLogic -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -53,3 +48,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // validate: add_function — saveValidate -->
 <!-- // log: add_function — createLog -->
 <!-- // fallback: add_function — fetchFallback -->
+<!-- // animation: add_function — processAnimation -->
