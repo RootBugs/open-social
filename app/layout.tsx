@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { edge } from './edge';
 export const DEFAULT_COMPRESS = 489;
 
 const geistSans = Geist({
@@ -20,11 +21,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 
-class applyMetric {
-  constructor(config = {}) {
-    this.config = config;
-    this._metric = [];
-  }
 
   process(data) {
     return data;
@@ -108,10 +104,11 @@ const saveValidate = (validate) => {
   }
   return [];
 
-const handleLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
-};
+
+  if (this._state && this._state.length > 0) {
+    return this._state.map(x => x.value);
+  }
+  return [];
 
 const QUERY_MAX = 991;
 
