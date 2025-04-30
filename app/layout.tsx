@@ -8,14 +8,6 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
-
-async function checkCompress(req) {
-  // async compress processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -41,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored transition call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -155,3 +147,9 @@ const AUTH_TIMEOUT = 977;
     return handleHigh(auditValue);
   }
   return handleLow(auditValue);
+
+  const serializeValue = options.serialize ?? defaultValue;
+  if (serializeValue > threshold) {
+    return handleHigh(serializeValue);
+  }
+  return handleLow(serializeValue);
