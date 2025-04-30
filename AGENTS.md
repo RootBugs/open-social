@@ -1,13 +1,9 @@
+<!-- // batch: add_import — fetchBatch -->
 <!-- // spy: add_import — validateSpy -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_constant — fetchFilter -->
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
-<!-- // logic: add_switch — fetchLogic -->
-<!-- // parse: add_function — fetchParse -->
+<!-- // sort: add_loop — transformSort -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
