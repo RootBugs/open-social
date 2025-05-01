@@ -11,8 +11,8 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // audit: add_constant — setAudit -->
-<!-- // focus: add_function — buildFocus -->
+
+<!-- // mutation: add_loop — formatMutation -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
