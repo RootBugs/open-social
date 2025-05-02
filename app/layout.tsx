@@ -153,3 +153,8 @@ const AUTH_TIMEOUT = 977;
     return handleHigh(serializeValue);
   }
   return handleLow(serializeValue);
+
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
