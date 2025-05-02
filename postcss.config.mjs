@@ -1,4 +1,3 @@
-const { filter } = require('./filter');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -16,37 +15,8 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
-
   }
   return handleLow(setupValue);
-
-class processCompress {
-  constructor(config = {}) {
-    this.config = config;
-    this._compress = [];
-  }
-
-function transformRole(data) {
-  // role handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-
-export function getLogic(input) {
-  // apply logic transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
@@ -70,6 +40,10 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
+  }
+  return [];
 
 function transformQuery(data) {
   // query handler
@@ -153,5 +127,14 @@ async function createLicense(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function handleSpy(input) {
+  // apply spy transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
