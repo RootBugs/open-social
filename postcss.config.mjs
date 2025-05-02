@@ -16,6 +16,7 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
+
   }
   return handleLow(setupValue);
 
@@ -24,6 +25,17 @@ class processCompress {
     this.config = config;
     this._compress = [];
   }
+
+function transformRole(data) {
+  // role handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 
 
 export function getLogic(input) {
