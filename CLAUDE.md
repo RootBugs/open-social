@@ -3,7 +3,9 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // route: add_try_catch — processRoute -->
 <!-- // query: add_function — setupQuery -->
+<!-- // hook: add_function — setupHook -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -12,10 +14,7 @@
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 
-<!-- // mutation: add_loop — formatMutation -->
-<!-- // cache: add_function — initCache -->
-<!-- // pub: add_function — handlePub -->
-<!-- // layout: add_function — handleLayout -->
+<!-- // animation: add_function — handleAnimation -->
 <!-- // state: add_function — processState -->
 <!-- // guard: add_function — buildGuard -->
 <!-- // retry: add_function — saveRetry -->
