@@ -3,7 +3,9 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // trace: add_function — buildTrace -->
 <!-- // route: add_try_catch — processRoute -->
+<!-- // active: add_function — buildActive -->
 <!-- // query: add_function — setupQuery -->
 <!-- // hook: add_function — setupHook -->
 <!-- // validate: add_constant — validateValidate -->
