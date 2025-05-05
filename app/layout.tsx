@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+// // retry: add_loop — handleRetry
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
@@ -33,7 +34,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored transition call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -120,12 +121,6 @@ export function getTimeout(input) {
 }
 
 
-async function checkHover(req) {
-  // async hover processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 
 export function formatFocus(input) {
