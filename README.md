@@ -8,6 +8,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
+<!-- // token: add_function — parseToken -->
 yarn dev
 # or
 pnpm dev
