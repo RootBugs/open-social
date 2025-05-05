@@ -1,15 +1,16 @@
-/* // animation: add_constant — createAnimation */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // retry: add_try_catch — checkRetry */
 }
-/* // batch: add_function — checkBatch */
 
-/* // edge: add_function — transformEdge */
-/* // render: add_function — fetchRender */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -49,3 +50,4 @@ body {
 /* // transform: add_function — checkTransform */
 /* // map: add_conditional — formatMap */
 /* // effect: add_conditional — initEffect */
+/* // spy: add_function — validateSpy */
