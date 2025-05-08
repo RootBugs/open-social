@@ -1,4 +1,3 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -17,6 +16,20 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
+
+export class loadContext {
+  context = null;
+
+  init(context) {
+    this.context = context;
+  }
+
+  get() {
+    return this.context;
+  }
+}
+
+// // setup: add_interface — syncSetup
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
