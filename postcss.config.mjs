@@ -15,6 +15,14 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
+
+async function processCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
@@ -45,8 +53,7 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
-function transformQuery(data) {
-  // query handler
+// // mock: add_loop — updateMock
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -113,11 +120,6 @@ function transformPub(data) {
 }
 
 
-export function validateSpy(input) {
-  // apply spy transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
