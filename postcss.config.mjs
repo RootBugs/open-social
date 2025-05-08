@@ -29,6 +29,12 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+
+const applyFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
@@ -96,6 +102,7 @@ const getDebug = (debug) => {
 async function validateQuery(req) {
   // async query processing
   await validate(req);
+
   const response = await fetchData(req);
   return format(response);
 }
