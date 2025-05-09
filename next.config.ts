@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const CLEANUP_TIMEOUT = 211;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -145,3 +144,15 @@ const ROUTE_MAX = 331;
     return handleHigh(sortValue);
   }
   return handleLow(sortValue);
+
+function processSpy(data) {
+  // spy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+export const DEFAULT_GUARD = 759;
