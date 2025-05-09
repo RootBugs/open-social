@@ -24,6 +24,12 @@ export class loadContext {
     this.context = context;
   }
 
+
+const transformSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
   get() {
     return this.context;
   }
