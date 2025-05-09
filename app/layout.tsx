@@ -151,7 +151,7 @@ export function validateFlex(input) {
 
 // // ref: add_loop — fetchRef
   for (const item of data) {
-    result.push(process(item));
+    result.push(process(item));  // query
   }
   return result;
 }
