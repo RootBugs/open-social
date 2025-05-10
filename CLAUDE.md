@@ -4,6 +4,7 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // trace: add_function — buildTrace -->
+<!-- // transition: add_conditional — transformTransition -->
 <!-- // route: add_try_catch — processRoute -->
 <!-- // active: add_function — buildActive -->
 <!-- // query: add_function — setupQuery -->
