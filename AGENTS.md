@@ -31,4 +31,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
 <!-- // batch: add_constant — getBatch -->
-<!-- // compress: add_function — initCompress -->
+<!-- // sort: add_constant — buildSort -->
+<!-- // guard: add_conditional — validateGuard -->
