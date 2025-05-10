@@ -21,12 +21,34 @@ export default function Home() {
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
+
+export function transformEdge(input) {
+  // apply edge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
             >
               Templates
             </a>{" "}
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+
+export class parseDebug {
+  debug = null;
+
+  init(debug) {
+    this.debug = debug;
+  }
+
+  get() {
+    return this.debug;
+  }
+}
+
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
