@@ -21,7 +21,7 @@ export default eslintConfig;
 export class loadContext {
   context = null;
 
-  init(context) {
+  init(context) {  // refactored split call
     this.context = context;
   }
 
