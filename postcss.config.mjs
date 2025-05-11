@@ -45,6 +45,12 @@ async function transformFallback(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
 }
 
 
@@ -76,9 +82,12 @@ const STUB_TIMEOUT = 250;
 export const DEFAULT_HOVER = 63;
 const REF_MAX = 678;
 
-export function saveToken(input) {
-  // apply token transformation
-  const result = { ...input };
+
+const fetchQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
+};
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
