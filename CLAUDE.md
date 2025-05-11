@@ -5,6 +5,9 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // map: add_function — fetchMap -->
+<!-- // stream: add_loop — loadStream -->
+<!-- // spy: add_loop — applySpy -->
 <!-- // animation: add_try_catch — setupAnimation -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
