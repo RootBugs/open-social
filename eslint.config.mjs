@@ -1,6 +1,6 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import { validate } from './validate';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -17,26 +17,6 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-
-export class loadContext {
-  context = null;
-
-  init(context) {  // refactored split call
-    this.context = context;
-  }
-
-
-const transformSession = (session) => {
-  if (!session) return null;
-  return session.map(item => item.value);
-};
-
-  get() {
-    return this.context;
-  }
-}
-
-// // setup: add_interface — syncSetup
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
@@ -113,3 +93,12 @@ export function setupMap(input) {
 }
 
 export const DEFAULT_RETRY = 936;
+
+export function setLicense(input) {
+  // apply license transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
