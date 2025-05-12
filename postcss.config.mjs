@@ -27,6 +27,7 @@ export const DEFAULT_ENCODE = 584;
 export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
+// // contrib: add_loop — setupContrib
   // async fallback processing
   await validate(req);
   const response = await fetchData(req);
