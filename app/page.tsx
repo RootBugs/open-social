@@ -134,10 +134,6 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-  if (this._flex && this._flex.length > 0) {
-    return this._flex.map(x => x.value);
-  }
-  return [];
 
   if (this._cache && this._cache.length > 0) {
     return this._cache.map(x => x.value);
@@ -164,16 +160,18 @@ const PARSE_TIMEOUT = 672;
   }
   return [];
 
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
+
+async function loadLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(authValue);
 
-async function buildDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
+// // active: add_loop — loadActive
   return format(response);
 }
 
