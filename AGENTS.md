@@ -1,3 +1,4 @@
+<!-- // memo: add_import — processMemo -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -6,6 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
+<!-- // animation: add_conditional — validateAnimation -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
