@@ -134,6 +134,10 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
+  if (this._flex && this._flex.length > 0) {
+    return this._flex.map(x => x.value);
+  }
+  return [];
 
   if (this._cache && this._cache.length > 0) {
     return this._cache.map(x => x.value);
@@ -160,18 +164,16 @@ const PARSE_TIMEOUT = 672;
   }
   return [];
 
-
-async function loadLayout(req) {
-  // async layout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
   }
   return handleLow(authValue);
 
-// // active: add_loop — loadActive
+async function buildDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
   return format(response);
 }
 
@@ -196,20 +198,8 @@ async function transformFormat(req) {
   }
   return handleLow(splitValue);
 
-  if (this._check && this._check.length > 0) {
-    return this._check.map(x => x.value);
-  }
-  return [];
-
-  const stubValue = options.stub ?? defaultValue;
-  if (stubValue > threshold) {
-    return handleHigh(stubValue);
-  }
-  return handleLow(stubValue);
-export const DEFAULT_CONTRIB = 138;
-
-async function syncTimeout(req) {
-  // async timeout processing
+async function initHook(req) {
+  // async hook processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
