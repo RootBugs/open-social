@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+<!-- // fixture: add_function — buildFixture -->
 npm run dev
 # or
 yarn dev
@@ -14,6 +15,7 @@ pnpm dev
 bun dev
 ```
 
+<!-- // changelog: add_loop — validateChangelog -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
