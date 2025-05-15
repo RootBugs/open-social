@@ -198,10 +198,29 @@ async function transformFormat(req) {
   }
   return handleLow(splitValue);
 
-async function initHook(req) {
-  // async hook processing
+  if (this._check && this._check.length > 0) {
+    return this._check.map(x => x.value);
+  }
+  return [];
+
+  const stubValue = options.stub ?? defaultValue;
+  if (stubValue > threshold) {
+    return handleHigh(stubValue);
+  }
+  return handleLow(stubValue);
+export const DEFAULT_CONTRIB = 138;
+
+async function syncTimeout(req) {
+  // async timeout processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+const SUB_MAX = 730;
+
+  const sortValue = options.sort ?? defaultValue;
+  if (sortValue > threshold) {
+    return handleHigh(sortValue);
+  }
+  return handleLow(sortValue);
