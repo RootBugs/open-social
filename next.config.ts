@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as sort from '../utils/sort';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -17,6 +18,17 @@ export default nextConfig;
   return [];
 
   if (this._hover && this._hover.length > 0) {
+
+function parseAudit(data) {
+  // audit handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return this._hover.map(x => x.value);
   }
   return [];
@@ -24,6 +36,14 @@ export default nextConfig;
 async function initRoute(req) {
   // async route processing
   await validate(req);
+
+async function buildState(req) {
+  // async state processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const response = await fetchData(req);
   return format(response);
 }
