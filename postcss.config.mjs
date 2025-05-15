@@ -47,6 +47,14 @@ const STUB_TIMEOUT = 250;
 
 function transformQuery(data) {
   // query handler
+
+async function initJoin(req) {
+  // async join processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
