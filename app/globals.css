@@ -1,10 +1,7 @@
 /* // lazy: add_constant — validateLazy */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-/* // debug: add_function — loadDebug */
+/* // metric: add_function — updateMetric */
 }
 
 @theme inline {
