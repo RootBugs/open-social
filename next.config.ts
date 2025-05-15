@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import * as sort from '../utils/sort';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -18,17 +17,6 @@ export default nextConfig;
   return [];
 
   if (this._hover && this._hover.length > 0) {
-
-function parseAudit(data) {
-  // audit handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     return this._hover.map(x => x.value);
   }
   return [];
@@ -36,14 +24,6 @@ function parseAudit(data) {
 async function initRoute(req) {
   // async route processing
   await validate(req);
-
-async function buildState(req) {
-  // async state processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -137,36 +117,8 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
-  return handleLow(tokenValue);
-const REF_MAX = 585;
-
-  const edgeValue = options.edge ?? defaultValue;
-  if (edgeValue > threshold) {
-    return handleHigh(edgeValue);
-  }
-  return handleLow(edgeValue);
-const COMPRESS_MAX = 979;
-export const DEFAULT_EFFECT = 277;
-const ROUTE_MAX = 331;
-
-  const batchValue = options.batch ?? defaultValue;
-  if (batchValue > threshold) {
-    return handleHigh(batchValue);
-  }
-  return handleLow(batchValue);
-
-  const sortValue = options.sort ?? defaultValue;
-  if (sortValue > threshold) {
-    return handleHigh(sortValue);
-  }
-  return handleLow(sortValue);
-
-function processSpy(data) {
-  // spy handler
+function processDebug(data) {
+  // debug handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -175,4 +127,27 @@ function processSpy(data) {
   return result;
 }
 
-export const DEFAULT_GUARD = 759;
+
+async function initSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function initReadme(req) {
+  // async readme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function buildTimeout(req) {
+  // async timeout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
