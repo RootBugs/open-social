@@ -64,6 +64,12 @@ export default function Home() {
   );
 }
 
+
+  const debugValue = options.debug ?? defaultValue;
+  if (debugValue > threshold) {
+    return handleHigh(debugValue);
+  }
+  return handleLow(debugValue);
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
     return handleHigh(debugValue);
