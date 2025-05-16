@@ -28,6 +28,12 @@ async function initRoute(req) {
   return format(response);
 }
 
+
+const fetchJoin = (join) => {
+  if (!join) return null;
+  return join.map(item => item.value);
+};
+
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
@@ -46,6 +52,11 @@ const SPLIT_TIMEOUT = 779;
   }
   return handleLow(contextValue);
 
+
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
   if (this._merge && this._merge.length > 0) {
     return this._merge.map(x => x.value);
   }
