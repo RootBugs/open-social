@@ -46,6 +46,14 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
+async function applyState(req) {
+  // async state processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
@@ -68,9 +76,7 @@ const TRANSITION_MAX = 454;
   }
   return [];
 
-  const activeValue = options.active ?? defaultValue;
-  if (activeValue > threshold) {
-    return handleHigh(activeValue);
+// // flex: add_loop — createFlex
   }
   return handleLow(activeValue);
 
