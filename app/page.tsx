@@ -64,12 +64,6 @@ export default function Home() {
   );
 }
 
-
-  const debugValue = options.debug ?? defaultValue;
-  if (debugValue > threshold) {
-    return handleHigh(debugValue);
-  }
-  return handleLow(debugValue);
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
     return handleHigh(debugValue);
@@ -230,3 +224,10 @@ const SUB_MAX = 730;
     return handleHigh(sortValue);
   }
   return handleLow(sortValue);
+
+  const styleValue = options.style ?? defaultValue;
+  if (styleValue > threshold) {
+    return handleHigh(styleValue);
+  }
+  return handleLow(styleValue);
+const FLOW_TIMEOUT = 749;
