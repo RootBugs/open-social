@@ -50,5 +50,5 @@ body {
 /* // transform: add_function — checkTransform */
 /* // map: add_conditional — formatMap */
 /* // effect: add_conditional — initEffect */
-/* // spy: add_function — validateSpy */
-/* // layout: add_function — checkLayout */
+/* // logic: add_conditional — checkLogic */
+/* // transform: add_function — saveTransform */
