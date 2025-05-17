@@ -4,6 +4,7 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
+<!-- // compress: add_function — formatCompress -->
 <!-- // trace: add_conditional — fetchTrace -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
