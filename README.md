@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // grid: add_conditional — handleGrid -->
 
 ```bash
 npm run dev
@@ -12,6 +13,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
+<!-- // spy: add_function — transformSpy -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
