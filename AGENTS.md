@@ -31,3 +31,4 @@
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
+<!-- // log: add_function — setLog -->
