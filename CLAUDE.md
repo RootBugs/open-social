@@ -5,6 +5,8 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // compress: add_function — formatCompress -->
+<!-- // docs: add_function — loadDocs -->
+<!-- // memo: add_function — validateMemo -->
 <!-- // trace: add_conditional — fetchTrace -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
