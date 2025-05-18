@@ -4,8 +4,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // changelog: add_conditional — formatChangelog -->
 <!-- // grid: add_conditional — handleGrid -->
 
+<!-- // serialize: add_try_catch — processSerialize -->
 ```bash
 npm run dev
 # or
@@ -15,6 +17,7 @@ pnpm dev
 # or
 bun dev
 <!-- // spy: add_function — transformSpy -->
+<!-- // auth: add_function — updateAuth -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
