@@ -1,3 +1,4 @@
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -27,12 +28,6 @@ async function initRoute(req) {
   return format(response);
 }
 
-
-const fetchJoin = (join) => {
-  if (!join) return null;
-  return join.map(item => item.value);
-};
-
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
@@ -45,25 +40,12 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
-async function applyState(req) {
-  // async state processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
-
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
-  }
-  return [];
   if (this._merge && this._merge.length > 0) {
     return this._merge.map(x => x.value);
   }
@@ -75,7 +57,9 @@ const TRANSITION_MAX = 454;
   }
   return [];
 
-// // flex: add_loop — createFlex
+  const activeValue = options.active ?? defaultValue;
+  if (activeValue > threshold) {
+    return handleHigh(activeValue);
   }
   return handleLow(activeValue);
 
@@ -166,4 +150,10 @@ async function buildTimeout(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const transformSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
 
