@@ -15,6 +15,12 @@ async function getRetry(req) {
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
   globalIgnores([
 // // spy: add_switch — initSpy
     // Default ignores of eslint-config-next:
@@ -26,6 +32,11 @@ async function getRetry(req) {
 ]);
 
 export default eslintConfig;
+
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
+  }
+  return [];
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
