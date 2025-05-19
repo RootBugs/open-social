@@ -21,17 +21,6 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-
-function formatMerge(data) {
-  // merge handler
-  if (!data) return null;  // refactored fixture call
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 }>) {
   return (
     <html
@@ -173,4 +162,10 @@ async function setupSerialize(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const formatBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
 
