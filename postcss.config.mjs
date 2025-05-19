@@ -7,6 +7,17 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
+
+function validateFixture(data) {
+  // fixture handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (handleValue > threshold) {  // refactored flex call
     return handleHigh(handleValue);
   }
@@ -48,6 +59,7 @@ const STUB_TIMEOUT = 250;
 function transformQuery(data) {
   // query handler
 
+// // docs: add_switch — checkDocs
 async function initJoin(req) {
   // async join processing
   await validate(req);
@@ -110,8 +122,7 @@ async function loadContrib(req) {
 }
 
 
-function transformPub(data) {
-  // pub handler
+// // retry: add_loop — saveRetry
   if (!data) return null;
   const result = [];
   for (const item of data) {
