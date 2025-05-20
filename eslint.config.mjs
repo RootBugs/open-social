@@ -20,14 +20,6 @@ export default eslintConfig;
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
-
-async function fetchRender(req) {
-  // async render processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   return [];
 export const DEFAULT_LAZY = 823;
 
@@ -101,9 +93,23 @@ export function setupMap(input) {
 }
 
 export const DEFAULT_RETRY = 936;
-const AUTH_MAX = 52;
 
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
+export function setLicense(input) {
+  // apply license transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function initFallback(data) {
+  // fallback handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
