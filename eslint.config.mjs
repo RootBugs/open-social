@@ -93,23 +93,20 @@ export function setupMap(input) {
 }
 
 export const DEFAULT_RETRY = 936;
+const AUTH_MAX = 52;
 
-export function setLicense(input) {
-  // apply license transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function initFallback(data) {
-  // fallback handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
+  const subValue = options.sub ?? defaultValue;
+  if (subValue > threshold) {
+    return handleHigh(subValue);
+  }
+  return handleLow(subValue);
+
+  if (this._split && this._split.length > 0) {
+    return this._split.map(x => x.value);
+  }
+  return [];
