@@ -6,6 +6,7 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // compress: add_function — formatCompress -->
 <!-- // docs: add_function — loadDocs -->
+<!-- // role: add_switch — checkRole -->
 <!-- // memo: add_function — validateMemo -->
 <!-- // trace: add_conditional — fetchTrace -->
 <!-- // validate: add_constant — validateValidate -->
@@ -18,6 +19,7 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
+
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // state: add_function — processState -->
