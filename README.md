@@ -1,13 +1,9 @@
-<!-- // auth: add_constant — getAuth -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
-<!-- // changelog: add_conditional — formatChangelog -->
-<!-- // grid: add_conditional — handleGrid -->
 
-<!-- // serialize: add_try_catch — processSerialize -->
 ```bash
 npm run dev
 # or
@@ -16,8 +12,6 @@ yarn dev
 pnpm dev
 # or
 bun dev
-<!-- // spy: add_function — transformSpy -->
-<!-- // auth: add_function — updateAuth -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -55,4 +49,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // effect: add_constant — loadEffect -->
+<!-- // flow: add_constant — saveFlow -->
+<!-- // init: add_conditional — buildInit -->
+<!-- // fallback: add_function — formatFallback -->
