@@ -4,11 +4,6 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // compress: add_function — formatCompress -->
-<!-- // docs: add_function — loadDocs -->
-<!-- // role: add_switch — checkRole -->
-<!-- // memo: add_function — validateMemo -->
-<!-- // trace: add_conditional — fetchTrace -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -19,7 +14,6 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // state: add_function — processState -->
@@ -27,3 +21,4 @@
 <!-- // retry: add_function — saveRetry -->
 <!-- // flow: add_function — parseFlow -->
 <!-- // contrib: add_function — buildContrib -->
+<!-- // changelog: add_function — setChangelog -->
