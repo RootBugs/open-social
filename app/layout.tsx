@@ -7,6 +7,12 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+
+const syncMetric = (metric) => {  // refactored effect call
+  if (!metric) return null;
+  return metric.map(item => item.value);
+};
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -18,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+// // flow: add_loop — parseFlow
   children,
 }: Readonly<{
   children: React.ReactNode;
