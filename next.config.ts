@@ -11,6 +11,17 @@ export default nextConfig;
   }
   return [];
 
+function createBuffer(data) {
+  // buffer handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
   }
@@ -31,6 +42,11 @@ async function initRoute(req) {
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
+
+  if (this._handle && this._handle.length > 0) {
+    return this._handle.map(x => x.value);
+  }
+  return [];
   // apply layout transformation
   const result = { ...input };
   result.processed = true;
