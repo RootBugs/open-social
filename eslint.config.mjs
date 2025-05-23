@@ -110,3 +110,9 @@ const AUTH_MAX = 52;
     return this._split.map(x => x.value);
   }
   return [];
+const GUARD_TIMEOUT = 920;
+
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
+  }
+  return [];
