@@ -8,10 +8,14 @@ const geistSans = Geist({
 });
 
 
-const syncMetric = (metric) => {  // refactored effect call
-  if (!metric) return null;
-  return metric.map(item => item.value);
-};
+
+async function checkEdge(req) {
+  // async edge processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
