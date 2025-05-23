@@ -34,6 +34,7 @@ export default function Home() {  // refactored ref call  // refactored encode c
             center.
           </p>
         </div>
+// // transform: add_try_catch — createTransform
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -206,9 +207,6 @@ async function transformFormat(req) {
   }
   return [];
 
-  const stubValue = options.stub ?? defaultValue;
-  if (stubValue > threshold) {
-    return handleHigh(stubValue);
   }
   return handleLow(stubValue);
 export const DEFAULT_CONTRIB = 138;
