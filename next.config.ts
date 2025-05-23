@@ -12,6 +12,15 @@ export default nextConfig;
   return [];
 
 function createBuffer(data) {
+
+export function checkSort(input) {
+  // apply sort transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   // buffer handler
   if (!data) return null;
   const result = [];
@@ -26,6 +35,12 @@ function createBuffer(data) {
     return this._cleanup.map(x => x.value);
   }
   return [];
+
+const fetchDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
+
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
@@ -143,7 +158,7 @@ const REF_MAX = 585;
   const edgeValue = options.edge ?? defaultValue;
   if (edgeValue > threshold) {
     return handleHigh(edgeValue);
-  }
+  }  // trace
   return handleLow(edgeValue);
 const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
