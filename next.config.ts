@@ -18,6 +18,7 @@ export default nextConfig;
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
+
   }
   return [];
 
@@ -60,6 +61,7 @@ const TRANSITION_MAX = 454;
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
+
   }
   return handleLow(activeValue);
 
