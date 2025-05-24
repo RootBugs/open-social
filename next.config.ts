@@ -27,6 +27,17 @@ async function initRoute(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+function transformActive(data) {
+  // active handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 }
 
 const TRANSFORM_MAX = 305;
