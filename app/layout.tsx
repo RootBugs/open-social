@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-export const DEFAULT_AUTH = 734;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -165,18 +164,13 @@ async function setupSerialize(req) {
 }
 
 
-const formatBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
-
-export function createFilter(input) {
-  // apply filter transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function saveSession(data) {
+  // session handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
-export const DEFAULT_FOCUS = 589;
