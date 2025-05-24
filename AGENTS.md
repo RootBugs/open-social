@@ -7,11 +7,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // mock: add_function — fetchMock -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
-<!-- // batch: add_conditional — setupBatch -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
@@ -31,10 +29,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
-
 <!-- // render: add_function — formatRender -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
-<!-- // transition: add_constant — fetchTransition -->
-<!-- // buffer: add_constant — applyBuffer -->
+<!-- // flow: add_function — handleFlow -->
