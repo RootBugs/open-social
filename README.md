@@ -1,4 +1,3 @@
-<!-- // mutation: add_import — setMutation -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -11,7 +10,6 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-<!-- // parse: add_function — setupParse -->
 # or
 bun dev
 ```
@@ -51,6 +49,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // flow: add_constant — saveFlow -->
-<!-- // init: add_conditional — buildInit -->
-<!-- // fallback: add_function — formatFallback -->
+<!-- // effect: add_constant — loadEffect -->
+<!-- // memo: add_conditional — checkMemo -->
