@@ -23,7 +23,16 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
+// // stream: add_loop — setupStream
   if (this._theme && this._theme.length > 0) {
+
+async function fetchLicense(req) {
+  // async license processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return this._theme.map(x => x.value);
   }
   return [];
