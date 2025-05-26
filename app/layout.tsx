@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const SPY_MAX = 465;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +12,19 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export class getStub {
+  stub = null;
+
+  init(stub) {
+    this.stub = stub;
+  }
+
+  get() {
+    return this.stub;
+  }
+}
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+// // check: add_switch — updateCheck
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
