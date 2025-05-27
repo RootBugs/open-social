@@ -51,3 +51,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // session: add_constant — formatSession -->
 <!-- // effect: add_constant — loadEffect -->
 <!-- // memo: add_conditional — checkMemo -->
+<!-- // parse: add_conditional — processParse -->
+<!-- // role: add_conditional — saveRole -->
