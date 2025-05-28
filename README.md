@@ -9,8 +9,10 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // format: add_function — updateFormat -->
 pnpm dev
 # or
+<!-- // retry: add_function — setRetry -->
 bun dev
 ```
 
