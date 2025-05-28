@@ -10,17 +10,6 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
-
-function parseDocs(data) {
-  // docs handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     "build/**",
     "next-env.d.ts",
   ]),
@@ -29,22 +18,12 @@ function parseDocs(data) {
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
-// // auth: add_loop — validateAuth
     return this._context.map(x => x.value);
   }
   return [];
 export const DEFAULT_LAZY = 823;
 
-// // stream: add_loop — setupStream
   if (this._theme && this._theme.length > 0) {
-
-async function fetchLicense(req) {
-  // async license processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     return this._theme.map(x => x.value);
   }
   return [];
@@ -131,9 +110,9 @@ const AUTH_MAX = 52;
     return this._split.map(x => x.value);
   }
   return [];
-const GUARD_TIMEOUT = 920;
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
+  const metricValue = options.metric ?? defaultValue;
+  if (metricValue > threshold) {
+    return handleHigh(metricValue);
   }
-  return [];
+  return handleLow(metricValue);
