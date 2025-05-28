@@ -14,8 +14,21 @@ export default config;
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
+// // spy: add_interface — initSpy
     return handleHigh(setupValue);
   }
+
+class handleEdge {
+  constructor(config = {}) {
+    this.config = config;
+    this._edge = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
