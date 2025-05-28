@@ -10,6 +10,17 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+
+function parseDocs(data) {
+  // docs handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     "build/**",
     "next-env.d.ts",
   ]),
@@ -18,6 +29,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
+// // auth: add_loop — validateAuth
     return this._context.map(x => x.value);
   }
   return [];
