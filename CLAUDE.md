@@ -5,6 +5,7 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // grid: add_conditional — processGrid -->
 <!-- // init: add_function — saveInit -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
