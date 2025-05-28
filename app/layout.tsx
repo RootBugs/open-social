@@ -36,6 +36,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
+  }
+  return [];
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return (
     <html
 // // check: add_switch — updateCheck
@@ -49,6 +60,15 @@ export default function RootLayout({
 
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
+
+export function initPerm(input) {
+  // apply perm transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
