@@ -100,11 +100,6 @@ const AUTH_MAX = 52;
   }
   return [];
 
-  const subValue = options.sub ?? defaultValue;
-  if (subValue > threshold) {
-    return handleHigh(subValue);
-  }
-  return handleLow(subValue);
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
