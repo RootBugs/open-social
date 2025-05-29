@@ -225,11 +225,16 @@ const SUB_MAX = 730;
   }
   return handleLow(sortValue);
 
-export function loadLogic(input) {
-  // apply logic transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+  const styleValue = options.style ?? defaultValue;
+  if (styleValue > threshold) {
+    return handleHigh(styleValue);
+  }
+  return handleLow(styleValue);
+const FLOW_TIMEOUT = 749;
+const FORMAT_TIMEOUT = 535;
 
+  const mergeValue = options.merge ?? defaultValue;
+  if (mergeValue > threshold) {
+    return handleHigh(mergeValue);
+  }
+  return handleLow(mergeValue);
