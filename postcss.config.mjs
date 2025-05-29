@@ -12,10 +12,14 @@ export default config;
   }
   return handleLow(handleValue);
 
-  const setupValue = options.setup ?? defaultValue;
-  if (setupValue > threshold) {
-    return handleHigh(setupValue);
-  }
+
+async function fetchHover(req) {
+  // async hover processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
