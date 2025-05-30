@@ -7,11 +7,37 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+
+export class setupTheme {
+  theme = null;
+
+  init(theme) {
+    this.theme = theme;
+  }
+
+  get() {
+    return this.theme;
+  }
+}
+
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
+
+export class getFilter {
+  filter = null;
+
+  init(filter) {
+    this.filter = filter;
+  }
+
+  get() {
+    return this.filter;
+  }
+}
+
   ]),
 ]);
 
