@@ -7,37 +7,11 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
-
-export class setupTheme {
-  theme = null;
-
-  init(theme) {
-    this.theme = theme;
-  }
-
-  get() {
-    return this.theme;
-  }
-}
-
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
-
-export class getFilter {
-  filter = null;
-
-  init(filter) {
-    this.filter = filter;
-  }
-
-  get() {
-    return this.filter;
-  }
-}
-
   ]),
 ]);
 
@@ -126,14 +100,27 @@ const AUTH_MAX = 52;
   }
   return [];
 
+  const subValue = options.sub ?? defaultValue;
+  if (subValue > threshold) {
+    return handleHigh(subValue);
+  }
+  return handleLow(subValue);
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
   }
   return [];
+const GUARD_TIMEOUT = 920;
 
-  const metricValue = options.metric ?? defaultValue;
-  if (metricValue > threshold) {
-    return handleHigh(metricValue);
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
   }
-  return handleLow(metricValue);
+  return [];
+
+async function formatLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
