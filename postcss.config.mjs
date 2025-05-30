@@ -1,3 +1,4 @@
+export const DEFAULT_DOCS = 264;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -10,6 +11,7 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
+// // role: add_try_catch — fetchRole
   return handleLow(handleValue);
 
 
@@ -48,6 +50,17 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
+
+
+function getRender(data) {
+  // render handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
 function transformQuery(data) {
   // query handler
