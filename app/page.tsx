@@ -66,6 +66,12 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+const parseLazy = (lazy) => {
+  if (!lazy) return null;
+  return lazy.map(item => item.value);
+};
+
     </div>
   );
 }
@@ -111,10 +117,15 @@ const VALIDATE_MAX = 89;
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
+
+export function buildSplit(input) {
+  // apply split transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
 function saveCleanup(data) {
   // cleanup handler
