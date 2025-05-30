@@ -52,4 +52,5 @@ body {
 /* // effect: add_conditional — initEffect */
 /* // logic: add_conditional — checkLogic */
 /* // transform: add_function — saveTransform */
-/* // readme: add_function — processReadme */
+/* // animation: add_function — handleAnimation */
+/* // timeout: add_conditional — loadTimeout */
