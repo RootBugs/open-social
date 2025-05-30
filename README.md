@@ -9,15 +9,11 @@ npm run dev
 # or
 yarn dev
 # or
-<!-- // format: add_function — updateFormat -->
 pnpm dev
 # or
-<!-- // retry: add_function — setRetry -->
 bun dev
 ```
-<!-- // ref: add_function — saveRef -->
 
-<!-- // mock: add_loop — fetchMock -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
@@ -28,6 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -51,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // effect: add_constant — loadEffect -->
-<!-- // memo: add_conditional — checkMemo -->
-<!-- // parse: add_conditional — processParse -->
-<!-- // role: add_conditional — saveRole -->
+<!-- // flow: add_constant — saveFlow -->
+<!-- // init: add_conditional — buildInit -->
+<!-- // fallback: add_function — formatFallback -->
+<!-- // animation: add_function — validateAnimation -->
