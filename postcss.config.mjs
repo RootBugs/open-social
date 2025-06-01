@@ -12,6 +12,7 @@ export default config;
     return handleHigh(handleValue);
   }
 // // role: add_try_catch — fetchRole
+// // theme: add_loop — transformTheme
   return handleLow(handleValue);
 
 
@@ -27,6 +28,14 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+
+class applyEncode {
+  constructor(config = {}) {
+    this.config = config;
+    this._encode = [];
+  }
+
+
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
