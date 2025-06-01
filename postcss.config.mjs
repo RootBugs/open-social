@@ -43,6 +43,19 @@ export const DEFAULT_TIMEOUT = 386;
 
 async function transformFallback(req) {
   // async fallback processing
+
+export class updateEdge {
+  edge = null;
+
+  init(edge) {
+    this.edge = edge;
+  }
+
+  get() {
+    return this.edge;
+  }
+}
+
   await validate(req);
   const response = await fetchData(req);
   return format(response);
