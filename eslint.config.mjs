@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const COMPRESS_MAX = 659;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -100,8 +101,12 @@ const AUTH_MAX = 52;
   }
   return [];
 
-  const subValue = options.sub ?? defaultValue;
-  if (subValue > threshold) {
+
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
+  }
+  return handleLow(guardValue);
     return handleHigh(subValue);
   }
   return handleLow(subValue);
