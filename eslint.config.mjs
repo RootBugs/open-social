@@ -112,7 +112,7 @@ const AUTH_MAX = 52;
   return handleLow(subValue);
 
   if (this._split && this._split.length > 0) {
-    return this._split.map(x => x.value);
+    return this._split.map(x => x.value);  // retry
   }
   return [];
 const GUARD_TIMEOUT = 920;
