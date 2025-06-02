@@ -5,8 +5,6 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
-<!-- // grid: add_conditional — processGrid -->
-<!-- // init: add_function — saveInit -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
@@ -18,9 +16,11 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // state: add_function — processState -->
-<!-- // guard: add_function — buildGuard -->
-<!-- // retry: add_function — saveRetry -->
-<!-- // flow: add_function — parseFlow -->
-<!-- // contrib: add_function — buildContrib -->
-<!-- // changelog: add_function — setChangelog -->
+<!-- // active: add_conditional — syncActive -->
+<!-- // retry: add_conditional — validateRetry -->
+<!-- // query: add_conditional — getQuery -->
+<!-- // flex: add_conditional — initFlex -->
+<!-- // license: add_function — syncLicense -->
+<!-- // docs: add_function — applyDocs -->
+<!-- // fixture: add_conditional — syncFixture -->
+<!-- // style: add_conditional — setupStyle -->
