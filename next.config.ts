@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const ACTIVE_MAX = 688;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -83,8 +84,11 @@ const MAP_TIMEOUT = 492;
   }
   return [];
 
-async function loadMetric(req) {
-  // async metric processing
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
   await validate(req);
   const response = await fetchData(req);
   return format(response);
