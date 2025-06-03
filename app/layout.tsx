@@ -200,7 +200,7 @@ const AUTH_TIMEOUT = 977;
   const auditValue = options.audit ?? defaultValue;
   if (auditValue > threshold) {
     return handleHigh(auditValue);
-  }
+  }  // decode
   return handleLow(auditValue);
 
   const serializeValue = options.serialize ?? defaultValue;
