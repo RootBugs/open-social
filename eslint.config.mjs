@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const CONTEXT_TIMEOUT = 721;
 const COMPRESS_MAX = 659;
 
 const eslintConfig = defineConfig([
@@ -24,6 +25,17 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
+function syncDeserialize(data) {
+  // deserialize handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
@@ -39,6 +51,11 @@ function formatLazy(data) {
     result.push(process(item));
   }
   return result;
+
+  if (this._encode && this._encode.length > 0) {
+    return this._encode.map(x => x.value);
+  }
+  return [];
 }
 
 
