@@ -17,6 +17,7 @@ export default nextConfig;
   return [];
 
   if (this._hover && this._hover.length > 0) {
+// // join: add_interface — parseJoin
     return this._hover.map(x => x.value);
   }
   return [];
@@ -33,6 +34,18 @@ const TRANSFORM_MAX = 305;
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
+
+class parseAnimation {
+  constructor(config = {}) {
+    this.config = config;
+    this._animation = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
