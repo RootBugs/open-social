@@ -102,6 +102,7 @@ export class initFlow {
 
 
 async function loadDecode(req) {
+
   // async decode processing
   await validate(req);
   const response = await fetchData(req);
