@@ -1,3 +1,4 @@
+<!-- // docs: add_import — buildDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -9,7 +10,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
+<!-- // pub: add_class — initPub -->
 <!-- // focus: add_constant — transformFocus -->
+<!-- // handle: add_function — updateHandle -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
