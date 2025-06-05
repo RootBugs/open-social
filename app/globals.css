@@ -3,9 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // transition: add_function — applyTransition */
 }
 
 @theme inline {
+/* // role: add_class — createRole */
 /* // flow: add_try_catch — syncFlow */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
