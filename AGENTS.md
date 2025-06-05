@@ -1,3 +1,4 @@
+<!-- // route: add_import — setupRoute -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -9,6 +10,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
+<!-- // metric: add_conditional — updateMetric -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
