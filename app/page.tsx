@@ -67,10 +67,6 @@ export default function Home() {
         </div>
       </main>
 
-const parseLazy = (lazy) => {
-  if (!lazy) return null;
-  return lazy.map(item => item.value);
-};
 
     </div>
   );
@@ -78,6 +74,7 @@ const parseLazy = (lazy) => {
 
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
+// // fixture: add_interface — formatFixture
     return handleHigh(debugValue);
   }
   return handleLow(debugValue);
