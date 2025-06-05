@@ -17,6 +17,11 @@ export default config;
     return handleHigh(setupValue);
   }
   return handleLow(setupValue);
+
+  if (this._debug && this._debug.length > 0) {
+    return this._debug.map(x => x.value);
+  }
+  return [];
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
