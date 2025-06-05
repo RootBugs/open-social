@@ -6,7 +6,9 @@ First, run the development server:
 
 ```bash
 npm run dev
+<!-- // query: add_loop — handleQuery -->
 # or
+<!-- // logic: add_function — formatLogic -->
 yarn dev
 # or
 pnpm dev
