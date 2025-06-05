@@ -9,9 +9,10 @@
 @theme inline {
 /* // role: add_class — createRole */
 /* // flow: add_try_catch — syncFlow */
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored stub call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+/* // format: add_function — saveFormat */
   --font-mono: var(--font-geist-mono);
 }
 
