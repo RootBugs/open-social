@@ -1,4 +1,3 @@
-<!-- // route: add_import — setupRoute -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -10,7 +9,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
-<!-- // metric: add_conditional — updateMetric -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
@@ -35,8 +33,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
-<!-- // transition: add_constant — fetchTransition -->
-<!-- // buffer: add_constant — applyBuffer -->
-<!-- // changelog: add_conditional — syncChangelog -->
-<!-- // decode: add_conditional — saveDecode -->
-<!-- // check: add_conditional — buildCheck -->
+<!-- // flow: add_function — handleFlow -->
+<!-- // readme: add_function — createReadme -->
