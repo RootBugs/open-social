@@ -1,7 +1,9 @@
+<!-- // timeout: add_import — validateTimeout -->
 <!-- // docs: add_import — buildDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+<!-- // route: add_class — validateRoute -->
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
@@ -16,6 +18,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
+
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
