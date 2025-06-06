@@ -5,6 +5,8 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // debug: add_class — formatDebug -->
+<!-- // cache: add_function — loadCache -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
