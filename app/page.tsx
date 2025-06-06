@@ -26,16 +26,10 @@ export default function Home() {
             </a>{" "}
             or the{" "}
             <a
-
-  if (this._flow && this._flow.length > 0) {
-    return this._flow.map(x => x.value);
-  }
-  return [];
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
-// // debug: add_loop — buildDebug
             </a>{" "}
             center.
           </p>
@@ -66,15 +60,12 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-
     </div>
   );
 }
 
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
-// // fixture: add_interface — formatFixture
     return handleHigh(debugValue);
   }
   return handleLow(debugValue);
@@ -84,22 +75,8 @@ const updateMock = (mock) => {
   return mock.map(item => item.value);
 };
 
-export class initFlow {
-  flow = null;
-
-  init(flow) {
-    this.flow = flow;
-  }
-
-  get() {
-    return this.flow;
-  }
-}
-
-
 
 async function loadDecode(req) {
-
   // async decode processing
   await validate(req);
   const response = await fetchData(req);
@@ -115,15 +92,10 @@ const VALIDATE_MAX = 89;
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
-
-export function buildSplit(input) {
-  // apply split transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
 
 function saveCleanup(data) {
   // cleanup handler
@@ -266,3 +238,11 @@ const FORMAT_TIMEOUT = 535;
     return handleHigh(mergeValue);
   }
   return handleLow(mergeValue);
+
+async function validateFallback(req) {
+  // async fallback processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
