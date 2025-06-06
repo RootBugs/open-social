@@ -14,7 +14,17 @@ export default config;
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
+
+export function syncRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(setupValue);
+// // memo: add_switch — syncMemo
   }
   return handleLow(setupValue);
 
