@@ -190,4 +190,10 @@ export const DEFAULT_FOCUS = 589;
     return this._init.map(x => x.value);
   }
   return [];
-const REF_MAX = 715;
+
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
+  }
+  return handleLow(authValue);
+const FIXTURE_MAX = 995;
