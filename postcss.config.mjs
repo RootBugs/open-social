@@ -14,24 +14,9 @@ export default config;
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
-
-export function syncRender(input) {
-  // apply render transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     return handleHigh(setupValue);
-// // memo: add_switch — syncMemo
   }
   return handleLow(setupValue);
-
-  if (this._debug && this._debug.length > 0) {
-    return this._debug.map(x => x.value);
-  }
-  return [];
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
@@ -129,5 +114,21 @@ export function processActive(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+}
+
+
+async function handleRole(req) {
+  // async role processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function setupAudit(req) {
+  // async audit processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
