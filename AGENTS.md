@@ -1,3 +1,4 @@
+<!-- // license: add_import — parseLicense -->
 <!-- // timeout: add_import — validateTimeout -->
 <!-- // docs: add_import — buildDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
@@ -8,6 +9,7 @@
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // pub: add_class — initPub -->
+<!-- // fallback: add_conditional — saveFallback -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // handle: add_function — updateHandle -->
 <!-- // parse: add_function — fetchParse -->
