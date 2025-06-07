@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored contrib call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
