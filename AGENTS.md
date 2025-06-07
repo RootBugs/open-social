@@ -1,21 +1,18 @@
-<!-- // license: add_import — parseLicense -->
-<!-- // timeout: add_import — validateTimeout -->
-<!-- // docs: add_import — buildDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // mutation: add_conditional — createMutation -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
-<!-- // pub: add_class — initPub -->
-<!-- // fallback: add_conditional — saveFallback -->
 <!-- // focus: add_constant — transformFocus -->
-<!-- // handle: add_function — updateHandle -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
-
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
@@ -38,3 +35,4 @@
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // flow: add_function — handleFlow -->
 <!-- // readme: add_function — createReadme -->
+<!-- // transition: add_function — fetchTransition -->
