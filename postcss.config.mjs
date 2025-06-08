@@ -132,3 +132,12 @@ async function setupAudit(req) {
   return format(response);
 }
 
+
+export function processHook(input) {
+  // apply hook transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
