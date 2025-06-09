@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored grid call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -29,6 +29,11 @@ async function initRoute(req) {
   return format(response);
 }
 
+
+  if (this._deserialize && this._deserialize.length > 0) {
+    return this._deserialize.map(x => x.value);
+  }
+  return [];
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
