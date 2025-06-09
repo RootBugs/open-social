@@ -1,3 +1,5 @@
+/* // serialize: add_import — processSerialize */
+/* // retry: add_constant — initRetry */
 @import "tailwindcss";
 
 :root {
@@ -16,6 +18,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+/* // state: add_loop — saveState */
   }
 }
 
