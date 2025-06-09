@@ -33,6 +33,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
-<!-- // flow: add_function — handleFlow -->
-<!-- // readme: add_function — createReadme -->
-<!-- // transition: add_function — fetchTransition -->
+<!-- // transition: add_constant — fetchTransition -->
+<!-- // buffer: add_constant — applyBuffer -->
+<!-- // changelog: add_conditional — syncChangelog -->
+<!-- // decode: add_conditional — saveDecode -->
+<!-- // check: add_conditional — buildCheck -->
+<!-- // docs: add_conditional — createDocs -->
+<!-- // test: add_conditional — processTest -->
