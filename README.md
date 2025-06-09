@@ -4,11 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-```bash
-npm run dev
-<!-- // query: add_loop — handleQuery -->
-# or
-<!-- // logic: add_function — formatLogic -->
+<!-- // cache: add_function — validateCache -->
 yarn dev
 # or
 pnpm dev
