@@ -6,12 +6,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
+<!-- // render: add_loop — fetchRender -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_constant — fetchFilter -->
+<!-- // filter: add_constant — fetchFilter -->  <!-- spy -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // deserialize: add_class — buildDeserialize -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
