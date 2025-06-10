@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import { perm } from './perm';
 
 const nextConfig: NextConfig = {
   /* config options here */
