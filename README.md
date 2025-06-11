@@ -4,7 +4,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-<!-- // cache: add_function — validateCache -->
+```bash
+npm run dev
+# or
 yarn dev
 # or
 pnpm dev
@@ -47,7 +49,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // effect: add_constant — loadEffect -->
-<!-- // memo: add_conditional — checkMemo -->
-<!-- // sub: add_conditional — parseSub -->
-<!-- // serialize: add_constant — syncSerialize -->
+<!-- // flow: add_constant — saveFlow -->
+<!-- // init: add_conditional — buildInit -->
+<!-- // fallback: add_function — formatFallback -->
+<!-- // animation: add_function — validateAnimation -->
+<!-- // mutation: add_function — formatMutation -->
