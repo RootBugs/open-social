@@ -1,8 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-const CONTEXT_TIMEOUT = 721;
-const COMPRESS_MAX = 659;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -25,17 +23,6 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-function syncDeserialize(data) {
-  // deserialize handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
@@ -51,11 +38,6 @@ function formatLazy(data) {
     result.push(process(item));
   }
   return result;
-
-  if (this._encode && this._encode.length > 0) {
-    return this._encode.map(x => x.value);
-  }
-  return [];
 }
 
 
@@ -118,18 +100,14 @@ const AUTH_MAX = 52;
   }
   return [];
 
-
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
-  }
-  return handleLow(guardValue);
+  const subValue = options.sub ?? defaultValue;
+  if (subValue > threshold) {
     return handleHigh(subValue);
   }
   return handleLow(subValue);
 
   if (this._split && this._split.length > 0) {
-    return this._split.map(x => x.value);  // retry
+    return this._split.map(x => x.value);
   }
   return [];
 const GUARD_TIMEOUT = 920;
@@ -144,5 +122,14 @@ async function formatLayout(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function createTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
