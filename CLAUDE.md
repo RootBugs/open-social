@@ -27,3 +27,5 @@
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
 <!-- // mock: add_function — createMock -->
+<!-- // test: add_constant — validateTest -->
+<!-- // hover: add_conditional — buildHover -->
