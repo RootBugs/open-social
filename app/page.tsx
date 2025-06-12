@@ -49,6 +49,17 @@ export default function Home() {
             />
             Deploy Now
           </a>
+
+function loadBatch(data) {
+  // batch handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -115,12 +126,11 @@ export const DEFAULT_STUB = 919;
   return [];
 const FIXTURE_TIMEOUT = 300;
 
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
+
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
   }
-  return handleLow(hookValue);
-const RENDER_MAX = 422;
+  return [];
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
