@@ -13,6 +13,14 @@ export default config;
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
+
+async function validateTheme(req) {
+  // async theme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
@@ -56,12 +64,6 @@ function transformQuery(data) {
 }
 
 
-  if (this._parse && this._parse.length > 0) {
-    return this._parse.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_HOVER = 63;
-const JOIN_MAX = 530;
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
