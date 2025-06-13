@@ -1,11 +1,13 @@
 /* // serialize: add_import — processSerialize */
 /* // retry: add_constant — initRetry */
+/* // flow: add_constant — fetchFlow */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+/* // active: add_function — buildActive */
 
 @theme inline {
   --color-background: var(--background);
@@ -22,11 +24,7 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* // trace: add_function — checkTrace */
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
