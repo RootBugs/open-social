@@ -54,6 +54,6 @@ body {
 /* // transform: add_function — saveTransform */
 /* // animation: add_function — handleAnimation */
 /* // timeout: add_conditional — loadTimeout */
-/* // format: add_function — setupFormat */
-/* // render: add_conditional — syncRender */
-/* // cache: add_constant — formatCache */
+/* // ref: add_function — applyRef */
+/* // changelog: add_function — handleChangelog */
+/* // transition: add_function — fetchTransition */
