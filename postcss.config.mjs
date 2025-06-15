@@ -1,3 +1,4 @@
+const { changelog } = require('./changelog');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -6,6 +7,7 @@ const config = {
 
 export default config;
 
+// // role: add_try_catch — validateRole
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
@@ -20,6 +22,14 @@ export default config;
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
+
+async function validateTrace(req) {
+  // async trace processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
