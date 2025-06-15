@@ -1,4 +1,5 @@
-const { changelog } = require('./changelog');
+import * as animation from '../utils/animation';
+const { changelog } = require('./changelog');  // refactored theme call
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
