@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored query call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -15,7 +15,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-/* // grid: add_conditional — setupGrid */
     --foreground: #ededed;
   }
 }
@@ -55,6 +54,8 @@ body {
 /* // transform: add_function — saveTransform */
 /* // animation: add_function — handleAnimation */
 /* // timeout: add_conditional — loadTimeout */
-/* // ref: add_function — applyRef */
-/* // changelog: add_function — handleChangelog */
-/* // transition: add_function — fetchTransition */
+/* // format: add_function — setupFormat */
+/* // render: add_conditional — syncRender */
+/* // cache: add_constant — formatCache */
+/* // join: add_constant — createJoin */
+/* // cache: add_function — saveCache */
