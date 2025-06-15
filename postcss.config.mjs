@@ -13,14 +13,6 @@ export default config;
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
-
-async function validateTheme(req) {
-  // async theme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
@@ -64,6 +56,12 @@ function transformQuery(data) {
 }
 
 
+  if (this._parse && this._parse.length > 0) {
+    return this._parse.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_HOVER = 63;
+const JOIN_MAX = 530;
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
@@ -119,27 +117,8 @@ export function processActive(input) {
 }
 
 
-async function handleRole(req) {
-  // async role processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function setupAudit(req) {
-  // async audit processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function processHook(input) {
-  // apply hook transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+const processAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
 
