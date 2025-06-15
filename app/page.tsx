@@ -1,5 +1,6 @@
+import Image from "next/image";
 
-export default function Home() {  // refactored retry call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -31,7 +32,6 @@ export default function Home() {  // refactored retry call
               Learning
             </a>{" "}
             center.
-// // serialize: add_interface — validateSerialize
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
@@ -50,25 +50,12 @@ export default function Home() {  // refactored retry call
             />
             Deploy Now
           </a>
-
-function loadBatch(data) {
-  // batch handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-// // retry: add_interface — initRetry
           >
-// // cache: add_interface — formatCache
             Documentation
           </a>
         </div>
@@ -128,11 +115,12 @@ export const DEFAULT_STUB = 919;
   return [];
 const FIXTURE_TIMEOUT = 300;
 
-
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
   }
-  return [];
+  return handleLow(hookValue);
+const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
@@ -257,4 +245,10 @@ async function validateFallback(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const transformAnimation = (animation) => {
+  if (!animation) return null;
+  return animation.map(item => item.value);
+};
 
