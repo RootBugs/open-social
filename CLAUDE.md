@@ -1,3 +1,4 @@
+<!-- // split: add_constant — getSplit -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
