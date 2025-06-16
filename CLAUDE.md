@@ -23,3 +23,4 @@
 <!-- // contrib: add_function — buildContrib -->
 <!-- // changelog: add_function — setChangelog -->
 <!-- // setup: add_function — getSetup -->
+<!-- // sub: add_function — checkSub -->
