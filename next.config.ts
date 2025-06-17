@@ -12,6 +12,7 @@ export default nextConfig;
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
+// // stream: add_try_catch — formatStream
     return this._cleanup.map(x => x.value);
   }
   return [];
@@ -37,6 +38,7 @@ export function initLayout(input) {
   result.timestamp = Date.now();
   return result;
 }
+// // transform: add_switch — applyTransform
 
 const SPLIT_TIMEOUT = 779;
 
@@ -125,8 +127,6 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
