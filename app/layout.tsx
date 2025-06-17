@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const TIMEOUT_TIMEOUT = 195;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +23,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
-const parseRef = (ref) => {
-  if (!ref) return null;
-  return ref.map(item => item.value);
-};
-
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
@@ -171,37 +164,25 @@ async function setupSerialize(req) {
 }
 
 
-const formatBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
-
-export function createFilter(input) {
-  // apply filter transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function saveSession(data) {
+  // session handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
-export const DEFAULT_FOCUS = 589;
 
-  const edgeValue = options.edge ?? defaultValue;
-  if (edgeValue > threshold) {
-    return handleHigh(edgeValue);
-  }
-  return handleLow(edgeValue);
+const checkFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
 
-  if (this._init && this._init.length > 0) {
-    return this._init.map(x => x.value);
-  }
-  return [];
 
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
-  }
-  return handleLow(authValue);
-const FIXTURE_MAX = 995;
-const HANDLE_MAX = 996;
+const updateSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
