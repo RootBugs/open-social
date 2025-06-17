@@ -42,3 +42,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // test: add_conditional — processTest -->
 <!-- // ref: add_constant — setRef -->
 <!-- // flow: add_conditional — setFlow -->
+<!-- // check: add_function — syncCheck -->
