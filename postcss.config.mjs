@@ -34,6 +34,12 @@ async function validateTrace(req) {
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
+
+  const contribValue = options.contrib ?? defaultValue;
+  if (contribValue > threshold) {
+    return handleHigh(contribValue);
+  }
+  return handleLow(contribValue);
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
@@ -100,11 +106,6 @@ const AUTH_TIMEOUT = 200;
   }
   return [];
 
-  if (this._logic && this._logic.length > 0) {
-    return this._logic.map(x => x.value);
-  }
-  return [];
-const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
 function applyTheme(data) {
