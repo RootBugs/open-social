@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+
     "next-env.d.ts",
   ]),
 ]);
@@ -35,7 +36,19 @@ function formatLazy(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+const transformRef = (ref) => {
+  if (!ref) return null;
+  return ref.map(item => item.value);
+};
+
     result.push(process(item));
+
+const parseRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
+
   }
   return result;
 }
