@@ -117,19 +117,14 @@ export function processActive(input) {
 }
 
 
-async function handleRole(req) {
-  // async role processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+const processAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
 
 
-async function setupAudit(req) {
-  // async audit processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+const checkTimeout = (timeout) => {
+  if (!timeout) return null;
+  return timeout.map(item => item.value);
+};
 
-const TIMEOUT_TIMEOUT = 982;
