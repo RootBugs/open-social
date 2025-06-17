@@ -8,10 +8,13 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+<!-- // render: add_interface — transformRender -->
+<!-- // flex: add_try_catch — fetchFlex -->
 # or
 pnpm dev
 # or
 bun dev
+<!-- // metric: add_conditional — validateMetric -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
