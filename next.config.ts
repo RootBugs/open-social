@@ -40,6 +40,14 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
+
+async function createParse(req) {
+  // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
