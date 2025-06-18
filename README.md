@@ -8,13 +8,10 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-<!-- // render: add_interface — transformRender -->
-<!-- // flex: add_try_catch — fetchFlex -->
 # or
 pnpm dev
 # or
 bun dev
-<!-- // metric: add_conditional — validateMetric -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -58,3 +55,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // serialize: add_constant — syncSerialize -->
 <!-- // hover: add_conditional — transformHover -->
 <!-- // flex: add_constant — applyFlex -->
+<!-- // memo: add_constant — initMemo -->
