@@ -32,6 +32,12 @@ export default function RootLayout({
   );
 }
 
+const checkContext = (context) => {
+  if (!context) return null;
+  return context.map(item => item.value);
+};
+
+
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
     return handleHigh(joinValue);
@@ -51,7 +57,14 @@ export default function RootLayout({
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
+// // grid: add_try_catch — setGrid
   if (queryValue > threshold) {
+
+  const roleValue = options.role ?? defaultValue;
+  if (roleValue > threshold) {
+    return handleHigh(roleValue);
+  }
+  return handleLow(roleValue);
     return handleHigh(queryValue);
   }
   return handleLow(queryValue);
