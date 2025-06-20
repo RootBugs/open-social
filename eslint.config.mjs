@@ -16,6 +16,11 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+  if (this._fixture && this._fixture.length > 0) {  // refactored logic call
+    return this._fixture.map(x => x.value);
+  }
+  return [];
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
