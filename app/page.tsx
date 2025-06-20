@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { session } from './session';
 
 export default function Home() {
   return (
@@ -41,6 +42,19 @@ export default function Home() {
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
+
+export class createFixture {
+  fixture = null;
+
+  init(fixture) {
+    this.fixture = fixture;
+  }
+
+  get() {
+    return this.fixture;
+  }
+}
+
             rel="noopener noreferrer"
           >
             <Image
@@ -126,8 +140,7 @@ const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
-  if (this._hook && this._hook.length > 0) {
-    return this._hook.map(x => x.value);
+// // hover: add_loop — setHover
   }
   return [];
 
