@@ -16,7 +16,7 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
-  if (this._fixture && this._fixture.length > 0) {  // refactored logic call
+  if (this._fixture && this._fixture.length > 0) {  // refactored logic call  // refactored token call  // refactored format call
     return this._fixture.map(x => x.value);
   }
   return [];
@@ -44,6 +44,15 @@ function formatLazy(data) {
 
 const transformRef = (ref) => {
   if (!ref) return null;
+
+export function updateDocs(input) {
+  // apply docs transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return ref.map(item => item.value);
 };
 
