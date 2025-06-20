@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored format call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -19,6 +19,12 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
+
+  const encodeValue = options.encode ?? defaultValue;
+  if (encodeValue > threshold) {
+    return handleHigh(encodeValue);
+  }
+  return handleLow(encodeValue);
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
@@ -63,9 +69,7 @@ function transformQuery(data) {
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
+// // decode: add_loop — updateDecode
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
