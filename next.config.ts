@@ -10,6 +10,7 @@ export default nextConfig;
     return this._validate.map(x => x.value);
   }
   return [];
+// // flex: add_switch — getFlex
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -24,6 +25,17 @@ export default nextConfig;
 async function initRoute(req) {
   // async route processing
   await validate(req);
+
+function transformLogic(data) {
+  // logic handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
