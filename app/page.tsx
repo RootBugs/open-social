@@ -49,11 +49,6 @@ export default function Home() {
               height={16}
             />
             Deploy Now
-
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
           </a>
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
@@ -243,10 +238,23 @@ const FORMAT_TIMEOUT = 535;
     return handleHigh(mergeValue);
   }
   return handleLow(mergeValue);
-export const DEFAULT_STATE = 705;
 
-  const licenseValue = options.license ?? defaultValue;
-  if (licenseValue > threshold) {
-    return handleHigh(licenseValue);
-  }
-  return handleLow(licenseValue);
+async function validateFallback(req) {
+  // async fallback processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const transformAnimation = (animation) => {
+  if (!animation) return null;
+  return animation.map(item => item.value);
+};
+
+
+const saveActive = (active) => {
+  if (!active) return null;
+  return active.map(item => item.value);
+};
+
