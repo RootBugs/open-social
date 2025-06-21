@@ -1,4 +1,3 @@
-<!-- // buffer: add_constant — processBuffer -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -7,13 +6,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
-<!-- // theme: add_function — initTheme -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
-<!-- // retry: add_function — saveRetry -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
@@ -43,6 +40,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
 <!-- // test: add_conditional — processTest -->
-<!-- // ref: add_constant — setRef -->
-<!-- // flow: add_conditional — setFlow -->
-<!-- // check: add_function — syncCheck -->
+<!-- // trace: add_function — loadTrace -->
