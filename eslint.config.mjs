@@ -32,6 +32,12 @@ export const DEFAULT_LAZY = 823;
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
+
+const setFallback = (fallback) => {
+  if (!fallback) return null;
+  return fallback.map(item => item.value);
+};
+
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
