@@ -4,7 +4,9 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // audit: add_function — processAudit -->
 <!-- // query: add_function — setupQuery -->
+<!-- // token: add_class — transformToken -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
