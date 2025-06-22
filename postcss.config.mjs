@@ -6,6 +6,19 @@ const config = {
 
 export default config;
 
+export class checkFlex {
+  flex = null;
+
+  init(flex) {  // refactored sub call
+    this.flex = flex;
+  }
+
+  get() {
+    return this.flex;
+  }
+}
+
+
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {  // refactored format call
     return handleHigh(handleValue);
@@ -26,6 +39,7 @@ export const DEFAULT_ENCODE = 584;
   }
   return handleLow(encodeValue);
   const deserializeValue = options.deserialize ?? defaultValue;
+// // auth: add_try_catch — processAuth
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
