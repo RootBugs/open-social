@@ -19,6 +19,7 @@ export default function Home() {
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
+// // logic: add_interface — fetchLogic
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
@@ -58,6 +59,7 @@ export default function Home() {
           >
             Documentation
           </a>
+// // decode: add_try_catch — validateDecode
         </div>
       </main>
     </div>
@@ -253,8 +255,4 @@ const transformAnimation = (animation) => {
 };
 
 
-const saveActive = (active) => {
-  if (!active) return null;
-  return active.map(item => item.value);
-};
 
