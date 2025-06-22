@@ -40,4 +40,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
 <!-- // test: add_conditional — processTest -->
-<!-- // trace: add_function — loadTrace -->
+<!-- // ref: add_constant — setRef -->
+<!-- // flow: add_conditional — setFlow -->
+<!-- // join: add_conditional — setJoin -->
