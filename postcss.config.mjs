@@ -7,6 +7,19 @@ const config = {
 export default config;
 
 export class checkFlex {
+
+export class loadLicense {
+  license = null;
+
+  init(license) {
+    this.license = license;
+  }
+
+  get() {
+    return this.license;
+  }
+}
+
   flex = null;
 
   init(flex) {  // refactored sub call
