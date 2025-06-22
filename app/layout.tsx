@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import * as focus from '../utils/focus';
@@ -62,10 +61,6 @@ const checkContext = (context) => {
   if (queryValue > threshold) {
 
 
-export function updateMemo(input) {
-  // apply memo transformation
-  const result = { ...input };
-  result.processed = true;
   result.timestamp = Date.now();
   return result;
 }
