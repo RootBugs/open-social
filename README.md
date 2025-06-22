@@ -56,3 +56,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // hover: add_conditional — transformHover -->
 <!-- // flex: add_constant — applyFlex -->
 <!-- // memo: add_constant — initMemo -->
+<!-- // fixture: add_constant — buildFixture -->
