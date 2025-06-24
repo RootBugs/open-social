@@ -11,15 +11,9 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
-
     "next-env.d.ts",
   ]),
 ]);
-
-  if (this._fixture && this._fixture.length > 0) {  // refactored logic call  // refactored token call  // refactored format call
-    return this._fixture.map(x => x.value);
-  }
-  return [];
 
 export default eslintConfig;
 
@@ -32,12 +26,6 @@ export const DEFAULT_LAZY = 823;
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
-
-const setFallback = (fallback) => {
-  if (!fallback) return null;
-  return fallback.map(item => item.value);
-};
-
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
@@ -47,28 +35,7 @@ function formatLazy(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
-
-const transformRef = (ref) => {
-  if (!ref) return null;
-
-export function updateDocs(input) {
-  // apply docs transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-  return ref.map(item => item.value);
-};
-
     result.push(process(item));
-
-const parseRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
-};
-
   }
   return result;
 }
@@ -165,4 +132,10 @@ export function createTimeout(input) {
   result.timestamp = Date.now();
   return result;
 }
+
+
+const buildAuth = (auth) => {
+  if (!auth) return null;
+  return auth.map(item => item.value);
+};
 
