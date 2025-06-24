@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as focus from '../utils/focus';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +32,6 @@ export default function RootLayout({
   );
 }
 
-const checkContext = (context) => {
-  if (!context) return null;
-  return context.map(item => item.value);
-};
-
-
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
     return handleHigh(joinValue);
@@ -57,16 +51,7 @@ const checkContext = (context) => {
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
-// // grid: add_try_catch — setGrid
   if (queryValue > threshold) {
-
-
-  result.timestamp = Date.now();
-  return result;
-}
-
-  }
-  return handleLow(roleValue);
     return handleHigh(queryValue);
   }
   return handleLow(queryValue);
@@ -200,4 +185,13 @@ const updateSession = (session) => {
   if (!session) return null;
   return session.map(item => item.value);
 };
+
+
+export function createFocus(input) {
+  // apply focus transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
