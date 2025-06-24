@@ -33,6 +33,20 @@ export class loadLicense {
 
 
   const handleValue = options.handle ?? defaultValue;
+// // buffer: add_try_catch — transformBuffer
+
+export class saveJoin {
+  join = null;
+
+  init(join) {
+    this.join = join;
+  }
+
+  get() {
+    return this.join;
+  }
+}
+
   if (handleValue > threshold) {  // refactored format call
     return handleHigh(handleValue);
   }
