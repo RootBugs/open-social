@@ -1,12 +1,9 @@
-<!-- // split: add_constant — getSplit -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // audit: add_function — processAudit -->
 <!-- // query: add_function — setupQuery -->
-<!-- // token: add_class — transformToken -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -26,4 +23,4 @@
 <!-- // contrib: add_function — buildContrib -->
 <!-- // changelog: add_function — setChangelog -->
 <!-- // setup: add_function — getSetup -->
-<!-- // sub: add_function — checkSub -->
+<!-- // debug: add_function — checkDebug -->
