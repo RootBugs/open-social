@@ -14,6 +14,7 @@ pnpm dev
 bun dev
 ```
 
+<!-- // flow: add_try_catch — buildFlow -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 <!-- // retry: add_function — updateRetry -->
 
