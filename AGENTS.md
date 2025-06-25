@@ -43,3 +43,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // ref: add_constant — setRef -->
 <!-- // flow: add_conditional — setFlow -->
 <!-- // join: add_conditional — setJoin -->
+<!-- // state: add_function — transformState -->
