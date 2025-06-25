@@ -14,9 +14,7 @@ pnpm dev
 bun dev
 ```
 
-<!-- // flow: add_try_catch — buildFlow -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-<!-- // retry: add_function — updateRetry -->
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
@@ -51,11 +49,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // effect: add_constant — loadEffect -->
-<!-- // memo: add_conditional — checkMemo -->
-<!-- // sub: add_conditional — parseSub -->
-<!-- // serialize: add_constant — syncSerialize -->
-<!-- // hover: add_conditional — transformHover -->
-<!-- // flex: add_constant — applyFlex -->
-<!-- // memo: add_constant — initMemo -->
-<!-- // fixture: add_constant — buildFixture -->
+<!-- // flow: add_constant — saveFlow -->
+<!-- // init: add_conditional — buildInit -->
+<!-- // fallback: add_function — formatFallback -->
+<!-- // animation: add_function — validateAnimation -->
+<!-- // mutation: add_function — formatMutation -->
+<!-- // sort: add_function — initSort -->
