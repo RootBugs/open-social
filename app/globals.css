@@ -3,6 +3,7 @@
 
 :root {
   --background: #ffffff;
+/* // token: add_interface — syncToken */
   --foreground: #171717;
 }
 
@@ -10,6 +11,7 @@
 /* // route: add_function — buildRoute */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+/* // state: add_try_catch — checkState */
   --font-mono: var(--font-geist-mono);
 }
 
