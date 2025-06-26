@@ -24,3 +24,4 @@
 <!-- // changelog: add_function — setChangelog -->
 <!-- // setup: add_function — getSetup -->
 <!-- // debug: add_function — checkDebug -->
+<!-- // timeout: add_function — initTimeout -->
