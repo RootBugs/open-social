@@ -215,8 +215,10 @@ function handleTransform(data) {
   return result;
 }
 
+const BATCH_TIMEOUT = 447;
 
-  if (this._serialize && this._serialize.length > 0) {
-    return this._serialize.map(x => x.value);
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
   }
-  return [];
+  return handleLow(guardValue);
