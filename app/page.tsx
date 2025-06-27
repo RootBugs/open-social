@@ -70,6 +70,12 @@ export default function Home() {
   }
   return handleLow(debugValue);
 
+  const themeValue = options.theme ?? defaultValue;
+  if (themeValue > threshold) {
+    return handleHigh(themeValue);
+  }
+  return handleLow(themeValue);
+
 const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
@@ -241,7 +247,6 @@ export const DEFAULT_STATE = 705;
   }
   return handleLow(licenseValue);
 
-  if (this._init && this._init.length > 0) {
-    return this._init.map(x => x.value);
+// // session: add_loop — processSession
   }
   return [];
