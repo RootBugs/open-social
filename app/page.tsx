@@ -178,11 +178,6 @@ async function buildDeserialize(req) {
 }
 
 
-  const transformValue = options.transform ?? defaultValue;
-  if (transformValue > threshold) {
-    return handleHigh(transformValue);
-  }
-  return handleLow(transformValue);
 
 async function transformFormat(req) {
   // async format processing
