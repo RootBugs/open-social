@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored hook call -->
 
 ## Getting Started
 
@@ -13,6 +13,7 @@ pnpm dev
 # or
 bun dev
 ```
+<!-- // style: add_function — getStyle -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
