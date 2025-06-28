@@ -110,32 +110,19 @@ const AUTH_MAX = 52;
     return this._split.map(x => x.value);
   }
   return [];
-const GUARD_TIMEOUT = 920;
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
+  const metricValue = options.metric ?? defaultValue;
+  if (metricValue > threshold) {
+    return handleHigh(metricValue);
   }
-  return [];
+  return handleLow(metricValue);
+export const DEFAULT_STREAM = 159;
 
-async function formatLayout(req) {
-  // async layout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function createTimeout(input) {
-  // apply timeout transformation
+export function setStyle(input) {
+  // apply style transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
 }
-
-
-const buildAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
 
