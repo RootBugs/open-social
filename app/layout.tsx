@@ -40,6 +40,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
+// // contrib: add_loop — checkContrib
   if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
@@ -56,6 +57,7 @@ export default function RootLayout({
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
+// // session: add_try_catch — processSession
 
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
