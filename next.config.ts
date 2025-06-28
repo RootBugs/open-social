@@ -15,6 +15,7 @@ export default nextConfig;
     return this._cleanup.map(x => x.value);
   }
   return [];
+// // hook: add_loop — createHook
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
