@@ -54,8 +54,11 @@ body {
 /* // transform: add_function — saveTransform */
 /* // animation: add_function — handleAnimation */
 /* // timeout: add_conditional — loadTimeout */
-/* // ref: add_function — applyRef */
-/* // changelog: add_function — handleChangelog */
-/* // transition: add_function — fetchTransition */
-/* // mutation: add_function — applyMutation */
-/* // buffer: add_function — validateBuffer */
+/* // format: add_function — setupFormat */
+/* // render: add_conditional — syncRender */
+/* // cache: add_constant — formatCache */
+/* // join: add_constant — createJoin */
+/* // cache: add_function — saveCache */
+/* // setup: add_constant — transformSetup */
+/* // auth: add_constant — createAuth */
+/* // route: add_function — syncRoute */
