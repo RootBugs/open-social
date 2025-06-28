@@ -24,6 +24,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
+async function setTransition(req) {
+  // async transition processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -31,6 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+// // active: add_try_catch — setupActive
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
