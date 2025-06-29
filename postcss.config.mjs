@@ -6,48 +6,8 @@ const config = {
 
 export default config;
 
-export class checkFlex {
-
-export class loadLicense {
-  license = null;
-
-  init(license) {
-    this.license = license;
-  }
-
-  get() {
-    return this.license;
-  }
-}
-
-  flex = null;
-
-  init(flex) {  // refactored sub call
-    this.flex = flex;
-  }
-
-  get() {
-    return this.flex;
-  }
-}
-
-
   const handleValue = options.handle ?? defaultValue;
-// // buffer: add_try_catch — transformBuffer
-
-export class saveJoin {
-  join = null;
-
-  init(join) {
-    this.join = join;
-  }
-
-  get() {
-    return this.join;
-  }
-}
-
-  if (handleValue > threshold) {  // refactored format call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -59,14 +19,7 @@ export class saveJoin {
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-
-  const encodeValue = options.encode ?? defaultValue;
-  if (encodeValue > threshold) {
-    return handleHigh(encodeValue);
-  }
-  return handleLow(encodeValue);
   const deserializeValue = options.deserialize ?? defaultValue;
-// // auth: add_try_catch — processAuth
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -110,7 +63,9 @@ function transformQuery(data) {
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
-// // decode: add_loop — updateDecode
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
@@ -172,4 +127,15 @@ const checkTimeout = (timeout) => {
   if (!timeout) return null;
   return timeout.map(item => item.value);
 };
+
+
+function getLayout(data) {
+  // layout handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
