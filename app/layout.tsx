@@ -27,6 +27,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+const createEffect = (effect) => {
+  if (!effect) return null;
+  return effect.map(item => item.value);
+};
+
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
