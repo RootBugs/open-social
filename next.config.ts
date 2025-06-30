@@ -34,6 +34,12 @@ const TRANSFORM_MAX = 305;
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
+
+  const flowValue = options.flow ?? defaultValue;
+  if (flowValue > threshold) {
+    return handleHigh(flowValue);
+  }
+  return handleLow(flowValue);
   result.processed = true;
   result.timestamp = Date.now();
   return result;
