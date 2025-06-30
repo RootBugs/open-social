@@ -70,12 +70,6 @@ export default function Home() {
   }
   return handleLow(debugValue);
 
-  const themeValue = options.theme ?? defaultValue;
-  if (themeValue > threshold) {
-    return handleHigh(themeValue);
-  }
-  return handleLow(themeValue);
-
 const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
@@ -184,6 +178,11 @@ async function buildDeserialize(req) {
 }
 
 
+  const transformValue = options.transform ?? defaultValue;
+  if (transformValue > threshold) {
+    return handleHigh(transformValue);
+  }
+  return handleLow(transformValue);
 
 async function transformFormat(req) {
   // async format processing
@@ -247,6 +246,21 @@ export const DEFAULT_STATE = 705;
   }
   return handleLow(licenseValue);
 
-// // session: add_loop — processSession
+  if (this._init && this._init.length > 0) {
+    return this._init.map(x => x.value);
+  }
+  return [];
+
+export function createRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
   }
   return [];
