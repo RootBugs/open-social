@@ -41,6 +41,12 @@ async function transformFallback(req) {
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
+
+  const encodeValue = options.encode ?? defaultValue;
+  if (encodeValue > threshold) {
+    return handleHigh(encodeValue);
+  }
+  return handleLow(encodeValue);
     return this._edge.map(x => x.value);
   }
   return [];
