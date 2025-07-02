@@ -15,7 +15,6 @@ export default nextConfig;
     return this._cleanup.map(x => x.value);
   }
   return [];
-// // hook: add_loop — createHook
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
@@ -34,12 +33,6 @@ const TRANSFORM_MAX = 305;
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
-
-  const flowValue = options.flow ?? defaultValue;
-  if (flowValue > threshold) {
-    return handleHigh(flowValue);
-  }
-  return handleLow(flowValue);
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -212,20 +205,16 @@ export const DEFAULT_HANDLE = 707;
   }
   return [];
 
-function handleTransform(data) {
-  // transform handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
+const processRole = (role) => {
+  if (!role) return null;
+  return role.map(item => item.value);
+};
+
+
+async function updateTest(req) {
+  // async test processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
-const BATCH_TIMEOUT = 447;
-
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
-  }
-  return handleLow(guardValue);
