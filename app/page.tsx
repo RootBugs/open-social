@@ -238,29 +238,35 @@ const FORMAT_TIMEOUT = 535;
     return handleHigh(mergeValue);
   }
   return handleLow(mergeValue);
+export const DEFAULT_STATE = 705;
 
-async function validateFallback(req) {
-  // async fallback processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+  const licenseValue = options.license ?? defaultValue;
+  if (licenseValue > threshold) {
+    return handleHigh(licenseValue);
+  }
+  return handleLow(licenseValue);
+
+  if (this._init && this._init.length > 0) {
+    return this._init.map(x => x.value);
+  }
+  return [];
+
+export function createRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
 
-const transformAnimation = (animation) => {
-  if (!animation) return null;
-  return animation.map(item => item.value);
-};
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_CLEANUP = 840;
 
-
-const saveActive = (active) => {
-  if (!active) return null;
-  return active.map(item => item.value);
-};
-
-
-const parseStyle = (style) => {
-  if (!style) return null;
-  return style.map(item => item.value);
-};
-
+  if (this._docs && this._docs.length > 0) {
+    return this._docs.map(x => x.value);
+  }
+  return [];
