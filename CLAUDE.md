@@ -29,4 +29,5 @@
 <!-- // mock: add_function — createMock -->
 <!-- // effect: add_conditional — transformEffect -->
 <!-- // hook: add_function — validateHook -->
-<!-- // mutation: add_conditional — loadMutation -->
+<!-- // transform: add_function — syncTransform -->
+<!-- // test: add_function — handleTest -->
