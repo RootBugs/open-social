@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
+        <Image  // serialize
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -83,10 +83,17 @@ async function loadDecode(req) {
   return format(response);
 }
 
+
+export function transformGuard(input) {
+  // apply guard transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const VALIDATE_MAX = 89;
 
-  if (this._compress && this._compress.length > 0) {
-    return this._compress.map(x => x.value);
   }
   return [];
 export const DEFAULT_MUTATION = 494;
