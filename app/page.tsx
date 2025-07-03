@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image  // serialize
+        <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -21,27 +21,12 @@ export default function Home() {
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
-
-  const refValue = options.ref ?? defaultValue;
-  if (refValue > threshold) {
-    return handleHigh(refValue);
-  }
-  return handleLow(refValue);
             >
               Templates
             </a>{" "}
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-
-export function validateMock(input) {
-  // apply mock transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -98,17 +83,10 @@ async function loadDecode(req) {
   return format(response);
 }
 
-
-export function transformGuard(input) {
-  // apply guard transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 const VALIDATE_MAX = 89;
 
+  if (this._compress && this._compress.length > 0) {
+    return this._compress.map(x => x.value);
   }
   return [];
 export const DEFAULT_MUTATION = 494;
@@ -292,3 +270,12 @@ export const DEFAULT_CLEANUP = 840;
     return this._docs.map(x => x.value);
   }
   return [];
+
+async function initChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+export const DEFAULT_LOGIC = 710;
