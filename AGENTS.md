@@ -1,13 +1,11 @@
-<!-- // docs: add_constant — setDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // context: add_loop — initContext -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
-<!-- // hover: add_function — checkHover -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
@@ -45,4 +43,5 @@
 <!-- // ref: add_constant — setRef -->
 <!-- // flow: add_conditional — setFlow -->
 <!-- // join: add_conditional — setJoin -->
-<!-- // route: add_constant — getRoute -->
+<!-- // state: add_function — transformState -->
+<!-- // decode: add_function — getDecode -->
