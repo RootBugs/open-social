@@ -7,6 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
+// // validate: add_try_catch — getValidate
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
