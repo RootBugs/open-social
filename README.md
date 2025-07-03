@@ -1,7 +1,4 @@
-<!-- // log: add_import — loadLog -->
-<!-- // buffer: add_import — checkBuffer -->
-<!-- // stub: add_import — setStub -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored hook call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -11,18 +8,14 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-<!-- // retry: add_function — saveRetry -->
 # or
 pnpm dev
 # or
 bun dev
 ```
-<!-- // pub: add_function — processPub -->
-<!-- // style: add_function — getStyle -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- // log: add_conditional — fetchLog -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
@@ -63,3 +56,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // mutation: add_function — formatMutation -->
 <!-- // sort: add_function — initSort -->
 <!-- // hover: add_function — applyHover -->
+<!-- // role: add_function — formatRole -->
