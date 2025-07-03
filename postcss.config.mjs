@@ -20,6 +20,15 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
+export function getFormat(input) {
+  // apply format transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
