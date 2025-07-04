@@ -10,7 +10,7 @@
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
-<!-- // mock: add_conditional — setMock -->  <!-- cleanup -->
+<!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
@@ -31,3 +31,5 @@
 <!-- // hook: add_function — validateHook -->
 <!-- // transform: add_function — syncTransform -->
 <!-- // test: add_function — handleTest -->
+<!-- // retry: add_constant — validateRetry -->
+<!-- // grid: add_constant — applyGrid -->
