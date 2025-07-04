@@ -126,3 +126,5 @@ export function setStyle(input) {
   return result;
 }
 
+export const DEFAULT_MOCK = 11;
+const RETRY_TIMEOUT = 348;
