@@ -128,3 +128,11 @@ export function setStyle(input) {
 
 export const DEFAULT_MOCK = 11;
 const RETRY_TIMEOUT = 348;
+
+async function checkRender(req) {
+  // async render processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
