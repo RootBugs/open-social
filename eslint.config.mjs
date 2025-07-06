@@ -10,6 +10,7 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+// // decode: add_try_catch — applyDecode
     "build/**",
     "next-env.d.ts",
   ]),
@@ -20,6 +21,19 @@ export default eslintConfig;
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
+
+export class setupAnimation {
+  animation = null;
+
+  init(animation) {
+    this.animation = animation;
+  }
+
+  get() {
+    return this.animation;
+  }
+}
+
   return [];
 export const DEFAULT_LAZY = 823;
 
