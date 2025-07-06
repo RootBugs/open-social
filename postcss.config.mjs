@@ -7,7 +7,6 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-// // validate: add_try_catch — getValidate
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
@@ -19,15 +18,6 @@ export default config;
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
-
-export function getFormat(input) {
-  // apply format transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
@@ -51,12 +41,6 @@ async function transformFallback(req) {
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
-
-  const encodeValue = options.encode ?? defaultValue;
-  if (encodeValue > threshold) {
-    return handleHigh(encodeValue);
-  }
-  return handleLow(encodeValue);
     return this._edge.map(x => x.value);
   }
   return [];
@@ -152,6 +136,15 @@ function getLayout(data) {
   for (const item of data) {
     result.push(process(item));
   }
+  return result;
+}
+
+
+export function updateMerge(input) {
+  // apply merge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
