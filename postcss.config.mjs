@@ -117,34 +117,24 @@ export function processActive(input) {
 }
 
 
-const processAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
+async function handleRole(req) {
+  // async role processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
 
-const checkTimeout = (timeout) => {
-  if (!timeout) return null;
-  return timeout.map(item => item.value);
-};
+async function setupAudit(req) {
+  // async audit processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
+const TIMEOUT_TIMEOUT = 982;
 
-function getLayout(data) {
-  // layout handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._flex && this._flex.length > 0) {
+    return this._flex.map(x => x.value);
   }
-  return result;
-}
-
-
-export function updateMerge(input) {
-  // apply merge transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  return [];
