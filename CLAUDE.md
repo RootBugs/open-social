@@ -33,4 +33,4 @@
 <!-- // test: add_function — handleTest -->
 <!-- // retry: add_constant — validateRetry -->
 <!-- // grid: add_constant — applyGrid -->
-<!-- // cache: add_constant — setupCache -->
+<!-- // merge: add_conditional — createMerge -->
