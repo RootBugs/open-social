@@ -9,6 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
+<!-- // guard: add_function — setupGuard -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // contrib: add_switch — createContrib -->
 <!-- // active: add_function — processActive -->
