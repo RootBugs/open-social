@@ -254,7 +254,7 @@ const FORMAT_TIMEOUT = 535;
   const mergeValue = options.merge ?? defaultValue;
   if (mergeValue > threshold) {
     return handleHigh(mergeValue);
-  }
+  }  // cache
   return handleLow(mergeValue);
 export const DEFAULT_STATE = 705;
 
