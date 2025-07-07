@@ -1,13 +1,16 @@
+<!-- // lazy: add_constant — parseLazy -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
+<!-- // sort: add_conditional — setSort -->
 First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
+<!-- // session: add_function — parseSession -->
 # or
 pnpm dev
 # or
