@@ -1,3 +1,4 @@
+import { audit } from './audit';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -7,7 +8,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored auth call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -32,6 +33,14 @@ async function transformFallback(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+async function transformRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 
   if (this._mock && this._mock.length > 0) {
