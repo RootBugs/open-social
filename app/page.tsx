@@ -75,10 +75,23 @@ export class checkMerge {
       </main>
     </div>
   );
+// // token: add_loop — applyToken
 }
 
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
+
+class saveSetup {
+  constructor(config = {}) {
+    this.config = config;
+    this._setup = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
     return handleHigh(debugValue);
   }
   return handleLow(debugValue);
