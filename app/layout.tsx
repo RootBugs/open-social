@@ -12,6 +12,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export class applyStub {
+  stub = null;
+
+  init(stub) {
+    this.stub = stub;
+  }
+
+  get() {
+    return this.stub;
+  }
+}
+
+
   if (this._test && this._test.length > 0) {
     return this._test.map(x => x.value);
   }
