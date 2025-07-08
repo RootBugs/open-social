@@ -157,12 +157,6 @@ function processSpy(data) {
 
 export const DEFAULT_GUARD = 759;
 
-async function formatChangelog(req) {
-  // async changelog processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 
 const initMetric = (metric) => {
