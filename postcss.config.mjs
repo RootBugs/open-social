@@ -1,3 +1,4 @@
+export const DEFAULT_TRANSITION = 760;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -44,6 +45,18 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
+
+
+class loadJoin {
+  constructor(config = {}) {
+    this.config = config;
+    this._join = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
 
 function transformQuery(data) {
   // query handler
