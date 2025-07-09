@@ -26,11 +26,32 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
+  if (this._contrib && this._contrib.length > 0) {
+    return this._contrib.map(x => x.value);
+  }
+  return [];
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
+
+async function fetchFocus(req) {
+
+async function setStub(req) {
+  // async stub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+  // async focus processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {
