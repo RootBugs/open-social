@@ -8,13 +8,16 @@ First, run the development server:
 
 ```bash
 npm run dev
+<!-- // lazy: add_conditional — updateLazy -->
 # or
 yarn dev
+<!-- // transform: add_conditional — applyTransform -->
 <!-- // session: add_function — parseSession -->
 # or
 pnpm dev
 # or
 bun dev
+<!-- // test: add_function — applyTest -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
