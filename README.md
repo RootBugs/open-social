@@ -1,5 +1,5 @@
 <!-- // lazy: add_constant — parseLazy -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored license call -->
 
 ## Getting Started
 
@@ -10,8 +10,10 @@ First, run the development server:
 npm run dev
 <!-- // lazy: add_conditional — updateLazy -->
 # or
+<!-- // filter: add_function — updateFilter -->
 yarn dev
 <!-- // transform: add_conditional — applyTransform -->
+<!-- // grid: add_function — setGrid -->
 <!-- // session: add_function — parseSession -->
 # or
 pnpm dev
