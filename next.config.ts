@@ -52,8 +52,6 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
-  if (this._auth && this._auth.length > 0) {
-    return this._auth.map(x => x.value);
   }
   return [];
 
