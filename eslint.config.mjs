@@ -114,11 +114,14 @@ const AUTH_MAX = 52;
   }
   return [];
 
-  const subValue = options.sub ?? defaultValue;
-  if (subValue > threshold) {
-    return handleHigh(subValue);
-  }
-  return handleLow(subValue);
+
+async function processTheme(req) {
+  // async theme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
