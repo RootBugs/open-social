@@ -14,19 +14,6 @@ export default function Home() {
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-
-export class checkMerge {
-  merge = null;
-
-  init(merge) {
-    this.merge = merge;
-  }
-
-  get() {
-    return this.merge;
-  }
-}
-
             To get started, edit the page.tsx file.
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
@@ -75,23 +62,10 @@ export class checkMerge {
       </main>
     </div>
   );
-// // token: add_loop — applyToken
 }
 
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
-
-class saveSetup {
-  constructor(config = {}) {
-    this.config = config;
-    this._setup = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
     return handleHigh(debugValue);
   }
   return handleLow(debugValue);
@@ -102,14 +76,9 @@ const updateMock = (mock) => {
 };
 
 
-
-async function saveCompress(req) {
-  // async compress processing
+async function loadDecode(req) {
+  // async decode processing
   await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -267,7 +236,7 @@ const FORMAT_TIMEOUT = 535;
   const mergeValue = options.merge ?? defaultValue;
   if (mergeValue > threshold) {
     return handleHigh(mergeValue);
-  }  // cache
+  }
   return handleLow(mergeValue);
 export const DEFAULT_STATE = 705;
 
@@ -302,8 +271,17 @@ export const DEFAULT_CLEANUP = 840;
   }
   return [];
 
-async function saveDeserialize(req) {
-  // async deserialize processing
+async function initChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+export const DEFAULT_LOGIC = 710;
+
+async function formatDocs(req) {
+  // async docs processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
