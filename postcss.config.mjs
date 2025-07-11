@@ -1,4 +1,3 @@
-export const DEFAULT_TRANSITION = 760;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -12,14 +11,6 @@ export default config;
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
-
-
-async function handleReadme(req) {
-  // async readme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -53,18 +44,6 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
-
-
-class loadJoin {
-  constructor(config = {}) {
-    this.config = config;
-    this._join = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
 
 function transformQuery(data) {
   // query handler
@@ -171,3 +150,8 @@ function applyActive(data) {
   return result;
 }
 
+
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
