@@ -13,6 +13,14 @@ export default config;
   }
   return handleLow(handleValue);
 
+
+async function handleReadme(req) {
+  // async readme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
