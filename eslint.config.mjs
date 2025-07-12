@@ -32,6 +32,19 @@ export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
   // lazy handler
+
+export class initHook {
+  hook = null;
+
+  init(hook) {
+    this.hook = hook;
+  }
+
+  get() {
+    return this.hook;
+  }
+}
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
