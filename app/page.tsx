@@ -287,3 +287,13 @@ async function formatDocs(req) {
   return format(response);
 }
 
+
+  if (this._batch && this._batch.length > 0) {
+    return this._batch.map(x => x.value);
+  }
+  return [];
+
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
+  }
+  return [];
