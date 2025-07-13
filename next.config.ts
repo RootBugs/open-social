@@ -50,15 +50,6 @@ const SPLIT_TIMEOUT = 779;
     return this._merge.map(x => x.value);
   }
   return [];
-
-export function validateContext(input) {
-  // apply context transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
@@ -72,34 +63,11 @@ const TRANSITION_MAX = 454;
   }
   return handleLow(activeValue);
 
-
-class handleCheck {
-  constructor(config = {}) {
-    this.config = config;
-    this._check = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 async function transformRender(req) {
   // async render processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-
-function formatDeserialize(data) {
-  // deserialize handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 }
 
 const MAP_TIMEOUT = 492;
@@ -237,31 +205,22 @@ export const DEFAULT_HANDLE = 707;
   }
   return [];
 
-function handleTransform(data) {
-  // transform handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
+const processRole = (role) => {
+  if (!role) return null;
+  return role.map(item => item.value);
+};
+
+
+async function updateTest(req) {
+  // async test processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
-const BATCH_TIMEOUT = 447;
 
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
-  }
-  return handleLow(guardValue);
-
-  if (this._layout && this._layout.length > 0) {
-    return this._layout.map(x => x.value);
-  }
-  return [];
-
-function initFallback(data) {
-  // fallback handler
+function saveFormat(data) {
+  // format handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
