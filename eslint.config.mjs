@@ -36,6 +36,7 @@ function formatLazy(data) {
 export class initHook {
   hook = null;
 
+// // serialize: add_switch — handleSerialize
   init(hook) {
     this.hook = hook;
   }
