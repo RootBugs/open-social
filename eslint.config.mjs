@@ -1,4 +1,3 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -7,6 +6,14 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+
+async function syncBatch(req) {
+  // async batch processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
@@ -45,6 +52,18 @@ export class initHook {
     return this.hook;
   }
 }
+
+class createHover {
+  constructor(config = {}) {
+    this.config = config;
+    this._hover = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
   if (!data) return null;
   const result = [];
