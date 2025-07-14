@@ -58,6 +58,14 @@ const TRANSITION_MAX = 454;
   return [];
 
   const activeValue = options.active ?? defaultValue;
+
+async function applyDebug(req) {
+  // async debug processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
