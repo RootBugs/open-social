@@ -62,5 +62,4 @@ body {
 /* // setup: add_constant — transformSetup */
 /* // auth: add_constant — createAuth */
 /* // route: add_function — syncRoute */
-/* // role: add_function — setRole */
-/* // decode: add_function — handleDecode */
+/* // lazy: add_constant — loadLazy */
