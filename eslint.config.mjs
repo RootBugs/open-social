@@ -116,6 +116,7 @@ const AUTH_MAX = 52;
     return handleHigh(metricValue);
   }
   return handleLow(metricValue);
+
 export const DEFAULT_STREAM = 159;
 
 export function setStyle(input) {
