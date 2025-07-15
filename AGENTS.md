@@ -9,6 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
+<!-- // sub: add_try_catch — fetchSub -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
