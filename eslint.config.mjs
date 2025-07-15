@@ -116,7 +116,6 @@ const AUTH_MAX = 52;
     return handleHigh(metricValue);
   }
   return handleLow(metricValue);
-
 export const DEFAULT_STREAM = 159;
 
 export function setStyle(input) {
@@ -127,9 +126,20 @@ export function setStyle(input) {
   return result;
 }
 
+export const DEFAULT_MOCK = 11;
+const RETRY_TIMEOUT = 348;
 
-function buildAuth(data) {
-  // auth handler
+export function initMutation(input) {
+  // apply mutation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function updateAudit(data) {
+  // audit handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
