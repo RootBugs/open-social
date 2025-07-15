@@ -1,3 +1,4 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -6,14 +7,6 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
-
-async function syncBatch(req) {
-  // async batch processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
@@ -39,32 +32,6 @@ export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
   // lazy handler
-
-export class initHook {
-  hook = null;
-
-// // serialize: add_switch — handleSerialize
-  init(hook) {
-    this.hook = hook;
-  }
-
-  get() {
-    return this.hook;
-  }
-}
-
-class createHover {
-  constructor(config = {}) {
-    this.config = config;
-    this._hover = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -159,14 +126,14 @@ export function setStyle(input) {
   return result;
 }
 
-export const DEFAULT_MOCK = 11;
-const RETRY_TIMEOUT = 348;
 
-export function initMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function buildAuth(data) {
+  // auth handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
