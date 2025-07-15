@@ -1,8 +1,10 @@
+/* // mutation: add_constant — getMutation */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // format: add_class — handleFormat */
 }
 /* // retry: add_function — setRetry */
 
