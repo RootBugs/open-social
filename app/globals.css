@@ -63,3 +63,5 @@ body {
 /* // auth: add_constant — createAuth */
 /* // route: add_function — syncRoute */
 /* // lazy: add_constant — loadLazy */
+/* // flex: add_function — validateFlex */
+/* // grid: add_conditional — setupGrid */
