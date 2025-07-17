@@ -1,3 +1,4 @@
+<!-- // serialize: add_constant — applySerialize -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -6,6 +7,7 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
+<!-- // trace: add_conditional — initTrace -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
