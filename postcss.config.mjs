@@ -40,6 +40,19 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
+
+export class saveSession {
+  session = null;
+
+  init(session) {
+    this.session = session;
+  }
+
+  get() {
+    return this.session;
+  }
+}
+
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
