@@ -40,19 +40,6 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-
-export class saveSession {
-  session = null;
-
-  init(session) {
-    this.session = session;
-  }
-
-  get() {
-    return this.session;
-  }
-}
-
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
@@ -151,9 +138,10 @@ const TIMEOUT_TIMEOUT = 982;
     return this._flex.map(x => x.value);
   }
   return [];
+const FORMAT_MAX = 793;
 
-function transformCache(data) {
-  // cache handler
+function applyActive(data) {
+  // active handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -162,3 +150,9 @@ function transformCache(data) {
   return result;
 }
 
+
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_DEBUG = 103;
