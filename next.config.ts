@@ -49,6 +49,15 @@ const SPLIT_TIMEOUT = 779;
   if (this._merge && this._merge.length > 0) {
     return this._merge.map(x => x.value);
   }
+
+export function syncChangelog(input) {
+  // apply changelog transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return [];
 const TRANSITION_MAX = 454;
 
