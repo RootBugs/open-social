@@ -3,9 +3,12 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // memo: add_function — getMemo -->
+<!-- // debug: add_function — updateDebug -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // flex: add_function — transformFlex -->
 <!-- // split: add_function — formatSplit -->
 <!-- // trace: add_conditional — initTrace -->
 <!-- // active: add_conditional — parseActive -->
