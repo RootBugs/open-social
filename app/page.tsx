@@ -97,6 +97,17 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
+function parseFallback(data) {
+  // fallback handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
 function saveCleanup(data) {
   // cleanup handler
   if (!data) return null;
@@ -227,7 +238,7 @@ const SUB_MAX = 730;
 
   const styleValue = options.style ?? defaultValue;
   if (styleValue > threshold) {
-    return handleHigh(styleValue);
+    return handleHigh(styleValue);  // render
   }
   return handleLow(styleValue);
 const FLOW_TIMEOUT = 749;
