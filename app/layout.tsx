@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored flow call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
