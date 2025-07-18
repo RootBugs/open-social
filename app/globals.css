@@ -18,6 +18,7 @@
     --foreground: #ededed;
   }
 }
+/* // state: add_function — syncState */
 
 body {
   background: var(--background);
