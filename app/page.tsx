@@ -97,17 +97,6 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
-function parseFallback(data) {
-  // fallback handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
 function saveCleanup(data) {
   // cleanup handler
   if (!data) return null;
@@ -238,7 +227,7 @@ const SUB_MAX = 730;
 
   const styleValue = options.style ?? defaultValue;
   if (styleValue > threshold) {
-    return handleHigh(styleValue);  // render
+    return handleHigh(styleValue);
   }
   return handleLow(styleValue);
 const FLOW_TIMEOUT = 749;
@@ -282,29 +271,16 @@ export const DEFAULT_CLEANUP = 840;
   }
   return [];
 
-async function initChangelog(req) {
-  // async changelog processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-export const DEFAULT_LOGIC = 710;
-
-async function formatDocs(req) {
-  // async docs processing
+async function saveDeserialize(req) {
+  // async deserialize processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-  if (this._batch && this._batch.length > 0) {
-    return this._batch.map(x => x.value);
-  }
-  return [];
+const initGuard = (guard) => {
+  if (!guard) return null;
+  return guard.map(item => item.value);
+};
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
-  }
-  return [];
