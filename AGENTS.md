@@ -1,21 +1,17 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // log: add_conditional — handleLog -->
-<!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_constant — fetchFilter -->
-<!-- // active: add_function — processActive -->
-<!-- // sub: add_try_catch — fetchSub -->
-<!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
+<!-- // decode: add_try_catch — transformDecode -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
+<!-- // format: add_function — parseFormat -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
