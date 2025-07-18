@@ -8,6 +8,7 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // memo: add_conditional — setMemo -->
 <!-- // flex: add_function — transformFlex -->
 <!-- // split: add_function — formatSplit -->
 <!-- // trace: add_conditional — initTrace -->
