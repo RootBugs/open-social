@@ -271,16 +271,28 @@ export const DEFAULT_CLEANUP = 840;
   }
   return [];
 
-async function saveDeserialize(req) {
-  // async deserialize processing
+async function initChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+export const DEFAULT_LOGIC = 710;
+
+async function formatDocs(req) {
+  // async docs processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-const initGuard = (guard) => {
-  if (!guard) return null;
-  return guard.map(item => item.value);
-};
+export function fetchGuard(input) {
+  // apply guard transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
