@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const CHANGELOG_TIMEOUT = 906;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -60,6 +61,12 @@ const TRANSITION_MAX = 454;
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
+
+  const activeValue = options.active ?? defaultValue;
+  if (activeValue > threshold) {
+    return handleHigh(activeValue);
+  }
+  return handleLow(activeValue);
   }
   return handleLow(activeValue);
 
