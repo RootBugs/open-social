@@ -43,7 +43,7 @@ body {
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
 /* // deserialize: add_function — loadDeserialize */
-/* // lazy: add_function — updateLazy */
+/* // lazy: add_function — updateLazy */  /* grid */
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
 /* // layout: add_constant — buildLayout */
