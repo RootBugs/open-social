@@ -36,11 +36,6 @@ export const DEFAULT_ANIMATION = 358;
   }
   return handleLow(changelogValue);
 
-function formatLazy(data) {
-  // lazy handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
     result.push(process(item));
   }
   return result;
