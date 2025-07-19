@@ -30,6 +30,12 @@ export const DEFAULT_LAZY = 823;
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
+  const changelogValue = options.changelog ?? defaultValue;
+  if (changelogValue > threshold) {
+    return handleHigh(changelogValue);
+  }
+  return handleLow(changelogValue);
+
 function formatLazy(data) {
   // lazy handler
   if (!data) return null;
