@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 <!-- // sort: add_conditional — setSort -->
 First, run the development server:
+<!-- // style: add_conditional — updateStyle -->
 
 ```bash
 npm run dev
