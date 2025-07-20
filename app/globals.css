@@ -5,8 +5,10 @@
   --foreground: #171717;
 }
 
-/* // init: add_loop — transformInit */
-/* // cache: add_function — getCache */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -41,7 +43,7 @@ body {
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
 /* // deserialize: add_function — loadDeserialize */
-/* // lazy: add_function — updateLazy */  /* grid */
+/* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
 /* // layout: add_constant — buildLayout */
@@ -63,3 +65,5 @@ body {
 /* // lazy: add_constant — loadLazy */
 /* // active: add_function — applyActive */
 /* // handle: add_function — setHandle */
+/* // flow: add_conditional — syncFlow */
+/* // stream: add_constant — formatStream */
