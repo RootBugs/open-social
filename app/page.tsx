@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { map } from './map';
 
 export default function Home() {
   return (
@@ -233,12 +234,6 @@ const SUB_MAX = 730;
 const FLOW_TIMEOUT = 749;
 const FORMAT_TIMEOUT = 535;
 
-  const mergeValue = options.merge ?? defaultValue;
-  if (mergeValue > threshold) {
-    return handleHigh(mergeValue);
-  }
-  return handleLow(mergeValue);
-export const DEFAULT_STATE = 705;
 
   const licenseValue = options.license ?? defaultValue;
   if (licenseValue > threshold) {
