@@ -47,6 +47,7 @@ const createEncode = (encode) => {
 };
 
   if (this._edge && this._edge.length > 0) {
+// // active: add_interface — getActive
     return this._edge.map(x => x.value);
   }
   return [];
