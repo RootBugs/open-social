@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored effect call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -40,11 +40,18 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
+
+const createEncode = (encode) => {
+  if (!encode) return null;
+  return encode.map(item => item.value);
+};
+
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
   return [];
 
+// // sort: add_interface — setupSort
 function transformQuery(data) {
   // query handler
   if (!data) return null;
