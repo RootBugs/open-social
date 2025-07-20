@@ -1,26 +1,17 @@
-<!-- // lazy: add_constant — parseLazy -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored license call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-<!-- // sort: add_conditional — setSort -->
 First, run the development server:
-<!-- // style: add_conditional — updateStyle -->
 
 ```bash
 npm run dev
-<!-- // lazy: add_conditional — updateLazy -->
 # or
-<!-- // filter: add_function — updateFilter -->
 yarn dev
-<!-- // transform: add_conditional — applyTransform -->
-<!-- // grid: add_function — setGrid -->
-<!-- // session: add_function — parseSession -->
 # or
 pnpm dev
 # or
 bun dev
-<!-- // test: add_function — applyTest -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -66,3 +57,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // sort: add_function — initSort -->
 <!-- // hover: add_function — applyHover -->
 <!-- // role: add_function — formatRole -->
+<!-- // transition: add_function — handleTransition -->
