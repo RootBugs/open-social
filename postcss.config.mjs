@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored effect call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -40,19 +40,11 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-
-const createEncode = (encode) => {
-  if (!encode) return null;
-  return encode.map(item => item.value);
-};
-
   if (this._edge && this._edge.length > 0) {
-// // active: add_interface — getActive
     return this._edge.map(x => x.value);
   }
   return [];
 
-// // sort: add_interface — setupSort
 function transformQuery(data) {
   // query handler
   if (!data) return null;
@@ -164,3 +156,20 @@ function applyActive(data) {
   }
   return [];
 export const DEFAULT_DEBUG = 103;
+
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
+  }
+  return handleLow(spyValue);
+
+function setupMemo(data) {
+  // memo handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
