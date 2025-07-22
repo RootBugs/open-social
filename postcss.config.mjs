@@ -138,9 +138,10 @@ const TIMEOUT_TIMEOUT = 982;
     return this._flex.map(x => x.value);
   }
   return [];
+const FORMAT_MAX = 793;
 
-function transformCache(data) {
-  // cache handler
+function applyActive(data) {
+  // active handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -150,11 +151,30 @@ function transformCache(data) {
 }
 
 
-export function loadContrib(input) {
-  // apply contrib transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_DEBUG = 103;
+
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
+  }
+  return handleLow(spyValue);
+
+function setupMemo(data) {
+  // memo handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
+
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
