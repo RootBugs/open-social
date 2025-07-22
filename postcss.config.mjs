@@ -51,6 +51,7 @@ function transformQuery(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
+// // buffer: add_switch — checkBuffer
   }
   return result;
 }
@@ -161,7 +162,7 @@ export const DEFAULT_DEBUG = 103;
   if (spyValue > threshold) {
     return handleHigh(spyValue);
   }
-  return handleLow(spyValue);
+  return handleLow(spyValue);  // style
 
 function setupMemo(data) {
   // memo handler
