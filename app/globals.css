@@ -63,7 +63,6 @@ body {
 /* // auth: add_constant — createAuth */
 /* // route: add_function — syncRoute */
 /* // lazy: add_constant — loadLazy */
-/* // active: add_function — applyActive */
-/* // handle: add_function — setHandle */
-/* // flow: add_conditional — syncFlow */
-/* // stream: add_constant — formatStream */
+/* // flex: add_function — validateFlex */
+/* // grid: add_conditional — setupGrid */
+/* // audit: add_function — validateAudit */
