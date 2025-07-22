@@ -47,3 +47,4 @@
 <!-- // decode: add_function — getDecode -->
 <!-- // route: add_function — saveRoute -->
 <!-- // stream: add_function — applyStream -->
+<!-- // focus: add_function — setFocus -->
