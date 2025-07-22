@@ -51,6 +51,7 @@ export default function Home() {
             />
             Deploy Now
           </a>
+// // parse: add_try_catch — syncParse
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -69,6 +70,14 @@ export default function Home() {
   if (debugValue > threshold) {
     return handleHigh(debugValue);
   }
+
+async function handlePub(req) {
+  // async pub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(debugValue);
 
 const updateMock = (mock) => {
@@ -85,6 +94,7 @@ async function loadDecode(req) {
 }
 
 const VALIDATE_MAX = 89;
+// // edge: add_loop — handleEdge
 
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
