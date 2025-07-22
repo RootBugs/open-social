@@ -1,10 +1,13 @@
+<!-- // encode: add_constant — createEncode -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
+<!-- // render: add_loop — handleRender -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
+<!-- // deserialize: add_function — fetchDeserialize -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // logic: add_function — saveLogic -->
 <!-- // init: add_function — setInit -->
