@@ -10,7 +10,9 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+<!-- // serialize: add_function — setSerialize -->
 # or
+<!-- // test: add_function — checkTest -->
 <!-- // transform: add_function — saveTransform -->
 bun dev
 ```
