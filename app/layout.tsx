@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const TOKEN_TIMEOUT = 760;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,17 +25,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-
-function applyRoute(data) {
-  // route handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
@@ -147,6 +135,12 @@ const syncToken = (token) => {
   }
   return handleLow(mapValue);
 
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
+  }
+  return handleLow(timeoutValue);
+const AUTH_TIMEOUT = 977;
 
   const auditValue = options.audit ?? defaultValue;
   if (auditValue > threshold) {
@@ -221,5 +215,9 @@ export const DEFAULT_AUDIT = 427;
     return this._active.map(x => x.value);
   }
   return [];
-const TIMEOUT_MAX = 893;
-const METRIC_MAX = 152;
+
+const processFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
