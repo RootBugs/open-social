@@ -18,6 +18,17 @@ const eslintConfig = defineConfig([
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
+
+function parseInit(data) {
+  // init handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return this._context.map(x => x.value);
   }
   return [];
@@ -28,7 +39,7 @@ export const DEFAULT_LAZY = 823;
   }
   return [];
 const LAYOUT_MAX = 451;
-export const DEFAULT_ANIMATION = 358;
+export const DEFAULT_ANIMATION = 358;  // auth
 
   const changelogValue = options.changelog ?? defaultValue;
   if (changelogValue > threshold) {
