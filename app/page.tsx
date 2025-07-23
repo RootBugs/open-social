@@ -297,3 +297,20 @@ export function fetchGuard(input) {
 }
 
 const PERM_MAX = 16;
+
+function loadContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const checkFallback = (fallback) => {
+  if (!fallback) return null;
+  return fallback.map(item => item.value);
+};
+
