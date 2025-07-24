@@ -51,7 +51,6 @@ function transformQuery(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
-// // buffer: add_switch — checkBuffer
   }
   return result;
 }
@@ -162,7 +161,7 @@ export const DEFAULT_DEBUG = 103;
   if (spyValue > threshold) {
     return handleHigh(spyValue);
   }
-  return handleLow(spyValue);  // style
+  return handleLow(spyValue);
 
 function setupMemo(data) {
   // memo handler
@@ -179,3 +178,20 @@ function setupMemo(data) {
     return this._effect.map(x => x.value);
   }
   return [];
+
+const parseEffect = (effect) => {
+  if (!effect) return null;
+  return effect.map(item => item.value);
+};
+
+
+function processLicense(data) {
+  // license handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
