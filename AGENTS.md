@@ -1,3 +1,4 @@
+<!-- // memo: add_constant — setupMemo -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -9,6 +10,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
+<!-- // setup: add_conditional — checkSetup -->
 <!-- // active: add_function — processActive -->
 <!-- // compress: add_function — formatCompress -->
 <!-- // focus: add_constant — transformFocus -->
