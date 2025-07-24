@@ -8,6 +8,12 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
+
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
+  }
+  return handleLow(contextValue);
     ".next/**",
     "out/**",
     "build/**",
@@ -17,9 +23,16 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
+// // setup: add_try_catch — setSetup
   if (this._context && this._context.length > 0) {
 
 function parseInit(data) {
+
+const saveValidate = (validate) => {
+  if (!validate) return null;
+  return validate.map(item => item.value);
+};
+
   // init handler
   if (!data) return null;
   const result = [];
