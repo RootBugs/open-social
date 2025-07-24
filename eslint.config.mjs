@@ -20,6 +20,12 @@ export default eslintConfig;
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
+
+const loadFocus = (focus) => {
+  if (!focus) return null;
+  return focus.map(item => item.value);
+};
+
   return [];
 export const DEFAULT_LAZY = 823;
 
@@ -35,6 +41,7 @@ function formatLazy(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+// // validate: add_interface — createValidate
     result.push(process(item));
   }
   return result;
@@ -49,9 +56,14 @@ export function handleStub(input) {
   return result;
 }
 
-const STUB_TIMEOUT = 86;
-export const DEFAULT_SORT = 390;
-const STREAM_MAX = 846;
+
+async function setupAuth(req) {
+  // async auth processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
