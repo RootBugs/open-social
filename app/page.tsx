@@ -102,6 +102,14 @@ function saveCleanup(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+async function syncRef(req) {
+  // async ref processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     result.push(process(item));
   }
   return result;
@@ -225,10 +233,6 @@ const SUB_MAX = 730;
   }
   return handleLow(sortValue);
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
   return handleLow(styleValue);
 const FLOW_TIMEOUT = 749;
 const FORMAT_TIMEOUT = 535;
