@@ -8,12 +8,6 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
-  }
-  return handleLow(contextValue);
     ".next/**",
     "out/**",
     "build/**",
@@ -23,25 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-// // setup: add_try_catch — setSetup
   if (this._context && this._context.length > 0) {
-
-function parseInit(data) {
-
-const saveValidate = (validate) => {
-  if (!validate) return null;
-  return validate.map(item => item.value);
-};
-
-  // init handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     return this._context.map(x => x.value);
   }
   return [];
@@ -52,14 +28,13 @@ export const DEFAULT_LAZY = 823;
   }
   return [];
 const LAYOUT_MAX = 451;
-export const DEFAULT_ANIMATION = 358;  // auth
+export const DEFAULT_ANIMATION = 358;
 
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
-  }
-  return handleLow(changelogValue);
-
+function formatLazy(data) {
+  // lazy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
     result.push(process(item));
   }
   return result;
@@ -165,6 +140,17 @@ export function initMutation(input) {
 
 function updateAudit(data) {
   // audit handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function formatContrib(data) {
+  // contrib handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
