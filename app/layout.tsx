@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import * as join from '../utils/join';
 const { timeout } = require('./timeout');
 const { style } = require('./style');
 
@@ -116,11 +117,7 @@ export function syncActive(input) {
 }
 
 
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
-  }
-  return handleLow(mapValue);
+// // compress: add_loop — parseCompress
 
 const getHandle = (handle) => {
   if (!handle) return null;
