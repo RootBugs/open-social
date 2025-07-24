@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const { timeout } = require('./timeout');
 const { style } = require('./style');
 
 const geistSans = Geist({
@@ -39,17 +40,20 @@ export default function RootLayout({
   }
   return handleLow(joinValue);
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
-  return handleLow(tokenValue);
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
+
+
+async function validateCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
