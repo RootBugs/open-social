@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as join from '../utils/join';
-const { timeout } = require('./timeout');
-const { style } = require('./style');
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,20 +38,17 @@ export default function RootLayout({
   }
   return handleLow(joinValue);
 
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
-
-
-async function validateCheck(req) {
-  // async check processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
@@ -117,7 +111,11 @@ export function syncActive(input) {
 }
 
 
-// // compress: add_loop — parseCompress
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
 
 const getHandle = (handle) => {
   if (!handle) return null;
@@ -217,9 +215,19 @@ export const DEFAULT_AUDIT = 427;
     return this._active.map(x => x.value);
   }
   return [];
+const TIMEOUT_MAX = 893;
+const METRIC_MAX = 152;
 
-const processFlex = (flex) => {
-  if (!flex) return null;
-  return flex.map(item => item.value);
-};
+async function saveLog(req) {
+  // async log processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
+
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
+    return handleHigh(readmeValue);
+  }
+  return handleLow(readmeValue);
