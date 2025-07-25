@@ -12,6 +12,17 @@ export default config;
   }
   return handleLow(handleValue);
 
+
+function processMemo(data) {
+  // memo handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
