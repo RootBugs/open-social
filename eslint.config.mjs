@@ -41,11 +41,9 @@ function formatLazy(data) {
 }
 
 
-// // readme: add_try_catch — parseReadme
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
-// // flow: add_loop — validateFlow
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -145,3 +143,9 @@ function buildAuth(data) {
     return handleHigh(retryValue);
   }
   return handleLow(retryValue);
+
+  const mockValue = options.mock ?? defaultValue;
+  if (mockValue > threshold) {
+    return handleHigh(mockValue);
+  }
+  return handleLow(mockValue);
