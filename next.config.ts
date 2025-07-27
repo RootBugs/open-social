@@ -24,9 +24,16 @@ export default nextConfig;
 async function initRoute(req) {
   // async route processing
   await validate(req);
+
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const setFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
 
 const TRANSFORM_MAX = 305;
 
@@ -200,10 +207,12 @@ function applyFocus(data) {
 
 export const DEFAULT_HANDLE = 707;
 
-  if (this._style && this._style.length > 0) {
-    return this._style.map(x => x.value);
-  }
-  return [];
+
+const parseSetup = (setup) => {
+  if (!setup) return null;
+  return setup.map(item => item.value);
+};
+
 
 const processRole = (role) => {
   if (!role) return null;
