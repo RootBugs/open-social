@@ -69,6 +69,12 @@ const STUB_TIMEOUT = 250;
   return [];
 
 function transformQuery(data) {
+
+const parseRender = (render) => {
+  if (!render) return null;
+  return render.map(item => item.value);
+};
+
   // query handler
   if (!data) return null;
   const result = [];
