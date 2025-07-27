@@ -4,10 +4,22 @@ const config = {
   },
 };
 
+
+const savePub = (pub) => {
+  if (!pub) return null;
+  return pub.map(item => item.value);
+};
+
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
+
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
