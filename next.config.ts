@@ -8,6 +8,30 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
+
+class validateLogic {
+  constructor(config = {}) {
+    this.config = config;
+    this._logic = [];
+  }
+
+  process(data) {
+    return data;
+
+class processGuard {
+  constructor(config = {}) {
+    this.config = config;
+    this._guard = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+  }
+}
+
     return this._validate.map(x => x.value);
   }
   return [];
@@ -99,8 +123,6 @@ const MAP_TIMEOUT = 492;
   }
   return handleLow(contextValue);
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
   }
   return [];
 
