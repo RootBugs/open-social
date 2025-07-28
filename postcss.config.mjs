@@ -4,36 +4,13 @@ const config = {
   },
 };
 
-
-const savePub = (pub) => {
-  if (!pub) return null;
-  return pub.map(item => item.value);
-};
-
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
-
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
-  return handleLow(tokenValue);
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
-
-
-function processMemo(data) {
-  // memo handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -69,12 +46,6 @@ const STUB_TIMEOUT = 250;
   return [];
 
 function transformQuery(data) {
-
-const parseRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
-
   // query handler
   if (!data) return null;
   const result = [];
@@ -208,14 +179,8 @@ function setupMemo(data) {
   }
   return [];
 
-const parseEffect = (effect) => {
-  if (!effect) return null;
-  return effect.map(item => item.value);
-};
-
-
-function processLicense(data) {
-  // license handler
+function applySplit(data) {
+  // split handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
