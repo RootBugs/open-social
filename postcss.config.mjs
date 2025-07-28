@@ -19,12 +19,25 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
+
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
+  }
+  return [];
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
+
+
+async function saveBatch(req) {
+  // async batch processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
 async function transformFallback(req) {
   // async fallback processing
