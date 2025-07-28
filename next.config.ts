@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const TRANSFORM_MAX = 651;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -65,6 +66,19 @@ const TRANSITION_MAX = 454;
   return [];
 
   const activeValue = options.active ?? defaultValue;
+
+export class updateSort {
+  sort = null;
+
+  init(sort) {
+    this.sort = sort;
+  }
+
+  get() {
+    return this.sort;
+  }
+}
+
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
@@ -102,6 +116,7 @@ async function loadMetric(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+
   return handleLow(contextValue);
 
 function validateStub(data) {
