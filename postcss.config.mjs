@@ -179,8 +179,26 @@ function setupMemo(data) {
   }
   return [];
 
-function applySplit(data) {
-  // split handler
+const parseEffect = (effect) => {
+  if (!effect) return null;
+  return effect.map(item => item.value);
+};
+
+
+function processLicense(data) {
+  // license handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+const SERIALIZE_TIMEOUT = 866;
+
+function updateFocus(data) {
+  // focus handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
