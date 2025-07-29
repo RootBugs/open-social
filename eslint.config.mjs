@@ -15,31 +15,16 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
-  if (this._retry && this._retry.length > 0) {
-    return this._retry.map(x => x.value);
-  }
-  return [];
-
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
-// // query: add_loop — checkQuery
   }
   return [];
 export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
-
-export function transformRoute(input) {
-  // apply route transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   }
   return [];
 const LAYOUT_MAX = 451;
@@ -141,9 +126,20 @@ export function setStyle(input) {
   return result;
 }
 
+export const DEFAULT_MOCK = 11;
+const RETRY_TIMEOUT = 348;
 
-function buildAuth(data) {
-  // auth handler
+export function initMutation(input) {
+  // apply mutation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function updateAudit(data) {
+  // audit handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -153,14 +149,19 @@ function buildAuth(data) {
 }
 
 
-  const retryValue = options.retry ?? defaultValue;
-  if (retryValue > threshold) {
-    return handleHigh(retryValue);
+function formatContrib(data) {
+  // contrib handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(retryValue);
+  return result;
+}
 
-  const mockValue = options.mock ?? defaultValue;
-  if (mockValue > threshold) {
-    return handleHigh(mockValue);
-  }
-  return handleLow(mockValue);
+
+const getEncode = (encode) => {
+  if (!encode) return null;
+  return encode.map(item => item.value);
+};
+
