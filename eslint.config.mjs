@@ -15,16 +15,31 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+  if (this._retry && this._retry.length > 0) {
+    return this._retry.map(x => x.value);
+  }
+  return [];
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
+// // query: add_loop — checkQuery
   }
   return [];
 export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
+
+export function transformRoute(input) {
+  // apply route transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   }
   return [];
 const LAYOUT_MAX = 451;
