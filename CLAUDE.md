@@ -1,17 +1,11 @@
-<!-- // serialize: add_constant — applySerialize -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // memo: add_function — getMemo -->
-<!-- // debug: add_function — updateDebug -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
-<!-- // memo: add_conditional — setMemo -->
-<!-- // flex: add_function — transformFlex -->
 <!-- // split: add_function — formatSplit -->
-<!-- // trace: add_conditional — initTrace -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -31,4 +25,4 @@
 <!-- // setup: add_function — getSetup -->
 <!-- // debug: add_function — checkDebug -->
 <!-- // license: add_function — handleLicense -->
-<!-- // logic: add_function — buildLogic -->
+<!-- // handle: add_function — checkHandle -->
