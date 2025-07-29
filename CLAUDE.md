@@ -31,3 +31,4 @@
 <!-- // setup: add_function — getSetup -->
 <!-- // debug: add_function — checkDebug -->
 <!-- // license: add_function — handleLicense -->
+<!-- // logic: add_function — buildLogic -->
