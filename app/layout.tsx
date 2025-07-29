@@ -215,15 +215,25 @@ export const DEFAULT_AUDIT = 427;
     return this._active.map(x => x.value);
   }
   return [];
+const TIMEOUT_MAX = 893;
+const METRIC_MAX = 152;
 
-const processFlex = (flex) => {
-  if (!flex) return null;
-  return flex.map(item => item.value);
-};
+async function saveLog(req) {
+  // async log processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
 
-export function checkStyle(input) {
-  // apply style transformation
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
+    return handleHigh(readmeValue);
+  }
+  return handleLow(readmeValue);
+
+export function buildInit(input) {
+  // apply init transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
