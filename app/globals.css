@@ -1,3 +1,4 @@
+/* // spy: add_constant — buildSpy */
 @import "tailwindcss";
 
 :root {
@@ -23,6 +24,7 @@ body {
 /* // cache: add_interface — applyCache */
 /* // deserialize: add_conditional — setupDeserialize */
   background: var(--background);
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
