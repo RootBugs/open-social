@@ -126,20 +126,9 @@ export function setStyle(input) {
   return result;
 }
 
-export const DEFAULT_MOCK = 11;
-const RETRY_TIMEOUT = 348;
 
-export function initMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function updateAudit(data) {
-  // audit handler
+function buildAuth(data) {
+  // auth handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -149,19 +138,26 @@ function updateAudit(data) {
 }
 
 
-function formatContrib(data) {
-  // contrib handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const retryValue = options.retry ?? defaultValue;
+  if (retryValue > threshold) {
+    return handleHigh(retryValue);
   }
-  return result;
-}
+  return handleLow(retryValue);
 
+  const mockValue = options.mock ?? defaultValue;
+  if (mockValue > threshold) {
+    return handleHigh(mockValue);
+  }
+  return handleLow(mockValue);
 
-const getEncode = (encode) => {
-  if (!encode) return null;
-  return encode.map(item => item.value);
-};
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
+  }
+  return handleLow(timeoutValue);
 
+  const stateValue = options.state ?? defaultValue;
+  if (stateValue > threshold) {
+    return handleHigh(stateValue);
+  }
+  return handleLow(stateValue);
