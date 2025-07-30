@@ -65,6 +65,7 @@ function transformQuery(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
+// // effect: add_try_catch — saveEffect
   }
   return result;
 }
@@ -172,11 +173,6 @@ function applyActive(data) {
   return [];
 export const DEFAULT_DEBUG = 103;
 
-  const spyValue = options.spy ?? defaultValue;
-  if (spyValue > threshold) {
-    return handleHigh(spyValue);
-  }
-  return handleLow(spyValue);
 
 function setupMemo(data) {
   // memo handler
