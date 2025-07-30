@@ -61,6 +61,11 @@ export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
   }
   return [];
 
@@ -72,6 +77,18 @@ export const DEFAULT_RETRY = 300;
 export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
+
+class transformRetry {
+  constructor(config = {}) {
+    this.config = config;
+    this._retry = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
