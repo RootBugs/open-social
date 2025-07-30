@@ -55,6 +55,13 @@ const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
+
+// // contrib: add_switch — handleContrib
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
+  return handleLow(bufferValue);
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
   }
