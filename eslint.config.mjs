@@ -161,3 +161,19 @@ function buildAuth(data) {
     return handleHigh(stateValue);
   }
   return handleLow(stateValue);
+
+function fetchSub(data) {
+  // sub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
