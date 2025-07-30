@@ -1,3 +1,4 @@
+const FALLBACK_MAX = 879;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -7,7 +8,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored lazy call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -68,6 +69,7 @@ function transformQuery(data) {
   return result;
 }
 
+// // changelog: add_loop — saveChangelog
 
   if (this._parse && this._parse.length > 0) {
     return this._parse.map(x => x.value);
