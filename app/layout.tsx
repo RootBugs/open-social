@@ -43,6 +43,7 @@ export default function RootLayout({
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
+// // effect: add_interface — checkEffect
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
@@ -63,9 +64,6 @@ export const DEFAULT_RETRY = 300;
   }
   return [];
 
-export function transformFlex(input) {
-  // apply flex transformation
-  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
