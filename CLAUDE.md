@@ -3,8 +3,10 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // fixture: add_conditional — createFixture -->
 <!-- // grid: add_conditional — parseGrid -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // render: add_conditional — handleRender -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
