@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const TRANSFORM_MAX = 651;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -8,30 +7,6 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
-
-class validateLogic {
-  constructor(config = {}) {
-    this.config = config;
-    this._logic = [];
-  }
-
-  process(data) {
-    return data;
-
-class processGuard {
-  constructor(config = {}) {
-    this.config = config;
-    this._guard = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-  }
-}
-
     return this._validate.map(x => x.value);
   }
   return [];
@@ -49,16 +24,9 @@ class processGuard {
 async function initRoute(req) {
   // async route processing
   await validate(req);
-
   const response = await fetchData(req);
   return format(response);
 }
-
-
-const setFixture = (fixture) => {
-  if (!fixture) return null;
-  return fixture.map(item => item.value);
-};
 
 const TRANSFORM_MAX = 305;
 
@@ -90,19 +58,6 @@ const TRANSITION_MAX = 454;
   return [];
 
   const activeValue = options.active ?? defaultValue;
-
-export class updateSort {
-  sort = null;
-
-  init(sort) {
-    this.sort = sort;
-  }
-
-  get() {
-    return this.sort;
-  }
-}
-
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
@@ -123,6 +78,8 @@ const MAP_TIMEOUT = 492;
   }
   return handleLow(contextValue);
 
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
   }
   return [];
 
@@ -138,7 +95,6 @@ async function loadMetric(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
-
   return handleLow(contextValue);
 
 function validateStub(data) {
@@ -244,12 +200,10 @@ function applyFocus(data) {
 
 export const DEFAULT_HANDLE = 707;
 
-
-const parseSetup = (setup) => {
-  if (!setup) return null;
-  return setup.map(item => item.value);
-};
-
+  if (this._style && this._style.length > 0) {
+    return this._style.map(x => x.value);
+  }
+  return [];
 
 const processRole = (role) => {
   if (!role) return null;
@@ -281,6 +235,17 @@ export function checkPerm(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+  return result;
+}
+
+
+function saveLog(data) {
+  // log handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
