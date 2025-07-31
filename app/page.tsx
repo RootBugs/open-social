@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored trace call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -296,12 +296,12 @@ export function fetchGuard(input) {
   return result;
 }
 
+const PERM_MAX = 16;
 
-export function syncEffect(input) {
-  // apply effect transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function setupChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
