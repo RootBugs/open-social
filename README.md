@@ -13,6 +13,7 @@ pnpm dev
 # or
 bun dev
 ```
+<!-- // retry: add_function — checkRetry -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
