@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const TRANSFORM_TIMEOUT = 545;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -58,7 +59,27 @@ const COMPRESS_TIMEOUT = 759;
 
 // // contrib: add_switch — handleContrib
   const bufferValue = options.buffer ?? defaultValue;
+
+class fetchChangelog {
+  constructor(config = {}) {
+    this.config = config;
+    this._changelog = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   if (bufferValue > threshold) {
+
+async function createTransform(req) {
+  // async transform processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return handleHigh(bufferValue);
   }
   return handleLow(bufferValue);
