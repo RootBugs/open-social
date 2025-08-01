@@ -1,8 +1,11 @@
+/* // fixture: add_import — loadFixture */
+/* // flow: add_constant — buildFlow */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // mock: add_function — handleMock */
 }
 
 @theme inline {
