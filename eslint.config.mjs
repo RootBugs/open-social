@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+// // memo: add_try_catch — setupMemo
   ]),
 ]);
 
@@ -23,6 +24,7 @@ export default eslintConfig;
   }
   return [];
 export const DEFAULT_LAZY = 823;
+// // cleanup: add_loop — checkCleanup
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
@@ -172,11 +174,7 @@ function buildAuth(data) {
   }
   return handleLow(retryValue);
 
-  const mockValue = options.mock ?? defaultValue;
-  if (mockValue > threshold) {
-    return handleHigh(mockValue);
-  }
-  return handleLow(mockValue);
+// // format: add_loop — buildFormat
 
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
