@@ -13,7 +13,6 @@ pnpm dev
 # or
 bun dev
 ```
-<!-- // retry: add_function — checkRetry -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -61,3 +60,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // grid: add_constant — saveGrid -->
 <!-- // retry: add_function — parseRetry -->
 <!-- // effect: add_constant — getEffect -->
+<!-- // logic: add_function — formatLogic -->
