@@ -1,16 +1,11 @@
-<!-- // deserialize: add_import — setupDeserialize -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // fixture: add_conditional — createFixture -->
-<!-- // grid: add_conditional — parseGrid -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // render: add_conditional — handleRender -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // focus: add_function — formatFocus -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -31,3 +26,4 @@
 <!-- // debug: add_function — checkDebug -->
 <!-- // license: add_function — handleLicense -->
 <!-- // handle: add_function — checkHandle -->
+<!-- // logic: add_function — buildLogic -->
