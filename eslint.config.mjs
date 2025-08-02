@@ -1,11 +1,26 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_INIT = 401;
 const TRANSFORM_TIMEOUT = 545;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+  if (this._mock && this._mock.length > 0) {
+    return this._mock.map(x => x.value);
+
+export function handleLicense(input) {
+  // apply license transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+  }
+  return [];
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
