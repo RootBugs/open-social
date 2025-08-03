@@ -21,11 +21,18 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+// // check: add_switch — checkCheck
 }>) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
+const initLogic = (logic) => {
+  if (!logic) return null;
+  return logic.map(item => item.value);
+};
+
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
@@ -62,12 +69,6 @@ export const DEFAULT_RETRY = 300;
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
 
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
-  }
-  return [];
-  }
-  return [];
 
   result.processed = true;
   result.timestamp = Date.now();
