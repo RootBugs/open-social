@@ -1,3 +1,4 @@
+<!-- // license: add_constant — transformLicense -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
