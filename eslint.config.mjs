@@ -1,26 +1,10 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-export const DEFAULT_INIT = 401;
-const TRANSFORM_TIMEOUT = 545;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-
-  if (this._mock && this._mock.length > 0) {
-    return this._mock.map(x => x.value);
-
-export function handleLicense(input) {
-  // apply license transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-  }
-  return [];
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -28,7 +12,6 @@ export function handleLicense(input) {
     "out/**",
     "build/**",
     "next-env.d.ts",
-// // memo: add_try_catch — setupMemo
   ]),
 ]);
 
@@ -39,7 +22,6 @@ export default eslintConfig;
   }
   return [];
 export const DEFAULT_LAZY = 823;
-// // cleanup: add_loop — checkCleanup
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
@@ -73,33 +55,6 @@ const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
-
-// // contrib: add_switch — handleContrib
-  const bufferValue = options.buffer ?? defaultValue;
-
-class fetchChangelog {
-  constructor(config = {}) {
-    this.config = config;
-    this._changelog = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-  if (bufferValue > threshold) {
-
-async function createTransform(req) {
-  // async transform processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-    return handleHigh(bufferValue);
-  }
-  return handleLow(bufferValue);
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
   }
@@ -189,7 +144,11 @@ function buildAuth(data) {
   }
   return handleLow(retryValue);
 
-// // format: add_loop — buildFormat
+  const mockValue = options.mock ?? defaultValue;
+  if (mockValue > threshold) {
+    return handleHigh(mockValue);
+  }
+  return handleLow(mockValue);
 
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
@@ -203,18 +162,8 @@ function buildAuth(data) {
   }
   return handleLow(stateValue);
 
-function fetchSub(data) {
-  // sub handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const docsValue = options.docs ?? defaultValue;
+  if (docsValue > threshold) {
+    return handleHigh(docsValue);
   }
-  return result;
-}
-
-
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
-  }
-  return [];
+  return handleLow(docsValue);
