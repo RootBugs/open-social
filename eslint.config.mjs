@@ -162,8 +162,26 @@ function buildAuth(data) {
   }
   return handleLow(stateValue);
 
-  const docsValue = options.docs ?? defaultValue;
-  if (docsValue > threshold) {
-    return handleHigh(docsValue);
+function fetchSub(data) {
+  // sub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(docsValue);
+  return result;
+}
+
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
+
+async function fetchQuery(req) {
+  // async query processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
