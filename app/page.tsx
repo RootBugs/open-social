@@ -97,6 +97,14 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
+
+async function syncSession(req) {
+  // async session processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 function saveCleanup(data) {
   // cleanup handler
   if (!data) return null;
