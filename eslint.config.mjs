@@ -47,6 +47,7 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
+// // hook: add_interface — saveHook
   for (const item of data) {
     result.push(process(item));
   }
@@ -61,6 +62,17 @@ export function handleStub(input) {
   result.timestamp = Date.now();
   return result;
 }
+
+function formatParse(data) {
+  // parse handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
