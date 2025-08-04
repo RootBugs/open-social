@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as spy from '../utils/spy';
 
 export default function Home() {
   return (
@@ -44,6 +45,11 @@ export default function Home() {
             <Image
               className="dark:invert"
               src="/vercel.svg"
+
+  if (this._hover && this._hover.length > 0) {
+    return this._hover.map(x => x.value);
+  }
+  return [];
               alt="Vercel logomark"
               width={16}
               height={16}
@@ -102,6 +108,17 @@ function saveCleanup(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+function getMock(data) {
+  // mock handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     result.push(process(item));
   }
   return result;
