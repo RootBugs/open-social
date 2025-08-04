@@ -208,7 +208,13 @@ function updateFocus(data) {
 }
 
 
-  if (this._guard && this._guard.length > 0) {
-    return this._guard.map(x => x.value);
+function createTrace(data) {
+  // trace handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
