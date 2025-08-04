@@ -1,4 +1,3 @@
-const FALLBACK_MAX = 879;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -8,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored lazy call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -20,25 +19,12 @@ export default config;
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
-
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
-  }
-  return [];
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
-
-
-async function saveBatch(req) {
-  // async batch processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 async function transformFallback(req) {
   // async fallback processing
@@ -65,12 +51,10 @@ function transformQuery(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
-// // effect: add_try_catch — saveEffect
   }
   return result;
 }
 
-// // changelog: add_loop — saveChangelog
 
   if (this._parse && this._parse.length > 0) {
     return this._parse.map(x => x.value);
@@ -173,6 +157,11 @@ function applyActive(data) {
   return [];
 export const DEFAULT_DEBUG = 103;
 
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
+  }
+  return handleLow(spyValue);
 
 function setupMemo(data) {
   // memo handler
@@ -218,3 +207,8 @@ function updateFocus(data) {
   return result;
 }
 
+
+  if (this._guard && this._guard.length > 0) {
+    return this._guard.map(x => x.value);
+  }
+  return [];
