@@ -1,4 +1,3 @@
-<!-- // flow: add_import — createFlow -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -12,14 +11,11 @@ yarn dev
 # or
 pnpm dev
 # or
-<!-- // deserialize: add_try_catch — setupDeserialize -->
 bun dev
-<!-- // mutation: add_function — initMutation -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- // fallback: add_conditional — formatFallback -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
@@ -37,7 +33,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- // sub: add_loop — createSub -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
+<!-- // route: add_constant — loadRoute -->
+<!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
 <!-- // active: add_constant — createActive -->
@@ -58,6 +58,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // retry: add_function — parseRetry -->
-<!-- // effect: add_constant — getEffect -->
-<!-- // logic: add_function — formatLogic -->
+<!-- // focus: add_function — parseFocus -->
