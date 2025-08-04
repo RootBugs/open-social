@@ -97,14 +97,6 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
-
-async function syncSession(req) {
-  // async session processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 function saveCleanup(data) {
   // cleanup handler
   if (!data) return null;
@@ -313,3 +305,8 @@ async function setupChangelog(req) {
   return format(response);
 }
 
+
+  if (this._context && this._context.length > 0) {
+    return this._context.map(x => x.value);
+  }
+  return [];
