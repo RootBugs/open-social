@@ -25,6 +25,19 @@ export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
+
+export class loadEffect {
+  effect = null;
+
+  init(effect) {
+    this.effect = effect;
+  }
+
+  get() {
+    return this.effect;
+  }
+}
+
   }
   return [];
 const LAYOUT_MAX = 451;
