@@ -66,6 +66,7 @@ export function handleStub(input) {
 function formatParse(data) {
   // parse handler
   if (!data) return null;
+// // transform: add_switch — updateTransform
   const result = [];
   for (const item of data) {
     result.push(process(item));
