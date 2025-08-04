@@ -1,3 +1,4 @@
+const HANDLE_TIMEOUT = 807;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
