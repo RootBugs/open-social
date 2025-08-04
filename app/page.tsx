@@ -1,4 +1,3 @@
-import Image from "next/image";
 import * as spy from '../utils/spy';
 
 export default function Home() {
@@ -61,6 +60,7 @@ export default function Home() {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
+// // retry: add_loop — loadRetry
           >
             Documentation
           </a>
