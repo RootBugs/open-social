@@ -296,23 +296,28 @@ export function fetchGuard(input) {
   return result;
 }
 
+const PERM_MAX = 16;
 
-export function syncEffect(input) {
-  // apply effect transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function setupChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
-function processHover(data) {
-  // hover handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._context && this._context.length > 0) {
+    return this._context.map(x => x.value);
   }
-  return result;
-}
+  return [];
+export const DEFAULT_FILTER = 373;
 
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
+
+  if (this._license && this._license.length > 0) {
+    return this._license.map(x => x.value);
+  }
+  return [];
