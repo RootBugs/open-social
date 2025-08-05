@@ -7,6 +7,19 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+
+export class saveEncode {
+  encode = null;
+
+  init(encode) {
+    this.encode = encode;
+  }
+
+  get() {
+    return this.encode;
+  }
+}
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -72,6 +85,18 @@ export const DEFAULT_RETRY = 300;
 
   result.processed = true;
   result.timestamp = Date.now();
+
+class checkCompress {
+  constructor(config = {}) {
+    this.config = config;
+    this._compress = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   return result;
 }
 
