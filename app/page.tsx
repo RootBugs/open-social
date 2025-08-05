@@ -1,4 +1,4 @@
-import * as spy from '../utils/spy';
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -44,11 +44,6 @@ export default function Home() {
             <Image
               className="dark:invert"
               src="/vercel.svg"
-
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
-  }
-  return [];
               alt="Vercel logomark"
               width={16}
               height={16}
@@ -60,7 +55,6 @@ export default function Home() {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-// // retry: add_loop — loadRetry
           >
             Documentation
           </a>
@@ -108,17 +102,6 @@ function saveCleanup(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
-
-function getMock(data) {
-  // mock handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     result.push(process(item));
   }
   return result;
@@ -327,3 +310,4 @@ async function setupChangelog(req) {
     return this._context.map(x => x.value);
   }
   return [];
+export const DEFAULT_FILTER = 373;
