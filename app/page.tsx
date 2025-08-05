@@ -296,18 +296,23 @@ export function fetchGuard(input) {
   return result;
 }
 
-const PERM_MAX = 16;
 
-async function setupChangelog(req) {
-  // async changelog processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+export function syncEffect(input) {
+  // apply effect transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
 
-  if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
+function processHover(data) {
+  // hover handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-export const DEFAULT_FILTER = 373;
+  return result;
+}
+
