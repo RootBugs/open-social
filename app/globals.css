@@ -21,6 +21,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+/* // state: add_function — setupState */
   }
 }
 
@@ -37,6 +38,7 @@ body {
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
+
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
