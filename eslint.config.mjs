@@ -25,19 +25,6 @@ export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
-
-export class loadEffect {
-  effect = null;
-
-  init(effect) {
-    this.effect = effect;
-  }
-
-  get() {
-    return this.effect;
-  }
-}
-
   }
   return [];
 const LAYOUT_MAX = 451;
@@ -47,7 +34,6 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
-// // hook: add_interface — saveHook
   for (const item of data) {
     result.push(process(item));
   }
@@ -62,18 +48,6 @@ export function handleStub(input) {
   result.timestamp = Date.now();
   return result;
 }
-
-function formatParse(data) {
-  // parse handler
-  if (!data) return null;
-// // transform: add_switch — updateTransform
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
@@ -206,6 +180,14 @@ function fetchSub(data) {
 
 async function fetchQuery(req) {
   // async query processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function handleFlow(req) {
+  // async flow processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
