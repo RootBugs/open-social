@@ -7,19 +7,6 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-
-export class saveEncode {
-  encode = null;
-
-  init(encode) {
-    this.encode = encode;
-  }
-
-  get() {
-    return this.encode;
-  }
-}
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -34,18 +21,11 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-// // check: add_switch — checkCheck
 }>) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-
-const initLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
-};
-
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
@@ -63,7 +43,6 @@ const initLogic = (logic) => {
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
-// // effect: add_interface — checkEffect
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
@@ -81,40 +60,20 @@ export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
+  }
+  return [];
 
-
+export function transformFlex(input) {
+  // apply flex transformation
+  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
-
-class checkCompress {
-  constructor(config = {}) {
-    this.config = config;
-    this._compress = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   return result;
 }
 
 export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
-
-class transformRetry {
-  constructor(config = {}) {
-    this.config = config;
-    this._retry = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
@@ -278,6 +237,17 @@ export function buildInit(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+  return result;
+}
+
+
+function formatBuffer(data) {
+  // buffer handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
