@@ -1,4 +1,3 @@
-<!-- // license: add_constant — transformLicense -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -9,7 +8,6 @@
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
-<!-- // memo: add_function — initMemo -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
@@ -37,3 +35,5 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
+<!-- // spy: add_function — initSpy -->
+<!-- // audit: add_function — handleAudit -->
