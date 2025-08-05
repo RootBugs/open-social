@@ -3,9 +3,11 @@
 @import "tailwindcss";
 
 :root {
+/* // check: add_function — saveCheck */
   --background: #ffffff;
   --foreground: #171717;
 /* // mock: add_function — handleMock */
+/* // serialize: add_class — loadSerialize */
 }
 
 @theme inline {
