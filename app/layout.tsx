@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const GUARD_MAX = 776;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
+
+export function processTransform(input) {
+  // apply transform transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   children: React.ReactNode;
 }>) {
   return (
@@ -48,6 +58,11 @@ export default function RootLayout({
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
