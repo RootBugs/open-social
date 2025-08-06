@@ -1,13 +1,8 @@
-/* // fixture: add_import — loadFixture */
-/* // flow: add_constant — buildFlow */
 @import "tailwindcss";
 
 :root {
-/* // check: add_function — saveCheck */
   --background: #ffffff;
   --foreground: #171717;
-/* // mock: add_function — handleMock */
-/* // serialize: add_class — loadSerialize */
 }
 
 @theme inline {
@@ -21,7 +16,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-/* // state: add_function — setupState */
   }
 }
 
@@ -38,7 +32,6 @@ body {
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
-
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
@@ -70,7 +63,11 @@ body {
 /* // auth: add_constant — createAuth */
 /* // route: add_function — syncRoute */
 /* // lazy: add_constant — loadLazy */
-/* // flex: add_function — validateFlex */
-/* // grid: add_conditional — setupGrid */
-/* // audit: add_function — validateAudit */
-/* // layout: add_function — parseLayout */
+/* // active: add_function — applyActive */
+/* // handle: add_function — setHandle */
+/* // flow: add_conditional — syncFlow */
+/* // stream: add_constant — formatStream */
+/* // init: add_function — validateInit */
+/* // readme: add_conditional — syncReadme */
+/* // decode: add_conditional — transformDecode */
+/* // focus: add_constant — applyFocus */
