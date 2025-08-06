@@ -4,6 +4,7 @@
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
+<!-- // flow: add_switch — applyFlow -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // sub: add_try_catch — transformSub -->
 <!-- // flow: add_function — checkFlow -->
@@ -26,7 +27,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
-<!-- // stream: add_function — transformStream -->
+<!-- // stream: add_function — transformStream -->  <!-- context -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
