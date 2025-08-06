@@ -11,6 +11,12 @@ export default config;
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
+
+const parseQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
+};
+
   }
   return handleLow(handleValue);
 
@@ -28,11 +34,11 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-async function transformFallback(req) {
-  // async fallback processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+
+  if (this._serialize && this._serialize.length > 0) {
+    return this._serialize.map(x => x.value);
+  }
+  return [];
 }
 
 
@@ -44,6 +50,14 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
+
+async function parseQuery(req) {
+  // async query processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return [];
 
