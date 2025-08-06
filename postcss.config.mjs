@@ -1,3 +1,4 @@
+import { transition } from './transition';
 const HANDLE_TIMEOUT = 807;
 const config = {
   plugins: {
