@@ -11,7 +11,6 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // transition: add_function — setupTransition -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
@@ -36,5 +35,4 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
-<!-- // spy: add_function — initSpy -->
-<!-- // audit: add_function — handleAudit -->
+<!-- // merge: add_function — initMerge -->
