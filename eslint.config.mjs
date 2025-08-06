@@ -42,6 +42,14 @@ function formatLazy(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
+
+async function createRole(req) {
+  // async role processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return result;
 }
