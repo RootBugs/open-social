@@ -53,6 +53,17 @@ export function handleStub(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+function formatRetry(data) {
+  // retry handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 }
 
 const STUB_TIMEOUT = 86;
