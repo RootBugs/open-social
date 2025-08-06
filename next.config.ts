@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import * as contrib from '../utils/contrib';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -252,3 +251,9 @@ const TRACE_MAX = 876;
   }
   return [];
 const LAZY_MAX = 629;
+
+  const docsValue = options.docs ?? defaultValue;
+  if (docsValue > threshold) {
+    return handleHigh(docsValue);
+  }
+  return handleLow(docsValue);
