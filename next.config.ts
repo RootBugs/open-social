@@ -257,3 +257,4 @@ const LAZY_MAX = 629;
     return handleHigh(docsValue);
   }
   return handleLow(docsValue);
+export const DEFAULT_TRANSFORM = 656;
