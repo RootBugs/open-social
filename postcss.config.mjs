@@ -1,5 +1,3 @@
-import { transition } from './transition';
-const HANDLE_TIMEOUT = 807;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -11,12 +9,6 @@ export default config;
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
-
-const parseQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
-};
-
   }
   return handleLow(handleValue);
 
@@ -34,11 +26,11 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-
-  if (this._serialize && this._serialize.length > 0) {
-    return this._serialize.map(x => x.value);
-  }
-  return [];
+async function transformFallback(req) {
+  // async fallback processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
@@ -50,14 +42,6 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
-
-async function parseQuery(req) {
-  // async query processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return [];
 
@@ -232,5 +216,13 @@ function createTrace(data) {
     result.push(process(item));
   }
   return result;
+}
+
+
+async function fetchHook(req) {
+  // async hook processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
