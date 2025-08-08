@@ -4,7 +4,6 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // map: add_switch — setMap -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -36,4 +35,6 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
-<!-- // merge: add_function — initMerge -->
+<!-- // spy: add_function — initSpy -->
+<!-- // audit: add_function — handleAudit -->
+<!-- // mock: add_function — getMock -->
