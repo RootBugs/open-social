@@ -1,18 +1,13 @@
-<!-- // filter: add_constant — setFilter -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
-<!-- // flow: add_switch — applyFlow -->
 <!-- // spy: add_conditional — setSpy -->
-<!-- // sub: add_try_catch — transformSub -->
 <!-- // flow: add_function — checkFlow -->
-<!-- // retry: add_function — processRetry -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
-<!-- // retry: add_class — setupRetry -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
@@ -27,7 +22,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
-<!-- // stream: add_function — transformStream -->  <!-- context -->
+<!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
@@ -54,3 +49,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // stream: add_function — applyStream -->
 <!-- // contrib: add_function — applyContrib -->
 <!-- // docs: add_function — transformDocs -->
+<!-- // flow: add_function — initFlow -->
