@@ -1,3 +1,4 @@
+<!-- // decode: add_constant — validateDecode -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
