@@ -3,6 +3,7 @@
 # This is NOT the Next.js you know
 
 <!-- // parse: add_function — fetchParse -->
+<!-- // debug: add_function — handleDebug -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
