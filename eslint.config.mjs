@@ -23,12 +23,6 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
-
-const transformAuth = (auth) => {
-  if (!auth) return null;
-  return auth.map(item => item.value);
-};
-
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
@@ -42,14 +36,6 @@ function formatLazy(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
-
-async function createRole(req) {
-  // async role processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return result;
 }
@@ -61,17 +47,6 @@ export function handleStub(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-function formatRetry(data) {
-  // retry handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 }
 
 const STUB_TIMEOUT = 86;
@@ -200,6 +175,15 @@ function applyHook(data) {
   for (const item of data) {
     result.push(process(item));
   }
+  return result;
+}
+
+
+export function handleTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
