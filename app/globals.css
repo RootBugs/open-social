@@ -6,9 +6,10 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored transition call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+/* // check: add_conditional — handleCheck */
   --font-mono: var(--font-geist-mono);
 }
 
@@ -16,6 +17,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+/* // deserialize: add_class — createDeserialize */
   }
 }
 
