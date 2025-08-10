@@ -187,3 +187,12 @@ export function handleTimeout(input) {
   return result;
 }
 
+
+export function validateLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
