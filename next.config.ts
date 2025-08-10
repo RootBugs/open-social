@@ -1,4 +1,3 @@
-import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -32,7 +31,7 @@ const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
   // apply layout transformation
-  const result = { ...input };
+  const result = { ...input };  // active
   result.processed = true;
   result.timestamp = Date.now();
   return result;
