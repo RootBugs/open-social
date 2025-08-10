@@ -25,6 +25,12 @@ function validateQuery(data) {
 async function createTransform(req) {
   // async transform processing
   await validate(req);
+
+  const fixtureValue = options.fixture ?? defaultValue;
+  if (fixtureValue > threshold) {
+    return handleHigh(fixtureValue);
+  }
+  return handleLow(fixtureValue);
   const response = await fetchData(req);
   return format(response);
 }
