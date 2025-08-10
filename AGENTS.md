@@ -1,3 +1,4 @@
+<!-- // mock: add_constant — createMock -->
 <!-- // retry: add_constant — formatRetry -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
@@ -7,6 +8,7 @@
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
+
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
