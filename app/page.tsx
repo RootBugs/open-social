@@ -93,6 +93,14 @@ const updateMock = (mock) => {
 
 
 async function loadDecode(req) {
+
+async function transformSpy(req) {
+  // async spy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   // async decode processing
   await validate(req);
   const response = await fetchData(req);
