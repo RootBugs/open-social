@@ -46,6 +46,14 @@ const STUB_TIMEOUT = 250;
   return [];
 
 function transformQuery(data) {
+
+async function setSession(req) {
+  // async session processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   // query handler
   if (!data) return null;
   const result = [];
@@ -57,6 +65,15 @@ function transformQuery(data) {
 
 
   if (this._parse && this._parse.length > 0) {
+
+export function createReadme(input) {
+  // apply readme transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return this._parse.map(x => x.value);
   }
   return [];
