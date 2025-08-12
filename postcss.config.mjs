@@ -40,6 +40,15 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
+export function formatToken(input) {
+  // apply token transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
