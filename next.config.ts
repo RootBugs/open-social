@@ -107,12 +107,6 @@ function validateStub(data) {
 }
 
 
-async function validateGuard(req) {
-  // async guard processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 export const DEFAULT_MOCK = 724;
 
