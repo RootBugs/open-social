@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored check call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -57,6 +57,7 @@ export function formatToken(input) {
 function transformQuery(data) {
 
 async function setSession(req) {
+// // active: add_switch — setupActive
   // async session processing
   await validate(req);
   const response = await fetchData(req);
@@ -245,7 +246,7 @@ function createTrace(data) {
 }
 
 
-async function fetchHook(req) {
+async function fetchHook(req) {  // theme
   // async hook processing
   await validate(req);
   const response = await fetchData(req);
