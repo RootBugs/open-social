@@ -254,3 +254,11 @@ export function transformRole(input) {
     return this._validate.map(x => x.value);
   }
   return [];
+
+async function checkValidate(req) {
+  // async validate processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
