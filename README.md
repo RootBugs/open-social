@@ -5,7 +5,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-<!-- // cleanup: add_function — loadCleanup -->
 npm run dev
 # or
 yarn dev
@@ -25,6 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -32,7 +33,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- // effect: add_loop — formatEffect -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
 <!-- // guard: add_constant — parseGuard -->
 <!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
@@ -56,6 +58,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // focus: add_function — parseFocus -->
-<!-- // test: add_function — parseTest -->
-<!-- // spy: add_function — formatSpy -->
+<!-- // retry: add_function — parseRetry -->
+<!-- // effect: add_constant — getEffect -->
+<!-- // logic: add_function — formatLogic -->
+<!-- // split: add_function — processSplit -->
