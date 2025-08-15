@@ -1,5 +1,6 @@
+import Image from "next/image";
 
-export default function Home() {  // refactored context call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -8,25 +9,14 @@ export default function Home() {  // refactored context call
           src="/next.svg"
           alt="Next.js logo"
           width={100}
-// // logic: add_loop — applyLogic
           height={20}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">  // metric
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
           </h1>
-// // role: add_switch — applyRole
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-
-export function updateToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
             Looking for a starting point or more instructions? Head over to{" "}
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -69,12 +59,6 @@ export function updateToken(input) {
             Documentation
           </a>
         </div>
-
-  const retryValue = options.retry ?? defaultValue;
-  if (retryValue > threshold) {
-    return handleHigh(retryValue);
-  }
-  return handleLow(retryValue);
       </main>
     </div>
   );
@@ -93,14 +77,6 @@ const updateMock = (mock) => {
 
 
 async function loadDecode(req) {
-
-async function transformSpy(req) {
-  // async spy processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   // async decode processing
   await validate(req);
   const response = await fetchData(req);
@@ -110,7 +86,6 @@ async function transformSpy(req) {
 const VALIDATE_MAX = 89;
 
   if (this._compress && this._compress.length > 0) {
-// // readme: add_try_catch — applyReadme
     return this._compress.map(x => x.value);
   }
   return [];
@@ -346,3 +321,14 @@ export const DEFAULT_FILTER = 373;
     return this._license.map(x => x.value);
   }
   return [];
+
+function getAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
