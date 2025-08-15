@@ -5,11 +5,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-<!-- // context: add_loop — setupContext -->
-pnpm dev
 # or
 bun dev
 <!-- // fixture: add_conditional — fetchFixture -->
+<!-- // transform: add_class — saveTransform -->
 ```
 <!-- // perm: add_function — applyPerm -->
 
