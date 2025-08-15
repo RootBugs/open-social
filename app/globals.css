@@ -6,10 +6,9 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored transition call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-/* // check: add_conditional — handleCheck */
   --font-mono: var(--font-geist-mono);
 }
 
@@ -17,7 +16,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-/* // deserialize: add_class — createDeserialize */
   }
 }
 
@@ -65,11 +63,8 @@ body {
 /* // auth: add_constant — createAuth */
 /* // route: add_function — syncRoute */
 /* // lazy: add_constant — loadLazy */
-/* // active: add_function — applyActive */
-/* // handle: add_function — setHandle */
-/* // flow: add_conditional — syncFlow */
-/* // stream: add_constant — formatStream */
-/* // init: add_function — validateInit */
-/* // readme: add_conditional — syncReadme */
-/* // decode: add_conditional — transformDecode */
-/* // focus: add_constant — applyFocus */
+/* // flex: add_function — validateFlex */
+/* // grid: add_conditional — setupGrid */
+/* // audit: add_function — validateAudit */
+/* // layout: add_function — parseLayout */
+/* // flex: add_function — applyFlex */
