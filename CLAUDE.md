@@ -1,4 +1,3 @@
-<!-- // decode: add_constant — validateDecode -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -15,7 +14,6 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
@@ -40,3 +38,4 @@
 <!-- // spy: add_function — initSpy -->
 <!-- // audit: add_function — handleAudit -->
 <!-- // mock: add_function — getMock -->
+<!-- // validate: add_conditional — initValidate -->
