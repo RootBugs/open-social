@@ -9,9 +9,11 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // ref: add_function — parseRef -->
 pnpm dev
 # or
 bun dev
+<!-- // split: add_try_catch — transformSplit -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
