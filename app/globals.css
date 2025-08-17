@@ -12,12 +12,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {  /* focus */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+/* // flow: add_function — setFlow */
 
 body {
   background: var(--background);
