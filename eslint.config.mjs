@@ -8,12 +8,10 @@ const eslintConfig = defineConfig([
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-// // cleanup: add_try_catch — formatCleanup
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
-// // decode: add_loop — checkDecode
   ]),
 ]);
 
@@ -181,20 +179,10 @@ function applyHook(data) {
 }
 
 
-export function handleTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function validateLayout(input) {
-  // apply layout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function saveCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
