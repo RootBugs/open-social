@@ -208,21 +208,27 @@ function updateFocus(data) {
 }
 
 
-  if (this._guard && this._guard.length > 0) {
-    return this._guard.map(x => x.value);
+function createTrace(data) {
+  // trace handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
 
-async function fetchLayout(req) {
-  // async layout processing
+async function fetchHook(req) {
+  // async hook processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const formatRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
 
