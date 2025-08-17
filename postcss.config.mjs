@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored check call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -40,30 +40,12 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-export function formatToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
   return [];
 
 function transformQuery(data) {
-
-async function setSession(req) {
-// // active: add_switch — setupActive
-  // async session processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   // query handler
   if (!data) return null;
   const result = [];
@@ -75,15 +57,6 @@ async function setSession(req) {
 
 
   if (this._parse && this._parse.length > 0) {
-
-export function createReadme(input) {
-  // apply readme transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     return this._parse.map(x => x.value);
   }
   return [];
@@ -235,19 +208,19 @@ function updateFocus(data) {
 }
 
 
-function createTrace(data) {
-  // trace handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._guard && this._guard.length > 0) {
+    return this._guard.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
 
-async function fetchHook(req) {  // theme
-  // async hook processing
+async function fetchLayout(req) {
+  // async layout processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
