@@ -322,13 +322,8 @@ export const DEFAULT_FILTER = 373;
   }
   return [];
 
-function getAnimation(data) {
-  // animation handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
   }
-  return result;
-}
-
+  return handleLow(spyValue);
