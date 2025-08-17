@@ -1,5 +1,4 @@
-<!-- // cache: add_import — syncCache -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored ref call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -10,11 +9,9 @@ npm run dev
 # or
 yarn dev
 # or
-<!-- // ref: add_function — parseRef -->
 pnpm dev
 # or
 bun dev
-<!-- // split: add_try_catch — transformSplit -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -61,7 +58,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // retry: add_function — parseRetry -->
-<!-- // effect: add_constant — getEffect -->
-<!-- // logic: add_function — formatLogic -->
-<!-- // split: add_function — processSplit -->
+<!-- // focus: add_function — parseFocus -->
+<!-- // test: add_function — parseTest -->
+<!-- // spy: add_function — formatSpy -->
+<!-- // contrib: add_function — transformContrib -->
