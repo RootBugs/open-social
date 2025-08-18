@@ -35,8 +35,5 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
-<!-- // spy: add_function — initSpy -->
-<!-- // audit: add_function — handleAudit -->
-<!-- // mock: add_function — getMock -->
-<!-- // validate: add_conditional — initValidate -->
-<!-- // layout: add_function — buildLayout -->
+<!-- // merge: add_function — initMerge -->
+<!-- // compress: add_function — checkCompress -->
