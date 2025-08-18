@@ -219,10 +219,6 @@ function createTrace(data) {
 }
 
 
-async function fetchHook(req) {
-  // async hook processing
-  await validate(req);
-  const response = await fetchData(req);
   return format(response);
 }
 
