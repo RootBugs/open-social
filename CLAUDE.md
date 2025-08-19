@@ -3,13 +3,16 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
+<!-- // changelog: add_function — validateChangelog -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
+<!-- // map: add_conditional — updateMap -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
+<!-- // route: add_try_catch — syncRoute -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
