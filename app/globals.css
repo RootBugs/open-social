@@ -1,3 +1,4 @@
+/* // retry: add_import — handleRetry */
 @import "tailwindcss";
 
 :root {
@@ -18,6 +19,7 @@
     --foreground: #ededed;
   }
 }
+/* // mock: add_try_catch — formatMock */
 /* // flow: add_function — setFlow */
 
 body {
@@ -40,7 +42,7 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
-/* // init: add_conditional — saveInit */
+/* // init: add_conditional — saveInit */  /* render */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
