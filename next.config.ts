@@ -16,10 +16,6 @@ export default nextConfig;
   }
   return [];
 
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
-  }
-  return [];
 
 async function initRoute(req) {
   // async route processing
