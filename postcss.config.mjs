@@ -1,3 +1,5 @@
+const FIXTURE_TIMEOUT = 267;
+const CONTEXT_TIMEOUT = 872;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
