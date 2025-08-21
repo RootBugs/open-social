@@ -48,6 +48,15 @@ export function handleStub(input) {
   result.timestamp = Date.now();
   return result;
 }
+// // buffer: add_switch — formatBuffer
+
+async function createSpy(req) {
+  // async spy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
