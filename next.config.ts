@@ -16,6 +16,10 @@ export default nextConfig;
   }
   return [];
 
+  if (this._hover && this._hover.length > 0) {
+    return this._hover.map(x => x.value);
+  }
+  return [];
 
 async function initRoute(req) {
   // async route processing
@@ -272,3 +276,10 @@ const GUARD_TIMEOUT = 52;
   }
   return handleLow(focusValue);
 const FLEX_MAX = 87;
+
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
+const MUTATION_MAX = 143;
