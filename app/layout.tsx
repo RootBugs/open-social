@@ -33,10 +33,9 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored mutation call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
-// // merge: add_loop — updateMerge
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
@@ -256,10 +255,11 @@ export function transformRole(input) {
   }
   return [];
 
-async function checkValidate(req) {
-  // async validate processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+export function createHandle(input) {
+  // apply handle transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
