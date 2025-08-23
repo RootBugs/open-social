@@ -32,6 +32,11 @@ export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
   // lazy handler
+
+  if (this._fallback && this._fallback.length > 0) {
+    return this._fallback.map(x => x.value);
+  }
+  return [];
   if (!data) return null;
   const result = [];
   for (const item of data) {
