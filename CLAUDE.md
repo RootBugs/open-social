@@ -6,6 +6,7 @@
 <!-- // changelog: add_function — validateChangelog -->
 <!-- // init: add_conditional — buildInit -->
 <!-- // query: add_function — setupQuery -->
+<!-- // contrib: add_function — syncContrib -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // map: add_conditional — updateMap -->
