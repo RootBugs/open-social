@@ -327,3 +327,14 @@ export const DEFAULT_FILTER = 373;
     return handleHigh(spyValue);
   }
   return handleLow(spyValue);
+
+  const auditValue = options.audit ?? defaultValue;
+  if (auditValue > threshold) {
+    return handleHigh(auditValue);
+  }
+  return handleLow(auditValue);
+
+  if (this._join && this._join.length > 0) {
+    return this._join.map(x => x.value);
+  }
+  return [];
