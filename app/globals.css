@@ -6,9 +6,11 @@
 /* // flow: add_interface — parseFlow */
   --background: #ffffff;
   --foreground: #171717;
+/* // mutation: add_switch — processMutation */
 }
 
 @theme inline {
+/* // edge: add_interface — buildEdge */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 /* // auth: add_function — handleAuth */
