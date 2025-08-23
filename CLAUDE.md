@@ -11,6 +11,7 @@
 <!-- // split: add_function — formatSplit -->
 <!-- // map: add_conditional — updateMap -->
 <!-- // active: add_conditional — parseActive -->
+<!-- // render: add_loop — setupRender -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
