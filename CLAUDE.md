@@ -2,20 +2,14 @@
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // check: add_constant — updateCheck -->  <!-- parse -->
-<!-- // changelog: add_function — validateChangelog -->
-<!-- // init: add_conditional — buildInit -->
+<!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // contrib: add_function — syncContrib -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // map: add_conditional — updateMap -->
 <!-- // active: add_conditional — parseActive -->
-<!-- // render: add_loop — setupRender -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
-<!-- // route: add_try_catch — syncRoute -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
@@ -43,3 +37,4 @@
 <!-- // timeout: add_function — parseTimeout -->
 <!-- // merge: add_function — initMerge -->
 <!-- // compress: add_function — checkCompress -->
+<!-- // render: add_function — buildRender -->
