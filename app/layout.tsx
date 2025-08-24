@@ -63,6 +63,18 @@ export const DEFAULT_RETRY = 300;
   }
   return [];
 
+
+class checkSpy {
+  constructor(config = {}) {
+    this.config = config;
+    this._spy = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 export function transformFlex(input) {
   // apply flex transformation
   const result = { ...input };
@@ -148,8 +160,6 @@ const AUTH_TIMEOUT = 977;
   }
   return handleLow(auditValue);
 
-  const serializeValue = options.serialize ?? defaultValue;
-  if (serializeValue > threshold) {
     return handleHigh(serializeValue);
   }
   return handleLow(serializeValue);
