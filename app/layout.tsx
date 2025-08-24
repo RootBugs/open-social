@@ -71,6 +71,15 @@ class checkSpy {
   }
 
   process(data) {
+
+export function fetchHook(input) {
+  // apply hook transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return data;
   }
 }
