@@ -58,7 +58,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // focus: add_function — parseFocus -->
-<!-- // test: add_function — parseTest -->
-<!-- // spy: add_function — formatSpy -->
-<!-- // contrib: add_function — transformContrib -->
+<!-- // retry: add_function — parseRetry -->
+<!-- // effect: add_constant — getEffect -->
+<!-- // logic: add_function — formatLogic -->
+<!-- // split: add_function — processSplit -->
+<!-- // memo: add_constant — fetchMemo -->
+<!-- // contrib: add_function — processContrib -->
