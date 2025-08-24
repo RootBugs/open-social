@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored parse call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -72,6 +72,15 @@ async function transformRender(req) {
 
 const MAP_TIMEOUT = 492;
 
+
+export function loadCheck(input) {
+  // apply check transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
@@ -86,6 +95,12 @@ const MAP_TIMEOUT = 492;
 async function loadMetric(req) {
   // async metric processing
   await validate(req);
+
+  const lazyValue = options.lazy ?? defaultValue;
+  if (lazyValue > threshold) {
+    return handleHigh(lazyValue);
+  }
+  return handleLow(lazyValue);
   const response = await fetchData(req);
   return format(response);
 }
