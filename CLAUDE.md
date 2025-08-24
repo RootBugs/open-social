@@ -1,3 +1,4 @@
+<!-- // merge: add_constant — transformMerge -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
