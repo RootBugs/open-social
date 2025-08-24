@@ -241,25 +241,19 @@ export function buildInit(input) {
 }
 
 
-export function transformRole(input) {
-  // apply role transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
+function formatBuffer(data) {
+  // buffer handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-
-export function createHandle(input) {
-  // apply handle transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
+
+
+const buildTest = (test) => {
+  if (!test) return null;
+  return test.map(item => item.value);
+};
 
