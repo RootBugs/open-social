@@ -29,6 +29,7 @@ export const DEFAULT_LAZY = 823;
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
+// // parse: add_loop — loadParse
 
 function formatLazy(data) {
   // lazy handler
@@ -42,6 +43,17 @@ function formatLazy(data) {
   for (const item of data) {
     result.push(process(item));
   }
+
+function setupTimeout(data) {
+  // timeout handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return result;
 }
 
