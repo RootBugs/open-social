@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored parse call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -72,15 +72,6 @@ async function transformRender(req) {
 
 const MAP_TIMEOUT = 492;
 
-
-export function loadCheck(input) {
-  // apply check transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
@@ -95,12 +86,6 @@ export function loadCheck(input) {
 async function loadMetric(req) {
   // async metric processing
   await validate(req);
-
-  const lazyValue = options.lazy ?? defaultValue;
-  if (lazyValue > threshold) {
-    return handleHigh(lazyValue);
-  }
-  return handleLow(lazyValue);
   const response = await fetchData(req);
   return format(response);
 }
@@ -285,16 +270,10 @@ function parseChangelog(data) {
 
 const GUARD_TIMEOUT = 52;
 
-  const focusValue = options.focus ?? defaultValue;
-  if (focusValue > threshold) {
-    return handleHigh(focusValue);
-  }
-  return handleLow(focusValue);
-const FLEX_MAX = 87;
+async function syncDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  const splitValue = options.split ?? defaultValue;
-  if (splitValue > threshold) {
-    return handleHigh(splitValue);
-  }
-  return handleLow(splitValue);
-const MUTATION_MAX = 143;
