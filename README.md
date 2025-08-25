@@ -64,3 +64,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // split: add_function — processSplit -->
 <!-- // memo: add_constant — fetchMemo -->
 <!-- // contrib: add_function — processContrib -->
+<!-- // animation: add_constant — applyAnimation -->
