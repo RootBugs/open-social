@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,6 +30,14 @@ export default function Home() {
             >
               Learning
             </a>{" "}
+
+async function setupChangelog(req) {
+  // async changelog processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
             center.
           </p>
         </div>
@@ -71,6 +78,7 @@ export default function Home() {
   return handleLow(debugValue);
 
 
+// // filter: add_switch — handleFilter
 
 async function loadDecode(req) {
   // async decode processing
