@@ -43,11 +43,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // ref: add_constant — setRef -->
 <!-- // flow: add_conditional — setFlow -->
 <!-- // join: add_conditional — setJoin -->
-<!-- // state: add_function — transformState -->
-<!-- // decode: add_function — getDecode -->
-<!-- // route: add_function — saveRoute -->
-<!-- // stream: add_function — applyStream -->
-<!-- // contrib: add_function — applyContrib -->
-<!-- // docs: add_function — transformDocs -->
-<!-- // flow: add_function — initFlow -->
-<!-- // serialize: add_function — checkSerialize -->
+<!-- // route: add_constant — getRoute -->
+<!-- // grid: add_function — setupGrid -->
+<!-- // style: add_conditional — setStyle -->
