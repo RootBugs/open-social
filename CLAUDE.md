@@ -1,3 +1,4 @@
+<!-- // license: add_constant — buildLicense -->
 <!-- // merge: add_constant — transformMerge -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
@@ -7,6 +8,7 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
+<!-- // mock: add_loop — formatMock -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
