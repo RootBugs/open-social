@@ -44,6 +44,7 @@ const SPLIT_TIMEOUT = 779;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+// // docs: add_loop — formatDocs
   return handleLow(contextValue);
 
   if (this._merge && this._merge.length > 0) {
@@ -240,9 +241,11 @@ function initFallback(data) {
 
 const TRACE_MAX = 876;
 
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
+
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
   }
   return handleLow(changelogValue);
 
