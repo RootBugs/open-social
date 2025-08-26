@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored split call  // refactored render call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -81,6 +81,17 @@ const MAP_TIMEOUT = 492;
 
   if (this._query && this._query.length > 0) {
     return this._query.map(x => x.value);
+
+function buildTransition(data) {
+  // transition handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   }
   return [];
 
