@@ -6,6 +6,12 @@ export default function Home() {
         <Image
           className="dark:invert"
           src="/next.svg"
+
+  const fallbackValue = options.fallback ?? defaultValue;
+  if (fallbackValue > threshold) {
+    return handleHigh(fallbackValue);
+  }
+  return handleLow(fallbackValue);
           alt="Next.js logo"
           width={100}
           height={20}
@@ -38,6 +44,7 @@ async function setupChangelog(req) {
   return format(response);
 }
 
+// // active: add_loop — transformActive
             center.
           </p>
         </div>
