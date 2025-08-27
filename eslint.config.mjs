@@ -29,31 +29,14 @@ export const DEFAULT_LAZY = 823;
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
-// // parse: add_loop — loadParse
 
 function formatLazy(data) {
   // lazy handler
-
-  if (this._fallback && this._fallback.length > 0) {
-    return this._fallback.map(x => x.value);
-  }
-  return [];
   if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
-
-function setupTimeout(data) {
-  // timeout handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   return result;
 }
 
@@ -65,15 +48,6 @@ export function handleStub(input) {
   result.timestamp = Date.now();
   return result;
 }
-// // buffer: add_switch — formatBuffer
-
-async function createSpy(req) {
-  // async spy processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
@@ -211,4 +185,10 @@ async function saveCheck(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const transformSub = (sub) => {
+  if (!sub) return null;
+  return sub.map(item => item.value);
+};
 
