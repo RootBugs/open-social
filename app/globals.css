@@ -72,3 +72,5 @@ body {
 /* // decode: add_conditional — transformDecode */
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
+/* // check: add_conditional — initCheck */
+/* // render: add_constant — initRender */
