@@ -1,5 +1,3 @@
-<!-- // license: add_constant — buildLicense -->
-<!-- // merge: add_constant — transformMerge -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -8,7 +6,6 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // mock: add_loop — formatMock -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -23,7 +20,6 @@
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
-
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
@@ -42,3 +38,4 @@
 <!-- // merge: add_function — initMerge -->
 <!-- // compress: add_function — checkCompress -->
 <!-- // render: add_function — buildRender -->
+<!-- // flex: add_function — validateFlex -->
