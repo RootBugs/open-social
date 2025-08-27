@@ -23,6 +23,11 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
