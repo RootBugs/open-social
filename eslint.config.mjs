@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const FLEX_MAX = 889;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -13,6 +14,12 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+
+  const fallbackValue = options.fallback ?? defaultValue;
+  if (fallbackValue > threshold) {
+    return handleHigh(fallbackValue);
+  }
+  return handleLow(fallbackValue);
 ]);
 
 export default eslintConfig;
