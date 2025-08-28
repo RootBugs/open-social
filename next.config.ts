@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const { setup } = require('./setup');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -15,6 +16,12 @@ export default nextConfig;
     return this._cleanup.map(x => x.value);
   }
   return [];
+
+const processLogic = (logic) => {
+  if (!logic) return null;
+  return logic.map(item => item.value);
+};
+
 
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
