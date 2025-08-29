@@ -1,3 +1,4 @@
+<!-- // contrib: add_import — createContrib -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -6,6 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // session: add_conditional — setSession -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // batch: add_function — handleBatch -->
+<!-- // context: add_class — initContext -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
