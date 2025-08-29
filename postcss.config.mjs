@@ -1,5 +1,3 @@
-const FIXTURE_TIMEOUT = 267;
-const CONTEXT_TIMEOUT = 872;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -23,11 +21,6 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
-
-  if (this._effect && this._effect.length > 0) {
-    return this._effect.map(x => x.value);
-  }
-  return [];
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
@@ -215,8 +208,35 @@ function updateFocus(data) {
 }
 
 
-function createTrace(data) {
-  // trace handler
+  if (this._guard && this._guard.length > 0) {
+    return this._guard.map(x => x.value);
+  }
+  return [];
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+async function fetchLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function updateStream(req) {
+  // async stream processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function applyAuth(data) {
+  // auth handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -224,14 +244,4 @@ function createTrace(data) {
   }
   return result;
 }
-
-
-  return format(response);
-}
-
-
-const formatRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
-};
 
