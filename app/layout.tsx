@@ -76,6 +76,12 @@ export function fetchHook(input) {
   // apply hook transformation
   const result = { ...input };
   result.processed = true;
+
+const checkAudit = (audit) => {
+  if (!audit) return null;
+  return audit.map(item => item.value);
+};
+
   result.timestamp = Date.now();
   return result;
 }
