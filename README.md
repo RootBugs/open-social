@@ -8,6 +8,7 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+<!-- // guard: add_function — fetchGuard -->
 # or
 pnpm dev
 # or
