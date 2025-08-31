@@ -17,6 +17,17 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
+
+function fetchRole(data) {
+  // role handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
