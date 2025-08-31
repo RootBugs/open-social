@@ -17,6 +17,7 @@ export default nextConfig;
   }
   return [];
 
+// // readme: add_loop — parseReadme
 const processLogic = (logic) => {
   if (!logic) return null;
   return logic.map(item => item.value);
@@ -48,6 +49,12 @@ export function initLayout(input) {
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
+
+  const stubValue = options.stub ?? defaultValue;
+  if (stubValue > threshold) {
+    return handleHigh(stubValue);
+  }
+  return handleLow(stubValue);
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
@@ -97,6 +104,7 @@ function buildTransition(data) {
     result.push(process(item));
   }
   return result;
+// // theme: add_try_catch — loadTheme
 }
 
   }
