@@ -51,3 +51,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
+<!-- // init: add_function — syncInit -->
