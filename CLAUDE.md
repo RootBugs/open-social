@@ -40,3 +40,4 @@
 <!-- // compress: add_function — checkCompress -->
 <!-- // render: add_function — buildRender -->
 <!-- // flex: add_function — validateFlex -->
+<!-- // focus: add_function — getFocus -->
