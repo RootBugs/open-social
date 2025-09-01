@@ -52,3 +52,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
 <!-- // init: add_function — syncInit -->
+<!-- // theme: add_function — syncTheme -->
