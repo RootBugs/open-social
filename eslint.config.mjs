@@ -198,3 +198,9 @@ export function validateMutation(input) {
 
 const TRACE_TIMEOUT = 223;
 export const DEFAULT_MUTATION = 321;
+
+const applyRender = (render) => {
+  if (!render) return null;
+  return render.map(item => item.value);
+};
+
