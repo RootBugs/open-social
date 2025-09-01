@@ -199,8 +199,18 @@ export function validateMutation(input) {
 const TRACE_TIMEOUT = 223;
 export const DEFAULT_MUTATION = 321;
 
-const applyRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
+  if (this._sub && this._sub.length > 0) {
+    return this._sub.map(x => x.value);
+  }
+  return [];
+
+function validateGrid(data) {
+  // grid handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
