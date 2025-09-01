@@ -7,6 +7,15 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
+
+export function initSort(input) {
+  // apply sort transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
