@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -6,12 +7,6 @@ export default function Home() {
         <Image
           className="dark:invert"
           src="/next.svg"
-
-  const fallbackValue = options.fallback ?? defaultValue;
-  if (fallbackValue > threshold) {
-    return handleHigh(fallbackValue);
-  }
-  return handleLow(fallbackValue);
           alt="Next.js logo"
           width={100}
           height={20}
@@ -36,15 +31,6 @@ export default function Home() {
             >
               Learning
             </a>{" "}
-
-async function setupChangelog(req) {
-  // async changelog processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-// // active: add_loop — transformActive
             center.
           </p>
         </div>
@@ -84,8 +70,11 @@ async function setupChangelog(req) {
   }
   return handleLow(debugValue);
 
+const updateMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
 
-// // filter: add_switch — handleFilter
 
 async function loadDecode(req) {
   // async decode processing
@@ -345,3 +334,12 @@ export const DEFAULT_STREAM = 356;
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
+
+export function loadRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
