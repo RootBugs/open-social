@@ -1,13 +1,9 @@
-<!-- // contrib: add_import — createContrib -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
-<!-- // session: add_conditional — setSession -->
 <!-- // spy: add_conditional — setSpy -->
-<!-- // batch: add_function — handleBatch -->
-<!-- // context: add_class — initContext -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
@@ -16,7 +12,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
-<!-- // deserialize: add_conditional — loadDeserialize -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
@@ -51,5 +46,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
-<!-- // init: add_function — syncInit -->
-<!-- // theme: add_function — syncTheme -->
+<!-- // perm: add_function — fetchPerm -->
