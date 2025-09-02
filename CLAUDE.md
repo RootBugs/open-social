@@ -7,7 +7,6 @@
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
-<!-- // lazy: add_try_catch — applyLazy -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
@@ -36,8 +35,9 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
-<!-- // merge: add_function — initMerge -->
-<!-- // compress: add_function — checkCompress -->
-<!-- // render: add_function — buildRender -->
-<!-- // flex: add_function — validateFlex -->
-<!-- // focus: add_function — getFocus -->
+<!-- // spy: add_function — initSpy -->
+<!-- // audit: add_function — handleAudit -->
+<!-- // mock: add_function — getMock -->
+<!-- // validate: add_conditional — initValidate -->
+<!-- // memo: add_conditional — handleMemo -->
+<!-- // format: add_function — updateFormat -->
