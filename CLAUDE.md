@@ -7,11 +7,13 @@
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
+<!-- // layout: add_function — transformLayout -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
+<!-- // animation: add_function — checkAnimation -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
