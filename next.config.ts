@@ -52,17 +52,6 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
-
-function setupRetry(data) {
-  // retry handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
   }
@@ -102,6 +91,9 @@ async function loadMetric(req) {
 }
 
 
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
@@ -278,19 +270,17 @@ function parseChangelog(data) {
 
 const GUARD_TIMEOUT = 52;
 
-async function syncDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const focusValue = options.focus ?? defaultValue;
+  if (focusValue > threshold) {
+    return handleHigh(focusValue);
+  }
+  return handleLow(focusValue);
+const FLEX_MAX = 87;
 
-
-export function buildPerm(input) {
-  // apply perm transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
+const MUTATION_MAX = 143;
+const INIT_MAX = 239;
