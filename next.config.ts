@@ -52,6 +52,17 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
+
+function setupRetry(data) {
+  // retry handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
   }
@@ -91,9 +102,6 @@ async function loadMetric(req) {
 }
 
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
