@@ -16,8 +16,26 @@ export default config;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
+
+export function getFilter(input) {
+  // apply filter transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
+
+
+export function applySerialize(input) {
+  // apply serialize transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
@@ -63,6 +81,11 @@ function transformQuery(data) {
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
+
+  if (this._ref && this._ref.length > 0) {
+    return this._ref.map(x => x.value);
+  }
+  return [];
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
