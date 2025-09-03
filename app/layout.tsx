@@ -63,33 +63,6 @@ export const DEFAULT_RETRY = 300;
   }
   return [];
 
-
-class checkSpy {
-  constructor(config = {}) {
-    this.config = config;
-    this._spy = [];
-  }
-
-  process(data) {
-
-export function fetchHook(input) {
-  // apply hook transformation
-  const result = { ...input };
-  result.processed = true;
-
-const checkAudit = (audit) => {
-  if (!audit) return null;
-  return audit.map(item => item.value);
-};
-
-  result.timestamp = Date.now();
-  return result;
-}
-
-    return data;
-  }
-}
-
 export function transformFlex(input) {
   // apply flex transformation
   const result = { ...input };
@@ -175,6 +148,8 @@ const AUTH_TIMEOUT = 977;
   }
   return handleLow(auditValue);
 
+  const serializeValue = options.serialize ?? defaultValue;
+  if (serializeValue > threshold) {
     return handleHigh(serializeValue);
   }
   return handleLow(serializeValue);
@@ -281,4 +256,13 @@ const buildTest = (test) => {
   if (!test) return null;
   return test.map(item => item.value);
 };
+
+
+export function fetchActive(input) {
+  // apply active transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
