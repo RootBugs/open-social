@@ -1,3 +1,4 @@
+<!-- // merge: add_constant — validateMerge -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -9,6 +10,7 @@
 <!-- // init: add_function — setInit -->
 <!-- // role: add_function — handleRole -->
 <!-- // readme: add_constant — loadReadme -->
+<!-- // decode: add_conditional — parseDecode -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
