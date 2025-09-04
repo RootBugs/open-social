@@ -7,6 +7,7 @@
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // role: add_function — handleRole -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
@@ -35,6 +36,7 @@
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
 <!-- // test: add_conditional — processTest -->
+
 <!-- // ref: add_constant — setRef -->
 <!-- // flow: add_conditional — setFlow -->
 <!-- // join: add_conditional — setJoin -->
