@@ -9,6 +9,15 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
+
+export function processBuffer(input) {
+  // apply buffer transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -55,6 +64,11 @@ export default function RootLayout({
   if (queryValue > threshold) {
     return handleHigh(queryValue);
   }
+
+  if (this._grid && this._grid.length > 0) {
+    return this._grid.map(x => x.value);
+  }
+  return [];
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
