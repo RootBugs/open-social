@@ -1,8 +1,10 @@
+/* // license: add_import — buildLicense */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // focus: add_try_catch — checkFocus */
 }
 
 }
@@ -17,6 +19,7 @@
 
 body {
   background: var(--background);
+/* // debug: add_conditional — initDebug */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
