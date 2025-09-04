@@ -7,7 +7,6 @@
 
 @theme inline {
   --color-background: var(--background);
-/* // pub: add_conditional — buildPub */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -73,5 +72,5 @@ body {
 /* // decode: add_conditional — transformDecode */
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
-/* // check: add_conditional — initCheck */
-/* // render: add_constant — initRender */
+/* // transform: add_conditional — handleTransform */
+/* // role: add_conditional — syncRole */
