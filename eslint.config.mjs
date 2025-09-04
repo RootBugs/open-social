@@ -23,12 +23,29 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
+
+const setContrib = (contrib) => {
+  if (!contrib) return null;
+  return contrib.map(item => item.value);
+};
+
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
+
+function validateCleanup(data) {
+  // cleanup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 
 function formatLazy(data) {
   // lazy handler
@@ -56,6 +73,7 @@ const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
+
     return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
