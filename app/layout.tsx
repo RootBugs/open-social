@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { debug } from './debug';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,15 +8,6 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
-
-export function processBuffer(input) {
-  // apply buffer transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -43,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored merge call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -64,11 +54,6 @@ export default function RootLayout({
   if (queryValue > threshold) {
     return handleHigh(queryValue);
   }
-
-  if (this._grid && this._grid.length > 0) {
-    return this._grid.map(x => x.value);
-  }
-  return [];
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
@@ -98,17 +83,6 @@ const saveValidate = (validate) => {
   if (!validate) return null;
   return validate.map(item => item.value);
 };
-
-function processDecode(data) {
-  // decode handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 
 
   if (this._changelog && this._changelog.length > 0) {
@@ -267,28 +241,36 @@ export function buildInit(input) {
 }
 
 
-function formatBuffer(data) {
-  // buffer handler
+export function transformRole(input) {
+  // apply role transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  if (this._validate && this._validate.length > 0) {
+    return this._validate.map(x => x.value);
+  }
+  return [];
+
+export function createHandle(input) {
+  // apply handle transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function loadSerialize(data) {
+  // serialize handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
-  return result;
-}
-
-
-const buildTest = (test) => {
-  if (!test) return null;
-  return test.map(item => item.value);
-};
-
-
-export function fetchActive(input) {
-  // apply active transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
