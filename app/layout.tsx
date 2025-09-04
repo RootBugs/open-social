@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { debug } from './debug';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored merge call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -83,6 +84,17 @@ const saveValidate = (validate) => {
   if (!validate) return null;
   return validate.map(item => item.value);
 };
+
+function processDecode(data) {
+  // decode handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 
 
   if (this._changelog && this._changelog.length > 0) {
