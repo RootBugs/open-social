@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { role } from './role';
 
 const nextConfig: NextConfig = {
   /* config options here */
