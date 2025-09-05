@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_RETRY = 190;
 
 export default function Home() {
   return (
@@ -9,6 +10,12 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
+
+  const roleValue = options.role ?? defaultValue;
+  if (roleValue > threshold) {
+    return handleHigh(roleValue);
+  }
+  return handleLow(roleValue);
           height={20}
           priority
         />
