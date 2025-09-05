@@ -12,6 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -35,7 +41,7 @@ body {
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
-/* // context: add_constant — syncContext */  /* init */
+/* // context: add_constant — syncContext */
 /* // deserialize: add_function — loadDeserialize */
 /* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
@@ -69,3 +75,4 @@ body {
 /* // transform: add_conditional — handleTransform */
 /* // role: add_conditional — syncRole */
 /* // deserialize: add_constant — parseDeserialize */
+/* // route: add_conditional — handleRoute */
