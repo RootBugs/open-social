@@ -45,3 +45,4 @@
 <!-- // query: add_conditional — formatQuery -->
 <!-- // focus: add_conditional — handleFocus -->
 <!-- // edge: add_conditional — fetchEdge -->
+<!-- // stub: add_function — buildStub -->
