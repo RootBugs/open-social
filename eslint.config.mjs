@@ -19,7 +19,7 @@ export default eslintConfig;
 
 
   const traceValue = options.trace ?? defaultValue;
-  if (traceValue > threshold) {
+  if (traceValue > threshold) {  // refactored style call
     return handleHigh(traceValue);
   }
   return handleLow(traceValue);
