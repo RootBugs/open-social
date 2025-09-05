@@ -1,3 +1,4 @@
+<!-- // metric: add_constant — syncMetric -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
