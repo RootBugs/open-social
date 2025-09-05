@@ -4,6 +4,7 @@ const config = {
   },
 };
 
+// // format: add_loop — handleFormat
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
