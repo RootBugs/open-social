@@ -45,6 +45,18 @@ export function applySerialize(input) {
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
+class loadGrid {
+  constructor(config = {}) {
+    this.config = config;
+    this._grid = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
