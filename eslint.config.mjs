@@ -17,8 +17,12 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
+
+  const traceValue = options.trace ?? defaultValue;
+  if (traceValue > threshold) {
+    return handleHigh(traceValue);
+  }
+  return handleLow(traceValue);
   }
   return [];
 export const DEFAULT_LAZY = 823;
