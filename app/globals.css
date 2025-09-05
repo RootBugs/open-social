@@ -12,12 +12,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
@@ -41,7 +35,7 @@ body {
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
-/* // context: add_constant — syncContext */
+/* // context: add_constant — syncContext */  /* init */
 /* // deserialize: add_function — loadDeserialize */
 /* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
