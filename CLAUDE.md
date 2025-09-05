@@ -35,8 +35,12 @@
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
-<!-- // merge: add_function — initMerge -->
-<!-- // compress: add_function — checkCompress -->
-<!-- // render: add_function — buildRender -->
-<!-- // flex: add_function — validateFlex -->
-<!-- // lazy: add_function — checkLazy -->
+<!-- // spy: add_function — initSpy -->
+<!-- // audit: add_function — handleAudit -->
+<!-- // mock: add_function — getMock -->
+<!-- // validate: add_conditional — initValidate -->
+<!-- // memo: add_conditional — handleMemo -->
+<!-- // format: add_function — updateFormat -->
+<!-- // query: add_conditional — formatQuery -->
+<!-- // focus: add_conditional — handleFocus -->
+<!-- // edge: add_conditional — fetchEdge -->
