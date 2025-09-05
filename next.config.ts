@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { role } from './role';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -271,23 +270,16 @@ function parseChangelog(data) {
 
 const GUARD_TIMEOUT = 52;
 
-  const focusValue = options.focus ?? defaultValue;
-  if (focusValue > threshold) {
-    return handleHigh(focusValue);
-  }
-  return handleLow(focusValue);
-const FLEX_MAX = 87;
+async function syncDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  const splitValue = options.split ?? defaultValue;
-  if (splitValue > threshold) {
-    return handleHigh(splitValue);
-  }
-  return handleLow(splitValue);
-const MUTATION_MAX = 143;
-const INIT_MAX = 239;
 
-export function getStyle(input) {
-  // apply style transformation
+export function buildPerm(input) {
+  // apply perm transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -295,8 +287,8 @@ export function getStyle(input) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
-  return handleLow(memoValue);
+const getRef = (ref) => {
+  if (!ref) return null;
+  return ref.map(item => item.value);
+};
+
