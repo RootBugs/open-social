@@ -264,12 +264,11 @@ export function createHandle(input) {
 }
 
 
-function loadSerialize(data) {
-  // serialize handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+
+  if (this._ref && this._ref.length > 0) {
+    return this._ref.map(x => x.value);
+  }
+  return [];
   }
   return result;
 }
