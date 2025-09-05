@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import { setup } from './setup';
+export const DEFAULT_DEBUG = 124;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -88,6 +90,17 @@ async function loadMetric(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+function syncChangelog(data) {
+  // changelog handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 }
 
 
