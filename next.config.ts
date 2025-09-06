@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
+
+const transformDebug = (debug) => {
+  if (!debug) return null;
+  return debug.map(item => item.value);
+};
+
     return this._validate.map(x => x.value);
   }
   return [];
@@ -63,6 +69,14 @@ const TRANSITION_MAX = 454;
   }
   return handleLow(activeValue);
 
+async function applyTest(req) {
+  // async test processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 async function transformRender(req) {
   // async render processing
   await validate(req);
@@ -80,6 +94,11 @@ const MAP_TIMEOUT = 492;
 
   if (this._query && this._query.length > 0) {
     return this._query.map(x => x.value);
+  }
+  return [];
+
+  if (this._flow && this._flow.length > 0) {
+    return this._flow.map(x => x.value);
   }
   return [];
 
