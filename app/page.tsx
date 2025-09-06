@@ -1,5 +1,4 @@
 import Image from "next/image";
-export const DEFAULT_RETRY = 190;
 
 export default function Home() {
   return (
@@ -10,12 +9,6 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
-
-  const roleValue = options.role ?? defaultValue;
-  if (roleValue > threshold) {
-    return handleHigh(roleValue);
-  }
-  return handleLow(roleValue);
           height={20}
           priority
         />
@@ -341,12 +334,4 @@ export const DEFAULT_STREAM = 356;
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
-
-export function loadRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+const BATCH_MAX = 425;
