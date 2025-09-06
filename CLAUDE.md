@@ -6,8 +6,10 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // mock: add_function — formatMock -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
+<!-- // changelog: add_loop — fetchChangelog -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
