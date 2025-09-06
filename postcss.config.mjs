@@ -1,3 +1,4 @@
+const { logic } = require('./logic');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -17,6 +18,11 @@ export default config;
     return handleHigh(setupValue);
   }
   return handleLow(setupValue);
+
+  if (this._fixture && this._fixture.length > 0) {
+    return this._fixture.map(x => x.value);
+  }
+  return [];
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
