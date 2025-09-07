@@ -54,6 +54,21 @@ export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
+
+
+const transformFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
+export function createParse(input) {
+  // apply parse transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
