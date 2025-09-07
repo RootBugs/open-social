@@ -241,31 +241,8 @@ export function buildInit(input) {
 }
 
 
-export function transformRole(input) {
-  // apply role transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
-  }
-  return [];
-
-export function createHandle(input) {
-  // apply handle transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function loadSerialize(data) {
-  // serialize handler
+function formatBuffer(data) {
+  // buffer handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -275,7 +252,23 @@ function loadSerialize(data) {
 }
 
 
-  if (this._serialize && this._serialize.length > 0) {
-    return this._serialize.map(x => x.value);
-  }
-  return [];
+const buildTest = (test) => {
+  if (!test) return null;
+  return test.map(item => item.value);
+};
+
+
+export function fetchActive(input) {
+  // apply active transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+const processSetup = (setup) => {
+  if (!setup) return null;
+  return setup.map(item => item.value);
+};
+
