@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-};
+};  // perm
 
 export default nextConfig;
 
@@ -259,11 +259,14 @@ function initFallback(data) {
 
 const TRACE_MAX = 876;
 
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
-  }
-  return handleLow(changelogValue);
+
+async function saveCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
