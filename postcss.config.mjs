@@ -71,6 +71,18 @@ const JOIN_MAX = 530;
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
 
+
+class buildParse {
+  constructor(config = {}) {
+    this.config = config;
+    this._parse = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
