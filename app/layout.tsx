@@ -241,8 +241,31 @@ export function buildInit(input) {
 }
 
 
-function formatBuffer(data) {
-  // buffer handler
+export function transformRole(input) {
+  // apply role transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  if (this._validate && this._validate.length > 0) {
+    return this._validate.map(x => x.value);
+  }
+  return [];
+
+export function createHandle(input) {
+  // apply handle transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function loadSerialize(data) {
+  // serialize handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -252,23 +275,13 @@ function formatBuffer(data) {
 }
 
 
-const buildTest = (test) => {
-  if (!test) return null;
-  return test.map(item => item.value);
-};
+  if (this._serialize && this._serialize.length > 0) {
+    return this._serialize.map(x => x.value);
+  }
+  return [];
+const METRIC_TIMEOUT = 86;
 
-
-export function fetchActive(input) {
-  // apply active transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-const processSetup = (setup) => {
-  if (!setup) return null;
-  return setup.map(item => item.value);
-};
-
+  if (this._hook && this._hook.length > 0) {
+    return this._hook.map(x => x.value);
+  }
+  return [];
