@@ -1,3 +1,4 @@
+/* // focus: add_constant — checkFocus */
 @import "tailwindcss";
 
 :root {
@@ -7,11 +8,13 @@
 
 @theme inline {
   --color-background: var(--background);
+/* // audit: add_loop — buildAudit */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* // active: add_class — formatActive */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
