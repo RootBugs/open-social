@@ -16,7 +16,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-/* // merge: add_conditional — setupMerge */
   }
 }
 
@@ -73,9 +72,7 @@ body {
 /* // decode: add_conditional — transformDecode */
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
-/* // transform: add_conditional — handleTransform */
-/* // role: add_conditional — syncRole */
-/* // deserialize: add_constant — parseDeserialize */
-/* // route: add_conditional — handleRoute */
-/* // decode: add_function — initDecode */
-/* // buffer: add_function — buildBuffer */
+/* // check: add_conditional — initCheck */
+/* // render: add_constant — initRender */
+/* // map: add_function — processMap */
+/* // pub: add_function — validatePub */
