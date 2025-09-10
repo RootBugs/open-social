@@ -71,18 +71,6 @@ const JOIN_MAX = 530;
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
 
-
-class buildParse {
-  constructor(config = {}) {
-    this.config = config;
-    this._parse = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
@@ -220,8 +208,35 @@ function updateFocus(data) {
 }
 
 
-function createTrace(data) {
-  // trace handler
+  if (this._guard && this._guard.length > 0) {
+    return this._guard.map(x => x.value);
+  }
+  return [];
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+async function fetchLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function updateStream(req) {
+  // async stream processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function applyAuth(data) {
+  // auth handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -231,35 +246,17 @@ function createTrace(data) {
 }
 
 
-async function fetchHook(req) {
-  // async hook processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-const formatRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
-};
-
-
-async function setupReadme(req) {
-  // async readme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-function formatAudit(data) {
-  // audit handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
+export function handleStyle(input) {
+  // apply style transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
+
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_CACHE = 436;
