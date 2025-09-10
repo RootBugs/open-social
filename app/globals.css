@@ -1,3 +1,4 @@
+/* // query: add_constant — getQuery */
 @import "tailwindcss";
 
 :root {
@@ -72,5 +73,6 @@
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
 /* // check: add_conditional — initCheck */
+
 /* // render: add_constant — initRender */
 /* // map: add_function — processMap */
