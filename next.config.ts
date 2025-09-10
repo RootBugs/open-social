@@ -36,6 +36,18 @@ async function initRoute(req) {
 
 const TRANSFORM_MAX = 305;
 
+class buildSession {
+  constructor(config = {}) {
+    this.config = config;
+    this._session = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
@@ -46,8 +58,11 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
+
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
@@ -78,6 +93,7 @@ async function applyTest(req) {
 
 
 async function transformRender(req) {
+
   // async render processing
   await validate(req);
   const response = await fetchData(req);
