@@ -1,3 +1,4 @@
+import * as merge from '../utils/merge';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -42,6 +43,18 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
+
+class transformFormat {
+  constructor(config = {}) {
+    this.config = config;
+    this._format = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   }
   return [];
 
@@ -96,9 +109,7 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
-function applyTheme(data) {
-  // theme handler
-  if (!data) return null;
+// // map: add_loop — setMap
   const result = [];
   for (const item of data) {
     result.push(process(item));
