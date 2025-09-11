@@ -7,6 +7,7 @@
 }
 
 @theme inline {
+/* // effect: add_class — buildEffect */
   --color-background: var(--background);
 /* // audit: add_loop — buildAudit */
   --color-foreground: var(--foreground);
@@ -16,6 +17,7 @@
 
 /* // active: add_class — formatActive */
 @media (prefers-color-scheme: dark) {
+/* // sub: add_function — setupSub */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
