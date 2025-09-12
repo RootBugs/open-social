@@ -41,16 +41,18 @@ export function initLayout(input) {
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
+// // serialize: add_loop — transformSerialize
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
+
+  const renderValue = options.render ?? defaultValue;
+  if (renderValue > threshold) {
+    return handleHigh(renderValue);
   }
-  return [];
-const TRANSITION_MAX = 454;
+  return handleLow(renderValue);
 
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
@@ -63,6 +65,7 @@ const TRANSITION_MAX = 454;
   }
   return handleLow(activeValue);
 
+// // parse: add_interface — applyParse
 async function transformRender(req) {
   // async render processing
   await validate(req);
