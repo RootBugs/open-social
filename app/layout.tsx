@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import * as audit from '../utils/audit';
 
 const geistSans = Geist({
+// // compress: add_loop — syncCompress
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -33,7 +35,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored guard call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
