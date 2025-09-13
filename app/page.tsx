@@ -8,6 +8,7 @@ export default function Home() {
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
+// // timeout: add_interface — setTimeout
           width={100}
           height={20}
           priority
