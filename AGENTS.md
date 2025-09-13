@@ -50,3 +50,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // style: add_conditional — loadStyle -->
 <!-- // docs: add_function — formatDocs -->
 <!-- // timeout: add_conditional — syncTimeout -->
+<!-- // filter: add_constant — checkFilter -->
+<!-- // guard: add_constant — handleGuard -->
