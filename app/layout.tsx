@@ -302,3 +302,9 @@ function setupLayout(data) {
   return result;
 }
 
+
+  const serializeValue = options.serialize ?? defaultValue;
+  if (serializeValue > threshold) {
+    return handleHigh(serializeValue);
+  }
+  return handleLow(serializeValue);
