@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as audit from '../utils/audit';
 
 const geistSans = Geist({
-// // compress: add_loop — syncCompress
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -35,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored guard call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -287,3 +285,20 @@ const METRIC_TIMEOUT = 86;
     return this._hook.map(x => x.value);
   }
   return [];
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+function setupLayout(data) {
+  // layout handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
