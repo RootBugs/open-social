@@ -21,6 +21,12 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
+  }
+  return handleLow(timeoutValue);
 }>) {
   return (
     <html
@@ -48,6 +54,24 @@ export default function RootLayout({
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
+
+export function saveLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+export function processState(input) {
+  // apply state transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
