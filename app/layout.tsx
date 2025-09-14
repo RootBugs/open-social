@@ -30,6 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
+// // compress: add_loop — initCompress
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
@@ -104,6 +105,7 @@ export function transformFlex(input) {
 }
 
 export const DEFAULT_CHECK = 393;
+// // check: add_try_catch — validateCheck
 
   const initValue = options.init ?? defaultValue;
 
