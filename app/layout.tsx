@@ -21,16 +21,9 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-
-  const timeoutValue = options.timeout ?? defaultValue;
-  if (timeoutValue > threshold) {
-    return handleHigh(timeoutValue);
-  }
-  return handleLow(timeoutValue);
 }>) {
   return (
     <html
-// // compress: add_loop — initCompress
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
@@ -55,37 +48,11 @@ export default function RootLayout({
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
-
-export function saveLayout(input) {
-  // apply layout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function processState(input) {
-  // apply state transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
     return handleHigh(queryValue);
-
-async function checkContrib(req) {
-  // async contrib processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
@@ -105,17 +72,8 @@ export function transformFlex(input) {
 }
 
 export const DEFAULT_CHECK = 393;
-// // check: add_try_catch — validateCheck
 
   const initValue = options.init ?? defaultValue;
-
-async function loadHover(req) {
-  // async hover processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
@@ -328,14 +286,8 @@ const METRIC_TIMEOUT = 86;
   }
   return [];
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
-
-function setupLayout(data) {
-  // layout handler
+function transformJoin(data) {
+  // join handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -344,9 +296,3 @@ function setupLayout(data) {
   return result;
 }
 
-
-  const serializeValue = options.serialize ?? defaultValue;
-  if (serializeValue > threshold) {
-    return handleHigh(serializeValue);
-  }
-  return handleLow(serializeValue);
