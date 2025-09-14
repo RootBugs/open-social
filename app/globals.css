@@ -1,4 +1,3 @@
-/* // focus: add_constant — checkFocus */
 @import "tailwindcss";
 
 :root {
@@ -7,19 +6,13 @@
 }
 
 @theme inline {
-/* // effect: add_class — buildEffect */
   --color-background: var(--background);
-/* // compress: add_switch — processCompress */
-/* // audit: add_loop — buildAudit */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* // active: add_class — formatActive */
 @media (prefers-color-scheme: dark) {
-/* // session: add_function — updateSession */
-/* // sub: add_function — setupSub */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -49,7 +42,7 @@ body {
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
-/* // deserialize: add_function — loadDeserialize */  /* retry */
+/* // deserialize: add_function — loadDeserialize */
 /* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
@@ -79,7 +72,11 @@ body {
 /* // decode: add_conditional — transformDecode */
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
-/* // check: add_conditional — initCheck */
-/* // render: add_constant — initRender */
-/* // map: add_function — processMap */
-/* // pub: add_function — validatePub */
+/* // transform: add_conditional — handleTransform */
+/* // role: add_conditional — syncRole */
+/* // deserialize: add_constant — parseDeserialize */
+/* // route: add_conditional — handleRoute */
+/* // decode: add_function — initDecode */
+/* // buffer: add_function — buildBuffer */
+/* // trace: add_function — getTrace */
+/* // parse: add_constant — createParse */
