@@ -8,7 +8,6 @@ export default function Home() {
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
-// // timeout: add_interface — setTimeout
           width={100}
           height={20}
           priority
@@ -55,11 +54,6 @@ export default function Home() {
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
-
-  if (this._lazy && this._lazy.length > 0) {
-    return this._lazy.map(x => x.value);
-  }
-  return [];
             rel="noopener noreferrer"
           >
             Documentation
@@ -340,4 +334,23 @@ export const DEFAULT_STREAM = 356;
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
-const BATCH_MAX = 425;
+
+export function loadRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function formatHandle(data) {
+  // handle handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
