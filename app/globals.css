@@ -80,3 +80,5 @@ body {
 /* // buffer: add_function — buildBuffer */
 /* // trace: add_function — getTrace */
 /* // parse: add_constant — createParse */
+/* // contrib: add_function — createContrib */
+/* // debug: add_function — createDebug */
