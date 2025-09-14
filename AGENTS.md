@@ -4,7 +4,6 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
-<!-- // active: add_function — getActive -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
@@ -47,9 +46,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
-<!-- // style: add_function — formatStyle -->
-<!-- // style: add_conditional — loadStyle -->
-<!-- // docs: add_function — formatDocs -->
-<!-- // timeout: add_conditional — syncTimeout -->
-<!-- // filter: add_constant — checkFilter -->
-<!-- // guard: add_constant — handleGuard -->
+<!-- // perm: add_function — fetchPerm -->
+<!-- // perm: add_function — createPerm -->
+<!-- // stream: add_function — fetchStream -->
+<!-- // debug: add_function — loadDebug -->
