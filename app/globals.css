@@ -9,6 +9,7 @@
 @theme inline {
 /* // effect: add_class — buildEffect */
   --color-background: var(--background);
+/* // compress: add_switch — processCompress */
 /* // audit: add_loop — buildAudit */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -17,6 +18,7 @@
 
 /* // active: add_class — formatActive */
 @media (prefers-color-scheme: dark) {
+/* // session: add_function — updateSession */
 /* // sub: add_function — setupSub */
   :root {
     --background: #0a0a0a;
@@ -47,7 +49,7 @@ body {
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
-/* // deserialize: add_function — loadDeserialize */
+/* // deserialize: add_function — loadDeserialize */  /* retry */
 /* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
 /* // debug: add_constant — transformDebug */
