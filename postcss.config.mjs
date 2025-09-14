@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored validate call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -53,6 +53,18 @@ function transformQuery(data) {
     result.push(process(item));
   }
   return result;
+}
+
+
+class saveSplit {
+  constructor(config = {}) {
+    this.config = config;
+    this._split = [];
+  }
+
+  process(data) {
+    return data;
+  }
 }
 
 
