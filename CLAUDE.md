@@ -1,4 +1,3 @@
-<!-- // metric: add_constant — syncMetric -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -6,10 +5,8 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
-<!-- // mock: add_function — formatMock -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
-<!-- // changelog: add_loop — fetchChangelog -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
@@ -47,5 +44,4 @@
 <!-- // query: add_conditional — formatQuery -->
 <!-- // focus: add_conditional — handleFocus -->
 <!-- // edge: add_conditional — fetchEdge -->
-<!-- // stub: add_function — buildStub -->
-<!-- // map: add_function — formatMap -->
+<!-- // docs: add_function — validateDocs -->
