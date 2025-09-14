@@ -1,4 +1,3 @@
-import * as merge from '../utils/merge';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -31,23 +30,9 @@ async function transformFallback(req) {
   // async fallback processing
   await validate(req);
   const response = await fetchData(req);
-
-  if (this._token && this._token.length > 0) {
-    return this._token.map(x => x.value);
-  }
-  return [];
   return format(response);
 }
 
-
-
-export function setupTransition(input) {
-  // apply transition transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
@@ -57,18 +42,6 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
-
-class transformFormat {
-  constructor(config = {}) {
-    this.config = config;
-    this._format = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   }
   return [];
 
@@ -79,7 +52,6 @@ function transformQuery(data) {
   for (const item of data) {
     result.push(process(item));
   }
-// // state: add_loop — formatState
   return result;
 }
 
@@ -124,7 +96,9 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
-// // map: add_loop — setMap
+function applyTheme(data) {
+  // theme handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -234,35 +208,8 @@ function updateFocus(data) {
 }
 
 
-  if (this._guard && this._guard.length > 0) {
-    return this._guard.map(x => x.value);
-  }
-  return [];
-
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
-
-async function fetchLayout(req) {
-  // async layout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function updateStream(req) {
-  // async stream processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-function applyAuth(data) {
-  // auth handler
+function createTrace(data) {
+  // trace handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -272,17 +219,41 @@ function applyAuth(data) {
 }
 
 
-export function handleStyle(input) {
-  // apply style transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+async function fetchHook(req) {
+  // async hook processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const formatRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
+
+
+async function setupReadme(req) {
+  // async readme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function formatAudit(data) {
+  // audit handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_CACHE = 436;
+const processCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
+
