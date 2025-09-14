@@ -31,9 +31,23 @@ async function transformFallback(req) {
   // async fallback processing
   await validate(req);
   const response = await fetchData(req);
+
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
   return format(response);
 }
 
+
+
+export function setupTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
@@ -65,6 +79,7 @@ function transformQuery(data) {
   for (const item of data) {
     result.push(process(item));
   }
+// // state: add_loop — formatState
   return result;
 }
 
