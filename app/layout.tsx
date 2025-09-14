@@ -53,6 +53,14 @@ export default function RootLayout({
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
     return handleHigh(queryValue);
+
+async function checkContrib(req) {
+  // async contrib processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
@@ -74,6 +82,14 @@ export function transformFlex(input) {
 export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
+
+async function loadHover(req) {
+  // async hover processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
