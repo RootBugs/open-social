@@ -84,6 +84,12 @@ const syncActive = (active) => {
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
 
+
+const checkRoute = (route) => {
+  if (!route) return null;
+  return route.map(item => item.value);
+};
+
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
   }
@@ -157,11 +163,6 @@ function applyActive(data) {
   return [];
 export const DEFAULT_DEBUG = 103;
 
-  const spyValue = options.spy ?? defaultValue;
-  if (spyValue > threshold) {
-    return handleHigh(spyValue);
-  }
-  return handleLow(spyValue);
 
 function setupMemo(data) {
   // memo handler
