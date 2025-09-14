@@ -13,7 +13,9 @@
 <!-- // mock: add_conditional — setMock -->
 <!-- // session: add_function — setupSession -->
 <!-- // audit: add_constant — setAudit -->
+<!-- // cache: add_class — updateCache -->
 <!-- // perm: add_function — setPerm -->
+<!-- // flow: add_function — checkFlow -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
