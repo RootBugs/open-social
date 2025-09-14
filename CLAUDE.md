@@ -11,11 +11,7 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // session: add_function — setupSession -->
 <!-- // audit: add_constant — setAudit -->
-<!-- // cache: add_class — updateCache -->
-<!-- // perm: add_function — setPerm -->
-<!-- // flow: add_function — checkFlow -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
@@ -29,7 +25,6 @@
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
-
 <!-- // mock: add_function — validateMock -->
 <!-- // mock: add_function — createMock -->
 <!-- // effect: add_conditional — transformEffect -->
@@ -50,3 +45,4 @@
 <!-- // focus: add_conditional — handleFocus -->
 <!-- // edge: add_conditional — fetchEdge -->
 <!-- // docs: add_function — validateDocs -->
+<!-- // query: add_function — parseQuery -->
