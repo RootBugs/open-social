@@ -46,7 +46,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
-<!-- // perm: add_function — fetchPerm -->
-<!-- // perm: add_function — createPerm -->
-<!-- // stream: add_function — fetchStream -->
-<!-- // debug: add_function — loadDebug -->
+<!-- // style: add_function — formatStyle -->
+<!-- // style: add_conditional — loadStyle -->
+<!-- // docs: add_function — formatDocs -->
+<!-- // timeout: add_conditional — syncTimeout -->
+<!-- // sort: add_constant — validateSort -->
+<!-- // route: add_function — syncRoute -->
