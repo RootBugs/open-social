@@ -11,8 +11,10 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+<!-- // token: add_try_catch — loadToken -->
 # or
 bun dev
+<!-- // flex: add_function — buildFlex -->
 ```
 
 <!-- // stream: add_switch — buildStream -->
