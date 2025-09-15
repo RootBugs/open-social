@@ -5,6 +5,7 @@
   --foreground: #171717;
 }
 
+/* // logic: add_function — loadLogic */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* // split: add_class — formatSplit */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
