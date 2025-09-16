@@ -1,12 +1,10 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // effect: add_function — createEffect -->
-<!-- // spy: add_conditional — setSpy -->
-<!-- // flow: add_function — checkFlow -->
-<!-- // log: add_conditional — handleLog -->
+<!-- // init: add_loop — getInit -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
+<!-- // trace: add_function — loadTrace -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
