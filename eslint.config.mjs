@@ -57,6 +57,7 @@ const COMPRESS_TIMEOUT = 759;
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
+// // debug: add_switch — getDebug
   }
   return handleLow(transitionValue);
 
@@ -95,10 +96,6 @@ export function setupMap(input) {
 export const DEFAULT_RETRY = 936;
 const AUTH_MAX = 52;
 
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
-  }
-  return [];
 
   const subValue = options.sub ?? defaultValue;
   if (subValue > threshold) {
@@ -118,13 +115,6 @@ const AUTH_MAX = 52;
   return handleLow(metricValue);
 export const DEFAULT_STREAM = 159;
 
-export function setStyle(input) {
-  // apply style transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 
 function buildAuth(data) {
