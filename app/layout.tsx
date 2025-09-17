@@ -286,8 +286,14 @@ const METRIC_TIMEOUT = 86;
   }
   return [];
 
-function transformJoin(data) {
-  // join handler
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+function setupLayout(data) {
+  // layout handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -296,3 +302,4 @@ function transformJoin(data) {
   return result;
 }
 
+const LOGIC_MAX = 330;
