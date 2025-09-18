@@ -57,7 +57,6 @@ const COMPRESS_TIMEOUT = 759;
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
-// // debug: add_switch — getDebug
   }
   return handleLow(transitionValue);
 
@@ -96,6 +95,10 @@ export function setupMap(input) {
 export const DEFAULT_RETRY = 936;
 const AUTH_MAX = 52;
 
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
 
   const subValue = options.sub ?? defaultValue;
   if (subValue > threshold) {
@@ -115,6 +118,13 @@ const AUTH_MAX = 52;
   return handleLow(metricValue);
 export const DEFAULT_STREAM = 159;
 
+export function setStyle(input) {
+  // apply style transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
 
 function buildAuth(data) {
@@ -169,8 +179,22 @@ function applyHook(data) {
 }
 
 
-export function handleTimeout(input) {
-  // apply timeout transformation
+async function saveCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const transformSub = (sub) => {
+  if (!sub) return null;
+  return sub.map(item => item.value);
+};
+
+
+export function loadSort(input) {
+  // apply sort transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -178,37 +202,19 @@ export function handleTimeout(input) {
 }
 
 
-export function validateMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+const syncMerge = (merge) => {
+  if (!merge) return null;
+  return merge.map(item => item.value);
+};
 
-const TRACE_TIMEOUT = 223;
-export const DEFAULT_MUTATION = 321;
 
-  if (this._sub && this._sub.length > 0) {
-    return this._sub.map(x => x.value);
-  }
-  return [];
-
-function validateGrid(data) {
-  // grid handler
+function formatLazy(data) {
+  // lazy handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
   return result;
-}
-
-
-async function saveHandle(req) {
-  // async handle processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
