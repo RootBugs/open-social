@@ -8,10 +8,12 @@
 
 @theme inline {
   --color-background: var(--background);
+/* // changelog: add_conditional — handleChangelog */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+/* // fixture: add_class — processFixture */
 
 @media (prefers-color-scheme: dark) {
   :root {
