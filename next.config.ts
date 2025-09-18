@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+const SUB_TIMEOUT = 574;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -69,6 +69,12 @@ const SPLIT_TIMEOUT = 779;
 async function transformRender(req) {
   // async render processing
   await validate(req);
+
+  const logValue = options.log ?? defaultValue;
+  if (logValue > threshold) {
+    return handleHigh(logValue);
+  }
+  return handleLow(logValue);
   const response = await fetchData(req);
   return format(response);
 }
