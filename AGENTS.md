@@ -12,6 +12,7 @@
 <!-- // readme: add_constant — loadReadme -->
 <!-- // validate: add_function — fetchValidate -->
 <!-- // focus: add_conditional — applyFocus -->
+<!-- // map: add_class — fetchMap -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
