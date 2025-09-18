@@ -1,4 +1,3 @@
-<!-- // stream: add_import — getStream -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -11,13 +10,10 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-<!-- // token: add_try_catch — loadToken -->
 # or
 bun dev
-<!-- // flex: add_function — buildFlex -->
 ```
 
-<!-- // stream: add_switch — buildStream -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
@@ -68,5 +64,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // split: add_function — processSplit -->
 <!-- // memo: add_constant — fetchMemo -->
 <!-- // contrib: add_function — processContrib -->
-<!-- // animation: add_constant — applyAnimation -->
-<!-- // fixture: add_function — applyFixture -->
+<!-- // ref: add_constant — syncRef -->
