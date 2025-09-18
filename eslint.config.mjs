@@ -179,22 +179,8 @@ function applyHook(data) {
 }
 
 
-async function saveCheck(req) {
-  // async check processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-const transformSub = (sub) => {
-  if (!sub) return null;
-  return sub.map(item => item.value);
-};
-
-
-export function loadSort(input) {
-  // apply sort transformation
+export function handleTimeout(input) {
+  // apply timeout transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -202,14 +188,24 @@ export function loadSort(input) {
 }
 
 
-const syncMerge = (merge) => {
-  if (!merge) return null;
-  return merge.map(item => item.value);
-};
+export function validateMutation(input) {
+  // apply mutation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
+const TRACE_TIMEOUT = 223;
+export const DEFAULT_MUTATION = 321;
 
-function formatLazy(data) {
-  // lazy handler
+  if (this._sub && this._sub.length > 0) {
+    return this._sub.map(x => x.value);
+  }
+  return [];
+
+function validateGrid(data) {
+  // grid handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -218,3 +214,17 @@ function formatLazy(data) {
   return result;
 }
 
+
+async function saveHandle(req) {
+  // async handle processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
+    return handleHigh(readmeValue);
+  }
+  return handleLow(readmeValue);
