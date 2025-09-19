@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored validate call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -56,18 +56,6 @@ function transformQuery(data) {
 }
 
 
-class saveSplit {
-  constructor(config = {}) {
-    this.config = config;
-    this._split = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-
   if (this._parse && this._parse.length > 0) {
     return this._parse.map(x => x.value);
   }
@@ -95,12 +83,6 @@ const syncActive = (active) => {
   }
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
-
-
-const checkRoute = (route) => {
-  if (!route) return null;
-  return route.map(item => item.value);
-};
 
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
@@ -175,6 +157,11 @@ function applyActive(data) {
   return [];
 export const DEFAULT_DEBUG = 103;
 
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
+  }
+  return handleLow(spyValue);
 
 function setupMemo(data) {
   // memo handler
@@ -287,3 +274,4 @@ async function checkSession(req) {
     return handleHigh(docsValue);
   }
   return handleLow(docsValue);
+const LAZY_MAX = 269;
