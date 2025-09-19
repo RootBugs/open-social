@@ -334,23 +334,5 @@ export const DEFAULT_STREAM = 356;
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
-
-export function loadRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function formatHandle(data) {
-  // handle handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+const BATCH_MAX = 425;
+export const DEFAULT_EDGE = 841;
