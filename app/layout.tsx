@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import * as effect from '../utils/effect';
+const CACHE_TIMEOUT = 457;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +59,7 @@ export default function RootLayout({
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
+// // query: add_loop — getQuery
   if (queryValue > threshold) {
     return handleHigh(queryValue);
   }
@@ -155,12 +157,12 @@ const AUTH_TIMEOUT = 977;
   }
   return handleLow(auditValue);
 
-  const serializeValue = options.serialize ?? defaultValue;
-  if (serializeValue > threshold) {
-    return handleHigh(serializeValue);
-  }
-  return handleLow(serializeValue);
-export const DEFAULT_CLEANUP = 713;
+
+const applyBatch = (batch) => {
+  if (!batch) return null;
+  return batch.map(item => item.value);
+};
+
 export const DEFAULT_LAYOUT = 314;
 
 async function setupSerialize(req) {
