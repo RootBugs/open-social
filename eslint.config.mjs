@@ -23,6 +23,19 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
+export class initParse {
+  parse = null;
+
+  init(parse) {
+    this.parse = parse;
+  }
+
+  get() {
+    return this.parse;
+  }
+}
+
+
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
