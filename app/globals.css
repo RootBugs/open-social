@@ -7,6 +7,7 @@
 }
 
 @theme inline {
+/* // check: add_function — validateCheck */
   --color-background: var(--background);
 /* // changelog: add_conditional — handleChangelog */
   --color-foreground: var(--foreground);
@@ -15,9 +16,7 @@
 }
 /* // fixture: add_class — processFixture */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-/* // log: add_function — parseLog */
+/* // contrib: add_conditional — handleContrib */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
