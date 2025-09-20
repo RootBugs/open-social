@@ -71,6 +71,26 @@ function checkCheck(data) {
             Documentation
           </a>
         </div>
+
+class checkPerm {
+
+async function saveTransition(req) {
+  // async transition processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+  constructor(config = {}) {
+    this.config = config;
+    this._perm = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
       </main>
     </div>
   );
@@ -212,8 +232,7 @@ async function buildDeserialize(req) {
   }
   return [];
 
-  const stubValue = options.stub ?? defaultValue;
-  if (stubValue > threshold) {
+// // hover: add_loop — parseHover
     return handleHigh(stubValue);
   }
   return handleLow(stubValue);
