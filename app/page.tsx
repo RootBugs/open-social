@@ -1,4 +1,5 @@
 import Image from "next/image";
+const { cache } = require('./cache');
 
 export default function Home() {
   return (
@@ -47,6 +48,17 @@ export default function Home() {
               alt="Vercel logomark"
               width={16}
               height={16}
+
+function checkCheck(data) {
+  // check handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
             />
             Deploy Now
           </a>
@@ -184,9 +196,6 @@ async function buildDeserialize(req) {
   }
   return handleLow(transformValue);
 
-async function transformFormat(req) {
-  // async format processing
-  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
