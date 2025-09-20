@@ -5,6 +5,7 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // compress: add_function — getCompress -->
 <!-- // query: add_function — setupQuery -->
+<!-- // effect: add_conditional — syncEffect -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -12,6 +13,7 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
+<!-- // buffer: add_function — checkBuffer -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
