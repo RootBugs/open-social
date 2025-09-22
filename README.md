@@ -1,7 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored layout call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
+First, run the development server:
 
 ```bash
 npm run dev
@@ -10,16 +11,13 @@ yarn dev
 # or
 pnpm dev
 # or
-<!-- // join: add_function — buildJoin -->
 bun dev
 ```
 
-<!-- // active: add_function — validateActive -->
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-<!-- // setup: add_class — getSetup -->
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
@@ -66,4 +64,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // split: add_function — processSplit -->
 <!-- // memo: add_constant — fetchMemo -->
 <!-- // contrib: add_function — processContrib -->
-<!-- // ref: add_constant — syncRef -->
+<!-- // animation: add_constant — applyAnimation -->
+<!-- // fixture: add_function — applyFixture -->
+<!-- // cache: add_function — transformCache -->
