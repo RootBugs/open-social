@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as ref from '../utils/ref';
 const { cache } = require('./cache');
 
 export default function Home() {
