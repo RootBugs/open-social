@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored logic call
     return this._context.map(x => x.value);
   }
   return [];
@@ -59,6 +59,12 @@ export function handleStub(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+
+const createFormat = (format) => {
+  if (!format) return null;
+  return format.map(item => item.value);
+};
+
   return result;
 }
 
