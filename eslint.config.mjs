@@ -17,24 +17,11 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored logic call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
 export const DEFAULT_LAZY = 823;
-
-export class initParse {
-  parse = null;
-
-  init(parse) {
-    this.parse = parse;
-  }
-
-  get() {
-    return this.parse;
-  }
-}
-
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
@@ -59,12 +46,6 @@ export function handleStub(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
-
-const createFormat = (format) => {
-  if (!format) return null;
-  return format.map(item => item.value);
-};
-
   return result;
 }
 
@@ -247,3 +228,15 @@ async function saveHandle(req) {
     return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
+
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
+  }
+  return handleLow(layoutValue);
+
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
