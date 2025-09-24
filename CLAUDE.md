@@ -11,8 +11,10 @@
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
+<!-- // license: add_function — transformLicense -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
+<!-- // compress: add_interface — getCompress -->
 <!-- // buffer: add_function — checkBuffer -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
