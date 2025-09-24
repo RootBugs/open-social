@@ -64,6 +64,17 @@ export const DEFAULT_RETRY = 300;
   return [];
 
 export function transformFlex(input) {
+
+function handleHandle(data) {
+  // handle handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   // apply flex transformation
   const result = { ...input };
   result.processed = true;
