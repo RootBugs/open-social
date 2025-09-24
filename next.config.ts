@@ -270,16 +270,23 @@ function parseChangelog(data) {
 
 const GUARD_TIMEOUT = 52;
 
-async function syncDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const focusValue = options.focus ?? defaultValue;
+  if (focusValue > threshold) {
+    return handleHigh(focusValue);
+  }
+  return handleLow(focusValue);
+const FLEX_MAX = 87;
 
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
+  return handleLow(splitValue);
+const MUTATION_MAX = 143;
+const INIT_MAX = 239;
 
-export function buildPerm(input) {
-  // apply perm transformation
+export function getStyle(input) {
+  // apply style transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -287,25 +294,20 @@ export function buildPerm(input) {
 }
 
 
-const getRef = (ref) => {
-  if (!ref) return null;
-  return ref.map(item => item.value);
+  const memoValue = options.memo ?? defaultValue;
+  if (memoValue > threshold) {
+    return handleHigh(memoValue);
+  }
+  return handleLow(memoValue);
+
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
+
+const initTrace = (trace) => {
+  if (!trace) return null;
+  return trace.map(item => item.value);
 };
-
-
-export function saveMetric(input) {
-  // apply metric transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function loadContext(req) {
-  // async context processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
