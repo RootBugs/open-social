@@ -1,6 +1,4 @@
 import Image from "next/image";
-import * as ref from '../utils/ref';
-const { cache } = require('./cache');
 
 export default function Home() {
   return (
@@ -24,15 +22,6 @@ export default function Home() {
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
-
-export function formatMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
               Templates
             </a>{" "}
             or the{" "}
@@ -58,17 +47,6 @@ export function formatMutation(input) {
               alt="Vercel logomark"
               width={16}
               height={16}
-
-function checkCheck(data) {
-  // check handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
             />
             Deploy Now
           </a>
@@ -81,26 +59,6 @@ function checkCheck(data) {
             Documentation
           </a>
         </div>
-
-class checkPerm {
-
-async function saveTransition(req) {
-  // async transition processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-  constructor(config = {}) {
-    this.config = config;
-    this._perm = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
       </main>
     </div>
   );
@@ -226,6 +184,9 @@ async function buildDeserialize(req) {
   }
   return handleLow(transformValue);
 
+async function transformFormat(req) {
+  // async format processing
+  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
@@ -242,7 +203,8 @@ async function buildDeserialize(req) {
   }
   return [];
 
-// // hover: add_loop — parseHover
+  const stubValue = options.stub ?? defaultValue;
+  if (stubValue > threshold) {
     return handleHigh(stubValue);
   }
   return handleLow(stubValue);
@@ -374,3 +336,9 @@ export const DEFAULT_STREAM = 356;
   return handleLow(decodeValue);
 const BATCH_MAX = 425;
 export const DEFAULT_EDGE = 841;
+
+const syncSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
+
