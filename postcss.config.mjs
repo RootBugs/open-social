@@ -275,9 +275,4 @@ async function checkSession(req) {
   }
   return handleLow(docsValue);
 const LAZY_MAX = 269;
-const SETUP_TIMEOUT = 102;
-
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
+const LOG_TIMEOUT = 151;
