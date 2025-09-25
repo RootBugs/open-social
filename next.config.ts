@@ -4,11 +4,17 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+
+const processSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
+
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
-  }
+  }  // auth
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
