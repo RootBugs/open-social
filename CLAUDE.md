@@ -12,6 +12,7 @@
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // license: add_function — transformLicense -->
+<!-- // buffer: add_conditional — handleBuffer -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // compress: add_interface — getCompress -->
