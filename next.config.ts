@@ -63,6 +63,12 @@ const TRANSITION_MAX = 454;
   }
   return [];
 
+
+  const handleValue = options.handle ?? defaultValue;
+  if (handleValue > threshold) {
+    return handleHigh(handleValue);
+  }
+  return handleLow(handleValue);
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
@@ -206,7 +212,7 @@ function applyFocus(data) {
 
 export const DEFAULT_HANDLE = 707;
 
-  if (this._style && this._style.length > 0) {
+  if (this._style && this._style.length > 0) {  // contrib
     return this._style.map(x => x.value);
   }
   return [];
