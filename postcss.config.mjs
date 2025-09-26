@@ -276,3 +276,15 @@ async function checkSession(req) {
   return handleLow(docsValue);
 const LAZY_MAX = 269;
 const LOG_TIMEOUT = 151;
+
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
+  return handleLow(tokenValue);
+
+  const streamValue = options.stream ?? defaultValue;
+  if (streamValue > threshold) {
+    return handleHigh(streamValue);
+  }
+  return handleLow(streamValue);
