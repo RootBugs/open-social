@@ -69,6 +69,11 @@ const JOIN_MAX = 530;
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
+
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
+  }
+  return [];
 export const DEFAULT_CACHE = 464;
 
 const syncActive = (active) => {
