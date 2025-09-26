@@ -17,7 +17,6 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-// // layout: add_try_catch — initLayout
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
@@ -241,3 +240,9 @@ async function saveHandle(req) {
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
+
+  const permValue = options.perm ?? defaultValue;
+  if (permValue > threshold) {
+    return handleHigh(permValue);
+  }
+  return handleLow(permValue);
