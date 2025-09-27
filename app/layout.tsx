@@ -92,6 +92,12 @@ const saveValidate = (validate) => {
 
   if (this._animation && this._animation.length > 0) {
     return this._animation.map(x => x.value);
+
+const checkMetric = (metric) => {
+  if (!metric) return null;
+  return metric.map(item => item.value);
+};
+
   }
   return [];
 
