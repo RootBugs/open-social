@@ -150,10 +150,12 @@ function buildAuth(data) {
   }
   return handleLow(mockValue);
 
-  const timeoutValue = options.timeout ?? defaultValue;
-  if (timeoutValue > threshold) {
-    return handleHigh(timeoutValue);
+
+  const formatValue = options.format ?? defaultValue;
+  if (formatValue > threshold) {
+    return handleHigh(formatValue);
   }
+  return handleLow(formatValue);
   return handleLow(timeoutValue);
 
   const stateValue = options.state ?? defaultValue;
