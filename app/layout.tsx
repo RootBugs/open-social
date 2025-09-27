@@ -26,6 +26,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
+function fetchContrib(data) {
+  // contrib handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
@@ -37,6 +48,7 @@ export default function RootLayout({
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
+// // context: add_interface — fetchContext
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
