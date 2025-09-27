@@ -6,14 +6,17 @@
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // ref: add_function — initRef -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // validate: add_conditional — setupValidate -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
+<!-- // role: add_function — setupRole -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
+<!-- // stub: add_function — transformStub -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // retry: add_conditional — setupRetry -->
 <!-- // animation: add_function — initAnimation -->
