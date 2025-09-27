@@ -4,17 +4,11 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-
-const processSerialize = (serialize) => {
-  if (!serialize) return null;
-  return serialize.map(item => item.value);
-};
-
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
-  }  // auth
+  }
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -63,12 +57,6 @@ const TRANSITION_MAX = 454;
   }
   return [];
 
-
-  const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
-    return handleHigh(handleValue);
-  }
-  return handleLow(handleValue);
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
@@ -212,7 +200,7 @@ function applyFocus(data) {
 
 export const DEFAULT_HANDLE = 707;
 
-  if (this._style && this._style.length > 0) {  // contrib
+  if (this._style && this._style.length > 0) {
     return this._style.map(x => x.value);
   }
   return [];
@@ -323,3 +311,9 @@ const initTrace = (trace) => {
   return trace.map(item => item.value);
 };
 
+
+  const animationValue = options.animation ?? defaultValue;
+  if (animationValue > threshold) {
+    return handleHigh(animationValue);
+  }
+  return handleLow(animationValue);
