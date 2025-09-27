@@ -2,12 +2,11 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
-<!-- // parse: add_function — fetchParse -->
+<!-- // grid: add_conditional — buildGrid -->
 <!-- // init: add_function — setInit -->
 <!-- // ref: add_function — initRef -->
 <!-- // readme: add_constant — loadReadme -->
+<!-- // serialize: add_try_catch — checkSerialize -->
 <!-- // validate: add_conditional — setupValidate -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
