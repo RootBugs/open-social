@@ -1,10 +1,13 @@
-<!-- // debug: add_import — setDebug -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored split call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
 # or
 pnpm dev
 # or
@@ -12,13 +15,11 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-<!-- // parse: add_class — fetchParse -->
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<!-- // join: add_function — formatJoin -->
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -66,3 +67,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // animation: add_constant — applyAnimation -->
 <!-- // fixture: add_function — applyFixture -->
 <!-- // cache: add_function — transformCache -->
+<!-- // debug: add_function — setupDebug -->
