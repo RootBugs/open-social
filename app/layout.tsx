@@ -26,17 +26,6 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-
-function fetchContrib(data) {
-  // contrib handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
@@ -48,7 +37,6 @@ function fetchContrib(data) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
-// // context: add_interface — fetchContext
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
@@ -104,12 +92,6 @@ const saveValidate = (validate) => {
 
   if (this._animation && this._animation.length > 0) {
     return this._animation.map(x => x.value);
-
-const checkMetric = (metric) => {
-  if (!metric) return null;
-  return metric.map(item => item.value);
-};
-
   }
   return [];
 
@@ -321,11 +303,11 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
+export const DEFAULT_PUB = 573;
+const LAYOUT_TIMEOUT = 432;
 
-async function setupGuard(req) {
-  // async guard processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+const parseQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
+};
 
