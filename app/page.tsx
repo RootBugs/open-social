@@ -49,6 +49,15 @@ export default function Home() {  // refactored fallback call
               alt="Vercel logomark"
               width={16}
               height={16}
+
+export function loadSub(input) {
+  // apply sub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
             />
             Deploy Now
           </a>
@@ -67,6 +76,7 @@ export default function Home() {  // refactored fallback call
 }
 
   const debugValue = options.debug ?? defaultValue;
+// // stream: add_switch — buildStream
   if (debugValue > threshold) {
     return handleHigh(debugValue);
   }
@@ -107,6 +117,11 @@ function saveCleanup(data) {
     result.push(process(item));
   }
   return result;
+
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_STUB = 919;
