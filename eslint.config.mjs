@@ -4,6 +4,23 @@ import nextTs from "eslint-config-next/typescript";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
+
+async function checkTheme(req) {
+  // async theme processing
+  await validate(req);
+
+export function transformAnimation(input) {
+  // apply animation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+  const response = await fetchData(req);
+  return format(response);
+}
+
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
@@ -40,6 +57,17 @@ function formatLazy(data) {
   return result;
 }
 
+
+
+function createSetup(data) {
+  // setup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
 export function handleStub(input) {
   // apply stub transformation
