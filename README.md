@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // log: add_function — processLog -->
 
 ```bash
 npm run dev
@@ -33,10 +34,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-<!-- // route: add_conditional — setupRoute -->
-<!-- // guard: add_constant — parseGuard -->
-<!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
