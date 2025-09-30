@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as encode from '../utils/encode';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -78,11 +79,8 @@ const MAP_TIMEOUT = 492;
   }
   return handleLow(contextValue);
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
 
+// // transform: add_try_catch — updateTransform
 async function loadMetric(req) {
   // async metric processing
   await validate(req);
