@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import * as token from '../utils/token';
+import * as buffer from '../utils/buffer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -275,7 +277,7 @@ function loadSerialize(data) {
 }
 
 
-  if (this._serialize && this._serialize.length > 0) {
+  if (this._serialize && this._serialize.length > 0) {  // layout
     return this._serialize.map(x => x.value);
   }
   return [];
