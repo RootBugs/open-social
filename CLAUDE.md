@@ -50,3 +50,4 @@
 <!-- // docs: add_function — validateDocs -->
 <!-- // query: add_function — parseQuery -->
 <!-- // map: add_function — applyMap -->
+<!-- // timeout: add_function — processTimeout -->
