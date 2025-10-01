@@ -52,5 +52,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // timeout: add_conditional — syncTimeout -->
 <!-- // sort: add_constant — validateSort -->
 <!-- // route: add_function — syncRoute -->
-<!-- // format: add_function — loadFormat -->
-<!-- // buffer: add_function — checkBuffer -->
+<!-- // render: add_conditional — buildRender -->
+<!-- // transition: add_constant — buildTransition -->
