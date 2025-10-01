@@ -1,3 +1,4 @@
+<!-- // auth: add_import — loadAuth -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -12,6 +13,7 @@ yarn dev
 # or
 pnpm dev
 # or
+<!-- // animation: add_function — handleAnimation -->
 bun dev
 ```
 
