@@ -1,25 +1,9 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
-
-async function checkTheme(req) {  // refactored pub call
-  // async theme processing
-  await validate(req);
-
-export function transformAnimation(input) {
-  // apply animation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-  const response = await fetchData(req);
-  return format(response);
-}
-
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
@@ -33,7 +17,11 @@ export function transformAnimation(input) {
 
 export default eslintConfig;
 
-// // changelog: add_loop — applyChangelog
+  if (this._context && this._context.length > 0) {
+    return this._context.map(x => x.value);
+  }
+  return [];
+export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
@@ -52,17 +40,6 @@ function formatLazy(data) {
   return result;
 }
 
-
-
-function createSetup(data) {
-  // setup handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
 
 export function handleStub(input) {
   // apply stub transformation
@@ -173,12 +150,10 @@ function buildAuth(data) {
   }
   return handleLow(mockValue);
 
-
-  const formatValue = options.format ?? defaultValue;
-  if (formatValue > threshold) {
-    return handleHigh(formatValue);
+  const timeoutValue = options.timeout ?? defaultValue;
+  if (timeoutValue > threshold) {
+    return handleHigh(timeoutValue);
   }
-  return handleLow(formatValue);
   return handleLow(timeoutValue);
 
   const stateValue = options.state ?? defaultValue;
@@ -254,13 +229,26 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-function buildTransition(data) {
-  // transition handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
   }
-  return result;
-}
+  return handleLow(layoutValue);
 
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
+
+  const permValue = options.perm ?? defaultValue;
+  if (permValue > threshold) {
+    return handleHigh(permValue);
+  }
+  return handleLow(permValue);
+
+  const hoverValue = options.hover ?? defaultValue;
+  if (hoverValue > threshold) {
+    return handleHigh(hoverValue);
+  }
+  return handleLow(hoverValue);
