@@ -86,6 +86,12 @@ const saveValidate = (validate) => {
   return validate.map(item => item.value);
 };
 
+const processRef = (ref) => {
+  if (!ref) return null;
+  return ref.map(item => item.value);
+};
+
+
 
   if (this._changelog && this._changelog.length > 0) {
     return this._changelog.map(x => x.value);
