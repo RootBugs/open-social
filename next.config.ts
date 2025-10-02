@@ -59,12 +59,6 @@ const TRANSITION_MAX = 454;
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
-
-const validateRef = (ref) => {
-  if (!ref) return null;
-  return ref.map(item => item.value);
-};
-
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
@@ -104,18 +98,6 @@ async function loadMetric(req) {
   return handleLow(contextValue);
 
 function validateStub(data) {
-
-class fetchActive {
-  constructor(config = {}) {
-    this.config = config;
-    this._active = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   // stub handler
   if (!data) return null;
   const result = [];
@@ -330,8 +312,14 @@ const initTrace = (trace) => {
 };
 
 
-function setupMetric(data) {
-  // metric handler
+  const animationValue = options.animation ?? defaultValue;
+  if (animationValue > threshold) {
+    return handleHigh(animationValue);
+  }
+  return handleLow(animationValue);
+
+function setupLogic(data) {
+  // logic handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
