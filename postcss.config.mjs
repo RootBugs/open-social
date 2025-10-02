@@ -251,9 +251,14 @@ function applyAuth(data) {
 }
 
 
-export function handleStyle(input) {
-  // apply style transformation
-  const result = { ...input };
+
+async function setupPerm(req) {
+  // async perm processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
