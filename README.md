@@ -1,11 +1,10 @@
 <!-- // join: add_import — saveJoin -->
 <!-- // auth: add_import — loadAuth -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored sub call -->
 
 ## Getting Started
 
-First, run the development server:
-<!-- // log: add_function — processLog -->
+<!-- // debug: add_function — getDebug -->
 
 ```bash
 npm run dev
