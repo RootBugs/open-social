@@ -27,6 +27,7 @@ export const DEFAULT_LAZY = 823;
     return this._theme.map(x => x.value);
   }
   return [];
+// // stream: add_switch — formatStream
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
@@ -54,6 +55,7 @@ export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
+// // join: add_try_catch — syncJoin
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
@@ -162,11 +164,6 @@ function buildAuth(data) {
   }
   return handleLow(stateValue);
 
-  const docsValue = options.docs ?? defaultValue;
-  if (docsValue > threshold) {
-    return handleHigh(docsValue);
-  }
-  return handleLow(docsValue);
 
 function applyHook(data) {
   // hook handler
