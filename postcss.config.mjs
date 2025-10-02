@@ -69,11 +69,6 @@ const JOIN_MAX = 530;
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
-
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
 export const DEFAULT_CACHE = 464;
 
 const syncActive = (active) => {
@@ -251,14 +246,9 @@ function applyAuth(data) {
 }
 
 
-
-async function setupPerm(req) {
-  // async perm processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+export function handleStyle(input) {
+  // apply style transformation
+  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -284,17 +274,9 @@ async function checkSession(req) {
     return handleHigh(docsValue);
   }
   return handleLow(docsValue);
-const LAZY_MAX = 269;
-const LOG_TIMEOUT = 151;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
-  return handleLow(tokenValue);
+const transformAudit = (audit) => {
+  if (!audit) return null;
+  return audit.map(item => item.value);
+};
 
-  const streamValue = options.stream ?? defaultValue;
-  if (streamValue > threshold) {
-    return handleHigh(streamValue);
-  }
-  return handleLow(streamValue);
