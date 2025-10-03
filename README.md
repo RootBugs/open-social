@@ -1,27 +1,22 @@
-<!-- // join: add_import — saveJoin -->
-<!-- // auth: add_import — loadAuth -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored sub call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-<!-- // debug: add_function — getDebug -->
+First, run the development server:
 
 ```bash
 npm run dev
 # or
-<!-- // spy: add_try_catch — transformSpy -->
 yarn dev
 # or
 pnpm dev
 # or
-<!-- // animation: add_function — handleAnimation -->
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-<!-- // spy: add_loop — updateSpy -->
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
@@ -38,6 +33,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
+<!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
@@ -69,3 +68,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // fixture: add_function — applyFixture -->
 <!-- // cache: add_function — transformCache -->
 <!-- // debug: add_function — setupDebug -->
+<!-- // hook: add_function — processHook -->
