@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const HOVER_MAX = 239;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -11,13 +12,21 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+
+async function processTheme(req) {
+  // async theme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     "next-env.d.ts",
   ]),
 ]);
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored memo call
     return this._context.map(x => x.value);
   }
   return [];
