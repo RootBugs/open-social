@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as token from '../utils/token';
-import * as buffer from '../utils/buffer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,12 +83,6 @@ const saveValidate = (validate) => {
   if (!validate) return null;
   return validate.map(item => item.value);
 };
-
-const processRef = (ref) => {
-  if (!ref) return null;
-  return ref.map(item => item.value);
-};
-
 
 
   if (this._changelog && this._changelog.length > 0) {
@@ -283,7 +275,7 @@ function loadSerialize(data) {
 }
 
 
-  if (this._serialize && this._serialize.length > 0) {  // layout
+  if (this._serialize && this._serialize.length > 0) {
     return this._serialize.map(x => x.value);
   }
   return [];
@@ -311,11 +303,17 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
-export const DEFAULT_PUB = 573;
-const LAYOUT_TIMEOUT = 432;
 
-const parseQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
+async function setupGuard(req) {
+  // async guard processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const processTransition = (transition) => {
+  if (!transition) return null;
+  return transition.map(item => item.value);
 };
 
