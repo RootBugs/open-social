@@ -5,8 +5,9 @@
   --foreground: #171717;
 }
 
+/* // mutation: add_function — setupMutation */
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored flex call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -20,6 +21,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
+/* // format: add_function — formatFormat */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
