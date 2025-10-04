@@ -59,6 +59,14 @@ export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
+
+async function processFlow(req) {
+  // async flow processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return this._session.map(x => x.value);
   }
   return [];
@@ -91,6 +99,7 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
+// // timeout: add_try_catch — loadTimeout
     return this._animation.map(x => x.value);
   }
   return [];
@@ -166,7 +175,7 @@ async function setupSerialize(req) {
 
 const formatBuffer = (buffer) => {
   if (!buffer) return null;
-  return buffer.map(item => item.value);
+  return buffer.map(item => item.value);  // mock
 };
 
 
