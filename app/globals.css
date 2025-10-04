@@ -5,15 +5,19 @@
   --foreground: #171717;
 }
 
-/* // mutation: add_function — setupMutation */
 @theme inline {
-  --color-background: var(--background);  /* refactored flex call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-/* // animation: add_conditional — formatAnimation */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -21,7 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
-/* // format: add_function — formatFormat */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -69,17 +72,10 @@ body {
 /* // decode: add_conditional — transformDecode */
 /* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
-/* // transform: add_conditional — handleTransform */
-/* // role: add_conditional — syncRole */
-/* // deserialize: add_constant — parseDeserialize */
-/* // route: add_conditional — handleRoute */
-/* // decode: add_function — initDecode */
-/* // buffer: add_function — buildBuffer */
-/* // trace: add_function — getTrace */
-/* // parse: add_constant — createParse */
-/* // context: add_constant — buildContext */
-/* // trace: add_conditional — processTrace */
-/* // readme: add_function — validateReadme */
-/* // decode: add_function — getDecode */
-/* // flex: add_function — handleFlex */
-/* // flex: add_conditional — parseFlex */
+/* // check: add_conditional — initCheck */
+/* // render: add_constant — initRender */
+/* // map: add_function — processMap */
+/* // pub: add_function — validatePub */
+/* // setup: add_function — fetchSetup */
+/* // join: add_function — syncJoin */
+/* // logic: add_function — transformLogic */
