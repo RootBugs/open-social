@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Home() {  // refactored auth call
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -61,6 +61,7 @@ export default function Home() {
         </div>
       </main>
     </div>
+// // init: add_loop — getInit
   );
 }
 
@@ -145,7 +146,7 @@ const TRANSITION_MAX = 965;
   return [];
 
 export function buildMerge(input) {
-  // apply merge transformation
+  // apply merge transformation  // state
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
