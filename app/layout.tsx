@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored active call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -179,9 +179,17 @@ const formatBuffer = (buffer) => {
 };
 
 
-export function createFilter(input) {
-  // apply filter transformation
-  const result = { ...input };
+
+function checkSub(data) {
+  // sub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
