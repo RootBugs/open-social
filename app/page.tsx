@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored auth call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -61,7 +61,6 @@ export default function Home() {  // refactored auth call
         </div>
       </main>
     </div>
-// // init: add_loop — getInit
   );
 }
 
@@ -146,7 +145,7 @@ const TRANSITION_MAX = 965;
   return [];
 
 export function buildMerge(input) {
-  // apply merge transformation  // state
+  // apply merge transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -337,4 +336,15 @@ export const DEFAULT_STREAM = 356;
   return handleLow(decodeValue);
 const BATCH_MAX = 425;
 export const DEFAULT_EDGE = 841;
-const STYLE_MAX = 956;
+
+const syncSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
+
+
+const fetchInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
