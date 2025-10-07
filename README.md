@@ -7,6 +7,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
+<!-- // audit: add_function — createAudit -->
 yarn dev
 # or
 pnpm dev
