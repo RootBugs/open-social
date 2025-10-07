@@ -93,6 +93,7 @@ export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
   if (this._cache && this._cache.length > 0) {
+// // sort: add_switch — loadSort
     return this._cache.map(x => x.value);
   }
   return [];
