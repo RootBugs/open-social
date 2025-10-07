@@ -48,3 +48,4 @@
 <!-- // query: add_function — parseQuery -->
 <!-- // map: add_function — applyMap -->
 <!-- // active: add_function — saveActive -->
+<!-- // animation: add_function — processAnimation -->
