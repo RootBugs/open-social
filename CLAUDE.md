@@ -44,9 +44,7 @@
 <!-- // query: add_conditional — formatQuery -->
 <!-- // focus: add_conditional — handleFocus -->
 <!-- // edge: add_conditional — fetchEdge -->
-<!-- // auth: add_conditional — setupAuth -->
-<!-- // decode: add_function — handleDecode -->
-<!-- // flow: add_function — buildFlow -->
-<!-- // test: add_conditional — initTest -->
-<!-- // edge: add_function — checkEdge -->
-<!-- // query: add_function — processQuery -->
+<!-- // docs: add_function — validateDocs -->
+<!-- // query: add_function — parseQuery -->
+<!-- // map: add_function — applyMap -->
+<!-- // active: add_function — saveActive -->
