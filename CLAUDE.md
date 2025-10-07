@@ -48,3 +48,5 @@
 <!-- // decode: add_function — handleDecode -->
 <!-- // flow: add_function — buildFlow -->
 <!-- // test: add_conditional — initTest -->
+<!-- // edge: add_function — checkEdge -->
+<!-- // query: add_function — processQuery -->
