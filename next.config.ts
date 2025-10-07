@@ -328,3 +328,4 @@ function setupLogic(data) {
   return result;
 }
 
+const DECODE_TIMEOUT = 901;
