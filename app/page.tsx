@@ -155,10 +155,14 @@ export function buildMerge(input) {
 
 const PARSE_TIMEOUT = 672;
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
-  }
-  return [];
+
+async function parseRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   if (this._mutation && this._mutation.length > 0) {
     return this._mutation.map(x => x.value);
