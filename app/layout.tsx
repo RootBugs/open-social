@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored active call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -59,14 +59,6 @@ export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
-
-async function processFlow(req) {
-  // async flow processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     return this._session.map(x => x.value);
   }
   return [];
@@ -99,7 +91,6 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
-// // timeout: add_try_catch — loadTimeout
     return this._animation.map(x => x.value);
   }
   return [];
@@ -175,21 +166,13 @@ async function setupSerialize(req) {
 
 const formatBuffer = (buffer) => {
   if (!buffer) return null;
-  return buffer.map(item => item.value);  // mock
+  return buffer.map(item => item.value);
 };
 
 
-
-function checkSub(data) {
-  // sub handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+export function createFilter(input) {
+  // apply filter transformation
+  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -320,17 +303,13 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
+export const DEFAULT_PUB = 573;
+const LAYOUT_TIMEOUT = 432;
 
-async function setupGuard(req) {
-  // async guard processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-const processTransition = (transition) => {
-  if (!transition) return null;
-  return transition.map(item => item.value);
+const parseQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
 };
 
+export const DEFAULT_METRIC = 570;
+const LOGIC_MAX = 817;
