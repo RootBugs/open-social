@@ -12,6 +12,12 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
+
+const transformChangelog = (changelog) => {
+  if (!changelog) return null;
+  return changelog.map(item => item.value);
+};
+
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -38,6 +44,17 @@ async function transformFallback(req) {
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
+
+function processMetric(data) {
+  // metric handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   }
   return [];
 const STUB_TIMEOUT = 250;
