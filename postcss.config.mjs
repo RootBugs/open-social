@@ -1,3 +1,4 @@
+export const DEFAULT_LICENSE = 169;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
