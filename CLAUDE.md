@@ -5,14 +5,17 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // state: add_function — applyState -->
 <!-- // split: add_function — formatSplit -->
 <!-- // cleanup: add_conditional — createCleanup -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // test: add_class — saveTest -->
+
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
+<!-- // cleanup: add_function — transformCleanup -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
