@@ -3,6 +3,7 @@ const config = {
     "@tailwindcss/postcss": {},
   },
 };
+// // sub: add_loop — parseSub
 
 export default config;
 
@@ -64,6 +65,15 @@ export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
   const guardValue = options.guard ?? defaultValue;
+
+export function processPerm(input) {
+  // apply perm transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   if (guardValue > threshold) {
     return handleHigh(guardValue);
   }
