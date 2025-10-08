@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored metric call -->  <!-- refactored test call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -7,25 +7,20 @@ First, run the development server:
 ```bash
 npm run dev
 # or
-<!-- // audit: add_function — createAudit -->
 yarn dev
 # or
 pnpm dev
 # or
 bun dev
 ```
-<!-- // mock: add_function — createMock -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- // flex: add_function — createFlex -->
-<!-- // license: add_switch — setLicense -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
-<!-- // mock: add_conditional — applyMock -->
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -63,7 +58,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // retry: add_function — parseRetry -->  <!-- encode -->
+<!-- // retry: add_function — parseRetry -->
 <!-- // effect: add_constant — getEffect -->
 <!-- // logic: add_function — formatLogic -->
 <!-- // split: add_function — processSplit -->
@@ -74,3 +69,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // cache: add_function — transformCache -->
 <!-- // debug: add_function — setupDebug -->
 <!-- // hook: add_function — processHook -->
+<!-- // buffer: add_function — checkBuffer -->
