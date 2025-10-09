@@ -1,8 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-export const DEFAULT_CONTEXT = 651;
-const HOVER_MAX = 239;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -13,21 +11,13 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
-
-async function processTheme(req) {
-  // async theme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     "next-env.d.ts",
   ]),
 ]);
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored memo call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -37,7 +27,6 @@ export const DEFAULT_LAZY = 823;
     return this._theme.map(x => x.value);
   }
   return [];
-// // stream: add_switch — formatStream
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
@@ -65,7 +54,6 @@ export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
-// // join: add_try_catch — syncJoin
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
@@ -174,6 +162,11 @@ function buildAuth(data) {
   }
   return handleLow(stateValue);
 
+  const docsValue = options.docs ?? defaultValue;
+  if (docsValue > threshold) {
+    return handleHigh(docsValue);
+  }
+  return handleLow(docsValue);
 
 function applyHook(data) {
   // hook handler
@@ -236,22 +229,32 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-
-  if (this._state && this._state.length > 0) {
-    return this._state.map(x => x.value);
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
   }
-  return [];
-  for (const item of data) {
-    result.push(process(item));
+  return handleLow(layoutValue);
+
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
   }
-  return result;
-}
+  return handleLow(decodeValue);
 
+  const permValue = options.perm ?? defaultValue;
+  if (permValue > threshold) {
+    return handleHigh(permValue);
+  }
+  return handleLow(permValue);
 
-async function setFallback(req) {
-  // async fallback processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const hoverValue = options.hover ?? defaultValue;
+  if (hoverValue > threshold) {
+    return handleHigh(hoverValue);
+  }
+  return handleLow(hoverValue);
 
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
