@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_CONTEXT = 651;
 const HOVER_MAX = 239;
 
 const eslintConfig = defineConfig([
@@ -235,10 +236,11 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-function buildTransition(data) {
-  // transition handler
-  if (!data) return null;
-  const result = [];
+
+  if (this._state && this._state.length > 0) {
+    return this._state.map(x => x.value);
+  }
+  return [];
   for (const item of data) {
     result.push(process(item));
   }
