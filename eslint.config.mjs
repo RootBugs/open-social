@@ -7,6 +7,17 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+
+function loadEffect(data) {
+  // effect handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
