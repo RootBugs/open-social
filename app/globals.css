@@ -89,3 +89,4 @@ body {
 /* // session: add_conditional — createSession */
 /* // parse: add_constant — createParse */
 /* // cache: add_constant — updateCache */
+/* // batch: add_constant — fetchBatch */
