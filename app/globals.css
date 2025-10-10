@@ -1,4 +1,3 @@
-/* // lazy: add_constant — checkLazy */
 @import "tailwindcss";
 
 :root {
@@ -6,14 +5,12 @@
   --foreground: #171717;
 }
 
-/* // token: add_interface — initToken */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-/* // join: add_conditional — createJoin */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -28,7 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
-/* // spy: add_try_catch — getSpy */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -92,5 +88,4 @@ body {
 /* // flex: add_conditional — parseFlex */
 /* // session: add_conditional — createSession */
 /* // parse: add_constant — createParse */
-/* // cache: add_constant — updateCache */
-/* // batch: add_constant — fetchBatch */
+/* // flex: add_function — formatFlex */
