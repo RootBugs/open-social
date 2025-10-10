@@ -93,15 +93,6 @@ export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
   if (this._cache && this._cache.length > 0) {
-
-async function transformRoute(req) {
-  // async route processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-// // sort: add_switch — loadSort
     return this._cache.map(x => x.value);
   }
   return [];
@@ -163,14 +154,10 @@ export function buildMerge(input) {
 
 const PARSE_TIMEOUT = 672;
 
-
-async function parseRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
+  }
+  return [];
 
   if (this._mutation && this._mutation.length > 0) {
     return this._mutation.map(x => x.value);
@@ -360,4 +347,13 @@ const fetchInit = (init) => {
   if (!init) return null;
   return init.map(item => item.value);
 };
+
+
+export function initValidate(input) {
+  // apply validate transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
