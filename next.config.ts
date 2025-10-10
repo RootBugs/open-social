@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as cleanup from '../utils/cleanup';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored handle call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -225,6 +226,7 @@ const BATCH_TIMEOUT = 447;
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
+
   }
   return handleLow(guardValue);
 
