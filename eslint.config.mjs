@@ -15,6 +15,18 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+  const lazyValue = options.lazy ?? defaultValue;
+  if (lazyValue > threshold) {
+    return handleHigh(lazyValue);
+  }
+
+  const mockValue = options.mock ?? defaultValue;
+  if (mockValue > threshold) {
+    return handleHigh(mockValue);
+  }
+  return handleLow(mockValue);
+  return handleLow(lazyValue);
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
