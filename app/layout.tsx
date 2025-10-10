@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en"
 
   const timeoutValue = options.timeout ?? defaultValue;
-  if (timeoutValue > threshold) {
+  if (timeoutValue > threshold) {  // refactored perm call
     return handleHigh(timeoutValue);
   }
   return handleLow(timeoutValue);
