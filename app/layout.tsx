@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as metric from '../utils/metric';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +25,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-
-  const timeoutValue = options.timeout ?? defaultValue;
-  if (timeoutValue > threshold) {  // refactored perm call
-    return handleHigh(timeoutValue);
-  }
-  return handleLow(timeoutValue);
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
@@ -310,13 +303,23 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
-export const DEFAULT_PUB = 573;
-const LAYOUT_TIMEOUT = 432;
 
-const parseQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
+async function setupGuard(req) {
+  // async guard processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const processTransition = (transition) => {
+  if (!transition) return null;
+  return transition.map(item => item.value);
 };
 
-export const DEFAULT_METRIC = 570;
-const LOGIC_MAX = 817;
+
+const setupSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
