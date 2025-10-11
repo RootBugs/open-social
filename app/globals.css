@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored query call */  /* refactored transition call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -18,7 +18,6 @@
     --foreground: #ededed;
   }
 }
-/* // map: add_conditional — parseMap */
 
 body {
   background: var(--background);
@@ -89,4 +88,5 @@ body {
 /* // flex: add_conditional — parseFlex */
 /* // session: add_conditional — createSession */
 /* // parse: add_constant — createParse */
-/* // flex: add_function — formatFlex */
+/* // cache: add_constant — updateCache */
+/* // route: add_conditional — checkRoute */
