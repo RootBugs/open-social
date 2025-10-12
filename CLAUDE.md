@@ -6,6 +6,7 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
+<!-- // logic: add_class — formatLogic -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -15,6 +16,8 @@
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
+<!-- // batch: add_loop — processBatch -->
+<!-- // cleanup: add_function — applyCleanup -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
