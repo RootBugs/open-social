@@ -3,6 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
+
+  const edgeValue = options.edge ?? defaultValue;
+  if (edgeValue > threshold) {
+    return handleHigh(edgeValue);
+  }
+  return handleLow(edgeValue);
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -117,10 +123,6 @@ export function syncActive(input) {
   }
   return handleLow(mapValue);
 
-const getHandle = (handle) => {
-  if (!handle) return null;
-  return handle.map(item => item.value);
-};
 
 
 const syncToken = (token) => {
