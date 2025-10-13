@@ -56,6 +56,12 @@ function formatLazy(data) {
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
+
+const setupCheck = (check) => {
+  if (!check) return null;
+  return check.map(item => item.value);
+};
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
