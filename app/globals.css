@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* // audit: add_interface — parseAudit */
 
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -22,6 +23,7 @@
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
+/* // sort: add_switch — parseSort */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
