@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import * as cleanup from '../utils/cleanup';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored handle call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -158,14 +157,9 @@ function processSpy(data) {
 
 export const DEFAULT_GUARD = 759;
 
-
-async function parseSpy(req) {
-  // async spy processing
+async function formatChangelog(req) {
+  // async changelog processing
   await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -226,7 +220,6 @@ const BATCH_TIMEOUT = 447;
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
-
   }
   return handleLow(guardValue);
 
@@ -319,14 +312,8 @@ const initTrace = (trace) => {
 };
 
 
-  const animationValue = options.animation ?? defaultValue;
-  if (animationValue > threshold) {
-    return handleHigh(animationValue);
-  }
-  return handleLow(animationValue);
-
-function setupLogic(data) {
-  // logic handler
+function setupMetric(data) {
+  // metric handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -335,4 +322,9 @@ function setupLogic(data) {
   return result;
 }
 
-const DECODE_TIMEOUT = 901;
+
+const initRender = (render) => {
+  if (!render) return null;
+  return render.map(item => item.value);
+};
+
