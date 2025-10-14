@@ -59,6 +59,12 @@ export function handleStub(input) {
 
 const setupCheck = (check) => {
   if (!check) return null;
+
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
+  return handleLow(bufferValue);
   return check.map(item => item.value);
 };
 
@@ -67,14 +73,24 @@ const setupCheck = (check) => {
   return result;
 }
 
-const STUB_TIMEOUT = 86;
-export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
+
+class createLazy {
+  constructor(config = {}) {
+    this.config = config;
+    this._lazy = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   }
   return handleLow(transitionValue);
 
