@@ -26,6 +26,7 @@ async function initRoute(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+// // logic: add_switch — applyLogic
 }
 
 const TRANSFORM_MAX = 305;
@@ -52,10 +53,7 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
-  if (this._auth && this._auth.length > 0) {
-    return this._auth.map(x => x.value);
-  }
-  return [];
+// // animation: add_loop — saveAnimation
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
