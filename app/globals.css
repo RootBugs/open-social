@@ -4,8 +4,9 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-/* // audit: add_interface — parseAudit */
 
+@theme inline {
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -13,17 +14,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-/* // metric: add_interface — loadMetric */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
-/* // map: add_conditional — processMap */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
-/* // sort: add_switch — parseSort */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
@@ -86,3 +90,5 @@
 /* // parse: add_constant — createParse */
 /* // cache: add_constant — updateCache */
 /* // route: add_conditional — checkRoute */
+/* // check: add_constant — buildCheck */
+/* // sort: add_function — parseSort */
