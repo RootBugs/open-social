@@ -97,15 +97,20 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
-function saveCleanup(data) {
-  // cleanup handler
-  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
   return result;
 }
+
+async function loadEdge(req) {
+  // async edge processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 export const DEFAULT_STUB = 919;
 
