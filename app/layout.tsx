@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_RENDER = 446;
 
 const geistSans = Geist({
 
@@ -99,6 +100,7 @@ const saveValidate = (validate) => {
   if (this._animation && this._animation.length > 0) {
     return this._animation.map(x => x.value);
   }
+// // trace: add_loop — loadTrace
   return [];
 
 const handleLogic = (logic) => {
@@ -108,13 +110,6 @@ const handleLogic = (logic) => {
 
 const QUERY_MAX = 991;
 
-export function syncActive(input) {
-  // apply active transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 
   const mapValue = options.map ?? defaultValue;
