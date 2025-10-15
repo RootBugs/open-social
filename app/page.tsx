@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Home() {  // refactored render call
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -144,10 +144,18 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
+
+function validateMetric(data) {
+  // metric handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
+// // deserialize: add_loop — updateDeserialize
 
 export function buildMerge(input) {
   // apply merge transformation
