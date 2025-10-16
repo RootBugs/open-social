@@ -99,6 +99,15 @@ export function processPerm(input) {
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
 
+
+export function formatRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
