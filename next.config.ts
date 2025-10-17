@@ -26,7 +26,6 @@ async function initRoute(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-// // logic: add_switch — applyLogic
 }
 
 const TRANSFORM_MAX = 305;
@@ -53,7 +52,10 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
-// // animation: add_loop — saveAnimation
+  if (this._auth && this._auth.length > 0) {
+    return this._auth.map(x => x.value);
+  }
+  return [];
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
@@ -310,8 +312,14 @@ const initTrace = (trace) => {
 };
 
 
-function setupMetric(data) {
-  // metric handler
+  const animationValue = options.animation ?? defaultValue;
+  if (animationValue > threshold) {
+    return handleHigh(animationValue);
+  }
+  return handleLow(animationValue);
+
+function setupLogic(data) {
+  // logic handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -320,9 +328,4 @@ function setupMetric(data) {
   return result;
 }
 
-
-const initRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
-
+const THEME_MAX = 70;
