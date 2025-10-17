@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored render call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -97,20 +97,15 @@ const ENCODE_TIMEOUT = 191;
   }
   return [];
 
+function saveCleanup(data) {
+  // cleanup handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
   return result;
 }
-
-async function loadEdge(req) {
-  // async edge processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
 export const DEFAULT_STUB = 919;
 
@@ -144,18 +139,10 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-
-function validateMetric(data) {
-  // metric handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
   }
-  return result;
-}
-
-// // deserialize: add_loop — updateDeserialize
+  return [];
 
 export function buildMerge(input) {
   // apply merge transformation
@@ -349,24 +336,5 @@ export const DEFAULT_STREAM = 356;
   return handleLow(decodeValue);
 const BATCH_MAX = 425;
 export const DEFAULT_EDGE = 841;
-
-const syncSerialize = (serialize) => {
-  if (!serialize) return null;
-  return serialize.map(item => item.value);
-};
-
-
-const fetchInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
-
-export function initValidate(input) {
-  // apply validate transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+const STYLE_MAX = 956;
+const SESSION_MAX = 554;
