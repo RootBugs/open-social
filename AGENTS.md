@@ -1,24 +1,23 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
-<!-- // active: add_interface — getActive -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // format: add_function — setFormat -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
-<!-- // validate: add_function — setValidate -->
 <!-- // parse: add_function — fetchParse -->
-<!-- // flow: add_class — createFlow -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
-<!-- // retry: add_conditional — updateRetry -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
-<!-- // cleanup: add_function — updateCleanup -->  <!-- contrib -->
+<!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
@@ -61,3 +60,4 @@
 <!-- // route: add_constant — handleRoute -->
 <!-- // context: add_conditional — initContext -->
 <!-- // ref: add_conditional — applyRef -->
+<!-- // lazy: add_function — handleLazy -->
