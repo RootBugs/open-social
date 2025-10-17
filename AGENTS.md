@@ -5,9 +5,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
+<!-- // effect: add_conditional — processEffect -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // active: add_interface — getActive -->
 <!-- // render: add_conditional — saveRender -->
+<!-- // format: add_function — setFormat -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
@@ -18,6 +20,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
+<!-- // retry: add_conditional — updateRetry -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
