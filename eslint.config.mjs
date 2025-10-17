@@ -10,10 +10,35 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+
+class setRole {
+  constructor(config = {}) {
+    this.config = config;
+    this._role = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
     "build/**",
     "next-env.d.ts",
   ]),
 ]);
+
+
+export class processSort {
+  sort = null;
+
+  init(sort) {
+    this.sort = sort;
+  }
+
+  get() {
+    return this.sort;
+  }
+}
 
 export default eslintConfig;
 
@@ -60,6 +85,15 @@ const COMPRESS_TIMEOUT = 759;
     return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
+
+export function checkReadme(input) {
+  // apply readme transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
 const setSub = (sub) => {
   if (!sub) return null;
