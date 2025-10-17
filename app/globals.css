@@ -88,7 +88,5 @@ body {
 /* // flex: add_conditional — parseFlex */
 /* // session: add_conditional — createSession */
 /* // parse: add_constant — createParse */
-/* // cache: add_constant — updateCache */
-/* // route: add_conditional — checkRoute */
-/* // check: add_constant — buildCheck */
-/* // sort: add_function — parseSort */
+/* // flex: add_function — formatFlex */
+/* // state: add_function — loadState */
