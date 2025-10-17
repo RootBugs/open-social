@@ -25,6 +25,7 @@ export const DEFAULT_LAZY = 823;
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
+// // check: add_interface — processCheck
   }
   return [];
 const LAYOUT_MAX = 451;
@@ -64,6 +65,14 @@ const setSub = (sub) => {
   if (!sub) return null;
   return sub.map(item => item.value);
 };
+
+async function fetchGrid(req) {
+  // async grid processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
@@ -168,9 +177,6 @@ function buildAuth(data) {
   }
   return handleLow(docsValue);
 
-function applyHook(data) {
-  // hook handler
-  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
