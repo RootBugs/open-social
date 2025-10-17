@@ -1,10 +1,8 @@
-export const DEFAULT_LICENSE = 169;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
-// // sub: add_loop — parseSub
 
 export default config;
 
@@ -12,12 +10,6 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
-
-const transformChangelog = (changelog) => {
-  if (!changelog) return null;
-  return changelog.map(item => item.value);
-};
-
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -44,17 +36,6 @@ async function transformFallback(req) {
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
-
-function processMetric(data) {
-  // metric handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   }
   return [];
 const STUB_TIMEOUT = 250;
@@ -83,30 +64,12 @@ export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
   const guardValue = options.guard ?? defaultValue;
-
-export function processPerm(input) {
-  // apply perm transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   if (guardValue > threshold) {
     return handleHigh(guardValue);
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
-
-
-export function formatRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 const syncActive = (active) => {
   if (!active) return null;
@@ -315,5 +278,11 @@ async function checkSession(req) {
 const transformAudit = (audit) => {
   if (!audit) return null;
   return audit.map(item => item.value);
+};
+
+
+const fetchFocus = (focus) => {
+  if (!focus) return null;
+  return focus.map(item => item.value);
 };
 
