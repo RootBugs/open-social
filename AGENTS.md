@@ -61,3 +61,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // context: add_conditional — initContext -->
 <!-- // ref: add_conditional — applyRef -->
 <!-- // animation: add_conditional — syncAnimation -->
+<!-- // docs: add_function — processDocs -->
