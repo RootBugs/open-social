@@ -10,6 +10,7 @@
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
+<!-- // sub: add_interface — validateSub -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
