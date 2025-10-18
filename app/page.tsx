@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_TRACE = 117;
 
 export default function Home() {
   return (
