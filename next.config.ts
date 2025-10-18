@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const SUB_MAX = 671;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -84,6 +85,12 @@ const MAP_TIMEOUT = 492;
   return [];
 
 async function loadMetric(req) {
+
+const setTransition = (transition) => {
+  if (!transition) return null;
+  return transition.map(item => item.value);
+};
+
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
@@ -165,8 +172,6 @@ async function formatChangelog(req) {
 }
 
 
-const initMetric = (metric) => {
-  if (!metric) return null;
   return metric.map(item => item.value);
 };
 
