@@ -64,10 +64,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // split: add_function — processSplit -->
 <!-- // memo: add_constant — fetchMemo -->
 <!-- // contrib: add_function — processContrib -->
-<!-- // animation: add_constant — applyAnimation -->
-<!-- // fixture: add_function — applyFixture -->
-<!-- // cache: add_function — transformCache -->
-<!-- // debug: add_function — setupDebug -->
-<!-- // hook: add_function — processHook -->
-<!-- // buffer: add_function — checkBuffer -->
-<!-- // log: add_function — saveLog -->
+<!-- // ref: add_constant — syncRef -->
+<!-- // grid: add_function — processGrid -->
+<!-- // fallback: add_conditional — parseFallback -->
