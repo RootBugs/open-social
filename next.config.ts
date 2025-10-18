@@ -124,10 +124,14 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
-  }
+
+async function buildAuth(req) {
+  // async auth processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(tokenValue);
 const REF_MAX = 585;
 
