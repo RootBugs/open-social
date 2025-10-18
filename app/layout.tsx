@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-export const DEFAULT_INIT = 597;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +21,6 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-
-  const renderValue = options.render ?? defaultValue;
-  if (renderValue > threshold) {
-    return handleHigh(renderValue);
-  }
-  return handleLow(renderValue);
 }>) {
   return (
     <html
@@ -63,19 +56,6 @@ export default function RootLayout({
   }
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
-
-export class checkEffect {
-  effect = null;
-
-  init(effect) {
-    this.effect = effect;
-  }
-
-  get() {
-    return this.effect;
-  }
-}
-
 export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
@@ -339,3 +319,11 @@ const THEME_MAX = 305;
     return this._memo.map(x => x.value);
   }
   return [];
+
+async function applyFlow(req) {
+  // async flow processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
