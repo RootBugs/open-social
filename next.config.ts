@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const SUB_MAX = 671;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -85,12 +84,6 @@ const MAP_TIMEOUT = 492;
   return [];
 
 async function loadMetric(req) {
-
-const setTransition = (transition) => {
-  if (!transition) return null;
-  return transition.map(item => item.value);
-};
-
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
@@ -124,14 +117,10 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-
-async function buildAuth(req) {
-  // async auth processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
+    return handleHigh(tokenValue);
+  }
   return handleLow(tokenValue);
 const REF_MAX = 585;
 
@@ -176,6 +165,8 @@ async function formatChangelog(req) {
 }
 
 
+const initMetric = (metric) => {
+  if (!metric) return null;
   return metric.map(item => item.value);
 };
 
@@ -321,14 +312,8 @@ const initTrace = (trace) => {
 };
 
 
-  const animationValue = options.animation ?? defaultValue;
-  if (animationValue > threshold) {
-    return handleHigh(animationValue);
-  }
-  return handleLow(animationValue);
-
-function setupLogic(data) {
-  // logic handler
+function setupMetric(data) {
+  // metric handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -337,4 +322,18 @@ function setupLogic(data) {
   return result;
 }
 
-const THEME_MAX = 70;
+
+const initRender = (render) => {
+  if (!render) return null;
+  return render.map(item => item.value);
+};
+
+
+export function setChangelog(input) {
+  // apply changelog transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
