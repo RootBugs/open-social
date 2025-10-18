@@ -54,3 +54,4 @@
 <!-- // active: add_function — saveActive -->
 <!-- // transform: add_function — initTransform -->
 <!-- // transition: add_function — validateTransition -->
+<!-- // stub: add_function — initStub -->
