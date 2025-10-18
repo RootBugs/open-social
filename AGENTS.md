@@ -5,6 +5,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
+<!-- // check: add_try_catch — updateCheck -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
@@ -18,6 +19,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
+<!-- // fallback: add_function — updateFallback -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
