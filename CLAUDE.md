@@ -1,22 +1,17 @@
-<!-- // hook: add_constant — processHook -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // format: add_try_catch — updateFormat -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
-<!-- // stub: add_function — updateStub -->
-<!-- // merge: add_loop — loadMerge -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
-<!-- // serialize: add_try_catch — getSerialize -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
@@ -55,4 +50,4 @@
 <!-- // active: add_function — saveActive -->
 <!-- // transform: add_function — initTransform -->
 <!-- // transition: add_function — validateTransition -->
-<!-- // stub: add_function — initStub -->
+<!-- // transition: add_function — transformTransition -->
