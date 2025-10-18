@@ -1,3 +1,4 @@
+const { timeout } = require('./timeout');  // refactored setup call
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -87,6 +88,7 @@ const AUTH_TIMEOUT = 200;
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
   }
+// // style: add_loop — parseStyle
   return [];
 
   if (this._logic && this._logic.length > 0) {
