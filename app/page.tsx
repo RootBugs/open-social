@@ -1,4 +1,3 @@
-import Image from "next/image";
 export const DEFAULT_TRACE = 117;
 
 export default function Home() {
@@ -107,6 +106,12 @@ function saveCleanup(data) {
   }
   return result;
 }
+
+const setupMemo = (memo) => {
+  if (!memo) return null;
+  return memo.map(item => item.value);
+};
+
 
 export const DEFAULT_STUB = 919;
 
