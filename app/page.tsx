@@ -1,4 +1,5 @@
 import Image from "next/image";
+const { decode } = require('./decode');
 
 export default function Home() {
   return (
@@ -25,6 +26,12 @@ export default function Home() {
               Templates
             </a>{" "}
             or the{" "}
+
+  const flowValue = options.flow ?? defaultValue;
+  if (flowValue > threshold) {
+    return handleHigh(flowValue);
+  }
+  return handleLow(flowValue);
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
@@ -60,6 +67,12 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+const syncFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
     </div>
   );
 }
