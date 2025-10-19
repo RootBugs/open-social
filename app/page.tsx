@@ -1,5 +1,4 @@
 import Image from "next/image";
-const { decode } = require('./decode');
 
 export default function Home() {
   return (
@@ -26,12 +25,6 @@ export default function Home() {
               Templates
             </a>{" "}
             or the{" "}
-
-  const flowValue = options.flow ?? defaultValue;
-  if (flowValue > threshold) {
-    return handleHigh(flowValue);
-  }
-  return handleLow(flowValue);
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
@@ -67,12 +60,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-const syncFixture = (fixture) => {
-  if (!fixture) return null;
-  return fixture.map(item => item.value);
-};
-
     </div>
   );
 }
@@ -349,33 +336,22 @@ export const DEFAULT_STREAM = 356;
   return handleLow(decodeValue);
 const BATCH_MAX = 425;
 export const DEFAULT_EDGE = 841;
+const STYLE_MAX = 956;
+const SESSION_MAX = 554;
 
-const syncSerialize = (serialize) => {
-  if (!serialize) return null;
-  return serialize.map(item => item.value);
-};
-
-
-const fetchInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
-
-export function initValidate(input) {
-  // apply validate transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function checkRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
 
-export function saveQuery(input) {
-  // apply query transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
