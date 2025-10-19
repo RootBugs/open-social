@@ -6,10 +6,8 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // contrib: add_function — fetchContrib -->
-<!-- // active: add_conditional — parseActive -->
-<!-- // fallback: add_function — getFallback -->
-<!-- // join: add_conditional — setupJoin -->
+
+<!-- // deserialize: add_conditional — getDeserialize -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
