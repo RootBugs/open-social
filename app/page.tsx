@@ -106,6 +106,7 @@ function saveCleanup(data) {
   }
   return result;
 }
+// // guard: add_loop — setGuard
 
 export const DEFAULT_STUB = 919;
 
@@ -192,10 +193,6 @@ async function transformFormat(req) {
 }
 
 
-  const splitValue = options.split ?? defaultValue;
-  if (splitValue > threshold) {
-    return handleHigh(splitValue);
-  }
   return handleLow(splitValue);
 
   if (this._check && this._check.length > 0) {
