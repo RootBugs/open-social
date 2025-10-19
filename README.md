@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // transform: add_conditional — parseTransform -->
 
 ```bash
 npm run dev
@@ -33,21 +34,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-<!-- // route: add_conditional — setupRoute -->
-<!-- // guard: add_constant — parseGuard -->
-<!-- // route: add_constant — loadRoute -->
-<!-- // mutation: add_constant — buildMutation -->
-<!-- // fallback: add_function — buildFallback -->
-<!-- // memo: add_function — processMemo -->
-<!-- // active: add_constant — createActive -->
-<!-- // init: add_conditional — buildInit -->
-<!-- // ref: add_function — setupRef -->
-<!-- // setup: add_conditional — createSetup -->
-<!-- // lazy: add_conditional — validateLazy -->
-<!-- // spy: add_conditional — validateSpy -->
-<!-- // trace: add_function — parseTrace -->
-<!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
 <!-- // effect: add_constant — loadEffect -->
 <!-- // memo: add_conditional — checkMemo -->
