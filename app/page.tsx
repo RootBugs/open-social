@@ -171,11 +171,17 @@ const PARSE_TIMEOUT = 672;
   }
   return handleLow(authValue);
 
-async function buildDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+
+function validateHandle(data) {
+  // handle handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 }
 
 
@@ -309,10 +315,6 @@ async function setupChangelog(req) {
   return [];
 export const DEFAULT_FILTER = 373;
 
-  if (this._token && this._token.length > 0) {
-    return this._token.map(x => x.value);
-  }
-  return [];
 
   if (this._license && this._license.length > 0) {
     return this._license.map(x => x.value);
