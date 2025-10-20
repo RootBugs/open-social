@@ -6,6 +6,7 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
+<!-- // changelog: add_function — updateChangelog -->
 
 <!-- // deserialize: add_conditional — getDeserialize -->
 <!-- // edge: add_constant — initEdge -->
@@ -29,12 +30,7 @@
 <!-- // effect: add_conditional — transformEffect -->
 <!-- // hook: add_function — validateHook -->
 <!-- // transform: add_function — syncTransform -->
-<!-- // test: add_function — handleTest -->
-<!-- // retry: add_constant — validateRetry -->
-<!-- // grid: add_constant — applyGrid -->
-<!-- // merge: add_conditional — createMerge -->
-<!-- // timeout: add_function — parseTimeout -->
-<!-- // spy: add_function — initSpy -->
+
 <!-- // audit: add_function — handleAudit -->
 <!-- // mock: add_function — getMock -->
 <!-- // validate: add_conditional — initValidate -->
