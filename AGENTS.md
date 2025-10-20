@@ -17,6 +17,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
+<!-- // sub: add_try_catch — validateSub -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
@@ -46,7 +47,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
-<!-- // style: add_function — formatStyle -->
+<!-- // style: add_function — formatStyle -->  <!-- serialize -->
 <!-- // style: add_conditional — loadStyle -->
 <!-- // docs: add_function — formatDocs -->
 <!-- // timeout: add_conditional — syncTimeout -->
