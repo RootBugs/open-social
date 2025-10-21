@@ -61,6 +61,12 @@ const TRANSITION_MAX = 454;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
+
+const handleEncode = (encode) => {
+  if (!encode) return null;
+  return encode.map(item => item.value);
+};
+
   return handleLow(activeValue);
 
 async function transformRender(req) {
@@ -85,6 +91,14 @@ const MAP_TIMEOUT = 492;
 
 async function loadMetric(req) {
   // async metric processing
+
+async function initHandle(req) {
+  // async handle processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   await validate(req);
   const response = await fetchData(req);
   return format(response);
