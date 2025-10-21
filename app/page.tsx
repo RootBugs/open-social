@@ -106,7 +106,6 @@ function saveCleanup(data) {
   }
   return result;
 }
-// // guard: add_loop — setGuard
 
 export const DEFAULT_STUB = 919;
 
@@ -171,17 +170,11 @@ const PARSE_TIMEOUT = 672;
   }
   return handleLow(authValue);
 
-
-function validateHandle(data) {
-  // handle handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+async function buildDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
@@ -199,6 +192,10 @@ async function transformFormat(req) {
 }
 
 
+  const splitValue = options.split ?? defaultValue;
+  if (splitValue > threshold) {
+    return handleHigh(splitValue);
+  }
   return handleLow(splitValue);
 
   if (this._check && this._check.length > 0) {
@@ -315,6 +312,10 @@ async function setupChangelog(req) {
   return [];
 export const DEFAULT_FILTER = 373;
 
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
 
   if (this._license && this._license.length > 0) {
     return this._license.map(x => x.value);
@@ -354,3 +355,16 @@ function checkRef(data) {
     return handleHigh(queryValue);
   }
   return handleLow(queryValue);
+
+async function transformSpy(req) {
+  // async spy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
