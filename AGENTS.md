@@ -14,8 +14,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
-<!-- // role: add_class — checkRole -->
-<!-- // effect: add_class — processEffect -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
@@ -62,6 +60,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — handleRoute -->
 <!-- // context: add_conditional — initContext -->
 <!-- // ref: add_conditional — applyRef -->
-<!-- // animation: add_conditional — syncAnimation -->
-<!-- // session: add_constant — syncSession -->
-<!-- // query: add_conditional — buildQuery -->
+<!-- // lazy: add_function — handleLazy -->
+<!-- // cleanup: add_function — transformCleanup -->
+<!-- // flex: add_function — processFlex -->
