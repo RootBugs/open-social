@@ -303,33 +303,31 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
-export const DEFAULT_PUB = 573;
-const LAYOUT_TIMEOUT = 432;
 
-const parseQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
-};
-
-export const DEFAULT_METRIC = 570;
-const LOGIC_MAX = 817;
-const THEME_MAX = 305;
-
-  if (this._memo && this._memo.length > 0) {
-    return this._memo.map(x => x.value);
-  }
-  return [];
-
-async function applyFlow(req) {
-  // async flow processing
+async function setupGuard(req) {
+  // async guard processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
+const processTransition = (transition) => {
+  if (!transition) return null;
+  return transition.map(item => item.value);
+};
+
+
+const setupSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
+
+async function parseAuth(req) {
+  // async auth processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
