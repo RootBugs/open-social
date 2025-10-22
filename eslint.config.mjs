@@ -269,3 +269,9 @@ async function updateCache(req) {
 }
 
 const EFFECT_MAX = 114;
+
+const getValidate = (validate) => {
+  if (!validate) return null;
+  return validate.map(item => item.value);
+};
+
