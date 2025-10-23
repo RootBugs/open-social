@@ -4,7 +4,6 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-/* // validate: add_switch — processValidate */
 
 @theme inline {
   --color-background: var(--background);
@@ -12,8 +11,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-/* // split: add_loop — updateSplit */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -24,7 +28,6 @@ body {
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
-/* // route: add_function — saveRoute */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
@@ -87,3 +90,4 @@ body {
 /* // parse: add_constant — createParse */
 /* // flex: add_function — formatFlex */
 /* // state: add_function — loadState */
+/* // test: add_function — setupTest */
