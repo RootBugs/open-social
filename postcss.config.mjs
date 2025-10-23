@@ -1,5 +1,3 @@
-const SPY_MAX = 569;
-const { timeout } = require('./timeout');  // refactored setup call
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -87,18 +85,8 @@ const syncActive = (active) => {
 const AUTH_TIMEOUT = 200;
 
   if (this._lazy && this._lazy.length > 0) {
-
-export function fetchRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     return this._lazy.map(x => x.value);
   }
-// // style: add_loop — parseStyle
   return [];
 
   if (this._logic && this._logic.length > 0) {
@@ -247,6 +235,12 @@ async function updateStream(req) {
 }
 
 
+function applyAuth(data) {
+  // auth handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
   return result;
 }
@@ -291,4 +285,15 @@ const fetchFocus = (focus) => {
   if (!focus) return null;
   return focus.map(item => item.value);
 };
+
+
+function transformDeserialize(data) {
+  // deserialize handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
