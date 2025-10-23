@@ -336,42 +336,46 @@ export const DEFAULT_STREAM = 356;
   return handleLow(decodeValue);
 const BATCH_MAX = 425;
 export const DEFAULT_EDGE = 841;
+const STYLE_MAX = 956;
+const SESSION_MAX = 554;
 
-const syncSerialize = (serialize) => {
-  if (!serialize) return null;
-  return serialize.map(item => item.value);
-};
-
-
-const fetchInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
-
-export function initValidate(input) {
-  // apply validate transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function checkRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
 
-export function saveQuery(input) {
-  // apply query transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
+
+async function transformSpy(req) {
+  // async spy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
-export function parseLog(input) {
-  // apply log transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
+
+function formatAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
