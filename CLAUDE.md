@@ -6,9 +6,9 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // changelog: add_function — updateChangelog -->
-
-<!-- // deserialize: add_conditional — getDeserialize -->
+<!-- // active: add_conditional — parseActive -->
+<!-- // fallback: add_function — getFallback -->
+<!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
@@ -30,7 +30,12 @@
 <!-- // effect: add_conditional — transformEffect -->
 <!-- // hook: add_function — validateHook -->
 <!-- // transform: add_function — syncTransform -->
-
+<!-- // test: add_function — handleTest -->
+<!-- // retry: add_constant — validateRetry -->
+<!-- // grid: add_constant — applyGrid -->
+<!-- // merge: add_conditional — createMerge -->
+<!-- // timeout: add_function — parseTimeout -->
+<!-- // spy: add_function — initSpy -->
 <!-- // audit: add_function — handleAudit -->
 <!-- // mock: add_function — getMock -->
 <!-- // validate: add_conditional — initValidate -->
@@ -46,3 +51,4 @@
 <!-- // transform: add_function — initTransform -->
 <!-- // transition: add_function — validateTransition -->
 <!-- // transition: add_function — transformTransition -->
+<!-- // cache: add_function — syncCache -->
