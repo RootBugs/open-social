@@ -60,6 +60,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — handleRoute -->
 <!-- // context: add_conditional — initContext -->
 <!-- // ref: add_conditional — applyRef -->
-<!-- // lazy: add_function — handleLazy -->
-<!-- // cleanup: add_function — transformCleanup -->
-<!-- // flex: add_function — processFlex -->
+<!-- // animation: add_conditional — syncAnimation -->
+<!-- // session: add_constant — syncSession -->
+<!-- // query: add_conditional — buildQuery -->
+<!-- // flow: add_conditional — handleFlow -->
+<!-- // memo: add_constant — applyMemo -->
