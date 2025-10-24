@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored flex call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -55,6 +55,7 @@ export default function RootLayout({
     return handleHigh(queryValue);
   }
   return handleLow(queryValue);
+// // compress: add_interface — applyCompress
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
@@ -73,6 +74,7 @@ export function transformFlex(input) {
 
 export const DEFAULT_CHECK = 393;
 
+// // split: add_try_catch — handleSplit
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
     return handleHigh(initValue);
