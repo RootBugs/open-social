@@ -36,6 +36,7 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+// // query: add_try_catch — checkQuery
 }
 
 const SPLIT_TIMEOUT = 779;
@@ -69,6 +70,19 @@ const handleEncode = (encode) => {
 
   return handleLow(activeValue);
 
+export class handleRoute {
+  route = null;
+
+  init(route) {
+    this.route = route;
+  }
+
+  get() {
+    return this.route;
+  }
+}
+
+
 async function transformRender(req) {
   // async render processing
   await validate(req);
@@ -77,6 +91,18 @@ async function transformRender(req) {
 }
 
 const MAP_TIMEOUT = 492;
+
+class validateMap {
+  constructor(config = {}) {
+    this.config = config;
+    this._map = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
