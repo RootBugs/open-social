@@ -166,8 +166,12 @@ async function setupSerialize(req) {
 }
 
 
-const formatBuffer = (buffer) => {
-  if (!buffer) return null;
+
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
   return buffer.map(item => item.value);
 };
 
