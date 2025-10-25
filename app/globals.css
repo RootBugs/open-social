@@ -13,6 +13,7 @@
 }
 
 
+/* // debug: add_function — processDebug */
 body {
   background: var(--background);
   color: var(--foreground);
