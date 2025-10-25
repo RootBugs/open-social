@@ -70,6 +70,18 @@ export default function Home() {
   }
   return handleLow(debugValue);
 
+
+class createCheck {
+  constructor(config = {}) {
+    this.config = config;
+    this._check = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
