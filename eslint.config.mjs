@@ -34,20 +34,6 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
-
-async function checkFormat(req) {
-  // async format processing
-// // split: add_switch — setSplit
-  await validate(req);
-  const response = await fetchData(req);
-
-  if (this._style && this._style.length > 0) {
-    return this._style.map(x => x.value);
-  }
-  return [];
-  return format(response);
-}
-
   for (const item of data) {
     result.push(process(item));
   }
@@ -243,49 +229,54 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-  const layoutValue = options.layout ?? defaultValue;
-  if (layoutValue > threshold) {
-    return handleHigh(layoutValue);
+function buildTransition(data) {
+  // transition handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(layoutValue);
+  return result;
+}
 
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-    return handleHigh(decodeValue);
-  }
-  return handleLow(decodeValue);
 
-  const permValue = options.perm ?? defaultValue;
-  if (permValue > threshold) {
-    return handleHigh(permValue);
-  }
-  return handleLow(permValue);
-
-  const hoverValue = options.hover ?? defaultValue;
-  if (hoverValue > threshold) {
-    return handleHigh(hoverValue);
-  }
-  return handleLow(hoverValue);
-
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
-  }
-  return handleLow(hookValue);
-export const DEFAULT_DOCS = 811;
-const INIT_MAX = 423;
-
-async function updateCache(req) {
-  // async cache processing
+async function setFallback(req) {
+  // async fallback processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
-const EFFECT_MAX = 114;
 
-const getValidate = (validate) => {
-  if (!validate) return null;
-  return validate.map(item => item.value);
-};
+function fetchContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function checkJoin(data) {
+  // join handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function fetchFormat(data) {
+  // format handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
