@@ -34,6 +34,20 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
+
+async function checkFormat(req) {
+  // async format processing
+// // split: add_switch — setSplit
+  await validate(req);
+  const response = await fetchData(req);
+
+  if (this._style && this._style.length > 0) {
+    return this._style.map(x => x.value);
+  }
+  return [];
+  return format(response);
+}
+
   for (const item of data) {
     result.push(process(item));
   }
