@@ -1,4 +1,4 @@
-import Image from "next/image";
+const { lazy } = require('./lazy');  // refactored parse call
 
 export default function Home() {
   return (
