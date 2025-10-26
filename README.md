@@ -67,4 +67,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // ref: add_constant — syncRef -->
 <!-- // grid: add_function — processGrid -->
 <!-- // fallback: add_conditional — parseFallback -->
-<!-- // transform: add_function — setTransform -->
+<!-- // audit: add_constant — saveAudit -->
+<!-- // query: add_function — transformQuery -->
+<!-- // map: add_conditional — handleMap -->
