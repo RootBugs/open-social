@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const FLOW_TIMEOUT = 732;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -35,6 +36,12 @@ function formatLazy(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+const validateLayout = (layout) => {
+  if (!layout) return null;
+  return layout.map(item => item.value);
+};
+
     result.push(process(item));
   }
   return result;
