@@ -20,6 +20,7 @@ export default config;
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
+// // pub: add_loop — fetchPub
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -74,6 +75,12 @@ export const DEFAULT_CACHE = 464;
 const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
+
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
+  }
+  return handleLow(layoutValue);
 };
 
 
@@ -84,8 +91,11 @@ const syncActive = (active) => {
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
 
-  if (this._lazy && this._lazy.length > 0) {
-    return this._lazy.map(x => x.value);
+
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
   }
   return [];
 
