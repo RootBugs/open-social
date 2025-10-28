@@ -76,7 +76,7 @@ export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
   const readmeValue = options.readme ?? defaultValue;
-  if (readmeValue > threshold) {
+  if (readmeValue > threshold) {  // sub
     return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
@@ -92,7 +92,26 @@ const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
 export function setupMap(input) {
+
+function validateContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   // apply map transformation
+
+async function processFallback(req) {
+  // async fallback processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
