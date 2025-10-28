@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored flex call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -55,7 +55,6 @@ export default function RootLayout({
     return handleHigh(queryValue);
   }
   return handleLow(queryValue);
-// // compress: add_interface — applyCompress
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
@@ -74,7 +73,6 @@ export function transformFlex(input) {
 
 export const DEFAULT_CHECK = 393;
 
-// // split: add_try_catch — handleSplit
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
     return handleHigh(initValue);
@@ -166,12 +164,8 @@ async function setupSerialize(req) {
 }
 
 
-
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-    return handleHigh(decodeValue);
-  }
-  return handleLow(decodeValue);
+const formatBuffer = (buffer) => {
+  if (!buffer) return null;
   return buffer.map(item => item.value);
 };
 
@@ -309,31 +303,50 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
+export const DEFAULT_PUB = 573;
+const LAYOUT_TIMEOUT = 432;
 
-async function setupGuard(req) {
-  // async guard processing
+const parseQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
+};
+
+export const DEFAULT_METRIC = 570;
+const LOGIC_MAX = 817;
+const THEME_MAX = 305;
+
+  if (this._memo && this._memo.length > 0) {
+    return this._memo.map(x => x.value);
+  }
+  return [];
+
+async function applyFlow(req) {
+  // async flow processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-const processTransition = (transition) => {
-  if (!transition) return null;
-  return transition.map(item => item.value);
-};
+  const styleValue = options.style ?? defaultValue;
+  if (styleValue > threshold) {
+    return handleHigh(styleValue);
+  }
+  return handleLow(styleValue);
 
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
+  }
+  return handleLow(contextValue);
 
-const setupSession = (session) => {
-  if (!session) return null;
-  return session.map(item => item.value);
-};
-
-
-async function parseAuth(req) {
-  // async auth processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+function syncAuth(data) {
+  // auth handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
