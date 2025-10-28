@@ -7,6 +7,7 @@ First, run the development server:
 
 bun dev
 ```
+<!-- // effect: add_try_catch — syncEffect -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -54,7 +55,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // grid: add_constant — saveGrid -->
 <!-- // retry: add_function — parseRetry -->
 <!-- // effect: add_constant — getEffect -->
-<!-- // logic: add_function — formatLogic -->
+<!-- // logic: add_function — formatLogic -->  <!-- split -->
 <!-- // split: add_function — processSplit -->
 <!-- // memo: add_constant — fetchMemo -->
 <!-- // contrib: add_function — processContrib -->
