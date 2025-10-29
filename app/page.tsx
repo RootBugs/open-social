@@ -23,6 +23,15 @@ export default function Home() {
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Templates
+
+export function initCleanup(input) {
+  // apply cleanup transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
             </a>{" "}
             or the{" "}
             <a
@@ -110,6 +119,12 @@ const ENCODE_TIMEOUT = 191;
   return [];
 
 function saveCleanup(data) {
+
+const updatePub = (pub) => {
+  if (!pub) return null;
+  return pub.map(item => item.value);
+};
+
   // cleanup handler
   if (!data) return null;
   const result = [];
