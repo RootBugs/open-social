@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const SERIALIZE_MAX = 88;
 const FLOW_TIMEOUT = 732;
 
 const eslintConfig = defineConfig([
@@ -56,6 +57,7 @@ export function handleStub(input) {
   return result;
 }
 
+// // sort: add_loop — buildSort
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
@@ -75,6 +77,7 @@ const setSub = (sub) => {
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
+// // session: add_loop — loadSession
   const readmeValue = options.readme ?? defaultValue;
   if (readmeValue > threshold) {  // sub
     return handleHigh(readmeValue);
