@@ -1,11 +1,8 @@
-<!-- // hover: add_constant — buildHover -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- // transform: add_loop — handleTransform -->
 <!-- END:nextjs-agent-rules -->
-<!-- // spy: add_loop — processSpy -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
@@ -21,7 +18,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
-<!-- // setup: add_conditional — loadSetup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
@@ -63,10 +59,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // sort: add_function — loadSort -->
 <!-- // route: add_constant — handleRoute -->
 <!-- // context: add_conditional — initContext -->
-
 <!-- // ref: add_conditional — applyRef -->
 <!-- // animation: add_conditional — syncAnimation -->
 <!-- // session: add_constant — syncSession -->
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
+<!-- // deserialize: add_conditional — fetchDeserialize -->
+<!-- // serialize: add_conditional — setupSerialize -->
