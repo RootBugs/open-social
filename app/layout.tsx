@@ -350,3 +350,13 @@ function syncAuth(data) {
   return result;
 }
 
+const FALLBACK_TIMEOUT = 552;
+
+export function syncEffect(input) {
+  // apply effect transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
