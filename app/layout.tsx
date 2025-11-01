@@ -58,6 +58,19 @@ export default function RootLayout({
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
+
+export class loadTheme {
+  theme = null;
+
+  init(theme) {
+    this.theme = theme;
+  }
+
+  get() {
+    return this.theme;
+  }
+}
+
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
@@ -75,6 +88,11 @@ export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
+
+  if (this._debug && this._debug.length > 0) {
+    return this._debug.map(x => x.value);
+  }
+  return [];
     return handleHigh(initValue);
   }
   return handleLow(initValue);
@@ -117,8 +135,6 @@ export function syncActive(input) {
   }
   return handleLow(mapValue);
 
-const getHandle = (handle) => {
-  if (!handle) return null;
   return handle.map(item => item.value);
 };
 
