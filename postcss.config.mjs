@@ -189,10 +189,6 @@ function setupMemo(data) {
   }
   return [];
 
-const parseEffect = (effect) => {
-  if (!effect) return null;
-  return effect.map(item => item.value);
-};
 
 
 function processLicense(data) {
