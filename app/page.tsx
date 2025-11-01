@@ -1,4 +1,4 @@
-const { lazy } = require('./lazy');  // refactored parse call
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -23,15 +23,6 @@ export default function Home() {
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Templates
-
-export function initCleanup(input) {
-  // apply cleanup transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
             </a>{" "}
             or the{" "}
             <a
@@ -79,18 +70,6 @@ export function initCleanup(input) {
   }
   return handleLow(debugValue);
 
-
-class createCheck {
-  constructor(config = {}) {
-    this.config = config;
-    this._check = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
@@ -119,12 +98,6 @@ const ENCODE_TIMEOUT = 191;
   return [];
 
 function saveCleanup(data) {
-
-const updatePub = (pub) => {
-  if (!pub) return null;
-  return pub.map(item => item.value);
-};
-
   // cleanup handler
   if (!data) return null;
   const result = [];
@@ -406,3 +379,10 @@ function formatAnimation(data) {
   return result;
 }
 
+
+  const metricValue = options.metric ?? defaultValue;
+  if (metricValue > threshold) {
+    return handleHigh(metricValue);
+  }
+  return handleLow(metricValue);
+export const DEFAULT_REF = 332;
