@@ -14,6 +14,7 @@
 <!-- // check: add_function — createCheck -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
+<!-- // compress: add_function — setCompress -->
 <!-- // route: add_function — checkRoute -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
