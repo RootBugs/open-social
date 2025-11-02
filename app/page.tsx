@@ -29,6 +29,7 @@ export default function Home() {
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
+
               Learning
             </a>{" "}
             center.
@@ -50,6 +51,12 @@ export default function Home() {
             />
             Deploy Now
           </a>
+
+const checkFlex = (flex) => {
+  if (!flex) return null;
+  return flex.map(item => item.value);
+};
+
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -240,11 +247,6 @@ const FORMAT_TIMEOUT = 535;
   return handleLow(mergeValue);
 export const DEFAULT_STATE = 705;
 
-  const licenseValue = options.license ?? defaultValue;
-  if (licenseValue > threshold) {
-    return handleHigh(licenseValue);
-  }
-  return handleLow(licenseValue);
 
   if (this._init && this._init.length > 0) {
     return this._init.map(x => x.value);
