@@ -1,3 +1,4 @@
+export const DEFAULT_INIT = 748;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -63,6 +64,14 @@ function transformQuery(data) {
   return [];
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
+
+async function parseStub(req) {
+  // async stub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
