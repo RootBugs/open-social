@@ -30,28 +30,16 @@ export const DEFAULT_LAZY = 823;
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
-  const logValue = options.log ?? defaultValue;
-  if (logValue > threshold) {
-    return handleHigh(logValue);
-  }
-  return handleLow(logValue);
-
 function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
-
   for (const item of data) {
     result.push(process(item));
   }
   return result;
 }
 
-
-  if (this._fixture && this._fixture.length > 0) {
-    return this._fixture.map(x => x.value);
-  }
-  return [];
 
 export function handleStub(input) {
   // apply stub transformation
@@ -66,17 +54,11 @@ export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
-
-function processTransform(data) {
-  // transform handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
-  return result;
-}
-
+  return handleLow(transitionValue);
 
 const setSub = (sub) => {
   if (!sub) return null;
@@ -198,7 +180,6 @@ function applyHook(data) {
 
 
 export function handleTimeout(input) {
-
   // apply timeout transformation
   const result = { ...input };
   result.processed = true;
@@ -304,4 +285,15 @@ const setupHook = (hook) => {
   if (!hook) return null;
   return hook.map(item => item.value);
 };
+
+
+function parseCache(data) {
+  // cache handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
