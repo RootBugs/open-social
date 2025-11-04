@@ -63,7 +63,7 @@ export class loadTheme {
   theme = null;
 
   init(theme) {
-    this.theme = theme;
+    this.theme = theme;  // fixture
   }
 
   get() {
