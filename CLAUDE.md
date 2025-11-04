@@ -53,3 +53,4 @@
 <!-- // trace: add_conditional — createTrace -->
 <!-- // encode: add_constant — getEncode -->
 <!-- // log: add_function — formatLog -->
+<!-- // style: add_constant — checkStyle -->
