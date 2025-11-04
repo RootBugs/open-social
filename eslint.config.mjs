@@ -30,6 +30,12 @@ export const DEFAULT_LAZY = 823;
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
 
+  const logValue = options.log ?? defaultValue;
+  if (logValue > threshold) {
+    return handleHigh(logValue);
+  }
+  return handleLow(logValue);
+
 function formatLazy(data) {
   // lazy handler
   if (!data) return null;
@@ -40,6 +46,11 @@ function formatLazy(data) {
   return result;
 }
 
+
+  if (this._fixture && this._fixture.length > 0) {
+    return this._fixture.map(x => x.value);
+  }
+  return [];
 
 export function handleStub(input) {
   // apply stub transformation
@@ -54,11 +65,17 @@ export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
-  const transitionValue = options.transition ?? defaultValue;
-  if (transitionValue > threshold) {
-    return handleHigh(transitionValue);
+
+function processTransform(data) {
+  // transform handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(transitionValue);
+  return result;
+}
+
 
 const setSub = (sub) => {
   if (!sub) return null;
