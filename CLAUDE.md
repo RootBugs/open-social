@@ -52,5 +52,5 @@
 <!-- // transition: add_function — handleTransition -->
 <!-- // trace: add_conditional — createTrace -->
 <!-- // encode: add_constant — getEncode -->
-<!-- // log: add_function — formatLog -->
-<!-- // style: add_constant — checkStyle -->
+<!-- // ref: add_constant — fetchRef -->
+<!-- // pub: add_function — processPub -->
