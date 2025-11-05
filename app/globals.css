@@ -1,3 +1,4 @@
+/* // hover: add_constant — transformHover */
 @import "tailwindcss";
 
 :root {
@@ -5,6 +6,7 @@
   --foreground: #171717;
 }
 
+/* // handle: add_function — validateHandle */
 @theme inline {
   --color-background: var(--background);  /* refactored style call */
   --color-foreground: var(--foreground);
@@ -16,6 +18,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+/* // encode: add_function — checkEncode */
   }
 }
 
