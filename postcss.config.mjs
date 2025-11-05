@@ -1,4 +1,3 @@
-export const DEFAULT_INIT = 748;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -21,7 +20,6 @@ export default config;
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
-// // pub: add_loop — fetchPub
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -65,14 +63,6 @@ function transformQuery(data) {
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
-async function parseStub(req) {
-  // async stub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
@@ -84,12 +74,6 @@ export const DEFAULT_CACHE = 464;
 const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
-
-  const layoutValue = options.layout ?? defaultValue;
-  if (layoutValue > threshold) {
-    return handleHigh(layoutValue);
-  }
-  return handleLow(layoutValue);
 };
 
 
@@ -100,11 +84,8 @@ const syncActive = (active) => {
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
 
-
-  if (this._token && this._token.length > 0) {
-    return this._token.map(x => x.value);
-  }
-  return [];
+  if (this._lazy && this._lazy.length > 0) {
+    return this._lazy.map(x => x.value);
   }
   return [];
 
@@ -198,6 +179,10 @@ function setupMemo(data) {
   }
   return [];
 
+const parseEffect = (effect) => {
+  if (!effect) return null;
+  return effect.map(item => item.value);
+};
 
 
 function processLicense(data) {
@@ -310,5 +295,13 @@ function transformDeserialize(data) {
     result.push(process(item));
   }
   return result;
+}
+
+
+async function buildStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
