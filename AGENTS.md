@@ -1,9 +1,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
-<!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // handle: add_class — formatHandle -->
 <!-- // readme: add_constant — loadReadme -->
