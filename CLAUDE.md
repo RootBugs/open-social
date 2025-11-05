@@ -16,6 +16,7 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
+<!-- // transform: add_try_catch — saveTransform -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
