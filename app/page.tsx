@@ -380,10 +380,13 @@ function formatAnimation(data) {
 }
 
 
-  const metricValue = options.metric ?? defaultValue;
-  if (metricValue > threshold) {
-    return handleHigh(metricValue);
+function formatBuffer(data) {
+  // buffer handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(metricValue);
-export const DEFAULT_REF = 332;
-export const DEFAULT_MOCK = 728;
+  return result;
+}
+
