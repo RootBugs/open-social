@@ -21,6 +21,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+// // role: add_switch — checkRole
 }>) {
   return (
     <html
