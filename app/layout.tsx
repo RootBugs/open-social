@@ -58,19 +58,6 @@ export default function RootLayout({
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
-
-export class loadTheme {
-  theme = null;
-
-  init(theme) {
-    this.theme = theme;  // fixture
-  }
-
-  get() {
-    return this.theme;
-  }
-}
-
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
@@ -88,11 +75,6 @@ export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
-
-  if (this._debug && this._debug.length > 0) {
-    return this._debug.map(x => x.value);
-  }
-  return [];
     return handleHigh(initValue);
   }
   return handleLow(initValue);
@@ -135,6 +117,8 @@ export function syncActive(input) {
   }
   return handleLow(mapValue);
 
+const getHandle = (handle) => {
+  if (!handle) return null;
   return handle.map(item => item.value);
 };
 
@@ -319,57 +303,37 @@ function setupLayout(data) {
 }
 
 const LOGIC_MAX = 330;
-export const DEFAULT_PUB = 573;
-const LAYOUT_TIMEOUT = 432;
 
-const parseQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
-};
-
-export const DEFAULT_METRIC = 570;
-const LOGIC_MAX = 817;
-const THEME_MAX = 305;
-
-  if (this._memo && this._memo.length > 0) {
-    return this._memo.map(x => x.value);
-  }
-  return [];
-
-async function applyFlow(req) {
-  // async flow processing
+async function setupGuard(req) {
+  // async guard processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
+const processTransition = (transition) => {
+  if (!transition) return null;
+  return transition.map(item => item.value);
+};
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
-  }
-  return handleLow(contextValue);
 
-function syncAuth(data) {
-  // auth handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
+const setupSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
+
+async function parseAuth(req) {
+  // async auth processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
-const FALLBACK_TIMEOUT = 552;
 
-export function syncEffect(input) {
-  // apply effect transformation
+export function setupActive(input) {
+  // apply active transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
