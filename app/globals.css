@@ -1,5 +1,3 @@
-/* // hover: add_constant — transformHover */
-/* // guard: add_constant — getGuard */
 @import "tailwindcss";
 
 :root {
@@ -7,9 +5,8 @@
   --foreground: #171717;
 }
 
-/* // handle: add_function — validateHandle */
 @theme inline {
-  --color-background: var(--background);  /* refactored style call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -19,11 +16,15 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-/* // encode: add_function — checkEncode */
   }
 }
 
-/* // readme: add_function — parseReadme */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -92,3 +93,4 @@
 /* // check: add_constant — buildCheck */
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
+/* // timeout: add_function — setTimeout */
