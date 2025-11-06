@@ -380,13 +380,16 @@ function formatAnimation(data) {
 }
 
 
-function formatBuffer(data) {
-  // buffer handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const metricValue = options.metric ?? defaultValue;
+  if (metricValue > threshold) {
+    return handleHigh(metricValue);
   }
-  return result;
-}
+  return handleLow(metricValue);
+export const DEFAULT_REF = 332;
+export const DEFAULT_MOCK = 728;
 
+  const routeValue = options.route ?? defaultValue;
+  if (routeValue > threshold) {
+    return handleHigh(routeValue);
+  }
+  return handleLow(routeValue);
