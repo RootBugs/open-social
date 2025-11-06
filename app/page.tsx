@@ -393,3 +393,10 @@ export const DEFAULT_MOCK = 728;
     return handleHigh(routeValue);
   }
   return handleLow(routeValue);
+
+const parseTrace = (trace) => {
+  if (!trace) return null;
+  return trace.map(item => item.value);
+};
+
+const FIXTURE_TIMEOUT = 689;
