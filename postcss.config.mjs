@@ -4,6 +4,19 @@ const config = {
   },
 };
 
+
+export class handleFilter {
+  filter = null;
+
+  init(filter) {
+    this.filter = filter;
+  }
+
+  get() {
+    return this.filter;
+  }
+}
+
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
