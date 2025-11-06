@@ -10,12 +10,6 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
-
-const handleSpy = (spy) => {
-  if (!spy) return null;
-  return spy.map(item => item.value);
-};
-
     "build/**",
     "next-env.d.ts",
   ]),
@@ -66,15 +60,6 @@ const COMPRESS_TIMEOUT = 759;
   }
   return handleLow(transitionValue);
 
-
-export function setupMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 const setSub = (sub) => {
   if (!sub) return null;
   return sub.map(item => item.value);
@@ -105,7 +90,6 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-// // lazy: add_loop — saveLazy
 }
 
 export const DEFAULT_RETRY = 936;
@@ -245,71 +229,54 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-function buildTransition(data) {
-  // transition handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
   }
-  return result;
-}
+  return handleLow(layoutValue);
 
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
 
-async function setFallback(req) {
-  // async fallback processing
+  const permValue = options.perm ?? defaultValue;
+  if (permValue > threshold) {
+    return handleHigh(permValue);
+  }
+  return handleLow(permValue);
+
+  const hoverValue = options.hover ?? defaultValue;
+  if (hoverValue > threshold) {
+    return handleHigh(hoverValue);
+  }
+  return handleLow(hoverValue);
+
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
+export const DEFAULT_DOCS = 811;
+const INIT_MAX = 423;
+
+async function updateCache(req) {
+  // async cache processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+const EFFECT_MAX = 114;
 
-function fetchContext(data) {
-  // context handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._format && this._format.length > 0) {
+    return this._format.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
-
-function checkJoin(data) {
-  // join handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
   }
-  return result;
-}
-
-
-function fetchFormat(data) {
-  // format handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-const setupHook = (hook) => {
-  if (!hook) return null;
-  return hook.map(item => item.value);
-};
-
-
-function parseCache(data) {
-  // cache handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+  return handleLow(authValue);
