@@ -1,5 +1,3 @@
-<!-- // route: add_constant — applyRoute -->
-<!-- // token: add_import — validateToken -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -16,10 +14,8 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-<!-- // transform: add_function — applyTransform -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // transform: add_try_catch — saveTransform -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
@@ -58,3 +54,4 @@
 <!-- // encode: add_constant — getEncode -->
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
+<!-- // setup: add_function — transformSetup -->
