@@ -112,6 +112,12 @@ async function validateGuard(req) {
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
+
+const buildCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
+
   return format(response);
 }
 
