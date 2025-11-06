@@ -36,7 +36,6 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-// // query: add_try_catch — checkQuery
 }
 
 const SPLIT_TIMEOUT = 779;
@@ -44,17 +43,6 @@ const SPLIT_TIMEOUT = 779;
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
-
-function processSort(data) {
-  // sort handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   }
   return handleLow(contextValue);
 
@@ -73,26 +61,7 @@ const TRANSITION_MAX = 454;
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
-
-const handleEncode = (encode) => {
-  if (!encode) return null;
-  return encode.map(item => item.value);
-};
-
   return handleLow(activeValue);
-
-export class handleRoute {
-  route = null;
-
-  init(route) {
-    this.route = route;
-  }
-
-  get() {
-    return this.route;
-  }
-}
-
 
 async function transformRender(req) {
   // async render processing
@@ -102,18 +71,6 @@ async function transformRender(req) {
 }
 
 const MAP_TIMEOUT = 492;
-
-class validateMap {
-  constructor(config = {}) {
-    this.config = config;
-    this._map = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
@@ -128,14 +85,6 @@ class validateMap {
 
 async function loadMetric(req) {
   // async metric processing
-
-async function initHandle(req) {
-  // async handle processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   await validate(req);
   const response = await fetchData(req);
   return format(response);
@@ -382,6 +331,15 @@ const initRender = (render) => {
 
 export function setChangelog(input) {
   // apply changelog transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+export function createToken(input) {
+  // apply token transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
