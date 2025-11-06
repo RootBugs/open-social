@@ -10,6 +10,12 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+
+const handleSpy = (spy) => {
+  if (!spy) return null;
+  return spy.map(item => item.value);
+};
+
     "build/**",
     "next-env.d.ts",
   ]),
@@ -60,6 +66,15 @@ const COMPRESS_TIMEOUT = 759;
   }
   return handleLow(transitionValue);
 
+
+export function setupMutation(input) {
+  // apply mutation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const setSub = (sub) => {
   if (!sub) return null;
   return sub.map(item => item.value);
@@ -90,6 +105,7 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+// // lazy: add_loop — saveLazy
 }
 
 export const DEFAULT_RETRY = 936;
