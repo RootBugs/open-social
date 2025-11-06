@@ -1,3 +1,4 @@
+<!-- // token: add_import — validateToken -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -14,6 +15,7 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
+<!-- // transform: add_function — applyTransform -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // transform: add_try_catch — saveTransform -->
