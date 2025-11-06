@@ -1,3 +1,4 @@
+<!-- // route: add_constant — applyRoute -->
 <!-- // token: add_import — validateToken -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
