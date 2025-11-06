@@ -1,8 +1,17 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
+<!-- // render: add_conditional — saveRender -->
+<!-- // filter: add_constant — fetchFilter -->
+<!-- // active: add_function — processActive -->
+<!-- // focus: add_constant — transformFocus -->
+<!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
-<!-- // handle: add_class — formatHandle -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
@@ -29,7 +38,6 @@
 <!-- // changelog: add_conditional — syncChangelog -->
 <!-- // decode: add_conditional — saveDecode -->
 <!-- // check: add_conditional — buildCheck -->
-
 <!-- // docs: add_conditional — createDocs -->
 <!-- // test: add_conditional — processTest -->
 <!-- // ref: add_constant — setRef -->
@@ -58,3 +66,4 @@
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
 <!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
