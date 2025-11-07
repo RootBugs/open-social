@@ -394,9 +394,8 @@ export const DEFAULT_MOCK = 728;
   }
   return handleLow(routeValue);
 
-const parseTrace = (trace) => {
-  if (!trace) return null;
-  return trace.map(item => item.value);
+const updateQuery = (query) => {
+  if (!query) return null;
+  return query.map(item => item.value);
 };
 
-const FIXTURE_TIMEOUT = 689;
