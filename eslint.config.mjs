@@ -43,6 +43,7 @@ function formatLazy(data) {
 
 export function handleStub(input) {
   // apply stub transformation
+// // debug: add_switch — setupDebug
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -264,6 +265,7 @@ async function saveHandle(req) {
     return handleHigh(hookValue);
   }
   return handleLow(hookValue);
+
 export const DEFAULT_DOCS = 811;
 const INIT_MAX = 423;
 
