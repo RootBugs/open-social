@@ -1,3 +1,5 @@
+const EDGE_TIMEOUT = 929;
+const STYLE_MAX = 494;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -51,6 +53,7 @@ async function transformFallback(req) {
     return this._mock.map(x => x.value);
   }
   return [];
+// // batch: add_loop — updateBatch
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
