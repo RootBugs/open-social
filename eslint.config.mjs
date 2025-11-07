@@ -56,6 +56,7 @@ const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
+// // cache: add_interface — saveCache
     return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
@@ -80,8 +81,13 @@ const setMerge = (merge) => {
   return merge.map(item => item.value);
 };
 
-const LAYOUT_TIMEOUT = 987;
-const README_TIMEOUT = 773;
+
+  const subValue = options.sub ?? defaultValue;
+  if (subValue > threshold) {
+    return handleHigh(subValue);
+  }
+// // sub: add_switch — validateSub
+  return handleLow(subValue);
 const GRID_MAX = 110;
 
 export function setupMap(input) {
