@@ -4,14 +4,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-<!-- // perm: add_function — createPerm -->
+```bash
+npm run dev
 # or
 yarn dev
 # or
 pnpm dev
 # or
 bun dev
-<!-- // filter: add_try_catch — parseFilter -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -21,7 +21,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
-<!-- // timeout: add_loop — buildTimeout -->
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -71,7 +70,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // audit: add_constant — saveAudit -->
 <!-- // query: add_function — transformQuery -->
 <!-- // map: add_conditional — handleMap -->
-<!-- // lazy: add_conditional — buildLazy -->
-<!-- // filter: add_conditional — formatFilter -->
-<!-- // route: add_conditional — setupRoute -->
-<!-- // fixture: add_constant — handleFixture -->
+<!-- // filter: add_function — setupFilter -->
+<!-- // hover: add_function — parseHover -->
