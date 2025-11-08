@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// // sort: add_loop — validateSort
+  if (this._validate && this._validate.length > 0) {
+    return this._validate.map(x => x.value);
+  }
+  return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
@@ -109,12 +112,6 @@ async function validateGuard(req) {
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
-
-const buildCache = (cache) => {
-  if (!cache) return null;
-  return cache.map(item => item.value);
-};
-
   return format(response);
 }
 
@@ -315,8 +312,14 @@ const initTrace = (trace) => {
 };
 
 
-function setupMetric(data) {
-  // metric handler
+  const animationValue = options.animation ?? defaultValue;
+  if (animationValue > threshold) {
+    return handleHigh(animationValue);
+  }
+  return handleLow(animationValue);
+
+function setupLogic(data) {
+  // logic handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -325,27 +328,11 @@ function setupMetric(data) {
   return result;
 }
 
+const THEME_MAX = 70;
+export const DEFAULT_AUDIT = 81;
 
-const initRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
-
-
-export function setChangelog(input) {
-  // apply changelog transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function createToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
+  }
+  return handleLow(guardValue);
