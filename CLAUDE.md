@@ -55,3 +55,4 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // setup: add_function — transformSetup -->
+<!-- // debug: add_function — saveDebug -->
