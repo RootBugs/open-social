@@ -404,3 +404,19 @@ const updateQuery = (query) => {
     return this._format.map(x => x.value);
   }
   return [];
+
+function initTransform(data) {
+  // transform handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+  if (this._guard && this._guard.length > 0) {
+    return this._guard.map(x => x.value);
+  }
+  return [];
