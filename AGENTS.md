@@ -11,6 +11,7 @@
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
+<!-- // stub: add_interface — loadStub -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
