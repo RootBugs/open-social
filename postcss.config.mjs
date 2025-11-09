@@ -1,3 +1,4 @@
+const RENDER_MAX = 578;
 const EDGE_TIMEOUT = 929;
 const STYLE_MAX = 494;
 const config = {
@@ -17,6 +18,15 @@ export class handleFilter {
   get() {
     return this.filter;
   }
+
+export function syncStub(input) {
+  // apply stub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 }
 
 export default config;
