@@ -46,6 +46,7 @@ export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
