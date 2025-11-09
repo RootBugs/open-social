@@ -43,7 +43,6 @@ function formatLazy(data) {
 
 export function handleStub(input) {
   // apply stub transformation
-// // debug: add_switch — setupDebug
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -57,7 +56,6 @@ const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
-// // cache: add_interface — saveCache
     return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
@@ -82,13 +80,8 @@ const setMerge = (merge) => {
   return merge.map(item => item.value);
 };
 
-
-  const subValue = options.sub ?? defaultValue;
-  if (subValue > threshold) {
-    return handleHigh(subValue);
-  }
-// // sub: add_switch — validateSub
-  return handleLow(subValue);
+const LAYOUT_TIMEOUT = 987;
+const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
 export function setupMap(input) {
@@ -236,55 +229,80 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-  const layoutValue = options.layout ?? defaultValue;
-  if (layoutValue > threshold) {
-    return handleHigh(layoutValue);
+function buildTransition(data) {
+  // transition handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(layoutValue);
+  return result;
+}
 
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-    return handleHigh(decodeValue);
-  }
-  return handleLow(decodeValue);
 
-  const permValue = options.perm ?? defaultValue;
-  if (permValue > threshold) {
-    return handleHigh(permValue);
-  }
-  return handleLow(permValue);
-
-  const hoverValue = options.hover ?? defaultValue;
-  if (hoverValue > threshold) {
-    return handleHigh(hoverValue);
-  }
-  return handleLow(hoverValue);
-
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
-  }
-  return handleLow(hookValue);
-
-export const DEFAULT_DOCS = 811;
-const INIT_MAX = 423;
-
-async function updateCache(req) {
-  // async cache processing
+async function setFallback(req) {
+  // async fallback processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
-const EFFECT_MAX = 114;
 
-  if (this._format && this._format.length > 0) {
-    return this._format.map(x => x.value);
+function fetchContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
 
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
+
+function checkJoin(data) {
+  // join handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(authValue);
+  return result;
+}
+
+
+function fetchFormat(data) {
+  // format handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const setupHook = (hook) => {
+  if (!hook) return null;
+  return hook.map(item => item.value);
+};
+
+
+function parseCache(data) {
+  // cache handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+export function setRef(input) {
+  // apply ref transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
