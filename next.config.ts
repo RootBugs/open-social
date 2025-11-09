@@ -6,12 +6,13 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored mock call
     return this._validate.map(x => x.value);
   }
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
+// // ref: add_interface — updateRef
     return this._cleanup.map(x => x.value);
   }
   return [];
@@ -54,6 +55,19 @@ const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
+
+export class createAnimation {
+  animation = null;
+
+  init(animation) {
+    this.animation = animation;
+  }
+
+  get() {
+    return this.animation;
+  }
+}
+
   }
   return [];
 
