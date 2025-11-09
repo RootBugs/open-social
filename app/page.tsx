@@ -12,7 +12,6 @@ export default function Home() {
           height={20}
           priority
         />
-// // mock: add_try_catch — setMock
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
@@ -63,14 +62,6 @@ export default function Home() {
       </main>
     </div>
   );
-
-async function syncLog(req) {
-  // async log processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 }
 
   const debugValue = options.debug ?? defaultValue;
@@ -408,3 +399,8 @@ const updateQuery = (query) => {
   return query.map(item => item.value);
 };
 
+
+  if (this._format && this._format.length > 0) {
+    return this._format.map(x => x.value);
+  }
+  return [];
