@@ -45,6 +45,14 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
+async function loadDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 function transformQuery(data) {
   // query handler
   if (!data) return null;
