@@ -57,6 +57,15 @@ export default function RootLayout({
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
+
+export function validateEdge(input) {
+  // apply edge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   }
   return handleLow(pubValue);
 
