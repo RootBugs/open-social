@@ -5,7 +5,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-<!-- // perm: add_switch — setPerm -->
 npm run dev
 # or
 yarn dev
@@ -21,13 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<!-- // transition: add_loop — initTransition -->
-<!-- // split: add_function — formatSplit -->
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-<!-- // render: add_function — saveRender -->
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -35,7 +33,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- // hover: add_loop — createHover -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
+<!-- // route: add_constant — loadRoute -->
+<!-- // mutation: add_constant — buildMutation -->
+<!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
 <!-- // active: add_constant — createActive -->
 <!-- // init: add_conditional — buildInit -->
@@ -63,10 +66,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // contrib: add_function — processContrib -->
 <!-- // ref: add_constant — syncRef -->
 <!-- // grid: add_function — processGrid -->
-
 <!-- // fallback: add_conditional — parseFallback -->
 <!-- // audit: add_constant — saveAudit -->
 <!-- // query: add_function — transformQuery -->
 <!-- // map: add_conditional — handleMap -->
-<!-- // filter: add_function — setupFilter -->
-<!-- // hover: add_function — parseHover -->
+<!-- // lazy: add_conditional — buildLazy -->
+<!-- // filter: add_conditional — formatFilter -->
+<!-- // route: add_conditional — setupRoute -->
+<!-- // fixture: add_constant — handleFixture -->
+<!-- // perm: add_conditional — loadPerm -->
