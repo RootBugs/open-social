@@ -3,8 +3,10 @@
 
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
+<!-- // filter: add_function — setupFilter -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // render: add_interface — checkRender -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
