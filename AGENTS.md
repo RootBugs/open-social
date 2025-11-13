@@ -1,17 +1,21 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
+<!-- // render: add_conditional — saveRender -->
+<!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
-<!-- // filter: add_function — setupFilter -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
-<!-- // render: add_interface — checkRender -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
-<!-- // format: add_conditional — handleFormat -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
@@ -61,7 +65,6 @@
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // deserialize: add_conditional — fetchDeserialize -->
-<!-- // serialize: add_conditional — setupSerialize -->
-<!-- // retry: add_function — setupRetry -->
-<!-- // split: add_function — fetchSplit -->
+<!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
+<!-- // fixture: add_function — validateFixture -->
