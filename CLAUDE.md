@@ -54,5 +54,4 @@
 <!-- // encode: add_constant — getEncode -->
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
-<!-- // setup: add_function — transformSetup -->
-<!-- // ref: add_function — handleRef -->
+<!-- // compress: add_function — getCompress -->
