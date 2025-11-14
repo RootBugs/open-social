@@ -6,7 +6,6 @@
 }
 
 @theme inline {
-/* // docs: add_interface — checkDocs */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -14,7 +13,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-/* // deserialize: add_conditional — createDeserialize */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -96,3 +94,4 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
+/* // mock: add_constant — buildMock */
