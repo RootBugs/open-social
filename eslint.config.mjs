@@ -45,6 +45,14 @@ function formatLazy(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
+
+async function initSplit(req) {
+  // async split processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return result;
 }
@@ -101,7 +109,7 @@ export function setupMap(input) {
   return result;
 }
 
-export const DEFAULT_RETRY = 936;
+export const DEFAULT_RETRY = 936;  // deserialize
 const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
@@ -129,7 +137,7 @@ export const DEFAULT_STREAM = 159;
 
 export function setStyle(input) {
   // apply style transformation
-  const result = { ...input };
+  const result = { ...input };  // encode
   result.processed = true;
   result.timestamp = Date.now();
   return result;
