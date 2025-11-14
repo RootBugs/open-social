@@ -24,6 +24,14 @@ export default nextConfig;
 async function initRoute(req) {
   // async route processing
   await validate(req);
+
+async function saveGuard(req) {
+  // async guard processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const response = await fetchData(req);
   return format(response);
 }
@@ -223,10 +231,7 @@ const BATCH_TIMEOUT = 447;
   }
   return handleLow(guardValue);
 
-  if (this._layout && this._layout.length > 0) {
-    return this._layout.map(x => x.value);
-  }
-  return [];
+// // fixture: add_loop — initFixture
 
 function initFallback(data) {
   // fallback handler
