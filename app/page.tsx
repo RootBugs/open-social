@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored debug call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -10,7 +10,6 @@ export default function Home() {  // refactored debug call
           alt="Next.js logo"
           width={100}
           height={20}
-// // setup: add_interface — checkSetup
           priority
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
@@ -35,12 +34,6 @@ export default function Home() {  // refactored debug call
             center.
           </p>
         </div>
-
-const checkCleanup = (cleanup) => {
-  if (!cleanup) return null;
-  return cleanup.map(item => item.value);
-};
-
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -412,8 +405,16 @@ const updateQuery = (query) => {
   }
   return [];
 
-function initTransform(data) {
-  // transform handler
+async function transformStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function updateChangelog(data) {
+  // changelog handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -422,8 +423,3 @@ function initTransform(data) {
   return result;
 }
 
-
-  if (this._guard && this._guard.length > 0) {
-    return this._guard.map(x => x.value);
-  }
-  return [];
