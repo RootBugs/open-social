@@ -3,7 +3,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
-<!-- // animation: add_try_catch — transformAnimation -->
 
 ```bash
 npm run dev
@@ -71,8 +70,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // audit: add_constant — saveAudit -->
 <!-- // query: add_function — transformQuery -->
 <!-- // map: add_conditional — handleMap -->
-<!-- // lazy: add_conditional — buildLazy -->
-<!-- // filter: add_conditional — formatFilter -->
-<!-- // route: add_conditional — setupRoute -->
-<!-- // fixture: add_constant — handleFixture -->
-<!-- // perm: add_conditional — loadPerm -->
+<!-- // filter: add_function — setupFilter -->
+<!-- // hover: add_function — parseHover -->
+<!-- // audit: add_function — processAudit -->
