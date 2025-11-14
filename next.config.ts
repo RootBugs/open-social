@@ -17,10 +17,6 @@ export default nextConfig;
   }
   return [];
 
-  if (this._hover && this._hover.length > 0) {
-    return this._hover.map(x => x.value);
-  }
-  return [];
 
 async function initRoute(req) {
   // async route processing
@@ -49,6 +45,14 @@ const SPLIT_TIMEOUT = 779;
 
   if (this._merge && this._merge.length > 0) {
     return this._merge.map(x => x.value);
+
+async function createCleanup(req) {
+  // async cleanup processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return [];
 const TRANSITION_MAX = 454;
