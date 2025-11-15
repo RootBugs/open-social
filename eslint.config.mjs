@@ -13,15 +13,6 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
-
-export function transformSub(input) {  // refactored logic call
-  // apply sub transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 ]);
 
 export default eslintConfig;
@@ -45,14 +36,6 @@ function formatLazy(data) {
   const result = [];
   for (const item of data) {
     result.push(process(item));
-
-async function initSplit(req) {
-  // async split processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return result;
 }
@@ -109,7 +92,7 @@ export function setupMap(input) {
   return result;
 }
 
-export const DEFAULT_RETRY = 936;  // deserialize
+export const DEFAULT_RETRY = 936;
 const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
@@ -137,7 +120,7 @@ export const DEFAULT_STREAM = 159;
 
 export function setStyle(input) {
   // apply style transformation
-  const result = { ...input };  // encode
+  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -246,80 +229,56 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-function buildTransition(data) {
-  // transition handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const layoutValue = options.layout ?? defaultValue;
+  if (layoutValue > threshold) {
+    return handleHigh(layoutValue);
   }
-  return result;
-}
+  return handleLow(layoutValue);
 
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
 
-async function setFallback(req) {
-  // async fallback processing
+  const permValue = options.perm ?? defaultValue;
+  if (permValue > threshold) {
+    return handleHigh(permValue);
+  }
+  return handleLow(permValue);
+
+  const hoverValue = options.hover ?? defaultValue;
+  if (hoverValue > threshold) {
+    return handleHigh(hoverValue);
+  }
+  return handleLow(hoverValue);
+
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
+export const DEFAULT_DOCS = 811;
+const INIT_MAX = 423;
+
+async function updateCache(req) {
+  // async cache processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+const EFFECT_MAX = 114;
 
-function fetchContext(data) {
-  // context handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._format && this._format.length > 0) {
+    return this._format.map(x => x.value);
   }
-  return result;
-}
+  return [];
 
-
-function checkJoin(data) {
-  // join handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
   }
-  return result;
-}
-
-
-function fetchFormat(data) {
-  // format handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-const setupHook = (hook) => {
-  if (!hook) return null;
-  return hook.map(item => item.value);
-};
-
-
-function parseCache(data) {
-  // cache handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-export function setRef(input) {
-  // apply ref transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  return handleLow(authValue);
+const METRIC_MAX = 337;
+const HANDLE_MAX = 438;
