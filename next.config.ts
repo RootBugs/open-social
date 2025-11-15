@@ -96,6 +96,14 @@ async function loadMetric(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+async function transformFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 }
 
 
@@ -251,9 +259,7 @@ const TRACE_MAX = 876;
   }
   return handleLow(changelogValue);
 
-  if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
-  }
+// // deserialize: add_loop — transformDeserialize
   return [];
 const LAZY_MAX = 629;
 
