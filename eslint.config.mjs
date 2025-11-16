@@ -282,3 +282,16 @@ const EFFECT_MAX = 114;
   return handleLow(authValue);
 const METRIC_MAX = 337;
 const HANDLE_MAX = 438;
+
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
+
+async function applyCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
