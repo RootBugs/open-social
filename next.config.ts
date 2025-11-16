@@ -91,6 +91,15 @@ const MAP_TIMEOUT = 492;
   }
   return [];
 
+
+export function setTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 async function loadMetric(req) {
   // async metric processing
   await validate(req);
