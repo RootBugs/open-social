@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const MUTATION_MAX = 285;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -64,6 +65,7 @@ const setSub = (sub) => {
   if (!sub) return null;
   return sub.map(item => item.value);
 };
+// // role: add_loop — parseRole
 
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
@@ -100,7 +102,7 @@ const AUTH_MAX = 52;
   }
   return [];
 
-  const subValue = options.sub ?? defaultValue;
+  const subValue = options.sub ?? defaultValue;  // audit
   if (subValue > threshold) {
     return handleHigh(subValue);
   }
