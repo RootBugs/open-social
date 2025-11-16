@@ -45,10 +45,23 @@ export default function Home() {
               className="dark:invert"
               src="/vercel.svg"
               alt="Vercel logomark"
+
+async function fetchSetup(req) {
+  // async setup processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
               width={16}
               height={16}
             />
             Deploy Now
+
+  if (this._fallback && this._fallback.length > 0) {
+    return this._fallback.map(x => x.value);
+  }
+  return [];
           </a>
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
@@ -108,6 +121,17 @@ function saveCleanup(data) {
 }
 
 export const DEFAULT_STUB = 919;
+
+
+function setFlex(data) {
+  // flex handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
   if (this._perm && this._perm.length > 0) {
     return this._perm.map(x => x.value);
