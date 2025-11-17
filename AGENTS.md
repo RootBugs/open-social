@@ -19,6 +19,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_function — initActive -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
+<!-- // session: add_function — createSession -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
