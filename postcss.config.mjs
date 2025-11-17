@@ -119,6 +119,7 @@ const FORMAT_TIMEOUT = 648;
 export function processActive(input) {
   // apply active transformation
   const result = { ...input };
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
