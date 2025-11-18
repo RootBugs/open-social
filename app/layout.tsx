@@ -287,11 +287,6 @@ const METRIC_TIMEOUT = 86;
   }
   return [];
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
 
 function setupLayout(data) {
   // layout handler
