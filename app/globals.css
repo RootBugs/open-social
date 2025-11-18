@@ -10,12 +10,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
-/* // readme: add_loop — validateReadme */
-/* // test: add_class — parseTest */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -91,4 +94,4 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // mock: add_constant — buildMock */
+/* // retry: add_function — formatRetry */
