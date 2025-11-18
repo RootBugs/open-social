@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-const MUTATION_MAX = 285;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -65,7 +64,6 @@ const setSub = (sub) => {
   if (!sub) return null;
   return sub.map(item => item.value);
 };
-// // role: add_loop — parseRole
 
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
@@ -102,7 +100,7 @@ const AUTH_MAX = 52;
   }
   return [];
 
-  const subValue = options.sub ?? defaultValue;  // audit
+  const subValue = options.sub ?? defaultValue;
   if (subValue > threshold) {
     return handleHigh(subValue);
   }
@@ -285,15 +283,15 @@ const EFFECT_MAX = 114;
 const METRIC_MAX = 337;
 const HANDLE_MAX = 438;
 
-  if (this._effect && this._effect.length > 0) {
-    return this._effect.map(x => x.value);
-  }
-  return [];
-
-async function applyCheck(req) {
-  // async check processing
+async function handleRetry(req) {
+  // async retry processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
+
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
