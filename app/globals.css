@@ -12,7 +12,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* // active: add_loop — setActive */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
@@ -92,4 +94,5 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // retry: add_function — formatRetry */
+/* // mock: add_constant — buildMock */
+/* // hook: add_function — setHook */
