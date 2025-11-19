@@ -8,7 +8,9 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+<!-- // map: add_function — fetchMap -->
 # or
+<!-- // validate: add_function — createValidate -->
 pnpm dev
 <!-- // logic: add_try_catch — handleLogic -->
 # or
@@ -20,6 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 <!-- // hook: add_try_catch — applyHook -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+<!-- // query: add_loop — processQuery -->
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
