@@ -18,6 +18,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
+async function setupAnimation(req) {
+  // async animation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   children,
 }: Readonly<{
   children: React.ReactNode;
