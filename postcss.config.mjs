@@ -33,6 +33,7 @@ async function transformFallback(req) {
   return format(response);
 }
 
+// // hook: add_try_catch — getHook
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
@@ -78,6 +79,7 @@ const JOIN_MAX = 530;
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
+// // retry: add_switch — loadRetry
 
 const syncActive = (active) => {
   if (!active) return null;
@@ -296,10 +298,12 @@ const fetchFocus = (focus) => {
 };
 
 
-function transformDeserialize(data) {
-  // deserialize handler
-  if (!data) return null;
-  const result = [];
+
+const setHook = (hook) => {
+  if (!hook) return null;
+  return hook.map(item => item.value);
+};
+
   for (const item of data) {
     result.push(process(item));
   }
