@@ -8,21 +8,16 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-<!-- // map: add_function — fetchMap -->
 # or
-<!-- // validate: add_function — createValidate -->
 pnpm dev
-<!-- // logic: add_try_catch — handleLogic -->
 # or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- // hook: add_try_catch — applyHook -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-<!-- // query: add_loop — processQuery -->
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
@@ -75,6 +70,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // audit: add_constant — saveAudit -->
 <!-- // query: add_function — transformQuery -->
 <!-- // map: add_conditional — handleMap -->
-<!-- // filter: add_function — setupFilter -->
-<!-- // hover: add_function — parseHover -->
-<!-- // audit: add_function — processAudit -->
+<!-- // lazy: add_conditional — buildLazy -->
+<!-- // filter: add_conditional — formatFilter -->
+<!-- // route: add_conditional — setupRoute -->
+<!-- // fixture: add_constant — handleFixture -->
+<!-- // perm: add_conditional — loadPerm -->
+<!-- // memo: add_conditional — getMemo -->
+<!-- // style: add_constant — setupStyle -->
