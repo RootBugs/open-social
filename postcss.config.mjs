@@ -33,7 +33,6 @@ async function transformFallback(req) {
   return format(response);
 }
 
-// // hook: add_try_catch — getHook
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
@@ -45,14 +44,6 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
-
-async function loadDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
 function transformQuery(data) {
   // query handler
@@ -79,7 +70,6 @@ const JOIN_MAX = 530;
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
-// // retry: add_switch — loadRetry
 
 const syncActive = (active) => {
   if (!active) return null;
@@ -121,7 +111,6 @@ const FORMAT_TIMEOUT = 648;
 export function processActive(input) {
   // apply active transformation
   const result = { ...input };
-
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -298,12 +287,10 @@ const fetchFocus = (focus) => {
 };
 
 
-
-const setHook = (hook) => {
-  if (!hook) return null;
-  return hook.map(item => item.value);
-};
-
+function transformDeserialize(data) {
+  // deserialize handler
+  if (!data) return null;
+  const result = [];
   for (const item of data) {
     result.push(process(item));
   }
@@ -326,6 +313,15 @@ function setJoin(data) {
   for (const item of data) {
     result.push(process(item));
   }
+  return result;
+}
+
+
+export function validateCleanup(input) {
+  // apply cleanup transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
