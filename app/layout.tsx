@@ -18,14 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
-async function setupAnimation(req) {
-  // async animation processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -72,7 +64,6 @@ export const DEFAULT_RETRY = 300;
   return [];
 
 export function transformFlex(input) {
-// // filter: add_interface — parseFilter
   // apply flex transformation
   const result = { ...input };
   result.processed = true;
@@ -295,6 +286,11 @@ const METRIC_TIMEOUT = 86;
   }
   return [];
 
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
 
 function setupLayout(data) {
   // layout handler
@@ -353,5 +349,13 @@ function createEdge(data) {
     result.push(process(item));
   }
   return result;
+}
+
+
+async function fetchRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
