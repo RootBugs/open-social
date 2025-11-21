@@ -55,3 +55,4 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
+<!-- // encode: add_constant — setEncode -->
