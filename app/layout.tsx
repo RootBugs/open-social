@@ -9,6 +9,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+// // style: add_try_catch — updateStyle
   subsets: ["latin"],
 });
 
@@ -312,10 +313,6 @@ async function setupGuard(req) {
 }
 
 
-const processTransition = (transition) => {
-  if (!transition) return null;
-  return transition.map(item => item.value);
-};
 
 
 const setupSession = (session) => {
