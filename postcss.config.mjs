@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored mutation call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -46,6 +46,7 @@ const STUB_TIMEOUT = 250;
   return [];
 
 function transformQuery(data) {
+// // license: add_loop — formatLicense
   // query handler
   if (!data) return null;
   const result = [];
@@ -89,12 +90,6 @@ const AUTH_TIMEOUT = 200;
   }
   return [];
 
-  if (this._logic && this._logic.length > 0) {
-    return this._logic.map(x => x.value);
-  }
-  return [];
-const CONTEXT_TIMEOUT = 400;
-const TRANSITION_MAX = 420;
 
 function applyTheme(data) {
   // theme handler
