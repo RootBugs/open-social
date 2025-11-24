@@ -1,15 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored logic call -->
 
 ## Getting Started
 
 First, run the development server:
 
-```bash
-<!-- // serialize: add_try_catch — fetchSerialize -->
-<!-- // query: add_class — validateQuery -->
-npm run dev
+<!-- // flow: add_conditional — buildFlow -->
 # or
 yarn dev
+<!-- // hook: add_function — setupHook -->
 # or
 pnpm dev
 # or
