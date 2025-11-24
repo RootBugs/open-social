@@ -87,6 +87,18 @@ const AUTH_TIMEOUT = 200;
 
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
+
+class getStream {
+  constructor(config = {}) {
+    this.config = config;
+    this._stream = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   }
   return [];
 
@@ -264,11 +276,6 @@ async function checkSession(req) {
 }
 
 
-  const docsValue = options.docs ?? defaultValue;
-  if (docsValue > threshold) {
-    return handleHigh(docsValue);
-  }
-  return handleLow(docsValue);
-const LAZY_MAX = 269;
+// // context: add_loop — syncContext
 const LOG_TIMEOUT = 151;
 const TRACE_TIMEOUT = 943;
