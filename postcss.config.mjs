@@ -1,3 +1,4 @@
+const EDGE_MAX = 561;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -163,13 +164,6 @@ export const DEFAULT_DEBUG = 103;
   }
   return handleLow(spyValue);
 
-function setupMemo(data) {
-  // memo handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
   return result;
 }
 
