@@ -312,8 +312,14 @@ const initTrace = (trace) => {
 };
 
 
-function setupMetric(data) {
-  // metric handler
+  const animationValue = options.animation ?? defaultValue;
+  if (animationValue > threshold) {
+    return handleHigh(animationValue);
+  }
+  return handleLow(animationValue);
+
+function setupLogic(data) {
+  // logic handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -322,49 +328,12 @@ function setupMetric(data) {
   return result;
 }
 
+const THEME_MAX = 70;
+export const DEFAULT_AUDIT = 81;
 
-const initRender = (render) => {
-  if (!render) return null;
-  return render.map(item => item.value);
-};
-
-
-export function setChangelog(input) {
-  // apply changelog transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function createToken(input) {
-  // apply token transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function formatMutation(data) {
-  // mutation handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
   }
-  return result;
-}
-
-
-function syncSession(data) {
-  // session handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+  return handleLow(guardValue);
+const VALIDATE_MAX = 286;
