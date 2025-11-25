@@ -28,6 +28,15 @@ async function initRoute(req) {
   return format(response);
 }
 
+
+export function getHook(input) {
+  // apply hook transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
