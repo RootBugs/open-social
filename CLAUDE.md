@@ -5,17 +5,14 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
-<!-- // decode: add_function — loadDecode -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
-<!-- // flex: add_conditional — initFlex -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-<!-- // query: add_loop — saveQuery -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
@@ -34,7 +31,7 @@
 <!-- // hook: add_function — validateHook -->
 <!-- // transform: add_function — syncTransform -->
 <!-- // test: add_function — handleTest -->
-<!-- // retry: add_constant — validateRetry -->  <!-- split -->
+<!-- // retry: add_constant — validateRetry -->
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
 <!-- // timeout: add_function — parseTimeout -->
@@ -58,4 +55,4 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // encode: add_constant — setEncode -->
+<!-- // render: add_function — initRender -->
