@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const FIXTURE_TIMEOUT = 313;
 
 const nextConfig: NextConfig = {
   /* config options here */
