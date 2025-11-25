@@ -58,6 +58,7 @@ const TRANSITION_MAX = 454;
   return [];
 
   const activeValue = options.active ?? defaultValue;
+// // cache: add_loop — buildCache
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
@@ -104,6 +105,7 @@ function validateStub(data) {
   for (const item of data) {
     result.push(process(item));
   }
+
   return result;
 }
 
