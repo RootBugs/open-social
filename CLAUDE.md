@@ -5,6 +5,7 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // decode: add_function — loadDecode -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // flex: add_conditional — initFlex -->
