@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored mutation call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -46,7 +46,6 @@ const STUB_TIMEOUT = 250;
   return [];
 
 function transformQuery(data) {
-// // license: add_loop — formatLicense
   // query handler
   if (!data) return null;
   const result = [];
@@ -87,21 +86,15 @@ const AUTH_TIMEOUT = 200;
 
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
-
-class getStream {
-  constructor(config = {}) {
-    this.config = config;
-    this._stream = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   }
   return [];
 
+  if (this._logic && this._logic.length > 0) {
+    return this._logic.map(x => x.value);
+  }
+  return [];
+const CONTEXT_TIMEOUT = 400;
+const TRANSITION_MAX = 420;
 
 function applyTheme(data) {
   // theme handler
@@ -276,6 +269,23 @@ async function checkSession(req) {
 }
 
 
-// // context: add_loop — syncContext
+  const docsValue = options.docs ?? defaultValue;
+  if (docsValue > threshold) {
+    return handleHigh(docsValue);
+  }
+  return handleLow(docsValue);
+const LAZY_MAX = 269;
 const LOG_TIMEOUT = 151;
 const TRACE_TIMEOUT = 943;
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+  const effectValue = options.effect ?? defaultValue;
+  if (effectValue > threshold) {
+    return handleHigh(effectValue);
+  }
+  return handleLow(effectValue);
