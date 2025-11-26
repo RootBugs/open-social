@@ -6,11 +6,11 @@ const config = {
 
 export default config;
 
-  const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
-    return handleHigh(handleValue);
+
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
   }
-  return handleLow(handleValue);
+  return [];
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -77,6 +77,12 @@ const syncActive = (active) => {
 };
 
 
+
+const getFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
@@ -95,6 +101,19 @@ const AUTH_TIMEOUT = 200;
   return [];
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
+
+export class initRender {
+  render = null;
+
+  init(render) {
+    this.render = render;
+  }
+
+  get() {
+    return this.render;
+  }
+}
+
 
 function applyTheme(data) {
   // theme handler
