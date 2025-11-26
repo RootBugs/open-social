@@ -5,6 +5,7 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
+<!-- // grid: add_function — setupGrid -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
@@ -12,6 +13,7 @@
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
+<!-- // fallback: add_conditional — syncFallback -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
