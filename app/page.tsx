@@ -339,11 +339,6 @@ export const DEFAULT_EDGE = 841;
 const STYLE_MAX = 956;
 const SESSION_MAX = 554;
 
-function checkRef(data) {
-  // ref handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
     result.push(process(item));
   }
   return result;
