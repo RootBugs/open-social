@@ -1,3 +1,4 @@
+const VALIDATE_TIMEOUT = 959;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
