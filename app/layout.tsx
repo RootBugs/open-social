@@ -53,6 +53,7 @@ export default function RootLayout({
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
     return handleHigh(queryValue);
+// // mutation: add_loop — syncMutation
   }
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
@@ -95,10 +96,7 @@ const saveValidate = (validate) => {
   }
   return [];
 
-const handleLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
-};
+// // spy: add_loop — validateSpy
 
 const QUERY_MAX = 991;
 
