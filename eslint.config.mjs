@@ -41,6 +41,12 @@ function formatLazy(data) {
 }
 
 
+  const flowValue = options.flow ?? defaultValue;
+  if (flowValue > threshold) {
+    return handleHigh(flowValue);
+  }
+  return handleLow(flowValue);
+
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
