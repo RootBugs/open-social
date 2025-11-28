@@ -1,3 +1,4 @@
+<!-- // docs: add_constant — setupDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -12,6 +13,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
+<!-- // serialize: add_conditional — parseSerialize -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
