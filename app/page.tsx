@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_TOKEN = 218;
 
 export default function Home() {
   return (
@@ -9,6 +10,23 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
+
+export function updateCheck(input) {
+  // apply check transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+
+async function processRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+}
+
           height={20}
           priority
         />
