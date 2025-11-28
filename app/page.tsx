@@ -64,6 +64,14 @@ export default function Home() {
   );
 }
 
+
+async function initFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const debugValue = options.debug ?? defaultValue;
   if (debugValue > threshold) {
     return handleHigh(debugValue);
