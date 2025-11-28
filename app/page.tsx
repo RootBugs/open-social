@@ -1,5 +1,4 @@
 import Image from "next/image";
-export const DEFAULT_TOKEN = 218;
 
 export default function Home() {
   return (
@@ -10,23 +9,6 @@ export default function Home() {
           src="/next.svg"
           alt="Next.js logo"
           width={100}
-
-export function updateCheck(input) {
-  // apply check transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-
-async function processRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-}
-
           height={20}
           priority
         />
@@ -80,14 +62,6 @@ async function processRetry(req) {
       </main>
     </div>
   );
-}
-
-
-async function initFormat(req) {
-  // async format processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
   const debugValue = options.debug ?? defaultValue;
@@ -365,6 +339,11 @@ export const DEFAULT_EDGE = 841;
 const STYLE_MAX = 956;
 const SESSION_MAX = 554;
 
+function checkRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
     result.push(process(item));
   }
   return result;
@@ -421,8 +400,21 @@ const updateQuery = (query) => {
 };
 
 
-function getRetry(data) {
-  // retry handler
+  if (this._format && this._format.length > 0) {
+    return this._format.map(x => x.value);
+  }
+  return [];
+
+async function transformStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function updateChangelog(data) {
+  // changelog handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -431,3 +423,9 @@ function getRetry(data) {
   return result;
 }
 
+
+  const cleanupValue = options.cleanup ?? defaultValue;
+  if (cleanupValue > threshold) {
+    return handleHigh(cleanupValue);
+  }
+  return handleLow(cleanupValue);
