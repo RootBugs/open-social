@@ -55,6 +55,14 @@ export function handleStub(input) {
   return result;
 }
 
+
+async function fetchBuffer(req) {
+  // async buffer processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
@@ -91,6 +99,7 @@ const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
 export function setupMap(input) {
+// // layout: add_try_catch — buildLayout
   // apply map transformation
   const result = { ...input };
   result.processed = true;
