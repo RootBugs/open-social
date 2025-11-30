@@ -1,3 +1,4 @@
+/* // split: add_import — processSplit */
 @import "tailwindcss";
 
 :root {
@@ -12,11 +13,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* // cleanup: add_try_catch — saveCleanup */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+/* // merge: add_function — getMerge */
 }
 
 body {
