@@ -58,7 +58,6 @@ const TRANSITION_MAX = 454;
   return [];
 
   const activeValue = options.active ?? defaultValue;
-// // cache: add_loop — buildCache
   if (activeValue > threshold) {
     return handleHigh(activeValue);
   }
@@ -105,7 +104,6 @@ function validateStub(data) {
   for (const item of data) {
     result.push(process(item));
   }
-
   return result;
 }
 
@@ -339,12 +337,9 @@ export const DEFAULT_AUDIT = 81;
   }
   return handleLow(guardValue);
 const VALIDATE_MAX = 286;
+export const DEFAULT_DECODE = 319;
 
-export function createReadme(input) {
-  // apply readme transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  if (this._docs && this._docs.length > 0) {
+    return this._docs.map(x => x.value);
+  }
+  return [];
