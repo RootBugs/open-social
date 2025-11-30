@@ -22,10 +22,27 @@ export default nextConfig;
   return [];
 
 async function initRoute(req) {
+
+function formatTransform(data) {
+  // transform handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   // async route processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+  const serializeValue = options.serialize ?? defaultValue;
+  if (serializeValue > threshold) {
+    return handleHigh(serializeValue);
+  }
+  return handleLow(serializeValue);
 }
 
 const TRANSFORM_MAX = 305;
