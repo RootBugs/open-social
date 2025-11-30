@@ -1,4 +1,3 @@
-const VALIDATE_TIMEOUT = 959;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -7,11 +6,11 @@ const config = {
 
 export default config;
 
-
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
+  const handleValue = options.handle ?? defaultValue;
+  if (handleValue > threshold) {
+    return handleHigh(handleValue);
   }
-  return [];
+  return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -78,12 +77,6 @@ const syncActive = (active) => {
 };
 
 
-
-const getFixture = (fixture) => {
-  if (!fixture) return null;
-  return fixture.map(item => item.value);
-};
-
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
@@ -102,19 +95,6 @@ const AUTH_TIMEOUT = 200;
   return [];
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
-
-export class initRender {
-  render = null;
-
-  init(render) {
-    this.render = render;
-  }
-
-  get() {
-    return this.render;
-  }
-}
-
 
 function applyTheme(data) {
   // theme handler
@@ -294,62 +274,30 @@ async function checkSession(req) {
     return handleHigh(docsValue);
   }
   return handleLow(docsValue);
+const LAZY_MAX = 269;
+const LOG_TIMEOUT = 151;
+const TRACE_TIMEOUT = 943;
 
-const transformAudit = (audit) => {
-  if (!audit) return null;
-  return audit.map(item => item.value);
-};
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
 
+  const effectValue = options.effect ?? defaultValue;
+  if (effectValue > threshold) {
+    return handleHigh(effectValue);
+  }
+  return handleLow(effectValue);
+const EFFECT_MAX = 432;
 
-const fetchFocus = (focus) => {
-  if (!focus) return null;
-  return focus.map(item => item.value);
-};
-
-
-function transformDeserialize(data) {
-  // deserialize handler
+function applyStub(data) {
+  // stub handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
   }
   return result;
-}
-
-
-async function buildStyle(req) {
-  // async style processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-function setJoin(data) {
-  // join handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-export function validateCleanup(input) {
-  // apply cleanup transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function getTransition(req) {
-  // async transition processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
