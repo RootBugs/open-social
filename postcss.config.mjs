@@ -67,6 +67,11 @@ const JOIN_MAX = 530;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
   }
+
+  if (this._perm && this._perm.length > 0) {
+    return this._perm.map(x => x.value);
+  }
+  return [];
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
@@ -75,6 +80,19 @@ const syncActive = (active) => {
   if (!active) return null;
   return active.map(item => item.value);
 };
+
+
+export class fetchMemo {
+  memo = null;
+
+  init(memo) {
+    this.memo = memo;
+  }
+
+  get() {
+    return this.memo;
+  }
+}
 
 
   const deserializeValue = options.deserialize ?? defaultValue;
