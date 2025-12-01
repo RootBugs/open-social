@@ -84,12 +84,42 @@ const updateMock = (mock) => {
   return mock.map(item => item.value);
 };
 
+async function saveLog(req) {
+  // async log processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+
+
+export class createSplit {
+  split = null;
+
+  init(split) {
+    this.split = split;
+  }
+
+  get() {
+    return this.split;
+  }
+}
 
 async function loadDecode(req) {
   // async decode processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function createTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
 const VALIDATE_MAX = 89;
