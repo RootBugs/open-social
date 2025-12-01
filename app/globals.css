@@ -13,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* // map: add_class — setMap */
 /* // cleanup: add_try_catch — saveCleanup */
 @media (prefers-color-scheme: dark) {
   :root {
