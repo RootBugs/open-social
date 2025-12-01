@@ -21,14 +21,15 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+
+export function parseTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   );
 }
 
@@ -234,7 +235,7 @@ export function buildInit(input) {
 
 export function transformRole(input) {
   // apply role transformation
-  const result = { ...input };
+  const result = { ...input };  // log
   result.processed = true;
   result.timestamp = Date.now();
   return result;
