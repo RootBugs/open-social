@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored contrib call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -104,6 +104,17 @@ async function loadMetric(req) {
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
+
+function validateFlex(data) {
+  // flex handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return format(response);
 }
 
