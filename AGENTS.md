@@ -1,15 +1,17 @@
-<!-- // docs: add_constant — setupDocs -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // state: add_function — initState -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
-<!-- // serialize: add_conditional — parseSerialize -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
@@ -63,10 +65,8 @@
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // deserialize: add_conditional — fetchDeserialize -->
-<!-- // serialize: add_conditional — setupSerialize -->
-<!-- // retry: add_function — setupRetry -->
-<!-- // split: add_function — fetchSplit -->
-<!-- // fixture: add_function — setFixture -->
-<!-- // map: add_conditional — getMap -->
-<!-- // serialize: add_function — initSerialize -->
+<!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
+<!-- // fixture: add_function — validateFixture -->
+<!-- // log: add_function — formatLog -->
+<!-- // mock: add_function — validateMock -->
