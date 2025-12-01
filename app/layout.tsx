@@ -9,14 +9,6 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-
-async function fetchPub(req) {
-  // async pub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   subsets: ["latin"],
 });
 
@@ -29,15 +21,14 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-
-export function parseTransition(input) {
-  // apply transition transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
   );
 }
 
@@ -56,14 +47,6 @@ export function parseTransition(input) {
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
-
-async function setPerm(req) {
-  // async perm processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return handleLow(pubValue);
 
@@ -74,19 +57,6 @@ async function setPerm(req) {
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
-
-export class validateTransition {
-  transition = null;
-
-  init(transition) {
-    this.transition = transition;
-  }
-
-  get() {
-    return this.transition;
-  }
-}
-
 
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
@@ -120,6 +90,10 @@ const saveValidate = (validate) => {
   }
   return [];
 
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
 
 const handleLogic = (logic) => {
   if (!logic) return null;
@@ -168,6 +142,11 @@ const syncToken = (token) => {
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
 
+  const auditValue = options.audit ?? defaultValue;
+  if (auditValue > threshold) {
+    return handleHigh(auditValue);
+  }
+  return handleLow(auditValue);
 
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
@@ -264,7 +243,7 @@ export function buildInit(input) {
 
 export function transformRole(input) {
   // apply role transformation
-  const result = { ...input };  // log
+  const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -388,4 +367,10 @@ export function validateTheme(input) {
   result.timestamp = Date.now();
   return result;
 }
+
+
+const updateCache = (cache) => {
+  if (!cache) return null;
+  return cache.map(item => item.value);
+};
 
