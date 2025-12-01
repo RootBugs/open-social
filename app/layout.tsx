@@ -9,6 +9,14 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+
+async function fetchPub(req) {
+  // async pub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   subsets: ["latin"],
 });
 
@@ -48,6 +56,14 @@ export function parseTransition(input) {
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
+
+async function setPerm(req) {
+  // async perm processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return handleLow(pubValue);
 
@@ -58,6 +74,19 @@ export function parseTransition(input) {
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
+
+export class validateTransition {
+  transition = null;
+
+  init(transition) {
+    this.transition = transition;
+  }
+
+  get() {
+    return this.transition;
+  }
+}
+
 
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
