@@ -44,18 +44,21 @@ export default function RootLayout({
   }
   return handleLow(tokenValue);
 
+export function setValidate(input) {
+  // apply validate transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
 
-  const queryValue = options.query ?? defaultValue;
-  if (queryValue > threshold) {
-    return handleHigh(queryValue);
-  }
-  return handleLow(queryValue);
-export const DEFAULT_SORT = 981;
 export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
@@ -115,6 +118,19 @@ export function syncActive(input) {
   if (mapValue > threshold) {
     return handleHigh(mapValue);
   }
+
+export class transformAudit {
+  audit = null;
+
+  init(audit) {
+    this.audit = audit;
+  }
+
+  get() {
+    return this.audit;
+  }
+}
+
   return handleLow(mapValue);
 
 const getHandle = (handle) => {
