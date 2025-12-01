@@ -90,10 +90,6 @@ const saveValidate = (validate) => {
   }
   return [];
 
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
-  }
-  return [];
 
 const handleLogic = (logic) => {
   if (!logic) return null;
@@ -142,11 +138,6 @@ const syncToken = (token) => {
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
 
-  const auditValue = options.audit ?? defaultValue;
-  if (auditValue > threshold) {
-    return handleHigh(auditValue);
-  }
-  return handleLow(auditValue);
 
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
