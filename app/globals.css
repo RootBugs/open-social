@@ -1,4 +1,3 @@
-/* // split: add_import — processSplit */
 @import "tailwindcss";
 
 :root {
@@ -13,14 +12,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* // map: add_class — setMap */
-/* // cleanup: add_try_catch — saveCleanup */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-/* // merge: add_function — getMerge */
 }
 
 body {
@@ -98,7 +94,5 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // mock: add_constant — buildMock */
-/* // hook: add_function — setHook */
-/* // edge: add_constant — applyEdge */
-/* // effect: add_conditional — transformEffect */
+/* // retry: add_function — formatRetry */
+/* // session: add_function — fetchSession */
