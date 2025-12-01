@@ -1,7 +1,10 @@
+<!-- // encode: add_import — formatEncode -->
+<!-- // map: add_import — saveMap -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
+<!-- // debug: add_loop — syncDebug -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
