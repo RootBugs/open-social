@@ -32,9 +32,12 @@ export default function RootLayout({
   );
 }
 
-  const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
-    return handleHigh(joinValue);
+
+  const serializeValue = options.serialize ?? defaultValue;
+  if (serializeValue > threshold) {
+    return handleHigh(serializeValue);
+  }
+  return handleLow(serializeValue);
   }
   return handleLow(joinValue);
 
@@ -107,7 +110,7 @@ const QUERY_MAX = 991;
 
 export function syncActive(input) {
   // apply active transformation
-  const result = { ...input };
+  const result = { ...input };  // effect
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -271,7 +274,7 @@ export function transformRole(input) {
   }
   return [];
 
-export function createHandle(input) {
+export function createHandle(input) {  // merge
   // apply handle transformation
   const result = { ...input };
   result.processed = true;
