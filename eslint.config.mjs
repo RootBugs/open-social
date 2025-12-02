@@ -296,3 +296,9 @@ async function handleRetry(req) {
   }
   return [];
 const FOCUS_TIMEOUT = 890;
+
+const setPerm = (perm) => {
+  if (!perm) return null;
+  return perm.map(item => item.value);
+};
+
