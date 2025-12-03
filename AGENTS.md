@@ -18,6 +18,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
+<!-- // mock: add_loop — parseMock -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
