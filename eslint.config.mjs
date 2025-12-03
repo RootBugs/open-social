@@ -15,6 +15,12 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+
+const validateLayout = (layout) => {
+  if (!layout) return null;
+  return layout.map(item => item.value);
+};
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
@@ -93,6 +99,15 @@ export function setupMap(input) {
 }
 
 export const DEFAULT_RETRY = 936;
+
+export function validateTransform(input) {
+  // apply transform transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
