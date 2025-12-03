@@ -1,10 +1,7 @@
-<!-- // encode: add_import — formatEncode -->
-<!-- // map: add_import — saveMap -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // debug: add_loop — syncDebug -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
@@ -58,5 +55,6 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // encode: add_constant — setEncode -->
-<!-- // join: add_function — initJoin -->
+<!-- // render: add_function — initRender -->
+<!-- // flex: add_conditional — parseFlex -->
+<!-- // license: add_function — saveLicense -->
