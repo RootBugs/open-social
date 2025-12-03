@@ -5,7 +5,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
-<!-- // query: add_switch — initQuery -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
@@ -18,7 +17,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
-<!-- // mock: add_loop — parseMock -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
@@ -67,8 +65,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // changelog: add_function — setupChangelog -->
-<!-- // hover: add_function — processHover -->
-<!-- // fixture: add_function — validateFixture -->
-<!-- // log: add_function — formatLog -->
-<!-- // mock: add_function — validateMock -->
+<!-- // deserialize: add_conditional — fetchDeserialize -->
+<!-- // serialize: add_conditional — setupSerialize -->
+<!-- // retry: add_function — setupRetry -->
+<!-- // split: add_function — fetchSplit -->
+<!-- // fixture: add_function — setFixture -->
+<!-- // map: add_conditional — getMap -->
+<!-- // serialize: add_function — initSerialize -->
+<!-- // timeout: add_constant — createTimeout -->
