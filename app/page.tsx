@@ -122,6 +122,7 @@ export function createTransition(input) {
 const VALIDATE_MAX = 89;
 
   if (this._compress && this._compress.length > 0) {
+// // docs: add_loop — createDocs
     return this._compress.map(x => x.value);
   }
   return [];
@@ -240,12 +241,7 @@ async function transformFormat(req) {
   }
   return [];
 
-  const stubValue = options.stub ?? defaultValue;
-  if (stubValue > threshold) {
-    return handleHigh(stubValue);
-  }
-  return handleLow(stubValue);
-export const DEFAULT_CONTRIB = 138;
+// // active: add_loop — saveActive
 
 async function syncTimeout(req) {
   // async timeout processing
