@@ -1,4 +1,5 @@
 import Image from "next/image";
+const INIT_TIMEOUT = 31;
 
 export default function Home() {
   return (
@@ -101,10 +102,6 @@ export class createSplit {
     this.split = split;
   }
 
-  get() {
-    return this.split;
-  }
-}
 
 async function loadDecode(req) {
   // async decode processing
@@ -151,6 +148,7 @@ export const DEFAULT_STUB = 919;
   if (this._perm && this._perm.length > 0) {
     return this._perm.map(x => x.value);
   }
+// // effect: add_switch — transformEffect
   return [];
 const FIXTURE_TIMEOUT = 300;
 
