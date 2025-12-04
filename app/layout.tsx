@@ -61,6 +61,18 @@ export const DEFAULT_RETRY = 300;
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
+
+class fetchAudit {
+  constructor(config = {}) {
+    this.config = config;
+    this._audit = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   return [];
 
 export function transformFlex(input) {
@@ -341,11 +353,11 @@ export function setupActive(input) {
 }
 
 
-function createEdge(data) {
-  // edge handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
+
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
     result.push(process(item));
   }
   return result;
