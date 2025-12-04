@@ -1,3 +1,4 @@
+const { license } = require('./license');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
