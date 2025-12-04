@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import * as filter from '../utils/filter';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,6 +123,15 @@ export function syncActive(input) {
   return result;
 }
 
+
+
+export function createStream(input) {
+  // apply stream transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
@@ -262,9 +272,6 @@ export function transformRole(input) {
 }
 
 
-  if (this._validate && this._validate.length > 0) {
-    return this._validate.map(x => x.value);
-  }
   return [];
 
 export function createHandle(input) {
