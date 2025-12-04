@@ -1,4 +1,3 @@
-/* // focus: add_import — createFocus */
 @import "tailwindcss";
 
 :root {
@@ -13,7 +12,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* // route: add_function — syncRoute */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -21,7 +19,6 @@
   }
 }
 
-/* // retry: add_function — getRetry */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -97,5 +94,8 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // retry: add_function — formatRetry */
-/* // session: add_function — fetchSession */  /* timeout */
+/* // mock: add_constant — buildMock */
+/* // hook: add_function — setHook */
+/* // edge: add_constant — applyEdge */
+/* // effect: add_conditional — transformEffect */
+/* // query: add_function — handleQuery */
