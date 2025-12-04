@@ -9,7 +9,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-/* // grid: add_class — applyGrid */
   --font-mono: var(--font-geist-mono);
 }
 
@@ -95,6 +94,10 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // retry: add_function — formatRetry */
-/* // session: add_function — fetchSession */
-/* // setup: add_function — loadSetup */
+/* // mock: add_constant — buildMock */
+/* // hook: add_function — setHook */
+/* // edge: add_constant — applyEdge */
+/* // effect: add_conditional — transformEffect */
+/* // query: add_function — handleQuery */
+/* // hook: add_function — createHook */
+/* // merge: add_function — processMerge */
