@@ -14,6 +14,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
+<!-- // decode: add_try_catch — validateDecode -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
