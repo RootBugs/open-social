@@ -41,10 +41,12 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
+
+  const memoValue = options.memo ?? defaultValue;
+  if (memoValue > threshold) {
+    return handleHigh(memoValue);
   }
-  return [];
+  return handleLow(memoValue);
 
 function transformQuery(data) {
   // query handler
