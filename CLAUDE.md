@@ -1,4 +1,3 @@
-<!-- // log: add_constant — fetchLog -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -6,16 +5,12 @@
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
-<!-- // render: add_function — loadRender -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
-<!-- // ref: add_switch — buildRef -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // trace: add_try_catch — setTrace -->
-<!-- // mock: add_switch — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
@@ -39,7 +34,6 @@
 <!-- // retry: add_constant — validateRetry -->
 <!-- // grid: add_constant — applyGrid -->
 <!-- // merge: add_conditional — createMerge -->
-
 <!-- // timeout: add_function — parseTimeout -->
 <!-- // spy: add_function — initSpy -->
 <!-- // audit: add_function — handleAudit -->
@@ -61,6 +55,6 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // render: add_function — initRender -->
-<!-- // flex: add_conditional — parseFlex -->
-<!-- // license: add_function — saveLicense -->
+<!-- // encode: add_constant — setEncode -->
+<!-- // join: add_function — initJoin -->
+<!-- // ref: add_function — setRef -->
