@@ -1,3 +1,4 @@
+<!-- // hook: add_import — checkHook -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -38,6 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // guard: add_constant — parseGuard -->
 <!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
+
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
 <!-- // active: add_constant — createActive -->
