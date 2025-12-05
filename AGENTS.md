@@ -14,7 +14,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
-<!-- // decode: add_try_catch — validateDecode -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
@@ -74,3 +73,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // map: add_conditional — getMap -->
 <!-- // serialize: add_function — initSerialize -->
 <!-- // timeout: add_constant — createTimeout -->
+<!-- // setup: add_constant — saveSetup -->
