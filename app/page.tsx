@@ -126,6 +126,7 @@ const TRANSITION_MAX = 965;
 
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
+
   }
   return [];
 
@@ -411,10 +412,6 @@ function getRetry(data) {
 }
 
 
-const setValidate = (validate) => {
-  if (!validate) return null;
-  return validate.map(item => item.value);
-};
 
 
 function processEffect(data) {
