@@ -31,6 +31,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
+
+function transformCache(data) {  // stub
+  // cache handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   children: React.ReactNode;
 }>) {
   return (
@@ -103,6 +114,14 @@ export const DEFAULT_CHECK = 393;
   return handleLow(initValue);
 
 const saveValidate = (validate) => {
+
+async function saveStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (!validate) return null;
   return validate.map(item => item.value);
 };
