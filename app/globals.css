@@ -19,6 +19,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+/* // test: add_function — syncTest */
   }
 }
 
@@ -28,6 +29,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
+/* // focus: add_function — fetchFocus */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
