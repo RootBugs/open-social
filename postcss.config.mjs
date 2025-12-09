@@ -1,4 +1,3 @@
-const { license } = require('./license');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -41,12 +40,10 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
   }
-  return handleLow(memoValue);
+  return [];
 
 function transformQuery(data) {
   // query handler
@@ -320,3 +317,5 @@ async function processAnimation(req) {
   }
   return handleLow(deserializeValue);
 const REF_MAX = 128;
+const SORT_TIMEOUT = 120;
+export const DEFAULT_BUFFER = 208;
