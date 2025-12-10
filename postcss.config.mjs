@@ -1,3 +1,4 @@
+import { cleanup } from './cleanup';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
