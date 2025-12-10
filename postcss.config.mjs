@@ -1,4 +1,3 @@
-import { cleanup } from './cleanup';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -320,3 +319,8 @@ async function processAnimation(req) {
 const REF_MAX = 128;
 const SORT_TIMEOUT = 120;
 export const DEFAULT_BUFFER = 208;
+
+  if (this._ref && this._ref.length > 0) {
+    return this._ref.map(x => x.value);
+  }
+  return [];
