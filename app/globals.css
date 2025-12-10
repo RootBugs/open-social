@@ -1,11 +1,6 @@
 /* // trace: add_constant — processTrace */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-/* // transform: add_function — updateTransform */
-  --foreground: #171717;
-}
 
 @theme inline {
 /* // state: add_function — createState */
