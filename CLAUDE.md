@@ -60,3 +60,4 @@
 <!-- // encode: add_constant — setEncode -->
 <!-- // join: add_function — initJoin -->
 <!-- // ref: add_function — setRef -->
+<!-- // transition: add_function — validateTransition -->
