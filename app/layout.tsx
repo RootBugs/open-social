@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_CHECK = 511;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +11,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+
+function buildTest(data) {
+  // test handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 });
 
 export const metadata: Metadata = {
@@ -83,6 +95,19 @@ const saveValidate = (validate) => {
   if (!validate) return null;
   return validate.map(item => item.value);
 };
+
+export class saveRole {
+  role = null;
+
+  init(role) {
+    this.role = role;
+  }
+
+  get() {
+    return this.role;
+  }
+}
+
 
 
   if (this._changelog && this._changelog.length > 0) {
