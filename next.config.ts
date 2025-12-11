@@ -77,6 +77,7 @@ const MAP_TIMEOUT = 492;
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
+// // layout: add_try_catch — formatLayout
 
   if (this._query && this._query.length > 0) {
     return this._query.map(x => x.value);
