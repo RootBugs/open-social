@@ -400,21 +400,8 @@ const updateQuery = (query) => {
 };
 
 
-  if (this._format && this._format.length > 0) {
-    return this._format.map(x => x.value);
-  }
-  return [];
-
-async function transformStyle(req) {
-  // async style processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-function updateChangelog(data) {
-  // changelog handler
+function getRetry(data) {
+  // retry handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -424,24 +411,25 @@ function updateChangelog(data) {
 }
 
 
-  const cleanupValue = options.cleanup ?? defaultValue;
-  if (cleanupValue > threshold) {
-    return handleHigh(cleanupValue);
-  }
-  return handleLow(cleanupValue);
+const setValidate = (validate) => {
+  if (!validate) return null;
+  return validate.map(item => item.value);
+};
 
-  const formatValue = options.format ?? defaultValue;
-  if (formatValue > threshold) {
-    return handleHigh(formatValue);
-  }
-  return handleLow(formatValue);
 
-export function handleHook(input) {
-  // apply hook transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function processEffect(data) {
+  // effect handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
-const SESSION_MAX = 58;
+
+const fetchCleanup = (cleanup) => {
+  if (!cleanup) return null;
+  return cleanup.map(item => item.value);
+};
+
