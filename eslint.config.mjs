@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import { query } from './query';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -88,6 +89,11 @@ const setMerge = (merge) => {
 
 const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
+
+  if (this._map && this._map.length > 0) {
+    return this._map.map(x => x.value);
+  }
+  return [];
 const GRID_MAX = 110;
 
 export function setupMap(input) {
@@ -96,6 +102,11 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_RETRY = 936;
