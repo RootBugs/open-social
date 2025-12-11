@@ -73,6 +73,7 @@ export default function Home() {
 const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
+// // grid: add_try_catch — setupGrid
 };
 
 
@@ -90,6 +91,19 @@ const VALIDATE_MAX = 89;
     return this._compress.map(x => x.value);
   }
   return [];
+
+export class setReadme {
+  readme = null;
+
+  init(readme) {
+    this.readme = readme;
+  }
+
+  get() {
+    return this.readme;
+  }
+}
+
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
