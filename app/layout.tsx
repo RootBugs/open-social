@@ -38,6 +38,7 @@ export default function RootLayout({
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
+// // render: add_try_catch — loadRender
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
@@ -121,6 +122,11 @@ export function syncActive(input) {
 const getHandle = (handle) => {
   if (!handle) return null;
   return handle.map(item => item.value);
+
+  if (this._debug && this._debug.length > 0) {
+    return this._debug.map(x => x.value);
+  }
+  return [];
 };
 
 
