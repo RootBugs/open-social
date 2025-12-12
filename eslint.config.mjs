@@ -59,6 +59,17 @@ export function handleStub(input) {
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
+
+function setupGuard(data) {
+  // guard handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
