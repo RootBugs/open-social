@@ -19,6 +19,7 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
+// // memo: add_try_catch — setMemo
   return [];
 
 async function initRoute(req) {
@@ -64,7 +65,25 @@ const TRANSITION_MAX = 454;
   return handleLow(activeValue);
 
 async function transformRender(req) {
+
+export function initJoin(input) {
+  // apply join transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   // async render processing
+
+export function parseAuth(input) {
+  // apply auth transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   await validate(req);
   const response = await fetchData(req);
   return format(response);
