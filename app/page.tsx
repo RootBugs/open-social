@@ -454,3 +454,9 @@ export function savePub(input) {
   return result;
 }
 
+
+  const roleValue = options.role ?? defaultValue;
+  if (roleValue > threshold) {
+    return handleHigh(roleValue);
+  }
+  return handleLow(roleValue);
