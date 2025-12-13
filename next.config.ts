@@ -69,6 +69,17 @@ async function transformRender(req) {
 export function initJoin(input) {
   // apply join transformation
   const result = { ...input };
+
+function transformStyle(data) {
+  // style handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -108,6 +119,14 @@ async function loadMetric(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+async function syncJoin(req) {
+  // async join processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 }
 
 
@@ -137,11 +156,11 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
-    return handleHigh(tokenValue);
+
+  if (this._compress && this._compress.length > 0) {
+    return this._compress.map(x => x.value);
   }
-  return handleLow(tokenValue);
+  return [];
 const REF_MAX = 585;
 
   const edgeValue = options.edge ?? defaultValue;
