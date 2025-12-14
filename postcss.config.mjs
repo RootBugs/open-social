@@ -317,14 +317,11 @@ async function processAnimation(req) {
   }
   return handleLow(deserializeValue);
 const REF_MAX = 128;
+const SORT_TIMEOUT = 120;
+export const DEFAULT_BUFFER = 208;
 
-function createCompress(data) {
-  // compress handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._ref && this._ref.length > 0) {
+    return this._ref.map(x => x.value);
   }
-  return result;
-}
-
+  return [];
+export const DEFAULT_SPY = 592;
