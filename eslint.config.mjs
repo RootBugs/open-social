@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import { query } from './query';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -15,12 +14,6 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
   ]),
 ]);
-
-
-const validateLayout = (layout) => {
-  if (!layout) return null;
-  return layout.map(item => item.value);
-};
 
 export default eslintConfig;
 
@@ -59,17 +52,6 @@ export function handleStub(input) {
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
-
-function setupGuard(data) {
-  // guard handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
@@ -100,11 +82,6 @@ const setMerge = (merge) => {
 
 const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
-
-  if (this._map && this._map.length > 0) {
-    return this._map.map(x => x.value);
-  }
-  return [];
 const GRID_MAX = 110;
 
 export function setupMap(input) {
@@ -113,23 +90,9 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
-  }
-  return [];
 }
 
 export const DEFAULT_RETRY = 936;
-
-export function validateTransform(input) {
-  // apply transform transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
@@ -357,4 +320,12 @@ const checkFocus = (focus) => {
   if (!focus) return null;
   return focus.map(item => item.value);
 };
+
+
+async function setParse(req) {
+  // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
