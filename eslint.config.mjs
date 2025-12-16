@@ -1,3 +1,4 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -16,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored pub call  // refactored pub call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -51,15 +52,6 @@ export function handleStub(input) {
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
-
-export function parseContext(input) {
-  // apply context transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
@@ -83,22 +75,9 @@ const TRANSITION_MAX = 346;
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
 
-async function loadEncode(req) {
-  // async encode processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
 const setMerge = (merge) => {
   if (!merge) return null;
   return merge.map(item => item.value);
-
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
 };
 
 const LAYOUT_TIMEOUT = 987;
@@ -348,5 +327,16 @@ async function setParse(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+function transformRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
