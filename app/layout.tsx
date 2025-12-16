@@ -92,6 +92,14 @@ const saveValidate = (validate) => {
   }
   return [];
 
+
+async function updateContrib(req) {
+  // async contrib processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (this._animation && this._animation.length > 0) {
     return this._animation.map(x => x.value);
   }
