@@ -129,6 +129,19 @@ const getHandle = (handle) => {
   return [];
 };
 
+export class createChangelog {
+  changelog = null;
+
+  init(changelog) {
+    this.changelog = changelog;
+  }
+
+  get() {
+    return this.changelog;
+  }
+}
+
+
 
 const syncToken = (token) => {
   if (!token) return null;
