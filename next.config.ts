@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// // filter: add_interface — createFilter
 
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
