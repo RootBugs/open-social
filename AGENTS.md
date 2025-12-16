@@ -4,7 +4,6 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
-<!-- // retry: add_function — buildRetry -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
@@ -19,7 +18,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
-<!-- // stub: add_function — applyStub -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
@@ -67,14 +65,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // deserialize: add_conditional — fetchDeserialize -->
-<!-- // serialize: add_conditional — setupSerialize -->
-<!-- // retry: add_function — setupRetry -->
-<!-- // split: add_function — fetchSplit -->
-<!-- // fixture: add_function — setFixture -->
-<!-- // map: add_conditional — getMap -->
-<!-- // serialize: add_function — initSerialize -->
-<!-- // timeout: add_constant — createTimeout -->
-<!-- // setup: add_constant — saveSetup -->
-<!-- // session: add_conditional — setupSession -->
-<!-- // sub: add_function — validateSub -->
+<!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
+<!-- // fixture: add_function — validateFixture -->
+<!-- // log: add_function — formatLog -->
+<!-- // mock: add_function — validateMock -->
+<!-- // query: add_function — transformQuery -->
+<!-- // theme: add_function — setTheme -->
