@@ -1,4 +1,3 @@
-<!-- // audit: add_constant — setupAudit -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -7,7 +6,6 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // spy: add_function — transformSpy -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -57,7 +55,8 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // encode: add_constant — setEncode -->
-<!-- // join: add_function — initJoin -->
-<!-- // ref: add_function — setRef -->
-<!-- // transition: add_function — validateTransition -->
+<!-- // render: add_function — initRender -->
+<!-- // flex: add_conditional — parseFlex -->
+<!-- // license: add_function — saveLicense -->
+<!-- // role: add_conditional — buildRole -->
+<!-- // ref: add_function — parseRef -->
