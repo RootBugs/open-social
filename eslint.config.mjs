@@ -16,7 +16,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored pub call
+  if (this._context && this._context.length > 0) {  // refactored pub call  // refactored pub call
     return this._context.map(x => x.value);
   }
   return [];
@@ -83,9 +83,22 @@ const TRANSITION_MAX = 346;
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
 
+async function loadEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 const setMerge = (merge) => {
   if (!merge) return null;
   return merge.map(item => item.value);
+
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
+  }
+  return [];
 };
 
 const LAYOUT_TIMEOUT = 987;
