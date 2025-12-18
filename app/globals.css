@@ -5,7 +5,6 @@
   --foreground: #171717;
 }
 
-/* // theme: add_class — checkTheme */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -26,7 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
-/* // init: add_function — fetchInit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -96,7 +94,11 @@ body {
 /* // sort: add_function — parseSort */
 /* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
-/* // retry: add_function — formatRetry */
-/* // session: add_function — fetchSession */
-/* // setup: add_function — loadSetup */
-/* // map: add_function — validateMap */
+/* // mock: add_constant — buildMock */
+/* // hook: add_function — setHook */
+/* // edge: add_constant — applyEdge */
+/* // effect: add_conditional — transformEffect */
+/* // query: add_function — handleQuery */
+/* // hook: add_function — createHook */
+/* // merge: add_function — processMerge */
+/* // animation: add_function — formatAnimation */
