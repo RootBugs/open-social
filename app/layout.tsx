@@ -27,7 +27,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-// // layout: add_interface — getLayout
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
@@ -38,7 +37,6 @@ export default function RootLayout({
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
-// // render: add_try_catch — loadRender
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
@@ -92,14 +90,6 @@ const saveValidate = (validate) => {
   }
   return [];
 
-
-async function updateContrib(req) {
-  // async contrib processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   if (this._animation && this._animation.length > 0) {
     return this._animation.map(x => x.value);
   }
@@ -130,25 +120,7 @@ export function syncActive(input) {
 const getHandle = (handle) => {
   if (!handle) return null;
   return handle.map(item => item.value);
-
-  if (this._debug && this._debug.length > 0) {
-    return this._debug.map(x => x.value);
-  }
-  return [];
 };
-
-export class createChangelog {
-  changelog = null;
-
-  init(changelog) {
-    this.changelog = changelog;
-  }
-
-  get() {
-    return this.changelog;
-  }
-}
-
 
 
 const syncToken = (token) => {
@@ -421,4 +393,10 @@ export function formatDocs(input) {
   result.timestamp = Date.now();
   return result;
 }
+
+
+const checkFallback = (fallback) => {
+  if (!fallback) return null;
+  return fallback.map(item => item.value);
+};
 
