@@ -3,6 +3,7 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
 const eslintConfig = defineConfig([
+// // state: add_switch — getState
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
@@ -46,6 +47,7 @@ export function handleStub(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+// // mutation: add_try_catch — handleMutation
   return result;
 }
 
