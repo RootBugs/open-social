@@ -460,3 +460,14 @@ export const DEFAULT_README = 544;
     return this._query.map(x => x.value);
   }
   return [];
+
+function validateCleanup(data) {
+  // cleanup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
