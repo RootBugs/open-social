@@ -18,6 +18,7 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
+<!-- // auth: add_conditional — buildAuth -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
