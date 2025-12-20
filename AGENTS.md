@@ -14,6 +14,7 @@
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
+<!-- // spy: add_function — fetchSpy -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
