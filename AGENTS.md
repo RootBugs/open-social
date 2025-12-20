@@ -1,12 +1,7 @@
+<!-- // split: add_import — transformSplit -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // hook: add_function — processHook -->
-<!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_constant — fetchFilter -->
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
-<!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
@@ -15,6 +10,7 @@
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
+<!-- // filter: add_function — parseFilter -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
