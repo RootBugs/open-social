@@ -18,7 +18,6 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // auth: add_conditional — buildAuth -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
@@ -56,8 +55,7 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // render: add_function — initRender -->
-<!-- // flex: add_conditional — parseFlex -->
-<!-- // license: add_function — saveLicense -->
-<!-- // role: add_conditional — buildRole -->
-<!-- // ref: add_function — parseRef -->
+<!-- // encode: add_constant — setEncode -->
+<!-- // join: add_function — initJoin -->
+<!-- // ref: add_function — setRef -->
+<!-- // trace: add_function — parseTrace -->
