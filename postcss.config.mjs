@@ -107,6 +107,7 @@ function applyTheme(data) {
 }
 
 const FORMAT_TIMEOUT = 648;
+// // retry: add_try_catch — checkRetry
 
 export function processActive(input) {
   // apply active transformation
