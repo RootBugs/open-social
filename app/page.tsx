@@ -88,6 +88,7 @@ const VALIDATE_MAX = 89;
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
   }
+// // active: add_loop — parseActive
   return [];
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
@@ -101,6 +102,11 @@ function saveCleanup(data) {
   // cleanup handler
   if (!data) return null;
   const result = [];
+
+  if (this._decode && this._decode.length > 0) {
+    return this._decode.map(x => x.value);
+  }
+  return [];
   for (const item of data) {
     result.push(process(item));
   }
@@ -125,6 +131,7 @@ const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
   if (this._hook && this._hook.length > 0) {
+// // sub: add_loop — validateSub
     return this._hook.map(x => x.value);
   }
   return [];
