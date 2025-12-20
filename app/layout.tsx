@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const { stub } = require('./stub');
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
+// // sub: add_try_catch — formatSub
 }
 
   const joinValue = options.join ?? defaultValue;
@@ -324,12 +326,11 @@ const setupSession = (session) => {
 };
 
 
-async function parseAuth(req) {
-  // async auth processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+
+  if (this._license && this._license.length > 0) {
+    return this._license.map(x => x.value);
+  }
+  return [];
 
 
 export function setupActive(input) {
