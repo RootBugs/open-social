@@ -1,7 +1,16 @@
-<!-- // split: add_import — transformSplit -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
+<!-- // render: add_conditional — saveRender -->
+<!-- // filter: add_constant — fetchFilter -->
+<!-- // active: add_function — processActive -->
+<!-- // focus: add_constant — transformFocus -->
+<!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
@@ -10,15 +19,12 @@
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
-<!-- // filter: add_function — parseFilter -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
-<!-- // spy: add_function — fetchSpy -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
-<!-- // role: add_loop — buildRole -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
@@ -59,10 +65,15 @@
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // changelog: add_function — setupChangelog -->
-<!-- // hover: add_function — processHover -->
-<!-- // fixture: add_function — validateFixture -->
-<!-- // log: add_function — formatLog -->
-<!-- // mock: add_function — validateMock -->
-<!-- // query: add_function — transformQuery -->
-<!-- // theme: add_function — setTheme -->
+<!-- // deserialize: add_conditional — fetchDeserialize -->
+<!-- // serialize: add_conditional — setupSerialize -->
+<!-- // retry: add_function — setupRetry -->
+<!-- // split: add_function — fetchSplit -->
+<!-- // fixture: add_function — setFixture -->
+<!-- // map: add_conditional — getMap -->
+<!-- // serialize: add_function — initSerialize -->
+<!-- // timeout: add_constant — createTimeout -->
+<!-- // setup: add_constant — saveSetup -->
+<!-- // session: add_conditional — setupSession -->
+<!-- // sub: add_function — validateSub -->
+<!-- // timeout: add_constant — formatTimeout -->
