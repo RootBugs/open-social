@@ -471,3 +471,4 @@ function setupLog(data) {
   return result;
 }
 
+export const DEFAULT_LAYOUT = 514;
