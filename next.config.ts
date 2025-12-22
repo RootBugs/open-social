@@ -317,10 +317,6 @@ export function getStyle(input) {
   }
   return handleLow(tokenValue);
 
-const initTrace = (trace) => {
-  if (!trace) return null;
-  return trace.map(item => item.value);
-};
 
 
   const animationValue = options.animation ?? defaultValue;
