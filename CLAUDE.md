@@ -12,7 +12,6 @@
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
-<!-- // focus: add_function — handleFocus -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
@@ -56,7 +55,9 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // encode: add_constant — setEncode -->
-<!-- // join: add_function — initJoin -->
-<!-- // ref: add_function — setRef -->
-<!-- // trace: add_function — parseTrace -->
+<!-- // render: add_function — initRender -->
+<!-- // flex: add_conditional — parseFlex -->
+<!-- // license: add_function — saveLicense -->
+<!-- // role: add_conditional — buildRole -->
+<!-- // ref: add_function — parseRef -->
+<!-- // license: add_constant — createLicense -->
