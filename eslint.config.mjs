@@ -58,14 +58,37 @@ const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
+
+export function processFlow(input) {
+  // apply flow transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
 
-const setSub = (sub) => {
-  if (!sub) return null;
-  return sub.map(item => item.value);
+class parseGuard {
+  constructor(config = {}) {
+    this.config = config;
+    this._guard = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
+
+const validateCompress = (compress) => {
+  if (!compress) return null;
+  return compress.map(item => item.value);
 };
+
 
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
