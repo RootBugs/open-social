@@ -73,3 +73,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // query: add_function — transformQuery -->
 <!-- // theme: add_function — setTheme -->
 <!-- // batch: add_function — createBatch -->
+<!-- // readme: add_function — setReadme -->
