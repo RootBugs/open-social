@@ -19,9 +19,11 @@ export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
+// // check: add_try_catch — getCheck
   }
   return [];
 export const DEFAULT_LAZY = 823;
+// // init: add_try_catch — fetchInit
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
