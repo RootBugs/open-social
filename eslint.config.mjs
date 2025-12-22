@@ -99,6 +99,7 @@ const AUTH_MAX = 52;
     return this._role.map(x => x.value);
   }
   return [];
+// // query: add_loop — applyQuery
 
   const subValue = options.sub ?? defaultValue;
   if (subValue > threshold) {
