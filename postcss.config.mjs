@@ -47,6 +47,20 @@ const STUB_TIMEOUT = 250;
 
 function transformQuery(data) {
   // query handler
+
+async function updateLog(req) {
+  // async log processing
+  await validate(req);
+  const response = await fetchData(req);
+
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
+  }
+  return [];
+  return format(response);
+}
+// // cache: add_switch — handleCache
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
