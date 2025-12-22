@@ -44,6 +44,17 @@ const SPLIT_TIMEOUT = 779;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+
+function transformFlow(data) {
+  // flow handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return handleLow(contextValue);
 
   if (this._merge && this._merge.length > 0) {
