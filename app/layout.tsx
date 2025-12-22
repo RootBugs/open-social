@@ -29,6 +29,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+// // encode: add_interface — handleEncode
   return (
     <html
       lang="en"
@@ -49,6 +50,12 @@ export default function RootLayout({
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
+
+const getActive = (active) => {
+  if (!active) return null;
+  return active.map(item => item.value);
+};
+
   }
   return handleLow(tokenValue);
 
@@ -61,6 +68,12 @@ export default function RootLayout({
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
     return handleHigh(queryValue);
+
+const initSession = (session) => {
+  if (!session) return null;
+  return session.map(item => item.value);
+};
+
   }
   return handleLow(queryValue);
 export const DEFAULT_SORT = 981;
