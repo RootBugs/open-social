@@ -98,6 +98,12 @@ const syncActive = (active) => {
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
 
+const processRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
+
+
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
   }
@@ -326,10 +332,6 @@ async function processAnimation(req) {
 }
 
 
-  const deserializeValue = options.deserialize ?? defaultValue;
-  if (deserializeValue > threshold) {
-    return handleHigh(deserializeValue);
-  }
   return handleLow(deserializeValue);
 const REF_MAX = 128;
 const SORT_TIMEOUT = 120;
@@ -341,10 +343,11 @@ export const DEFAULT_BUFFER = 208;
   return [];
 export const DEFAULT_SPY = 592;
 
-function handleMemo(data) {
-  // memo handler
-  if (!data) return null;
-  const result = [];
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
   for (const item of data) {
     result.push(process(item));
   }
