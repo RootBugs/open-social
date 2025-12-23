@@ -36,6 +36,12 @@ export default function RootLayout({
   if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
+
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
+    return handleHigh(spyValue);
+  }
+  return handleLow(spyValue);
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
@@ -115,6 +121,14 @@ export function syncActive(input) {
   if (mapValue > threshold) {
     return handleHigh(mapValue);
   }
+
+async function fetchCheck(req) {
+  // async check processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(mapValue);
 
 const getHandle = (handle) => {
