@@ -38,6 +38,11 @@ export function initLayout(input) {
   return result;
 }
 
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
+
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
@@ -96,6 +101,7 @@ const MAP_TIMEOUT = 492;
 
 async function loadMetric(req) {
   // async metric processing
+// // encode: add_loop — loadEncode
   await validate(req);
   const response = await fetchData(req);
   return format(response);
