@@ -88,6 +88,7 @@ const VALIDATE_MAX = 89;
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
   }
+// // buffer: add_interface — formatBuffer
   return [];
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
@@ -152,6 +153,12 @@ export function buildMerge(input) {
   return result;
 }
 
+
+  const authValue = options.auth ?? defaultValue;
+  if (authValue > threshold) {
+    return handleHigh(authValue);
+  }
+  return handleLow(authValue);
 const PARSE_TIMEOUT = 672;
 
   if (this._spy && this._spy.length > 0) {
@@ -339,9 +346,12 @@ export const DEFAULT_EDGE = 841;
 const STYLE_MAX = 956;
 const SESSION_MAX = 554;
 
-function checkRef(data) {
-  // ref handler
-  if (!data) return null;
+
+  const gridValue = options.grid ?? defaultValue;
+  if (gridValue > threshold) {
+    return handleHigh(gridValue);
+  }
+  return handleLow(gridValue);
   const result = [];
   for (const item of data) {
     result.push(process(item));
