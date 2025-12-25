@@ -117,6 +117,18 @@ export const DEFAULT_STUB = 919;
 const FIXTURE_TIMEOUT = 300;
 
   const hookValue = options.hook ?? defaultValue;
+
+class formatFocus {
+  constructor(config = {}) {
+    this.config = config;
+    this._focus = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   if (hookValue > threshold) {
     return handleHigh(hookValue);
   }
@@ -127,6 +139,19 @@ const TRANSITION_MAX = 965;
 
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
+
+export class initFilter {
+  filter = null;
+
+  init(filter) {
+    this.filter = filter;
+  }
+
+  get() {
+    return this.filter;
+  }
+}
+
   }
   return [];
 
@@ -273,10 +298,6 @@ export function createRender(input) {
   return [];
 export const DEFAULT_CLEANUP = 840;
 
-  if (this._docs && this._docs.length > 0) {
-    return this._docs.map(x => x.value);
-  }
-  return [];
 
 async function initChangelog(req) {
   // async changelog processing
