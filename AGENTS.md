@@ -1,3 +1,4 @@
+<!-- // format: add_constant — syncFormat -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -15,7 +16,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
+<!-- // changelog: add_function — processChangelog -->
 <!-- // docs: add_function — processDocs -->
+<!-- // split: add_function — saveSplit -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
