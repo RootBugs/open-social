@@ -47,20 +47,6 @@ const STUB_TIMEOUT = 250;
 
 function transformQuery(data) {
   // query handler
-
-async function updateLog(req) {
-  // async log processing
-  await validate(req);
-  const response = await fetchData(req);
-
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
-  return format(response);
-}
-// // cache: add_switch — handleCache
-
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -98,12 +84,6 @@ const syncActive = (active) => {
   return handleLow(deserializeValue);
 const AUTH_TIMEOUT = 200;
 
-const processRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
-};
-
-
   if (this._lazy && this._lazy.length > 0) {
     return this._lazy.map(x => x.value);
   }
@@ -127,7 +107,6 @@ function applyTheme(data) {
 }
 
 const FORMAT_TIMEOUT = 648;
-// // retry: add_try_catch — checkRetry
 
 export function processActive(input) {
   // apply active transformation
@@ -332,6 +311,10 @@ async function processAnimation(req) {
 }
 
 
+  const deserializeValue = options.deserialize ?? defaultValue;
+  if (deserializeValue > threshold) {
+    return handleHigh(deserializeValue);
+  }
   return handleLow(deserializeValue);
 const REF_MAX = 128;
 const SORT_TIMEOUT = 120;
@@ -343,11 +326,21 @@ export const DEFAULT_BUFFER = 208;
   return [];
 export const DEFAULT_SPY = 592;
 
-
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
+function handleMemo(data) {
+  // memo handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
+
+function initLog(data) {
+  // log handler
+  if (!data) return null;
+  const result = [];
   for (const item of data) {
     result.push(process(item));
   }
