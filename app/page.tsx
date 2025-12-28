@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { serialize } from './serialize';
 
 export default function Home() {
   return (
@@ -124,6 +125,7 @@ const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
+// // layout: add_try_catch — initLayout
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
   }
