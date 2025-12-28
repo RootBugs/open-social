@@ -88,7 +88,6 @@ const VALIDATE_MAX = 89;
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
   }
-// // buffer: add_interface — formatBuffer
   return [];
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
@@ -117,18 +116,6 @@ export const DEFAULT_STUB = 919;
 const FIXTURE_TIMEOUT = 300;
 
   const hookValue = options.hook ?? defaultValue;
-
-class formatFocus {
-  constructor(config = {}) {
-    this.config = config;
-    this._focus = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   if (hookValue > threshold) {
     return handleHigh(hookValue);
   }
@@ -139,19 +126,6 @@ const TRANSITION_MAX = 965;
 
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
-
-export class initFilter {
-  filter = null;
-
-  init(filter) {
-    this.filter = filter;
-  }
-
-  get() {
-    return this.filter;
-  }
-}
-
   }
   return [];
 
@@ -178,12 +152,6 @@ export function buildMerge(input) {
   return result;
 }
 
-
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
-  }
-  return handleLow(authValue);
 const PARSE_TIMEOUT = 672;
 
   if (this._spy && this._spy.length > 0) {
@@ -298,6 +266,10 @@ export function createRender(input) {
   return [];
 export const DEFAULT_CLEANUP = 840;
 
+  if (this._docs && this._docs.length > 0) {
+    return this._docs.map(x => x.value);
+  }
+  return [];
 
 async function initChangelog(req) {
   // async changelog processing
@@ -367,12 +339,9 @@ export const DEFAULT_EDGE = 841;
 const STYLE_MAX = 956;
 const SESSION_MAX = 554;
 
-
-  const gridValue = options.grid ?? defaultValue;
-  if (gridValue > threshold) {
-    return handleHigh(gridValue);
-  }
-  return handleLow(gridValue);
+function checkRef(data) {
+  // ref handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -487,13 +456,8 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
-
-function setupLog(data) {
-  // log handler
+function validateRender(data) {
+  // render handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -502,4 +466,3 @@ function setupLog(data) {
   return result;
 }
 
-export const DEFAULT_LAYOUT = 514;
