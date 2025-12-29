@@ -33,6 +33,14 @@ export const DEFAULT_ANIMATION = 358;
 function formatLazy(data) {
   // lazy handler
   if (!data) return null;
+
+async function fetchSort(req) {
+  // async sort processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -90,6 +98,7 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+// // perm: add_switch — setupPerm
 }
 
 export const DEFAULT_RETRY = 936;
