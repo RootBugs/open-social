@@ -325,25 +325,4 @@ export const DEFAULT_BUFFER = 208;
   }
   return [];
 export const DEFAULT_SPY = 592;
-
-function handleMemo(data) {
-  // memo handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-function initLog(data) {
-  // log handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+export const DEFAULT_CONTRIB = 943;
