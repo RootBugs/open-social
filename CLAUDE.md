@@ -61,3 +61,5 @@
 <!-- // role: add_conditional — buildRole -->
 <!-- // ref: add_function — parseRef -->
 <!-- // license: add_constant — createLicense -->
+<!-- // hover: add_constant — syncHover -->
+<!-- // logic: add_constant — updateLogic -->
