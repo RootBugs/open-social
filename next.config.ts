@@ -38,28 +38,12 @@ export function initLayout(input) {
   return result;
 }
 
-  if (this._session && this._session.length > 0) {
-    return this._session.map(x => x.value);
-  }
-  return [];
-
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
-
-function transformFlow(data) {
-  // flow handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   return handleLow(contextValue);
 
   if (this._merge && this._merge.length > 0) {
@@ -101,7 +85,6 @@ const MAP_TIMEOUT = 492;
 
 async function loadMetric(req) {
   // async metric processing
-// // encode: add_loop — loadEncode
   await validate(req);
   const response = await fetchData(req);
   return format(response);
@@ -323,6 +306,10 @@ export function getStyle(input) {
   }
   return handleLow(tokenValue);
 
+const initTrace = (trace) => {
+  if (!trace) return null;
+  return trace.map(item => item.value);
+};
 
 
   const animationValue = options.animation ?? defaultValue;
@@ -370,6 +357,14 @@ export function loadJoin(input) {
 
 
 async function updateRole(req) {
+  // async role processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function parseRole(req) {
   // async role processing
   await validate(req);
   const response = await fetchData(req);
