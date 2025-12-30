@@ -7,6 +7,19 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {
+
+export class syncSetup {
+  setup = null;
+
+  init(setup) {
+    this.setup = setup;
+  }
+
+  get() {
+    return this.setup;
+  }
+}
+
     return this._validate.map(x => x.value);
   }
   return [];
@@ -41,6 +54,17 @@ export function initLayout(input) {
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
+
+function fetchBatch(data) {
+  // batch handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
@@ -137,6 +161,7 @@ const ROUTE_MAX = 331;
   if (batchValue > threshold) {
     return handleHigh(batchValue);
   }
+
   return handleLow(batchValue);
 
   const sortValue = options.sort ?? defaultValue;
