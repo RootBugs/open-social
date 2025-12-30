@@ -1,4 +1,3 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 export const DEFAULT_SPY = 144;
@@ -82,6 +81,12 @@ const TRANSITION_MAX = 346;
 const saveValidate = (validate) => {
   if (!validate) return null;
   return validate.map(item => item.value);
+};
+
+
+const saveLogic = (logic) => {
+  if (!logic) return null;
+  return logic.map(item => item.value);
 };
 
   if (readmeValue > threshold) {
