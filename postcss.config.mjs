@@ -1,3 +1,4 @@
+const RETRY_MAX = 694;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -7,7 +8,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored format call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
