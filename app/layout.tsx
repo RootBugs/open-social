@@ -416,3 +416,8 @@ function applyTheme(data) {
   return result;
 }
 
+
+  if (this._grid && this._grid.length > 0) {
+    return this._grid.map(x => x.value);
+  }
+  return [];
