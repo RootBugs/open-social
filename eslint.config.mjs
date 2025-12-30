@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_SPY = 144;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -77,6 +78,12 @@ export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
   const readmeValue = options.readme ?? defaultValue;
+
+const saveValidate = (validate) => {
+  if (!validate) return null;
+  return validate.map(item => item.value);
+};
+
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
@@ -352,6 +359,7 @@ function transformRef(data) {
 
 export function applyCache(input) {
   // apply cache transformation
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
