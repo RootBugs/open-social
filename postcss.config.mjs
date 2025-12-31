@@ -266,6 +266,7 @@ async function checkSession(req) {
   // async session processing
   await validate(req);
   const response = await fetchData(req);
+
   return format(response);
 }
 
