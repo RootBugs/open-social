@@ -77,6 +77,15 @@ export const DEFAULT_CHECK = 393;
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
+
+export function fetchTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(initValue);
 
 const saveValidate = (validate) => {
@@ -129,11 +138,7 @@ const syncToken = (token) => {
 };
 
 
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
-  }
-  return handleLow(mapValue);
+// // merge: add_loop — setupMerge
 
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
@@ -211,11 +216,12 @@ const HANDLE_MAX = 996;
   return [];
 export const DEFAULT_AUDIT = 427;
 
-  if (this._active && this._active.length > 0) {
-    return this._active.map(x => x.value);
-  }
-  return [];
-const TIMEOUT_MAX = 893;
+
+const checkContext = (context) => {
+  if (!context) return null;
+  return context.map(item => item.value);
+};
+
 const METRIC_MAX = 152;
 
 async function saveLog(req) {
