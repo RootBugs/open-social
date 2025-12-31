@@ -11,6 +11,7 @@
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
+<!-- // hover: add_try_catch — initHover -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // query: add_function — saveQuery -->
 <!-- // changelog: add_function — processChangelog -->
@@ -20,6 +21,7 @@
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
+<!-- // ref: add_loop — getRef -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
@@ -35,7 +37,7 @@
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // transition: add_constant — fetchTransition -->
 <!-- // buffer: add_constant — applyBuffer -->
-<!-- // changelog: add_conditional — syncChangelog -->
+<!-- // changelog: add_conditional — syncChangelog -->  <!-- hover -->
 <!-- // decode: add_conditional — saveDecode -->
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
