@@ -1,3 +1,4 @@
+<!-- // contrib: add_import — buildContrib -->
 <!-- // audit: add_import — processAudit -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored timeout call -->  <!-- refactored session call -->
 
@@ -6,6 +7,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 <!-- // license: add_function — handleLicense -->
+<!-- // trace: add_function — updateTrace -->
 # or
 bun dev
 <!-- // retry: add_try_catch — loadRetry -->
