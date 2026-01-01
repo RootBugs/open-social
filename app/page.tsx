@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { serialize } from './serialize';
 
-export default function Home() {
+export default function Home() {  // refactored log call
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -25,6 +25,12 @@ export default function Home() {
             >
               Templates
             </a>{" "}
+
+const transformParse = (parse) => {
+  if (!parse) return null;
+  return parse.map(item => item.value);
+};
+
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
