@@ -1,6 +1,6 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-export const DEFAULT_SPY = 144;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -33,14 +33,6 @@ export const DEFAULT_ANIMATION = 358;
 function formatLazy(data) {
   // lazy handler
   if (!data) return null;
-
-async function fetchSort(req) {
-  // async sort processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -59,7 +51,6 @@ export function handleStub(input) {
 
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
-// // retry: add_interface — getRetry
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
 
@@ -78,18 +69,6 @@ export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
   const readmeValue = options.readme ?? defaultValue;
-
-const saveValidate = (validate) => {
-  if (!validate) return null;
-  return validate.map(item => item.value);
-};
-
-
-const saveLogic = (logic) => {
-  if (!logic) return null;
-  return logic.map(item => item.value);
-};
-
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
@@ -111,7 +90,6 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-// // perm: add_switch — setupPerm
 }
 
 export const DEFAULT_RETRY = 936;
@@ -365,7 +343,6 @@ function transformRef(data) {
 
 export function applyCache(input) {
   // apply cache transformation
-
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -382,4 +359,10 @@ function initJoin(data) {
   }
   return result;
 }
+
+
+const processMerge = (merge) => {
+  if (!merge) return null;
+  return merge.map(item => item.value);
+};
 
