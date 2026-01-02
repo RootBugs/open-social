@@ -3,10 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
 };
+// // mutation: add_try_catch — transformMutation
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored retry call
 
 export class syncSetup {
   setup = null;
@@ -42,6 +43,17 @@ async function initRoute(req) {
 }
 
 const TRANSFORM_MAX = 305;
+
+
+function initRetry(data) {
+  // retry handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
 export function initLayout(input) {
   // apply layout transformation
