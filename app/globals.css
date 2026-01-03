@@ -4,9 +4,10 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* // retry: add_try_catch — applyRetry */
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored filter call */  /* refactored memo call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
