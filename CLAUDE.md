@@ -10,6 +10,7 @@
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
+<!-- // setup: add_class — applySetup -->
 <!-- // deserialize: add_try_catch — checkDeserialize -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
