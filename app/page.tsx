@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { serialize } from './serialize';
 
-export default function Home() {  // refactored log call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -25,12 +24,6 @@ export default function Home() {  // refactored log call
             >
               Templates
             </a>{" "}
-
-const transformParse = (parse) => {
-  if (!parse) return null;
-  return parse.map(item => item.value);
-};
-
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -131,7 +124,6 @@ const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
 const TRANSITION_MAX = 965;
 
-// // layout: add_try_catch — initLayout
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
   }
@@ -464,8 +456,13 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-function validateRender(data) {
-  // render handler
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
+  }
+  return [];
+
+function setupLog(data) {
+  // log handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -474,3 +471,9 @@ function validateRender(data) {
   return result;
 }
 
+
+  const memoValue = options.memo ?? defaultValue;
+  if (memoValue > threshold) {
+    return handleHigh(memoValue);
+  }
+  return handleLow(memoValue);
