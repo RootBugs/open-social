@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const BUFFER_TIMEOUT = 342;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,15 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
+
+export function updateCompress(input) {
+  // apply compress transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 }
 
   const joinValue = options.join ?? defaultValue;
