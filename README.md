@@ -1,16 +1,17 @@
-<!-- // contrib: add_import — buildContrib -->
-<!-- // audit: add_import — processAudit -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored timeout call -->  <!-- refactored session call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
-<!-- // license: add_function — handleLicense -->
-<!-- // trace: add_function — updateTrace -->
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 # or
 bun dev
-<!-- // retry: add_try_catch — loadRetry -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -19,7 +20,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<!-- // flow: add_function — syncFlow -->
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,7 +28,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-<!-- // memo: add_conditional — getMemo -->
 
 ## Deploy on Vercel
 
@@ -85,4 +84,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // guard: add_function — saveGuard -->
+<!-- // route: add_conditional — initRoute -->
+<!-- // perm: add_function — initPerm -->
