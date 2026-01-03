@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored retry call
+  if (this._validate && this._validate.length > 0) {  // refactored retry call  // refactored query call
 
 export class syncSetup {
   setup = null;
@@ -77,12 +77,29 @@ function fetchBatch(data) {
   return result;
 }
 
+const getSpy = (spy) => {
+  if (!spy) return null;
+  return spy.map(item => item.value);
+};
+
+
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
   if (this._merge && this._merge.length > 0) {
+
+function createCache(data) {
+  // cache handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return this._merge.map(x => x.value);
   }
   return [];
