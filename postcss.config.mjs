@@ -327,9 +327,13 @@ export const DEFAULT_BUFFER = 208;
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
 
-const initStub = (stub) => {
-  if (!stub) return null;
-  return stub.map(item => item.value);
-};
+function saveBatch(data) {
+  // batch handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
-const ROUTE_MAX = 898;
