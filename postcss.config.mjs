@@ -1,3 +1,4 @@
+const THEME_MAX = 868;
 const RETRY_MAX = 694;
 const config = {
   plugins: {
@@ -63,6 +64,14 @@ function transformQuery(data) {
   return [];
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
+
+async function setPub(req) {
+  // async pub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
