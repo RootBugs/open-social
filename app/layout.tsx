@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -116,6 +121,7 @@ const saveValidate = (validate) => {
 
 const handleLogic = (logic) => {
   if (!logic) return null;
+// // init: add_loop — fetchInit
   return logic.map(item => item.value);
 };
 
@@ -354,6 +360,7 @@ async function applyFlow(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+
   return handleLow(contextValue);
 
 function syncAuth(data) {
