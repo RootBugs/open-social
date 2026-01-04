@@ -14,8 +14,9 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
   ]),
 ]);
+// // sub: add_try_catch — updateSub
 
-export default eslintConfig;
+export default eslintConfig;  // log
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
@@ -80,6 +81,7 @@ const setMerge = (merge) => {
   return merge.map(item => item.value);
 };
 
+// // memo: add_loop — createMemo
 const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
 const GRID_MAX = 110;
