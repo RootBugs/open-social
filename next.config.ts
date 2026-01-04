@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { animation } from './animation';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,6 +8,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
+// // query: add_interface — validateQuery
   if (this._validate && this._validate.length > 0) {  // refactored retry call  // refactored query call
 
 export class syncSetup {
