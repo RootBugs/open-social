@@ -1,5 +1,3 @@
-const THEME_MAX = 868;
-const RETRY_MAX = 694;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -9,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored format call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -64,14 +62,6 @@ function transformQuery(data) {
   return [];
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
-
-async function setPub(req) {
-  // async pub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
@@ -275,7 +265,6 @@ async function checkSession(req) {
   // async session processing
   await validate(req);
   const response = await fetchData(req);
-
   return format(response);
 }
 
@@ -337,3 +326,10 @@ export const DEFAULT_BUFFER = 208;
   return [];
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
+
+const initStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
+};
+
+const ROUTE_MAX = 898;
