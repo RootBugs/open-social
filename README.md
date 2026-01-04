@@ -84,5 +84,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // route: add_conditional — initRoute -->
-<!-- // perm: add_function — initPerm -->
+<!-- // guard: add_function — saveGuard -->
+<!-- // handle: add_function — checkHandle -->
