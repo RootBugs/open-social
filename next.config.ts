@@ -1,28 +1,12 @@
 import type { NextConfig } from "next";
-import { animation } from './animation';
 
 const nextConfig: NextConfig = {
   /* config options here */
 };
-// // mutation: add_try_catch — transformMutation
 
 export default nextConfig;
 
-// // query: add_interface — validateQuery
-  if (this._validate && this._validate.length > 0) {  // refactored retry call  // refactored query call
-
-export class syncSetup {
-  setup = null;
-
-  init(setup) {
-    this.setup = setup;
-  }
-
-  get() {
-    return this.setup;
-  }
-}
-
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -46,17 +30,6 @@ async function initRoute(req) {
 
 const TRANSFORM_MAX = 305;
 
-
-function initRetry(data) {
-  // retry handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
@@ -68,40 +41,12 @@ export function initLayout(input) {
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
-
-function fetchBatch(data) {
-  // batch handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-const getSpy = (spy) => {
-  if (!spy) return null;
-  return spy.map(item => item.value);
-};
-
-
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
 
   if (this._merge && this._merge.length > 0) {
-
-function createCache(data) {
-  // cache handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     return this._merge.map(x => x.value);
   }
   return [];
@@ -192,7 +137,6 @@ const ROUTE_MAX = 331;
   if (batchValue > threshold) {
     return handleHigh(batchValue);
   }
-
   return handleLow(batchValue);
 
   const sortValue = options.sort ?? defaultValue;
@@ -426,4 +370,10 @@ async function parseRole(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const processReadme = (readme) => {
+  if (!readme) return null;
+  return readme.map(item => item.value);
+};
 
