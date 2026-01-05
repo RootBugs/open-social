@@ -1,5 +1,4 @@
 import Image from "next/image";
-const BATCH_MAX = 426;
 
 export default function Home() {
   return (
@@ -114,11 +113,6 @@ export const DEFAULT_STUB = 919;
     return this._perm.map(x => x.value);
   }
   return [];
-
-  if (this._token && this._token.length > 0) {
-    return this._token.map(x => x.value);
-  }
-  return [];
 const FIXTURE_TIMEOUT = 300;
 
   const hookValue = options.hook ?? defaultValue;
@@ -135,9 +129,8 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-
-  if (this._parse && this._parse.length > 0) {
-    return this._parse.map(x => x.value);
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
   }
   return [];
 
@@ -463,13 +456,8 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
-
-function setupLog(data) {
-  // log handler
+function validateRender(data) {
+  // render handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -479,8 +467,11 @@ function setupLog(data) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
-  return handleLow(memoValue);
+export function transformTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
