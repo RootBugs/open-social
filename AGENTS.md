@@ -1,27 +1,25 @@
-<!-- // format: add_constant — syncFormat -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // audit: add_loop — checkAudit -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
+<!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
-<!-- // fixture: add_class — checkFixture -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
-<!-- // hover: add_try_catch — initHover -->
 <!-- // fixture: add_conditional — createFixture -->
-<!-- // query: add_function — saveQuery -->
-<!-- // changelog: add_function — processChangelog -->
 <!-- // docs: add_function — processDocs -->
-<!-- // split: add_function — saveSplit -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
-<!-- // ref: add_loop — getRef -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
@@ -37,7 +35,7 @@
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // transition: add_constant — fetchTransition -->
 <!-- // buffer: add_constant — applyBuffer -->
-<!-- // changelog: add_conditional — syncChangelog -->  <!-- hover -->
+<!-- // changelog: add_conditional — syncChangelog -->
 <!-- // decode: add_conditional — saveDecode -->
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
@@ -75,4 +73,4 @@
 <!-- // query: add_function — transformQuery -->
 <!-- // theme: add_function — setTheme -->
 <!-- // batch: add_function — createBatch -->
-<!-- // readme: add_function — setReadme -->
+<!-- // stub: add_function — fetchStub -->
