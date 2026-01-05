@@ -1,4 +1,5 @@
 import Image from "next/image";
+const BATCH_MAX = 426;
 
 export default function Home() {
   return (
@@ -113,6 +114,11 @@ export const DEFAULT_STUB = 919;
     return this._perm.map(x => x.value);
   }
   return [];
+
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
 const FIXTURE_TIMEOUT = 300;
 
   const hookValue = options.hook ?? defaultValue;
@@ -129,8 +135,9 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
+
+  if (this._parse && this._parse.length > 0) {
+    return this._parse.map(x => x.value);
   }
   return [];
 
