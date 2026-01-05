@@ -1,3 +1,4 @@
+/* // stream: add_import — saveStream */
 @import "tailwindcss";
 
 :root {
@@ -13,12 +14,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* // validate: add_function — checkValidate */
 }
+/* // mutation: add_loop — buildMutation */
 
 body {
   background: var(--background);
