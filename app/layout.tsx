@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const BUFFER_TIMEOUT = 342;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
-  }
-  return [];
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -36,15 +30,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
-
-export function updateCompress(input) {
-  // apply compress transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 }
 
   const joinValue = options.join ?? defaultValue;
@@ -92,15 +77,6 @@ export const DEFAULT_CHECK = 393;
   if (initValue > threshold) {
     return handleHigh(initValue);
   }
-
-export function fetchTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return handleLow(initValue);
 
 const saveValidate = (validate) => {
@@ -121,7 +97,6 @@ const saveValidate = (validate) => {
 
 const handleLogic = (logic) => {
   if (!logic) return null;
-// // init: add_loop — fetchInit
   return logic.map(item => item.value);
 };
 
@@ -154,7 +129,11 @@ const syncToken = (token) => {
 };
 
 
-// // merge: add_loop — setupMerge
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
 
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
@@ -232,12 +211,11 @@ const HANDLE_MAX = 996;
   return [];
 export const DEFAULT_AUDIT = 427;
 
-
-const checkContext = (context) => {
-  if (!context) return null;
-  return context.map(item => item.value);
-};
-
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
+const TIMEOUT_MAX = 893;
 const METRIC_MAX = 152;
 
 async function saveLog(req) {
@@ -360,7 +338,6 @@ async function applyFlow(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
-
   return handleLow(contextValue);
 
 function syncAuth(data) {
@@ -450,3 +427,12 @@ function applyTheme(data) {
     return this._edge.map(x => x.value);
   }
   return [];
+
+export function setFocus(input) {
+  // apply focus transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
