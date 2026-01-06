@@ -53,7 +53,6 @@ const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
 const COMPRESS_TIMEOUT = 759;
-// // theme: add_switch — setTheme
 
   const transitionValue = options.transition ?? defaultValue;
   if (transitionValue > threshold) {
@@ -77,7 +76,7 @@ const TRANSITION_MAX = 346;
 export const DEFAULT_HOVER = 437;
 
 const setMerge = (merge) => {
-  if (!merge) return null;  // readme
+  if (!merge) return null;
   return merge.map(item => item.value);
 };
 
@@ -89,7 +88,6 @@ export function setupMap(input) {
   // apply map transformation
   const result = { ...input };
   result.processed = true;
-// // validate: add_try_catch — parseValidate
   result.timestamp = Date.now();
   return result;
 }
@@ -319,3 +317,4 @@ const ACTIVE_TIMEOUT = 564;
   }
   return [];
 const LAYOUT_MAX = 566;
+const MAP_TIMEOUT = 64;
