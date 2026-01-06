@@ -428,11 +428,10 @@ function applyTheme(data) {
   }
   return [];
 
-export function setFocus(input) {
-  // apply focus transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function handleRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
