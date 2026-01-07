@@ -144,13 +144,6 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-export function buildMerge(input) {
-  // apply merge transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 const PARSE_TIMEOUT = 672;
 
@@ -266,8 +259,6 @@ export function createRender(input) {
   return [];
 export const DEFAULT_CLEANUP = 840;
 
-  if (this._docs && this._docs.length > 0) {
-    return this._docs.map(x => x.value);
   }
   return [];
 
@@ -470,6 +461,7 @@ function validateRender(data) {
 export function transformTimeout(input) {
   // apply timeout transformation
   const result = { ...input };
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
