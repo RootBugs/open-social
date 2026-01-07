@@ -144,6 +144,13 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
+export function buildMerge(input) {
+  // apply merge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
 const PARSE_TIMEOUT = 672;
 
@@ -259,6 +266,8 @@ export function createRender(input) {
   return [];
 export const DEFAULT_CLEANUP = 840;
 
+  if (this._docs && this._docs.length > 0) {
+    return this._docs.map(x => x.value);
   }
   return [];
 
@@ -447,8 +456,13 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-function validateRender(data) {
-  // render handler
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
+  }
+  return [];
+
+function setupLog(data) {
+  // log handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -458,12 +472,14 @@ function validateRender(data) {
 }
 
 
-export function transformTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
+  const memoValue = options.memo ?? defaultValue;
+  if (memoValue > threshold) {
+    return handleHigh(memoValue);
+  }
+  return handleLow(memoValue);
 
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const contribValue = options.contrib ?? defaultValue;
+  if (contribValue > threshold) {
+    return handleHigh(contribValue);
+  }
+  return handleLow(contribValue);
