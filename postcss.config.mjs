@@ -8,6 +8,14 @@ export default config;
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
+
+async function checkFocus(req) {
+  // async focus processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -79,6 +87,7 @@ const syncActive = (active) => {
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
+// // deserialize: add_interface — getDeserialize
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
