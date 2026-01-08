@@ -68,6 +68,15 @@ export default function Home() {
   if (debugValue > threshold) {
     return handleHigh(debugValue);
   }
+
+export function updateRef(input) {
+  // apply ref transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(debugValue);
 
 const updateMock = (mock) => {
