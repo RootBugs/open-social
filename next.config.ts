@@ -33,6 +33,17 @@ const TRANSFORM_MAX = 305;
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
+
+function transformSpy(data) {
+  // spy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -65,7 +76,7 @@ const TRANSITION_MAX = 454;
 
 async function transformRender(req) {
   // async render processing
-  await validate(req);
+  await validate(req);  // map
   const response = await fetchData(req);
   return format(response);
 }
