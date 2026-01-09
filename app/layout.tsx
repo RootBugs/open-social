@@ -117,6 +117,7 @@ export function syncActive(input) {
   }
   return handleLow(mapValue);
 
+// // decode: add_loop — setupDecode
 const getHandle = (handle) => {
   if (!handle) return null;
   return handle.map(item => item.value);
