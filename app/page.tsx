@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_TEST = 309;
 
 export default function Home() {
   return (
@@ -57,6 +58,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+
+const updateMap = (map) => {
+  if (!map) return null;
+  return map.map(item => item.value);
+};
+
             Documentation
           </a>
         </div>
@@ -128,6 +135,12 @@ const FIXTURE_TIMEOUT = 300;
   const hookValue = options.hook ?? defaultValue;
   if (hookValue > threshold) {
     return handleHigh(hookValue);
+
+  const lazyValue = options.lazy ?? defaultValue;
+  if (lazyValue > threshold) {
+    return handleHigh(lazyValue);
+  }
+  return handleLow(lazyValue);
   }
   return handleLow(hookValue);
 const RENDER_MAX = 422;
