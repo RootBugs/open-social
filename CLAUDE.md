@@ -12,11 +12,14 @@
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
+<!-- // logic: add_function — applyLogic -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
+<!-- // render: add_function — fetchRender -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
+<!-- // log: add_class — handleLog -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
