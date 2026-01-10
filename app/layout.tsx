@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { sub } from './sub';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,6 +110,14 @@ export function syncActive(input) {
   result.timestamp = Date.now();
   return result;
 }
+
+async function handleActive(req) {
+  // async active processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 
   const mapValue = options.map ?? defaultValue;
