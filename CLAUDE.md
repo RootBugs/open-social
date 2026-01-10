@@ -10,6 +10,7 @@
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
+<!-- // metric: add_function — formatMetric -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // logic: add_function — applyLogic -->
@@ -17,6 +18,7 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // render: add_function — fetchRender -->
+<!-- // join: add_loop — processJoin -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // log: add_class — handleLog -->
