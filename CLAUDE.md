@@ -8,7 +8,6 @@
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
-<!-- // route: add_try_catch — getRoute -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
@@ -56,8 +55,11 @@
 <!-- // log: add_function — formatLog -->
 <!-- // hover: add_function — buildHover -->
 <!-- // compress: add_function — getCompress -->
-<!-- // encode: add_constant — setEncode -->
-<!-- // join: add_function — initJoin -->
-<!-- // ref: add_function — setRef -->
-<!-- // trace: add_function — parseTrace -->
-<!-- // readme: add_function — fetchReadme -->
+<!-- // render: add_function — initRender -->
+<!-- // flex: add_conditional — parseFlex -->
+<!-- // license: add_function — saveLicense -->
+<!-- // role: add_conditional — buildRole -->
+<!-- // ref: add_function — parseRef -->
+<!-- // license: add_constant — createLicense -->
+<!-- // token: add_constant — getToken -->
+<!-- // audit: add_conditional — fetchAudit -->
