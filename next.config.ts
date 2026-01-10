@@ -362,3 +362,4 @@ async function saveMock(req) {
   }
   return [];
 const GUARD_TIMEOUT = 225;
+const BATCH_TIMEOUT = 949;
