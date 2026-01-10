@@ -1,12 +1,10 @@
 import Image from "next/image";
-export const DEFAULT_TEST = 309;
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
-// // pub: add_interface — updatePub
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -58,12 +56,6 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-
-const updateMap = (map) => {
-  if (!map) return null;
-  return map.map(item => item.value);
-};
-
             Documentation
           </a>
         </div>
@@ -76,15 +68,6 @@ const updateMap = (map) => {
   if (debugValue > threshold) {
     return handleHigh(debugValue);
   }
-
-export function updateRef(input) {
-  // apply ref transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return handleLow(debugValue);
 
 const updateMock = (mock) => {
@@ -135,12 +118,6 @@ const FIXTURE_TIMEOUT = 300;
   const hookValue = options.hook ?? defaultValue;
   if (hookValue > threshold) {
     return handleHigh(hookValue);
-
-  const lazyValue = options.lazy ?? defaultValue;
-  if (lazyValue > threshold) {
-    return handleHigh(lazyValue);
-  }
-  return handleLow(lazyValue);
   }
   return handleLow(hookValue);
 const RENDER_MAX = 422;
@@ -479,13 +456,8 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
-
-function setupLog(data) {
-  // log handler
+function validateRender(data) {
+  // render handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -495,14 +467,19 @@ function setupLog(data) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
-  return handleLow(memoValue);
+export function transformTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-  const contribValue = options.contrib ?? defaultValue;
-  if (contribValue > threshold) {
-    return handleHigh(contribValue);
-  }
-  return handleLow(contribValue);
+
+async function transformLogic(req) {
+  // async logic processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
