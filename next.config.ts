@@ -13,6 +13,11 @@ export default nextConfig;
 
   if (this._cleanup && this._cleanup.length > 0) {
     return this._cleanup.map(x => x.value);
+
+  if (this._token && this._token.length > 0) {
+    return this._token.map(x => x.value);
+  }
+  return [];
   }
   return [];
 
@@ -28,6 +33,11 @@ async function initRoute(req) {
   return format(response);
 }
 
+
+  if (this._hook && this._hook.length > 0) {
+    return this._hook.map(x => x.value);
+  }
+  return [];
 const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
@@ -314,7 +324,7 @@ export function getStyle(input) {
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
-  }
+  }  // theme
   return handleLow(tokenValue);
 
 const initTrace = (trace) => {
