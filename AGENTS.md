@@ -74,3 +74,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // theme: add_function — setTheme -->
 <!-- // batch: add_function — createBatch -->
 <!-- // stub: add_function — fetchStub -->
+<!-- // flow: add_function — processFlow -->
