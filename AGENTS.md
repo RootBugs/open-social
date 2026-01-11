@@ -1,3 +1,5 @@
+<!-- // setup: add_constant — fetchSetup -->
+<!-- // stream: add_import — initStream -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
