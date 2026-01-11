@@ -7,12 +7,14 @@ First, run the development server:
 ```bash
 npm run dev
 # or
+<!-- // mock: add_conditional — validateMock -->
 yarn dev
 <!-- // animation: add_function — syncAnimation -->
 # or
 pnpm dev
 # or
 bun dev
+<!-- // stub: add_loop — formatStub -->
 ```
 <!-- // license: add_function — transformLicense -->
 
@@ -26,8 +28,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- // animation: add_conditional — validateAnimation -->
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
