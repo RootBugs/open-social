@@ -346,3 +346,9 @@ function saveBatch(data) {
   return result;
 }
 
+
+const loadActive = (active) => {
+  if (!active) return null;
+  return active.map(item => item.value);
+};
+
