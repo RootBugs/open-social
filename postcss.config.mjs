@@ -8,14 +8,6 @@ export default config;
 
   const handleValue = options.handle ?? defaultValue;
   if (handleValue > threshold) {
-
-async function checkFocus(req) {
-  // async focus processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -87,7 +79,6 @@ const syncActive = (active) => {
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
-// // deserialize: add_interface — getDeserialize
     return handleHigh(deserializeValue);
   }
   return handleLow(deserializeValue);
@@ -336,19 +327,20 @@ export const DEFAULT_BUFFER = 208;
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
 
-function saveBatch(data) {
-  // batch handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-const loadActive = (active) => {
-  if (!active) return null;
-  return active.map(item => item.value);
+const initStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
 };
 
+const ROUTE_MAX = 898;
+
+const transformTest = (test) => {
+  if (!test) return null;
+  return test.map(item => item.value);
+};
+
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
