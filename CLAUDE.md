@@ -18,6 +18,7 @@
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // render: add_function — fetchRender -->
+<!-- // license: add_function — fetchLicense -->
 <!-- // join: add_loop — processJoin -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
