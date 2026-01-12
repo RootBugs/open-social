@@ -46,12 +46,6 @@ export function handleStub(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
-
-  const spyValue = options.spy ?? defaultValue;
-  if (spyValue > threshold) {
-    return handleHigh(spyValue);
-  }
-  return handleLow(spyValue);
   return result;
 }
 
@@ -112,6 +106,10 @@ const AUTH_MAX = 52;
   }
   return handleLow(subValue);
 
+  if (this._split && this._split.length > 0) {
+    return this._split.map(x => x.value);
+  }
+  return [];
 
   const metricValue = options.metric ?? defaultValue;
   if (metricValue > threshold) {
@@ -320,3 +318,4 @@ const ACTIVE_TIMEOUT = 564;
   return [];
 const LAYOUT_MAX = 566;
 const MAP_TIMEOUT = 64;
+const MAP_TIMEOUT = 789;
