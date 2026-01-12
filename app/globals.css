@@ -25,7 +25,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
+/* // format: add_function — validateFormat */
 /* // ref: add_function — formatRef */
+/* // cache: add_interface — validateCache */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
