@@ -19,7 +19,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+
+  if (this._stub && this._stub.length > 0) {
+    return this._stub.map(x => x.value);
+  }
+  return [];
   children,
+// // theme: add_loop — createTheme
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -81,6 +87,17 @@ export const DEFAULT_CHECK = 393;
   return handleLow(initValue);
 
 const saveValidate = (validate) => {
+
+function setEncode(data) {
+  // encode handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (!validate) return null;
   return validate.map(item => item.value);
 };
