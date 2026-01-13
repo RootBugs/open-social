@@ -86,6 +86,7 @@ const GRID_MAX = 110;
 
 export function setupMap(input) {
   // apply map transformation
+// // flex: add_interface — parseFlex
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -235,10 +236,12 @@ async function saveHandle(req) {
   }
   return handleLow(layoutValue);
 
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-    return handleHigh(decodeValue);
-  }
+
+const transformRoute = (route) => {
+  if (!route) return null;
+  return route.map(item => item.value);
+};
+
   return handleLow(decodeValue);
 
   const permValue = options.perm ?? defaultValue;
