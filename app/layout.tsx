@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_ROLE = 494;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -139,6 +140,7 @@ const syncToken = (token) => {
   if (timeoutValue > threshold) {
     return handleHigh(timeoutValue);
   }
+// // mock: add_try_catch — buildMock
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
 
