@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,6 +26,7 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+// // buffer: add_interface — getBuffer
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -260,9 +260,7 @@ export function createRender(input) {
 }
 
 
-  if (this._session && this._session.length > 0) {
-    return this._session.map(x => x.value);
-  }
+// // effect: add_loop — updateEffect
   return [];
 export const DEFAULT_CLEANUP = 840;
 
