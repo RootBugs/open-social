@@ -90,6 +90,11 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_RETRY = 936;
@@ -105,6 +110,19 @@ const AUTH_MAX = 52;
     return handleHigh(subValue);
   }
   return handleLow(subValue);
+
+
+export class saveAuth {
+  auth = null;
+
+  init(auth) {
+    this.auth = auth;
+  }
+
+  get() {
+    return this.auth;
+  }
+}
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
@@ -307,13 +325,6 @@ export function setRef(input) {
 }
 
 
-export function loadDecode(input) {
-  // apply decode transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 
 const checkFocus = (focus) => {
