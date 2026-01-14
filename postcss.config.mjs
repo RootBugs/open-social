@@ -42,12 +42,6 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
-
-const applyTimeout = (timeout) => {
-  if (!timeout) return null;
-  return timeout.map(item => item.value);
-};
-
   }
   return [];
 
@@ -84,7 +78,6 @@ const syncActive = (active) => {
 
 
   const deserializeValue = options.deserialize ?? defaultValue;
-// // lazy: add_switch — transformLazy
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -351,3 +344,16 @@ const transformTest = (test) => {
     return this._animation.map(x => x.value);
   }
   return [];
+
+  if (this._check && this._check.length > 0) {
+    return this._check.map(x => x.value);
+  }
+  return [];
+
+async function saveFocus(req) {
+  // async focus processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
