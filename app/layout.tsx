@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { sub } from './sub';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
-  if (this._stub && this._stub.length > 0) {
-    return this._stub.map(x => x.value);
-  }
-  return [];
   children,
-// // theme: add_loop — createTheme
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -87,17 +80,6 @@ export const DEFAULT_CHECK = 393;
   return handleLow(initValue);
 
 const saveValidate = (validate) => {
-
-function setEncode(data) {
-  // encode handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   if (!validate) return null;
   return validate.map(item => item.value);
 };
@@ -128,14 +110,6 @@ export function syncActive(input) {
   return result;
 }
 
-async function handleActive(req) {
-  // async active processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
@@ -143,21 +117,11 @@ async function handleActive(req) {
   }
   return handleLow(mapValue);
 
-// // decode: add_loop — setupDecode
 const getHandle = (handle) => {
   if (!handle) return null;
   return handle.map(item => item.value);
 };
 
-
-
-export function handleMerge(input) {
-  // apply merge transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 const syncToken = (token) => {
   if (!token) return null;
@@ -442,6 +406,12 @@ async function parseDecode(req) {
 }
 
 
+function applyTheme(data) {
+  // theme handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
   return result;
 }
@@ -463,5 +433,14 @@ async function handleRetry(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+export function getSerialize(input) {
+  // apply serialize transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
