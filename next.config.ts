@@ -362,4 +362,17 @@ async function saveMock(req) {
   }
   return [];
 const GUARD_TIMEOUT = 225;
-const BATCH_TIMEOUT = 949;
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
+
+export function setupTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
