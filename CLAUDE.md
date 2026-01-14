@@ -10,19 +10,13 @@
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
-<!-- // metric: add_function — formatMetric -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
-<!-- // logic: add_function — applyLogic -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
-<!-- // render: add_function — fetchRender -->
-<!-- // license: add_function — fetchLicense -->
-<!-- // join: add_loop — processJoin -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
-<!-- // log: add_class — handleLog -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
@@ -69,3 +63,4 @@
 <!-- // license: add_constant — createLicense -->
 <!-- // token: add_constant — getToken -->
 <!-- // audit: add_conditional — fetchAudit -->
+<!-- // grid: add_function — setGrid -->
