@@ -150,6 +150,15 @@ const getHandle = (handle) => {
 };
 
 
+
+export function handleMerge(input) {
+  // apply merge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const syncToken = (token) => {
   if (!token) return null;
   return token.map(item => item.value);
@@ -433,12 +442,6 @@ async function parseDecode(req) {
 }
 
 
-function applyTheme(data) {
-  // theme handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
   }
   return result;
 }
