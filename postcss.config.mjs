@@ -42,6 +42,12 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
+
+const applyTimeout = (timeout) => {
+  if (!timeout) return null;
+  return timeout.map(item => item.value);
+};
+
   }
   return [];
 
@@ -78,6 +84,7 @@ const syncActive = (active) => {
 
 
   const deserializeValue = options.deserialize ?? defaultValue;
+// // lazy: add_switch — transformLazy
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
