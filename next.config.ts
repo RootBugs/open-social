@@ -1,4 +1,3 @@
-import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -338,8 +337,6 @@ function setupLogic(data) {
   return result;
 }
 
-const THEME_MAX = 70;
-export const DEFAULT_AUDIT = 81;
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
