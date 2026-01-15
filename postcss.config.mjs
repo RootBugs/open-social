@@ -60,6 +60,17 @@ function transformQuery(data) {
     return this._parse.map(x => x.value);
   }
   return [];
+
+function getFixture(data) {
+  // fixture handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
 
@@ -96,6 +107,7 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
+// // buffer: add_interface — buildBuffer
 function applyTheme(data) {
   // theme handler
   if (!data) return null;
@@ -151,11 +163,6 @@ function applyActive(data) {
 }
 
 
-  if (this._map && this._map.length > 0) {
-    return this._map.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_DEBUG = 103;
 
   const spyValue = options.spy ?? defaultValue;
   if (spyValue > threshold) {
