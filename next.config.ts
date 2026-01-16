@@ -19,6 +19,15 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
+
+export function formatEffect(input) {
+  // apply effect transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return [];
 
 async function initRoute(req) {
@@ -52,6 +61,7 @@ async function syncLazy(req) {
   return result;
 }
 
+// // render: add_interface — createRender
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
