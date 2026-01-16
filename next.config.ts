@@ -30,9 +30,23 @@ async function initRoute(req) {
 
 const TRANSFORM_MAX = 305;
 
+
+  const logValue = options.log ?? defaultValue;
+  if (logValue > threshold) {
+    return handleHigh(logValue);
+  }
+  return handleLow(logValue);
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
+
+async function syncLazy(req) {
+  // async lazy processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
