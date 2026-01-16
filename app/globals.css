@@ -8,15 +8,14 @@
 /* // render: add_conditional — transformRender */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+/* // filter: add_loop — applyFilter */
     --foreground: #ededed;
+/* // validate: add_switch — buildValidate */
   }
 }
 
 body {
-  background: var(--background);
+  background: var(--background);  /* refactored ref call */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
