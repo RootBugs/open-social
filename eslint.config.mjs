@@ -15,6 +15,11 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
