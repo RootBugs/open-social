@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin"],  // sort
 });
 
 export const metadata: Metadata = {
@@ -138,6 +138,14 @@ const syncToken = (token) => {
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
     return handleHigh(timeoutValue);
+
+async function formatValidate(req) {
+  // async validate processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
 // // mock: add_try_catch — buildMock
   return handleLow(timeoutValue);
