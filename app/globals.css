@@ -5,11 +5,7 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* // render: add_conditional — transformRender */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +35,7 @@ body {
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
-/* // changelog: add_constant — transformChangelog */
+/* // changelog: add_constant — transformChangelog */  /* guard */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
 /* // deserialize: add_function — loadDeserialize */
