@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const { query } = require('./query');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -103,6 +104,7 @@ const MAP_TIMEOUT = 492;
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
+// // encode: add_switch — fetchEncode
     return this._query.map(x => x.value);
   }
   return [];
