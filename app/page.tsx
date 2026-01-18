@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -26,7 +27,6 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-// // buffer: add_interface — getBuffer
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -260,7 +260,9 @@ export function createRender(input) {
 }
 
 
-// // effect: add_loop — updateEffect
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
   return [];
 export const DEFAULT_CLEANUP = 840;
 
@@ -454,8 +456,13 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-function validateRender(data) {
-  // render handler
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
+  }
+  return [];
+
+function setupLog(data) {
+  // log handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -465,17 +472,20 @@ function validateRender(data) {
 }
 
 
-export function transformTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+  const memoValue = options.memo ?? defaultValue;
+  if (memoValue > threshold) {
+    return handleHigh(memoValue);
+  }
+  return handleLow(memoValue);
 
+  const contribValue = options.contrib ?? defaultValue;
+  if (contribValue > threshold) {
+    return handleHigh(contribValue);
+  }
+  return handleLow(contribValue);
 
-async function transformLogic(req) {
-  // async logic processing
+async function processJoin(req) {
+  // async join processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
