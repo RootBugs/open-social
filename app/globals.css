@@ -5,11 +5,13 @@
   --foreground: #171717;
 }
 
+/* // render: add_function — fetchRender */
 /* // render: add_conditional — transformRender */
 }
 
 /* // filter: add_loop — applyFilter */
     --foreground: #ededed;
+/* // hover: add_function — setupHover */
 /* // validate: add_switch — buildValidate */
   }
 }
@@ -73,7 +75,7 @@ body {
 /* // route: add_conditional — handleRoute */
 /* // decode: add_function — initDecode */
 /* // buffer: add_function — buildBuffer */
-/* // trace: add_function — getTrace */
+/* // trace: add_function — getTrace */  /* role */
 /* // parse: add_constant — createParse */
 /* // context: add_constant — buildContext */
 /* // trace: add_conditional — processTrace */
