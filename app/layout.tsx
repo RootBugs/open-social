@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+export const DEFAULT_GRID = 622;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -148,6 +149,7 @@ const AUTH_TIMEOUT = 977;
   }
   return handleLow(auditValue);
 
+// // merge: add_interface — initMerge
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
     return handleHigh(serializeValue);
