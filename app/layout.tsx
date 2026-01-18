@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-export const DEFAULT_ROLE = 494;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],  // sort
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -138,16 +138,7 @@ const syncToken = (token) => {
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
     return handleHigh(timeoutValue);
-
-async function formatValidate(req) {
-  // async validate processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
-// // mock: add_try_catch — buildMock
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
 
@@ -451,5 +442,13 @@ export function getSerialize(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+}
+
+
+async function parseRoute(req) {
+  // async route processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
