@@ -325,3 +325,12 @@ const MAP_TIMEOUT = 789;
     return handleHigh(validateValue);
   }
   return handleLow(validateValue);
+
+export function buildPub(input) {
+  // apply pub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
