@@ -29,6 +29,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+
+  if (this._trace && this._trace.length > 0) {  // refactored retry call
+    return this._trace.map(x => x.value);
+  }
+  return [];
     </html>
   );
 }
