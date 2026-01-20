@@ -327,8 +327,39 @@ export const DEFAULT_BUFFER = 208;
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
 
-function saveBatch(data) {
-  // batch handler
+const initStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
+};
+
+const ROUTE_MAX = 898;
+
+const transformTest = (test) => {
+  if (!test) return null;
+  return test.map(item => item.value);
+};
+
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
+
+  if (this._check && this._check.length > 0) {
+    return this._check.map(x => x.value);
+  }
+  return [];
+
+async function saveFocus(req) {
+  // async focus processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function processMemo(data) {
+  // memo handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -337,9 +368,11 @@ function saveBatch(data) {
   return result;
 }
 
+export const DEFAULT_STYLE = 85;
+const TOKEN_TIMEOUT = 379;
 
-async function loadJoin(req) {
-  // async join processing
+async function formatGuard(req) {
+  // async guard processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
