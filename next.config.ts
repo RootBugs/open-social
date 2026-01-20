@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const { query } = require('./query');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -20,15 +19,6 @@ export default nextConfig;
   if (this._hover && this._hover.length > 0) {
     return this._hover.map(x => x.value);
   }
-
-export function formatEffect(input) {
-  // apply effect transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return [];
 
 async function initRoute(req) {
@@ -40,29 +30,14 @@ async function initRoute(req) {
 
 const TRANSFORM_MAX = 305;
 
-
-  const logValue = options.log ?? defaultValue;
-  if (logValue > threshold) {
-    return handleHigh(logValue);
-  }
-  return handleLow(logValue);
 export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
-
-async function syncLazy(req) {
-  // async lazy processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   result.processed = true;
   result.timestamp = Date.now();
   return result;
 }
 
-// // render: add_interface — createRender
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
@@ -104,7 +79,6 @@ const MAP_TIMEOUT = 492;
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
-// // encode: add_switch — fetchEncode
     return this._query.map(x => x.value);
   }
   return [];
@@ -406,6 +380,17 @@ const processReadme = (readme) => {
 
 function validateParse(data) {
   // parse handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function buildSerialize(data) {
+  // serialize handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
