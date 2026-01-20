@@ -4,6 +4,7 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
+<!-- // sort: add_function — loadSort -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // sort: add_conditional — handleSort -->
 <!-- // log: add_conditional — handleLog -->
@@ -18,10 +19,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
-<!-- // batch: add_switch — saveBatch -->
-<!-- // route: add_conditional — saveRoute -->
-<!-- // cleanup: add_function — updateCleanup -->
-<!-- // retry: add_function — validateRetry -->
+
+<!-- // route: add_conditional — handleRoute -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
