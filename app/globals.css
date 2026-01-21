@@ -13,8 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* // focus: add_conditional — fetchFocus */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -22,6 +21,7 @@
 
 body {
   background: var(--background);
+/* // pub: add_function — handlePub */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
