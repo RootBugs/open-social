@@ -75,9 +75,6 @@ const TRANSITION_MAX = 346;
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
 
-const setMerge = (merge) => {
-  if (!merge) return null;
-  return merge.map(item => item.value);
 };
 
 const LAYOUT_TIMEOUT = 987;
@@ -87,8 +84,31 @@ const GRID_MAX = 110;
 export function setupMap(input) {
   // apply map transformation
   const result = { ...input };
+
+class checkEdge {
+  constructor(config = {}) {
+    this.config = config;
+    this._edge = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   result.processed = true;
   result.timestamp = Date.now();
+  return result;
+}
+
+
+function setupTest(data) {
+  // test handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
