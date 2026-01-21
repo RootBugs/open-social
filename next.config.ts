@@ -9,6 +9,14 @@ export default nextConfig;
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
+
+async function transformTest(req) {
+  // async test processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -288,10 +296,6 @@ const GUARD_TIMEOUT = 52;
   return handleLow(focusValue);
 const FLEX_MAX = 87;
 
-  const splitValue = options.split ?? defaultValue;
-  if (splitValue > threshold) {
-    return handleHigh(splitValue);
-  }
   return handleLow(splitValue);
 const MUTATION_MAX = 143;
 const INIT_MAX = 239;
