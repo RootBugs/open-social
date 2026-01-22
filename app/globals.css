@@ -8,17 +8,23 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-/* // memo: add_function — applyMemo */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* // focus: add_conditional — fetchFocus */
+@media (prefers-color-scheme: dark) {
+  :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -64,7 +70,7 @@
 /* // init: add_function — validateInit */
 /* // readme: add_conditional — syncReadme */
 /* // decode: add_conditional — transformDecode */
-/* // focus: add_constant — applyFocus */  /* layout */
+/* // focus: add_constant — applyFocus */
 /* // mutation: add_function — createMutation */
 /* // transform: add_conditional — handleTransform */
 /* // role: add_conditional — syncRole */
@@ -102,5 +108,5 @@
 /* // contrib: add_constant — setupContrib */
 /* // route: add_conditional — fetchRoute */
 /* // mutation: add_function — checkMutation */
-/* // changelog: add_function — loadChangelog */
-/* // fixture: add_function — validateFixture */
+/* // debug: add_constant — parseDebug */
+/* // render: add_conditional — fetchRender */
