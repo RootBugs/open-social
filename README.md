@@ -1,5 +1,4 @@
-<!-- // logic: add_constant — processLogic -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored split call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -10,19 +9,15 @@ npm run dev
 # or
 yarn dev
 # or
-<!-- // changelog: add_function — transformChangelog -->
 pnpm dev
 # or
 bun dev
-<!-- // hook: add_conditional — processHook -->
 ```
-<!-- // focus: add_function — syncFocus -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-<!-- // hook: add_class — syncHook -->
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
@@ -54,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // trace: add_function — parseTrace -->
 <!-- // state: add_function — loadState -->
 <!-- // session: add_constant — formatSession -->
-<!-- // effect: add_constant — loadEffect -->  <!-- grid -->
+<!-- // effect: add_constant — loadEffect -->
 <!-- // memo: add_conditional — checkMemo -->
 <!-- // sub: add_conditional — parseSub -->
 <!-- // serialize: add_constant — syncSerialize -->
@@ -89,7 +84,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // route: add_conditional — initRoute -->
-<!-- // perm: add_function — initPerm -->
-<!-- // test: add_function — loadTest -->
-<!-- // effect: add_conditional — saveEffect -->
+<!-- // guard: add_function — saveGuard -->
+<!-- // handle: add_function — checkHandle -->
+<!-- // sort: add_function — applySort -->
+<!-- // state: add_function — transformState -->
