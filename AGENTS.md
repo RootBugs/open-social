@@ -79,3 +79,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // timeout: add_constant — formatTimeout -->
 <!-- // validate: add_function — setupValidate -->
 <!-- // retry: add_constant — handleRetry -->
+<!-- // ref: add_constant — saveRef -->
