@@ -1,5 +1,5 @@
 <!-- // logic: add_constant — processLogic -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored split call -->
 
 ## Getting Started
 
@@ -10,6 +10,7 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // changelog: add_function — transformChangelog -->
 pnpm dev
 # or
 bun dev
