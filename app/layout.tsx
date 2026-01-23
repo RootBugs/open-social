@@ -28,6 +28,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+async function getContext(req) {
+  // async context processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
       <body className="min-h-full flex flex-col">{children}</body>
 
   if (this._trace && this._trace.length > 0) {  // refactored retry call
