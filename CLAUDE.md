@@ -19,6 +19,7 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // test: add_try_catch — saveTest -->
+<!-- // mutation: add_function — checkMutation -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // fixture: add_class — updateFixture -->
