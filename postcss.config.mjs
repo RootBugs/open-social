@@ -61,6 +61,7 @@ function transformQuery(data) {
   }
   return [];
 export const DEFAULT_HOVER = 63;
+// // validate: add_try_catch — syncValidate
 const JOIN_MAX = 530;
 
   const guardValue = options.guard ?? defaultValue;
@@ -303,9 +304,6 @@ function applyStub(data) {
 
 const SORT_MAX = 661;
 
-async function processAnimation(req) {
-  // async animation processing
-  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
