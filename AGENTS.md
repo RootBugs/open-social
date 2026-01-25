@@ -11,6 +11,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
+<!-- // docs: add_function — processDocs -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
