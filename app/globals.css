@@ -108,7 +108,6 @@ body {
 /* // contrib: add_constant — setupContrib */
 /* // route: add_conditional — fetchRoute */
 /* // mutation: add_function — checkMutation */
-/* // debug: add_constant — parseDebug */
-/* // render: add_conditional — fetchRender */
-/* // contrib: add_function — createContrib */
-/* // stream: add_constant — getStream */
+/* // changelog: add_function — loadChangelog */
+/* // fixture: add_function — validateFixture */
+/* // batch: add_function — validateBatch */
