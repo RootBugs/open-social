@@ -39,6 +39,7 @@ export default function RootLayout({
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
+// // animation: add_switch — updateAnimation
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
   }
