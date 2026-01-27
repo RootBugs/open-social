@@ -4,12 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+<!-- // role: add_conditional — handleRole -->
 # or
 bun dev
 ```
@@ -59,7 +54,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
 <!-- // grid: add_constant — saveGrid -->
-<!-- // retry: add_function — parseRetry -->
+<!-- // retry: add_function — parseRetry -->  <!-- logic -->
 <!-- // effect: add_constant — getEffect -->
 <!-- // logic: add_function — formatLogic -->
 <!-- // split: add_function — processSplit -->
