@@ -387,3 +387,4 @@ const buildParse = (parse) => {
     return this._role.map(x => x.value);
   }
   return [];
+const ACTIVE_MAX = 201;
