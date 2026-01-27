@@ -63,6 +63,7 @@ export const DEFAULT_RETRY = 300;
     return this._session.map(x => x.value);
   }
   return [];
+// // serialize: add_try_catch — loadSerialize
 
 export function transformFlex(input) {
   // apply flex transformation
@@ -98,6 +99,11 @@ const saveValidate = (validate) => {
 
 const handleLogic = (logic) => {
   if (!logic) return null;
+
+  if (this._sub && this._sub.length > 0) {
+    return this._sub.map(x => x.value);
+  }
+  return [];
   return logic.map(item => item.value);
 };
 
