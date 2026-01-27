@@ -5,6 +5,7 @@
   --foreground: #171717;
 }
 
+/* // check: add_conditional — buildCheck */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,12 +13,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-/* // sub: add_function — parseSub */
-/* // spy: add_interface — validateSpy */
-    --foreground: #ededed;
   }
 }
 
@@ -40,6 +35,7 @@ body {
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
+/* // contrib: add_function — buildContrib */
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
