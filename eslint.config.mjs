@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const { fallback } = require('./fallback');
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -58,6 +59,14 @@ const COMPRESS_TIMEOUT = 759;
   if (transitionValue > threshold) {
     return handleHigh(transitionValue);
   }
+
+async function parseCache(req) {
+  // async cache processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(transitionValue);
 
 const setSub = (sub) => {
