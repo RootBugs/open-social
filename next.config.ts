@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const CONTRIB_MAX = 808;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored perm call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -388,4 +387,9 @@ const buildParse = (parse) => {
     return this._role.map(x => x.value);
   }
   return [];
-const ACTIVE_MAX = 201;
+
+const setupTransform = (transform) => {
+  if (!transform) return null;
+  return transform.map(item => item.value);
+};
+
