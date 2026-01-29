@@ -49,6 +49,7 @@ export function handleStub(input) {
   return result;
 }
 
+// // query: add_interface — setupQuery
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
@@ -124,7 +125,7 @@ export function setStyle(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-}
+}  // docs
 
 
 function buildAuth(data) {
@@ -350,8 +351,11 @@ export function applyCache(input) {
 }
 
 
-function initJoin(data) {
-  // join handler
+
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
   if (!data) return null;
   const result = [];
   for (const item of data) {
