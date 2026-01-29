@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const CONTRIB_MAX = 808;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,7 +7,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored perm call
     return this._validate.map(x => x.value);
   }
   return [];
