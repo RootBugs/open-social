@@ -39,7 +39,6 @@ export default function RootLayout({
   return handleLow(joinValue);
 
   const tokenValue = options.token ?? defaultValue;
-// // animation: add_switch — updateAnimation
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
   }
@@ -63,7 +62,6 @@ export const DEFAULT_RETRY = 300;
     return this._session.map(x => x.value);
   }
   return [];
-// // serialize: add_try_catch — loadSerialize
 
 export function transformFlex(input) {
   // apply flex transformation
@@ -99,11 +97,6 @@ const saveValidate = (validate) => {
 
 const handleLogic = (logic) => {
   if (!logic) return null;
-
-  if (this._sub && this._sub.length > 0) {
-    return this._sub.map(x => x.value);
-  }
-  return [];
   return logic.map(item => item.value);
 };
 
@@ -435,16 +428,8 @@ function applyTheme(data) {
   }
   return [];
 
-async function handleRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function getSerialize(input) {
-  // apply serialize transformation
+export function setFocus(input) {
+  // apply focus transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -452,16 +437,17 @@ export function getSerialize(input) {
 }
 
 
-async function parseRoute(req) {
-  // async route processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+export function applyDebug(input) {
+  // apply debug transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
 
-export function syncBatch(input) {
-  // apply batch transformation
+export function formatTest(input) {
+  // apply test transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
