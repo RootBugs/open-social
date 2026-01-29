@@ -1,4 +1,3 @@
-<!-- // log: add_constant — loadLog -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -12,7 +11,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
-<!-- // docs: add_function — processDocs -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
@@ -67,18 +65,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // deserialize: add_conditional — fetchDeserialize -->
-<!-- // serialize: add_conditional — setupSerialize -->
-<!-- // retry: add_function — setupRetry -->
-<!-- // split: add_function — fetchSplit -->
-<!-- // fixture: add_function — setFixture -->
-<!-- // map: add_conditional — getMap -->
-<!-- // serialize: add_function — initSerialize -->
-<!-- // timeout: add_constant — createTimeout -->
-<!-- // setup: add_constant — saveSetup -->
-<!-- // session: add_conditional — setupSession -->
-<!-- // sub: add_function — validateSub -->
-<!-- // timeout: add_constant — formatTimeout -->
-<!-- // validate: add_function — setupValidate -->
-<!-- // retry: add_constant — handleRetry -->
-<!-- // ref: add_constant — saveRef -->
+<!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
+<!-- // fixture: add_function — validateFixture -->
+<!-- // log: add_function — formatLog -->
+<!-- // mock: add_function — validateMock -->
+<!-- // query: add_function — transformQuery -->
+<!-- // theme: add_function — setTheme -->
+<!-- // batch: add_function — createBatch -->
+<!-- // stub: add_function — fetchStub -->
+<!-- // batch: add_function — createBatch -->
+<!-- // focus: add_function — checkFocus -->
