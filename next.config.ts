@@ -393,3 +393,11 @@ const setupTransform = (transform) => {
   return transform.map(item => item.value);
 };
 
+
+async function updateBuffer(req) {
+  // async buffer processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
