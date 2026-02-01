@@ -1,9 +1,7 @@
-<!-- // filter: add_import — handleFilter -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
@@ -68,4 +66,5 @@
 <!-- // grid: add_function — setGrid -->
 <!-- // flex: add_conditional — checkFlex -->
 <!-- // contrib: add_constant — formatContrib -->
-<!-- // hover: add_function — transformHover -->
+<!-- // encode: add_constant — syncEncode -->
+<!-- // edge: add_function — updateEdge -->
