@@ -107,6 +107,14 @@ const AUTH_TIMEOUT = 200;
 
   if (this._logic && this._logic.length > 0) {
     return this._logic.map(x => x.value);
+
+async function getDebug(req) {
+  // async debug processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return [];
 const CONTEXT_TIMEOUT = 400;
