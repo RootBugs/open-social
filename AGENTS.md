@@ -15,6 +15,7 @@
 <!-- // retry: add_function — validateRetry -->
 <!-- // stream: add_class — processStream -->
 <!-- // parse: add_conditional — getParse -->
+<!-- // contrib: add_conditional — formatContrib -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
@@ -22,6 +23,7 @@
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
+<!-- // buffer: add_interface — buildBuffer -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
