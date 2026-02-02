@@ -71,3 +71,4 @@
 <!-- // contrib: add_constant — formatContrib -->
 <!-- // encode: add_constant — syncEncode -->
 <!-- // edge: add_function — updateEdge -->
+<!-- // session: add_function — loadSession -->
