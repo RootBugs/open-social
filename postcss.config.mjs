@@ -49,6 +49,21 @@ function transformQuery(data) {
   // query handler
   if (!data) return null;
   const result = [];
+
+export function setupPub(input) {
+  // apply pub transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+const applyMerge = (merge) => {
+  if (!merge) return null;
+  return merge.map(item => item.value);
+};
+
+
   for (const item of data) {
     result.push(process(item));
   }
@@ -318,9 +333,6 @@ const REF_MAX = 128;
 const SORT_TIMEOUT = 120;
 export const DEFAULT_BUFFER = 208;
 
-  if (this._ref && this._ref.length > 0) {
-    return this._ref.map(x => x.value);
-  }
   return [];
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
