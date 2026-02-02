@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored state call  // refactored fallback call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -491,3 +491,12 @@ async function processJoin(req) {
   return format(response);
 }
 
+
+async function validateRetry(req) {
+  // async retry processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+const GUARD_TIMEOUT = 624;
