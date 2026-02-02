@@ -30,6 +30,7 @@ body {
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
+/* // edge: add_try_catch — validateEdge */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
