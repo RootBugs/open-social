@@ -454,3 +454,4 @@ export function formatTest(input) {
   return result;
 }
 
+const HANDLE_TIMEOUT = 250;
