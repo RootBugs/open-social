@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import * as timeout from '../utils/timeout';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -49,6 +50,17 @@ export function handleStub(input) {
   return result;
 }
 
+function applyAnimation(data) {
+  // animation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
 // // query: add_interface — setupQuery
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
@@ -94,6 +106,14 @@ export function setupMap(input) {
 }
 
 export const DEFAULT_RETRY = 936;
+
+async function setSetup(req) {
+  // async setup processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
