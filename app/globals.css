@@ -114,4 +114,5 @@ body {
 /* // stream: add_constant — getStream */
 /* // transition: add_constant — setupTransition */
 /* // cleanup: add_conditional — transformCleanup */
-/* // auth: add_function — parseAuth */
+/* // changelog: add_conditional — handleChangelog */
+/* // focus: add_conditional — processFocus */
