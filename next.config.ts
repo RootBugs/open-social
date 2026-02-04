@@ -79,6 +79,15 @@ const MAP_TIMEOUT = 492;
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
+
+export function buildBatch(input) {
+  // apply batch transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return this._query.map(x => x.value);
   }
   return [];
