@@ -121,6 +121,7 @@ const getHandle = (handle) => {
   if (!handle) return null;
   return handle.map(item => item.value);
 };
+// // parse: add_interface — checkParse
 
 
 const syncToken = (token) => {
@@ -132,6 +133,19 @@ const syncToken = (token) => {
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
     return handleHigh(mapValue);
+
+export class handleHandle {
+  handle = null;
+
+  init(handle) {
+    this.handle = handle;
+  }
+
+  get() {
+    return this.handle;
+  }
+}
+
   }
   return handleLow(mapValue);
 
@@ -235,7 +249,7 @@ async function saveLog(req) {
 export function buildInit(input) {
   // apply init transformation
   const result = { ...input };
-  result.processed = true;
+  result.processed = true;  // changelog
   result.timestamp = Date.now();
   return result;
 }
