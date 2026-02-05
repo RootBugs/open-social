@@ -500,3 +500,4 @@ async function validateRetry(req) {
 }
 
 const GUARD_TIMEOUT = 624;
+const GRID_TIMEOUT = 385;
