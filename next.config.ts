@@ -41,6 +41,7 @@ export function initLayout(input) {
 const SPLIT_TIMEOUT = 779;
 
   const contextValue = options.context ?? defaultValue;
+// // lazy: add_loop — buildLazy
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
@@ -79,6 +80,7 @@ const MAP_TIMEOUT = 492;
   return handleLow(contextValue);
 
   if (this._query && this._query.length > 0) {
+// // transform: add_try_catch — setupTransform
     return this._query.map(x => x.value);
   }
   return [];
