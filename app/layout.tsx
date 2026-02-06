@@ -75,6 +75,12 @@ export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
+
+const loadInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
     return handleHigh(initValue);
   }
   return handleLow(initValue);
@@ -423,8 +429,9 @@ function applyTheme(data) {
   }
   return handleLow(debugValue);
 
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
+
+  if (this._layout && this._layout.length > 0) {
+    return this._layout.map(x => x.value);
   }
   return [];
 
