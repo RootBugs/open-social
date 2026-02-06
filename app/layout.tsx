@@ -34,7 +34,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored debug call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -91,6 +91,19 @@ const loadInit = (init) => {
     return handleHigh(initValue);
   }
   return handleLow(initValue);
+
+
+export class handleLazy {
+  lazy = null;
+
+  init(lazy) {
+    this.lazy = lazy;
+  }
+
+  get() {
+    return this.lazy;
+  }
+}
 
 const saveValidate = (validate) => {
   if (!validate) return null;
@@ -169,10 +182,17 @@ const AUTH_TIMEOUT = 977;
 export const DEFAULT_CLEANUP = 713;
 export const DEFAULT_LAYOUT = 314;
 
-async function setupSerialize(req) {
-  // async serialize processing
-  await validate(req);
-  const response = await fetchData(req);
+
+function fetchMutation(data) {
+  // mutation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return format(response);
 }
 
