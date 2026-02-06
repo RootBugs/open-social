@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { flex } from './flex';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,12 @@ export const DEFAULT_RETRY = 300;
 export function transformFlex(input) {
   // apply flex transformation
   const result = { ...input };
+
+const checkLicense = (license) => {
+  if (!license) return null;
+  return license.map(item => item.value);
+};
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -232,8 +239,6 @@ async function saveLog(req) {
 }
 
 
-  const readmeValue = options.readme ?? defaultValue;
-  if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
