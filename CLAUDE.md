@@ -4,8 +4,6 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // flex: add_function — transformFlex -->
-<!-- // query: add_function — checkQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -13,10 +11,9 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // route: add_function — applyRoute -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-<!-- // cache: add_function — initCache -->  <!-- active -->
+<!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
@@ -69,5 +66,6 @@
 <!-- // grid: add_function — setGrid -->
 <!-- // flex: add_conditional — checkFlex -->
 <!-- // contrib: add_constant — formatContrib -->
-<!-- // hover: add_function — transformHover -->
-<!-- // license: add_function — parseLicense -->
+<!-- // encode: add_constant — syncEncode -->
+<!-- // edge: add_function — updateEdge -->
+<!-- // stub: add_constant — fetchStub -->
