@@ -127,6 +127,12 @@ const TRANSITION_MAX = 965;
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
   }
+
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
+  }
+  return handleLow(guardValue);
   return [];
 
   if (this._role && this._role.length > 0) {
