@@ -1,4 +1,3 @@
-<!-- // ref: add_constant — loadRef -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -25,9 +24,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
-<!-- // batch: add_function — handleBatch -->
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<!-- // perm: add_switch — loadPerm -->
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
@@ -37,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 <!-- // route: add_conditional — setupRoute -->
 <!-- // guard: add_constant — parseGuard -->
-<!-- // route: add_constant — loadRoute -->  <!-- join -->
+<!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
@@ -85,8 +84,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // guard: add_function — saveGuard -->
-<!-- // handle: add_function — checkHandle -->
-<!-- // sort: add_function — applySort -->
-<!-- // state: add_function — transformState -->
-<!-- // split: add_function — syncSplit -->
+<!-- // route: add_conditional — initRoute -->
+<!-- // perm: add_function — initPerm -->
+<!-- // test: add_function — loadTest -->
+<!-- // effect: add_conditional — saveEffect -->
+<!-- // merge: add_constant — getMerge -->
+<!-- // map: add_conditional — processMap -->
