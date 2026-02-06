@@ -10,6 +10,19 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
+
+export class fetchRoute {
+  route = null;
+
+  init(route) {
+    this.route = route;
+  }
+
+  get() {
+    return this.route;
+  }
+}
+
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -69,6 +82,7 @@ const JOIN_MAX = 530;
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
+// // filter: add_try_catch — setupFilter
 export const DEFAULT_CACHE = 464;
 
 const syncActive = (active) => {
