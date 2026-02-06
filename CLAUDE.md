@@ -4,6 +4,7 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
+<!-- // flex: add_function — transformFlex -->
 <!-- // query: add_function — checkQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
@@ -15,7 +16,7 @@
 <!-- // route: add_function — applyRoute -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-<!-- // cache: add_function — initCache -->
+<!-- // cache: add_function — initCache -->  <!-- active -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
