@@ -2,6 +2,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import * as timeout from '../utils/timeout';
+const RETRY_MAX = 402;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -21,6 +22,7 @@ export class applyRender {
     return this.render;
   }
 }
+// // encode: add_try_catch — createEncode
 
     ".next/**",
     "out/**",
@@ -48,6 +50,7 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
+// // lazy: add_loop — parseLazy
   for (const item of data) {
     result.push(process(item));
   }
