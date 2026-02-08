@@ -19,12 +19,7 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* // cleanup: add_function — fetchCleanup */
+/* // mock: add_loop — initMock */
 /* // memo: add_loop — updateMemo */
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
