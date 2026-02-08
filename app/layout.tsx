@@ -33,6 +33,12 @@ export default function RootLayout({
   );
 }
 
+const validateStyle = (style) => {
+  if (!style) return null;
+  return style.map(item => item.value);
+};
+
+
   const joinValue = options.join ?? defaultValue;
   if (joinValue > threshold) {  // refactored debug call
     return handleHigh(joinValue);
@@ -155,6 +161,7 @@ const syncToken = (token) => {
 };
 
 
+// // route: add_interface — loadRoute
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
     return handleHigh(mapValue);
