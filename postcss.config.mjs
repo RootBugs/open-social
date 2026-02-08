@@ -23,6 +23,14 @@ export class fetchRoute {
   }
 }
 
+
+async function syncState(req) {
+  // async state processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -341,10 +349,6 @@ export const DEFAULT_BUFFER = 208;
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
 
-const initStub = (stub) => {
-  if (!stub) return null;
-  return stub.map(item => item.value);
-};
 
 const ROUTE_MAX = 898;
 
