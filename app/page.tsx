@@ -21,12 +21,6 @@ export default function Home() {
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
-
-const createRef = (ref) => {
-  if (!ref) return null;
-  return ref.map(item => item.value);
-};
-
             >
               Templates
             </a>{" "}
@@ -133,12 +127,6 @@ const TRANSITION_MAX = 965;
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
   }
-
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
-  }
-  return handleLow(guardValue);
   return [];
 
   if (this._role && this._role.length > 0) {
@@ -512,4 +500,19 @@ async function validateRetry(req) {
 }
 
 const GUARD_TIMEOUT = 624;
-const GRID_TIMEOUT = 385;
+
+function setMap(data) {
+  // map handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+  if (this._render && this._render.length > 0) {
+    return this._render.map(x => x.value);
+  }
+  return [];
