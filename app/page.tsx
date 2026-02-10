@@ -456,13 +456,8 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
-
-function setupLog(data) {
-  // log handler
+function validateRender(data) {
+  // render handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -472,47 +467,25 @@ function setupLog(data) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
-  return handleLow(memoValue);
-
-  const contribValue = options.contrib ?? defaultValue;
-  if (contribValue > threshold) {
-    return handleHigh(contribValue);
-  }
-  return handleLow(contribValue);
-
-async function processJoin(req) {
-  // async join processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-async function validateRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-const GUARD_TIMEOUT = 624;
-
-function setMap(data) {
-  // map handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
+export function transformTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
 
-  if (this._render && this._render.length > 0) {
-    return this._render.map(x => x.value);
-  }
-  return [];
+async function transformLogic(req) {
+  // async logic processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const getDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
+
