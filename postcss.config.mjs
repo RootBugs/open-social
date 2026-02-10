@@ -10,36 +10,6 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
-
-export class fetchRoute {
-  route = null;
-
-  init(route) {
-    this.route = route;
-  }
-
-  get() {
-    return this.route;
-  }
-}
-
-
-async function syncState(req) {
-  // async state processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function initBatch(input) {
-  // apply batch transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -70,12 +40,6 @@ async function transformFallback(req) {
   return [];
 const STUB_TIMEOUT = 250;
 
-
-const transformFlow = (flow) => {
-  if (!flow) return null;
-  return flow.map(item => item.value);
-};
-
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
@@ -105,7 +69,6 @@ const JOIN_MAX = 530;
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
-// // filter: add_try_catch — setupFilter
 export const DEFAULT_CACHE = 464;
 
 const syncActive = (active) => {
@@ -141,12 +104,6 @@ function applyTheme(data) {
     result.push(process(item));
   }
   return result;
-
-const setupTimeout = (timeout) => {
-  if (!timeout) return null;
-  return timeout.map(item => item.value);
-};
-
 }
 
 const FORMAT_TIMEOUT = 648;
@@ -370,6 +327,10 @@ export const DEFAULT_BUFFER = 208;
 export const DEFAULT_SPY = 592;
 export const DEFAULT_CONTRIB = 943;
 
+const initStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
+};
 
 const ROUTE_MAX = 898;
 
@@ -420,6 +381,17 @@ async function formatGuard(req) {
 
 function transformSub(data) {
   // sub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function formatValidate(data) {
+  // validate handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
