@@ -31,6 +31,15 @@ async function syncState(req) {
   return format(response);
 }
 
+
+export function initBatch(input) {
+  // apply batch transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
@@ -60,6 +69,12 @@ async function transformFallback(req) {
   }
   return [];
 const STUB_TIMEOUT = 250;
+
+
+const transformFlow = (flow) => {
+  if (!flow) return null;
+  return flow.map(item => item.value);
+};
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
@@ -126,6 +141,12 @@ function applyTheme(data) {
     result.push(process(item));
   }
   return result;
+
+const setupTimeout = (timeout) => {
+  if (!timeout) return null;
+  return timeout.map(item => item.value);
+};
+
 }
 
 const FORMAT_TIMEOUT = 648;
