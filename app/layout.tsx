@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { flex } from './flex';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,14 +32,8 @@ export default function RootLayout({
   );
 }
 
-const validateStyle = (style) => {
-  if (!style) return null;
-  return style.map(item => item.value);
-};
-
-
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored debug call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -73,12 +66,6 @@ export const DEFAULT_RETRY = 300;
 export function transformFlex(input) {
   // apply flex transformation
   const result = { ...input };
-
-const checkLicense = (license) => {
-  if (!license) return null;
-  return license.map(item => item.value);
-};
-
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -88,28 +75,9 @@ export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
-
-const loadInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-
-
-export class handleLazy {
-  lazy = null;
-
-  init(lazy) {
-    this.lazy = lazy;
-  }
-
-  get() {
-    return this.lazy;
-  }
-}
 
 const saveValidate = (validate) => {
   if (!validate) return null;
@@ -161,7 +129,6 @@ const syncToken = (token) => {
 };
 
 
-// // route: add_interface — loadRoute
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
     return handleHigh(mapValue);
@@ -189,17 +156,10 @@ const AUTH_TIMEOUT = 977;
 export const DEFAULT_CLEANUP = 713;
 export const DEFAULT_LAYOUT = 314;
 
-
-function fetchMutation(data) {
-  // mutation handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+async function setupSerialize(req) {
+  // async serialize processing
+  await validate(req);
+  const response = await fetchData(req);
   return format(response);
 }
 
@@ -266,6 +226,8 @@ async function saveLog(req) {
 }
 
 
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
@@ -461,9 +423,8 @@ function applyTheme(data) {
   }
   return handleLow(debugValue);
 
-
-  if (this._layout && this._layout.length > 0) {
-    return this._layout.map(x => x.value);
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
   }
   return [];
 
@@ -507,4 +468,10 @@ async function transformValidate(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const handleSort = (sort) => {
+  if (!sort) return null;
+  return sort.map(item => item.value);
+};
 
