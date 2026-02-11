@@ -92,3 +92,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // map: add_conditional — processMap -->
 <!-- // decode: add_constant — getDecode -->
 <!-- // trace: add_conditional — checkTrace -->
+<!-- // test: add_conditional — fetchTest -->
