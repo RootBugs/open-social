@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -119,6 +118,7 @@ const FIXTURE_TIMEOUT = 300;
   if (hookValue > threshold) {
     return handleHigh(hookValue);
   }
+// // handle: add_loop — processHandle
   return handleLow(hookValue);
 const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
