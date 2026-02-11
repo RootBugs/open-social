@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored log call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -25,7 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* // split: add_constant — getSplit */
-/* // transition: add_function — getTransition */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
@@ -117,4 +116,4 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // fixture: add_function — loadFixture */
+/* // memo: add_function — formatMemo */
