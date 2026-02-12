@@ -217,11 +217,12 @@ function handleTransform(data) {
 
 const BATCH_TIMEOUT = 447;
 
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
-  }
-  return handleLow(guardValue);
+
+const buildDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
+
 
   if (this._layout && this._layout.length > 0) {
     return this._layout.map(x => x.value);
