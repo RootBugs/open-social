@@ -1,8 +1,7 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // readme: add_function — checkReadme -->
-<!-- // pub: add_conditional — processPub -->
+<!-- // merge: add_conditional — applyMerge -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
