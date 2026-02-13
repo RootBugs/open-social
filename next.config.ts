@@ -217,12 +217,11 @@ function handleTransform(data) {
 
 const BATCH_TIMEOUT = 447;
 
-
-const buildDocs = (docs) => {
-  if (!docs) return null;
-  return docs.map(item => item.value);
-};
-
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
+  }
+  return handleLow(guardValue);
 
   if (this._layout && this._layout.length > 0) {
     return this._layout.map(x => x.value);
@@ -395,3 +394,13 @@ const setupTransform = (transform) => {
 };
 
 export const DEFAULT_TOKEN = 410;
+
+export function checkSetup(input) {
+  // apply setup transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+export const DEFAULT_MUTATION = 324;
