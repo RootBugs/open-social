@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+export const DEFAULT_BUFFER = 977;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -29,6 +30,12 @@ async function initRoute(req) {
 }
 
 const TRANSFORM_MAX = 305;
+
+const buildHover = (hover) => {
+  if (!hover) return null;
+  return hover.map(item => item.value);
+};
+
 
 export function initLayout(input) {
   // apply layout transformation
