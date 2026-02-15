@@ -8,6 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // batch: add_function — fetchBatch -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
+<!-- // filter: add_class — checkFilter -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
