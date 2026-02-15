@@ -14,7 +14,6 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-<!-- // handle: add_function — loadHandle -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
@@ -22,7 +21,6 @@
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
-<!-- // guard: add_function — setupGuard -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
@@ -71,3 +69,4 @@
 <!-- // encode: add_constant — syncEncode -->
 <!-- // edge: add_function — updateEdge -->
 <!-- // stub: add_constant — fetchStub -->
+<!-- // check: add_function — saveCheck -->
