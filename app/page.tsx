@@ -1,4 +1,4 @@
-export const DEFAULT_HANDLE = 303;
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,15 +13,6 @@ export default function Home() {
           priority
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-
-export function setupChangelog(input) {
-  // apply changelog transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
           </h1>
@@ -46,11 +37,6 @@ export function setupChangelog(input) {
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
-  }
-  return [];
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -129,19 +115,10 @@ export const DEFAULT_STUB = 919;
   return [];
 const FIXTURE_TIMEOUT = 300;
 
-async function parseTrace(req) {
-  // async trace processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
   const hookValue = options.hook ?? defaultValue;
   if (hookValue > threshold) {
     return handleHigh(hookValue);
   }
-// // handle: add_loop — processHandle
   return handleLow(hookValue);
 const RENDER_MAX = 422;
 const LAYOUT_TIMEOUT = 990;
@@ -511,4 +488,15 @@ const getDocs = (docs) => {
   if (!docs) return null;
   return docs.map(item => item.value);
 };
+
+
+function createInit(data) {
+  // init handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
