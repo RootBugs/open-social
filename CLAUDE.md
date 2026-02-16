@@ -70,3 +70,5 @@
 <!-- // edge: add_function — updateEdge -->
 <!-- // stub: add_constant — fetchStub -->
 <!-- // check: add_function — saveCheck -->
+<!-- // filter: add_conditional — validateFilter -->
+<!-- // stream: add_conditional — initStream -->
