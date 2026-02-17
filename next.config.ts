@@ -52,6 +52,17 @@ const SPLIT_TIMEOUT = 779;
   return [];
 const TRANSITION_MAX = 454;
 
+
+function syncLazy(data) {
+  // lazy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
   }
@@ -77,6 +88,7 @@ const MAP_TIMEOUT = 492;
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
+// // mock: add_switch — saveMock
 
   if (this._query && this._query.length > 0) {
     return this._query.map(x => x.value);
