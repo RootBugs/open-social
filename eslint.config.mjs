@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored sub call
     return this._context.map(x => x.value);
   }
   return [];
@@ -90,6 +90,7 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+// // deserialize: add_interface — setupDeserialize
 }
 
 export const DEFAULT_RETRY = 936;
@@ -164,11 +165,6 @@ function buildAuth(data) {
   }
   return handleLow(timeoutValue);
 
-  const stateValue = options.state ?? defaultValue;
-  if (stateValue > threshold) {
-    return handleHigh(stateValue);
-  }
-  return handleLow(stateValue);
 
   const docsValue = options.docs ?? defaultValue;
   if (docsValue > threshold) {
