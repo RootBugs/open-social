@@ -122,6 +122,14 @@ export function setStyle(input) {
   // apply style transformation
   const result = { ...input };
   result.processed = true;
+
+async function createHook(req) {
+  // async hook processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   result.timestamp = Date.now();
   return result;
 }
