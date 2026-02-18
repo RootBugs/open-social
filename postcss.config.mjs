@@ -1,3 +1,4 @@
+const FLOW_TIMEOUT = 26;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -38,6 +39,17 @@ export function buildCompress(input) {
 
   // async fallback processing
   await validate(req);
+
+function updateTrace(data) {
+  // trace handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
@@ -138,6 +150,7 @@ export function processActive(input) {
   // apply active transformation
   const result = { ...input };
   result.processed = true;
+// // stream: add_switch — transformStream
   result.timestamp = Date.now();
   return result;
 }
