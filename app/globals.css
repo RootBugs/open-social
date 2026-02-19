@@ -36,6 +36,7 @@
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
+/* // focus: add_switch — loadFocus */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
 /* // deserialize: add_function — loadDeserialize */
