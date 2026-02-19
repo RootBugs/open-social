@@ -1,14 +1,10 @@
-<!-- // transform: add_import — checkTransform -->
-<!-- // compress: add_constant — initCompress -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
-<!-- // batch: add_function — fetchBatch -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
-<!-- // filter: add_class — checkFilter -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
@@ -69,16 +65,19 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // changelog: add_function — setupChangelog -->
-<!-- // hover: add_function — processHover -->
-<!-- // fixture: add_function — validateFixture -->
-<!-- // log: add_function — formatLog -->
-<!-- // mock: add_function — validateMock -->
-<!-- // query: add_function — transformQuery -->
-<!-- // theme: add_function — setTheme -->
-<!-- // batch: add_function — createBatch -->
-<!-- // stub: add_function — fetchStub -->
-<!-- // batch: add_function — createBatch -->
-<!-- // focus: add_function — checkFocus -->
-<!-- // flow: add_function — formatFlow -->
-<!-- // sort: add_function — applySort -->
+<!-- // deserialize: add_conditional — fetchDeserialize -->
+<!-- // serialize: add_conditional — setupSerialize -->
+<!-- // retry: add_function — setupRetry -->
+<!-- // split: add_function — fetchSplit -->
+<!-- // fixture: add_function — setFixture -->
+<!-- // map: add_conditional — getMap -->
+<!-- // serialize: add_function — initSerialize -->
+<!-- // timeout: add_constant — createTimeout -->
+<!-- // setup: add_constant — saveSetup -->
+<!-- // session: add_conditional — setupSession -->
+<!-- // sub: add_function — validateSub -->
+<!-- // timeout: add_constant — formatTimeout -->
+<!-- // validate: add_function — setupValidate -->
+<!-- // retry: add_constant — handleRetry -->
+<!-- // contrib: add_constant — createContrib -->
+<!-- // stream: add_constant — setupStream -->
