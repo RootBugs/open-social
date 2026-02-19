@@ -66,6 +66,9 @@
 <!-- // grid: add_function — setGrid -->
 <!-- // flex: add_conditional — checkFlex -->
 <!-- // contrib: add_constant — formatContrib -->
-<!-- // hover: add_function — transformHover -->
-<!-- // license: add_function — parseLicense -->
-<!-- // parse: add_function — createParse -->
+<!-- // encode: add_constant — syncEncode -->
+<!-- // edge: add_function — updateEdge -->
+<!-- // stub: add_constant — fetchStub -->
+<!-- // check: add_function — saveCheck -->
+<!-- // query: add_conditional — buildQuery -->
+<!-- // context: add_function — saveContext -->
