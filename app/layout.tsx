@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-export const DEFAULT_AUDIT = 681;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -464,6 +463,15 @@ export function formatTest(input) {
 
 async function createFormat(req) {
   // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+export const DEFAULT_AUTH = 108;
+
+async function setupCheck(req) {
+  // async check processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
