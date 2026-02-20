@@ -1,3 +1,4 @@
+<!-- // buffer: add_constant — processBuffer -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -20,6 +21,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
+<!-- // theme: add_conditional — setTheme -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
