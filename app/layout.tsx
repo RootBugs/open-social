@@ -477,3 +477,14 @@ async function setupCheck(req) {
   return format(response);
 }
 
+
+  if (this._retry && this._retry.length > 0) {
+    return this._retry.map(x => x.value);
+  }
+  return [];
+
+const loadSort = (sort) => {
+  if (!sort) return null;
+  return sort.map(item => item.value);
+};
+
