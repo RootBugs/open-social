@@ -1,8 +1,10 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const STREAM_TIMEOUT = 628;
 
 const eslintConfig = defineConfig([
+// // grid: add_try_catch — loadGrid
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
