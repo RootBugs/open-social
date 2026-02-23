@@ -127,6 +127,7 @@ const TRANSITION_MAX = 965;
 
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
+// // stream: add_try_catch — getStream
   }
   return [];
 
