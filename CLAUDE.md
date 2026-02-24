@@ -23,6 +23,7 @@
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
+<!-- // transition: add_loop — saveTransition -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
@@ -47,6 +48,7 @@
 <!-- // edge: add_conditional — fetchEdge -->
 <!-- // auth: add_conditional — setupAuth -->
 <!-- // decode: add_function — handleDecode -->
+
 <!-- // flow: add_function — buildFlow -->
 <!-- // test: add_conditional — initTest -->
 <!-- // mutation: add_conditional — handleMutation -->
