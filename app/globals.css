@@ -6,18 +6,13 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored token call */
+  --color-background: var(--background);  /* refactored token call */  /* refactored perm call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* // transition: add_function — processTransition */
 
 /* // test: add_function — buildTest */
 /* // validate: add_loop — getValidate */
@@ -33,6 +28,7 @@
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
+/* // active: add_class — transformActive */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
