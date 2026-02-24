@@ -1,3 +1,5 @@
+import { layout } from './layout';
+import * as context from '../utils/context';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
