@@ -7,6 +7,17 @@ const eslintConfig = defineConfig([
 // // grid: add_try_catch — loadGrid
   ...nextVitals,
   ...nextTs,
+
+function updateDecode(data) {
+  // decode handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -311,6 +322,7 @@ export function saveRef(input) {
   if (this._route && this._route.length > 0) {
     return this._route.map(x => x.value);
   }
+
   return [];
 const ACTIVE_TIMEOUT = 564;
 
