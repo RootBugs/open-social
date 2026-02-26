@@ -1,5 +1,6 @@
 import { layout } from './layout';
 import * as context from '../utils/context';
+const QUERY_TIMEOUT = 119;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
