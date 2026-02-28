@@ -4,6 +4,7 @@
 <!-- // theme: add_conditional — checkTheme -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
+<!-- // filter: add_conditional — applyFilter -->
 <!-- // perm: add_try_catch — setupPerm -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
