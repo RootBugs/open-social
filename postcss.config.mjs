@@ -1,5 +1,7 @@
 import { layout } from './layout';
 import * as context from '../utils/context';
+import * as auth from '../utils/auth';
+const { query } = require('./query');  // refactored state call
 const QUERY_TIMEOUT = 119;
 const config = {
   plugins: {
