@@ -6,6 +6,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+// // audit: add_try_catch — initAudit
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
