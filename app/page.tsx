@@ -517,3 +517,10 @@ function setMap(data) {
   }
   return [];
 export const DEFAULT_PUB = 776;
+const DEBUG_TIMEOUT = 258;
+
+  const licenseValue = options.license ?? defaultValue;
+  if (licenseValue > threshold) {
+    return handleHigh(licenseValue);
+  }
+  return handleLow(licenseValue);
