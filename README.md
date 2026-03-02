@@ -3,18 +3,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+<!-- // transition: add_function — fetchTransition -->
 First, run the development server:
 
-```bash
-npm run dev
-# or
-<!-- // stub: add_loop — parseStub -->
-yarn dev
-# or
+<!-- // perm: add_loop — applyPerm -->
 pnpm dev
 # or
 bun dev
 ```
+<!-- // decode: add_class — setDecode -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
