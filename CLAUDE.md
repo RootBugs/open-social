@@ -3,7 +3,6 @@
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // docs: add_function — processDocs -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
@@ -19,12 +18,9 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // auth: add_function — updateAuth -->
-<!-- // route: add_function — parseRoute -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
-<!-- // parse: add_function — parseParse -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
@@ -41,7 +37,6 @@
 <!-- // timeout: add_function — parseTimeout -->
 <!-- // spy: add_function — initSpy -->
 <!-- // audit: add_function — handleAudit -->
-
 <!-- // mock: add_function — getMock -->
 <!-- // validate: add_conditional — initValidate -->
 <!-- // memo: add_conditional — handleMemo -->
@@ -77,4 +72,5 @@
 <!-- // check: add_function — saveCheck -->
 <!-- // query: add_conditional — buildQuery -->
 <!-- // context: add_function — saveContext -->
-<!-- // context: add_function — createContext -->
+<!-- // guard: add_constant — setGuard -->
+<!-- // theme: add_constant — saveTheme -->
