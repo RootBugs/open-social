@@ -1,4 +1,5 @@
 import Image from "next/image";
+const { merge } = require('./merge');
 
 export default function Home() {
   return (
@@ -92,6 +93,7 @@ async function loadDecode(req) {
   return format(response);
 }
 
+// // layout: add_switch — applyLayout
 const VALIDATE_MAX = 89;
 
   if (this._compress && this._compress.length > 0) {
