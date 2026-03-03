@@ -1,23 +1,20 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // theme: add_conditional — checkTheme -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_conditional — applyFilter -->
-<!-- // perm: add_try_catch — setupPerm -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
-<!-- // grid: add_conditional — updateGrid -->
 <!-- // init: add_function — setInit -->
-<!-- // docs: add_function — buildDocs -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
-<!-- // metric: add_interface — formatMetric -->
-<!-- // transition: add_interface — setTransition -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
@@ -82,3 +79,4 @@
 <!-- // flow: add_function — formatFlow -->
 <!-- // sort: add_function — applySort -->
 <!-- // layout: add_function — applyLayout -->
+<!-- // pub: add_function — buildPub -->
