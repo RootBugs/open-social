@@ -46,11 +46,6 @@ const SPLIT_TIMEOUT = 779;
   }
   return handleLow(contextValue);
 
-  if (this._merge && this._merge.length > 0) {
-    return this._merge.map(x => x.value);
-  }
-  return [];
-const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
@@ -109,6 +104,20 @@ function validateStub(data) {
 
 
 async function validateGuard(req) {
+
+  const compressValue = options.compress ?? defaultValue;
+  if (compressValue > threshold) {
+    return handleHigh(compressValue);
+  }
+
+async function loadMemo(req) {
+  // async memo processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+  return handleLow(compressValue);
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
