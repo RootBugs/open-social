@@ -61,6 +61,19 @@ export const DEFAULT_RETRY = 300;
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
+
+export class handleDocs {
+  docs = null;
+
+  init(docs) {
+    this.docs = docs;
+  }
+
+  get() {
+    return this.docs;
+  }
+}
+
   return [];
 
 export function transformFlex(input) {
@@ -106,6 +119,12 @@ export function syncActive(input) {
   // apply active transformation
   const result = { ...input };
   result.processed = true;
+
+  const flowValue = options.flow ?? defaultValue;
+  if (flowValue > threshold) {
+    return handleHigh(flowValue);
+  }
+  return handleLow(flowValue);
   result.timestamp = Date.now();
   return result;
 }
@@ -130,6 +149,7 @@ const syncToken = (token) => {
 
 
   const mapValue = options.map ?? defaultValue;
+// // sub: add_loop — parseSub
   if (mapValue > threshold) {
     return handleHigh(mapValue);
   }
