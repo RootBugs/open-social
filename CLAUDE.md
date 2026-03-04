@@ -72,5 +72,6 @@
 <!-- // check: add_function — saveCheck -->
 <!-- // query: add_conditional — buildQuery -->
 <!-- // context: add_function — saveContext -->
-<!-- // context: add_function — createContext -->
-<!-- // split: add_function — parseSplit -->
+<!-- // guard: add_constant — setGuard -->
+<!-- // theme: add_constant — saveTheme -->
+<!-- // query: add_function — syncQuery -->
