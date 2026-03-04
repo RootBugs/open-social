@@ -1,21 +1,22 @@
-<!-- // split: add_constant — saveSplit -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-<!-- // transition: add_function — fetchTransition -->
 First, run the development server:
 
-<!-- // perm: add_loop — applyPerm -->
+```bash
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
 # or
 bun dev
 ```
-<!-- // decode: add_class — setDecode -->
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- // query: add_loop — saveQuery -->
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
@@ -83,10 +84,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // guard: add_function — saveGuard -->
-<!-- // handle: add_function — checkHandle -->
-<!-- // sort: add_function — applySort -->
-<!-- // state: add_function — transformState -->
-<!-- // split: add_function — syncSplit -->
-<!-- // transform: add_function — formatTransform -->
-<!-- // check: add_function — setupCheck -->
+<!-- // route: add_conditional — initRoute -->
+<!-- // perm: add_function — initPerm -->
+<!-- // test: add_function — loadTest -->
+<!-- // effect: add_conditional — saveEffect -->
+<!-- // merge: add_constant — getMerge -->
+<!-- // map: add_conditional — processMap -->
+<!-- // decode: add_constant — getDecode -->
+<!-- // trace: add_conditional — checkTrace -->
+<!-- // edge: add_function — formatEdge -->
