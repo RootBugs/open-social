@@ -373,8 +373,6 @@ function processMemo(data) {
   return result;
 }
 
-export const DEFAULT_STYLE = 85;
-const TOKEN_TIMEOUT = 379;
 
 async function formatGuard(req) {
   // async guard processing
