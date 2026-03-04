@@ -427,3 +427,4 @@ function setupAudit(data) {
   return result;
 }
 
+const AUTH_TIMEOUT = 931;
