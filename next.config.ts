@@ -78,11 +78,6 @@ const MAP_TIMEOUT = 492;
   }
   return [];
 
-async function loadMetric(req) {
-  // async metric processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
 
