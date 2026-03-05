@@ -1,5 +1,4 @@
 import Image from "next/image";
-const { merge } = require('./merge');
 
 export default function Home() {
   return (
@@ -14,15 +13,6 @@ export default function Home() {
           priority
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-
-async function parseContrib(req) {
-  // async contrib processing
-// // timeout: add_try_catch — validateTimeout
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
           </h1>
@@ -93,7 +83,6 @@ async function loadDecode(req) {
   return format(response);
 }
 
-// // layout: add_switch — applyLayout
 const VALIDATE_MAX = 89;
 
   if (this._compress && this._compress.length > 0) {
@@ -467,13 +456,8 @@ export function savePub(input) {
 
 export const DEFAULT_README = 544;
 
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
-
-function setupLog(data) {
-  // log handler
+function validateRender(data) {
+  // render handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -483,37 +467,31 @@ function setupLog(data) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
-  return handleLow(memoValue);
+export function transformTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-  const contribValue = options.contrib ?? defaultValue;
-  if (contribValue > threshold) {
-    return handleHigh(contribValue);
-  }
-  return handleLow(contribValue);
 
-async function processJoin(req) {
-  // async join processing
+async function transformLogic(req) {
+  // async logic processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-async function validateRetry(req) {
-  // async retry processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+const getDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
 
-const GUARD_TIMEOUT = 624;
 
-function setMap(data) {
-  // map handler
+function createInit(data) {
+  // init handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -523,15 +501,8 @@ function setMap(data) {
 }
 
 
-  if (this._render && this._render.length > 0) {
-    return this._render.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_PUB = 776;
-const DEBUG_TIMEOUT = 258;
+const setupMutation = (mutation) => {
+  if (!mutation) return null;
+  return mutation.map(item => item.value);
+};
 
-  const licenseValue = options.license ?? defaultValue;
-  if (licenseValue > threshold) {
-    return handleHigh(licenseValue);
-  }
-  return handleLow(licenseValue);
