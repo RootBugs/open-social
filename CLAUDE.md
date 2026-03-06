@@ -1,3 +1,4 @@
+<!-- // logic: add_import — setupLogic -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -18,6 +19,7 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // encode: add_function — syncEncode -->
 <!-- // active: add_conditional — syncActive -->
+<!-- // style: add_try_catch — applyStyle -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
