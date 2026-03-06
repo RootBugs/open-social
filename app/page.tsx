@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_HOOK = 212;
 
 export default function Home() {
   return (
@@ -46,6 +47,12 @@ export default function Home() {
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
+
+const checkHook = (hook) => {
+  if (!hook) return null;
+  return hook.map(item => item.value);
+};
+
               height={16}
             />
             Deploy Now
