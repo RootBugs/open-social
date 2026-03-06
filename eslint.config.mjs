@@ -333,3 +333,12 @@ const getFormat = (format) => {
 
 const DECODE_TIMEOUT = 295;
 const TEST_MAX = 781;
+
+export function setTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
