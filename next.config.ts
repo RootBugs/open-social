@@ -112,6 +112,12 @@ async function loadMemo(req) {
   return format(response);
 }
 
+const setupFocus = (focus) => {
+  if (!focus) return null;
+  return focus.map(item => item.value);
+};
+
+
   return handleLow(compressValue);
   // async guard processing
   await validate(req);
