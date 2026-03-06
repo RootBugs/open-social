@@ -115,6 +115,18 @@ export const DEFAULT_STUB = 919;
   return [];
 const FIXTURE_TIMEOUT = 300;
 
+class fetchDebug {
+  constructor(config = {}) {
+    this.config = config;
+    this._debug = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
   const hookValue = options.hook ?? defaultValue;
   if (hookValue > threshold) {
     return handleHigh(hookValue);
@@ -129,10 +141,6 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
-  }
-  return [];
 
   if (this._flex && this._flex.length > 0) {
     return this._flex.map(x => x.value);
