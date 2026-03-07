@@ -1,4 +1,3 @@
-import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -95,6 +94,19 @@ function validateStub(data) {
     result.push(process(item));
   }
   return result;
+
+export class initHook {
+  hook = null;
+
+  init(hook) {
+    this.hook = hook;
+  }
+
+  get() {
+    return this.hook;
+  }
+}
+
 }
 
 
@@ -116,6 +128,18 @@ const setupFocus = (focus) => {
   if (!focus) return null;
   return focus.map(item => item.value);
 };
+
+
+class syncToken {
+  constructor(config = {}) {
+    this.config = config;
+    this._token = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
 
 
   return handleLow(compressValue);
