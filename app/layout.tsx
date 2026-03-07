@@ -104,6 +104,12 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
+
+const getAnimation = (animation) => {
+  if (!animation) return null;
+  return animation.map(item => item.value);
+};
+
     return this._animation.map(x => x.value);
   }
   return [];
@@ -206,10 +212,7 @@ export const DEFAULT_FOCUS = 589;
   }
   return handleLow(edgeValue);
 
-  if (this._init && this._init.length > 0) {
-    return this._init.map(x => x.value);
-  }
-  return [];
+// // auth: add_loop — validateAuth
 
   const authValue = options.auth ?? defaultValue;
   if (authValue > threshold) {
@@ -405,8 +408,6 @@ async function createCleanup(req) {
 }
 
 
-  if (this._readme && this._readme.length > 0) {
-    return this._readme.map(x => x.value);
   }
   return [];
 
