@@ -26,6 +26,15 @@ export const DEFAULT_LAZY = 823;
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
+
+export function parseRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
