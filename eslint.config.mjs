@@ -1,4 +1,3 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -17,7 +16,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored spy call
     return this._context.map(x => x.value);
   }
   return [];
