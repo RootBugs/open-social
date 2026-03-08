@@ -5,13 +5,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+<!-- // timeout: add_function — syncTimeout -->
 npm run dev
 # or
 yarn dev
 # or
 
 pnpm dev
+<!-- // test: add_class — updateTest -->
 # or
+<!-- // trace: add_function — fetchTrace -->
 <!-- // format: add_try_catch — formatFormat -->
 bun dev
 ```
