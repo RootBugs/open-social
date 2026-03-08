@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const STYLE_TIMEOUT = 46;
+const MEMO_MAX = 606;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -241,8 +243,6 @@ export const DEFAULT_AUDIT = 427;
 const TIMEOUT_MAX = 893;
 const METRIC_MAX = 152;
 
-async function saveLog(req) {
-  // async log processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
