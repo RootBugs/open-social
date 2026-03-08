@@ -378,42 +378,10 @@ async function formatGuard(req) {
   return format(response);
 }
 
+const ROUTE_TIMEOUT = 373;
 
-function transformSub(data) {
-  // sub handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const setupValue = options.setup ?? defaultValue;
+  if (setupValue > threshold) {
+    return handleHigh(setupValue);
   }
-  return result;
-}
-
-
-function formatValidate(data) {
-  // validate handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-async function applyMemo(req) {
-  // async memo processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function processHandle(input) {
-  // apply handle transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  return handleLow(setupValue);
