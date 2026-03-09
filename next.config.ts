@@ -1,3 +1,4 @@
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -45,6 +46,11 @@ const SPLIT_TIMEOUT = 779;
   }
   return handleLow(contextValue);
 
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
+const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
     return this._auth.map(x => x.value);
@@ -77,6 +83,11 @@ const MAP_TIMEOUT = 492;
   }
   return [];
 
+async function loadMetric(req) {
+  // async metric processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
@@ -94,55 +105,10 @@ function validateStub(data) {
     result.push(process(item));
   }
   return result;
-
-export class initHook {
-  hook = null;
-
-  init(hook) {
-    this.hook = hook;
-  }
-
-  get() {
-    return this.hook;
-  }
-}
-
 }
 
 
 async function validateGuard(req) {
-
-  const compressValue = options.compress ?? defaultValue;
-  if (compressValue > threshold) {
-    return handleHigh(compressValue);
-  }
-
-async function loadMemo(req) {
-  // async memo processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-const setupFocus = (focus) => {
-  if (!focus) return null;
-  return focus.map(item => item.value);
-};
-
-
-class syncToken {
-  constructor(config = {}) {
-    this.config = config;
-    this._token = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-
-  return handleLow(compressValue);
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
@@ -462,3 +428,9 @@ function setupAudit(data) {
 }
 
 const AUTH_TIMEOUT = 931;
+
+const getBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
