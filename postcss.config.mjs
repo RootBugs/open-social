@@ -385,3 +385,9 @@ const ROUTE_TIMEOUT = 373;
     return handleHigh(setupValue);
   }
   return handleLow(setupValue);
+
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
+  }
+  return handleLow(transitionValue);
