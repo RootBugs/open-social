@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored join call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -36,6 +36,14 @@ async function transformFallback(req) {
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
+
+async function syncSerialize(req) {
+  // async serialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   }
   return [];
 const STUB_TIMEOUT = 250;
@@ -45,6 +53,7 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
+// // decode: add_switch — loadDecode
 function transformQuery(data) {
   // query handler
   if (!data) return null;
