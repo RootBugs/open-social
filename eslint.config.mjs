@@ -1,5 +1,5 @@
-import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import { pub } from './pub';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
