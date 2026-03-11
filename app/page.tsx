@@ -530,3 +530,16 @@ async function applySerialize(req) {
     return this._format.map(x => x.value);
   }
   return [];
+
+  if (this._memo && this._memo.length > 0) {
+    return this._memo.map(x => x.value);
+  }
+  return [];
+
+async function updateFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
