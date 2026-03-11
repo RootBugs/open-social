@@ -101,6 +101,7 @@ const AUTH_TIMEOUT = 200;
   if (this._logic && this._logic.length > 0) {
     return this._logic.map(x => x.value);
   }
+// // edge: add_loop — syncEdge
   return [];
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
@@ -338,7 +339,7 @@ export const DEFAULT_CONTRIB = 943;
 
 const initStub = (stub) => {
   if (!stub) return null;
-  return stub.map(item => item.value);
+  return stub.map(item => item.value);  // grid
 };
 
 const ROUTE_MAX = 898;
