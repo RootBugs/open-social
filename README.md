@@ -11,8 +11,7 @@ npm run dev
 yarn dev
 # or
 
-pnpm dev
-<!-- // test: add_class — updateTest -->
+<!-- // transition: add_function — buildTransition -->
 # or
 <!-- // trace: add_function — fetchTrace -->
 <!-- // format: add_try_catch — formatFormat -->
