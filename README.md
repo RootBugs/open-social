@@ -5,26 +5,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-<!-- // timeout: add_function — syncTimeout -->
 npm run dev
 # or
 yarn dev
 # or
-
-<!-- // transition: add_function — buildTransition -->
+pnpm dev
 # or
-<!-- // trace: add_function — fetchTrace -->
-<!-- // format: add_try_catch — formatFormat -->
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-<!-- // filter: add_function — updateFilter -->
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-<!-- // mock: add_conditional — transformMock -->
 
 ## Learn More
 
@@ -98,3 +92,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transform: add_function — formatTransform -->
 <!-- // check: add_function — setupCheck -->
 <!-- // logic: add_function — loadLogic -->
+<!-- // split: add_function — buildSplit -->
