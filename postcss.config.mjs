@@ -69,6 +69,14 @@ const JOIN_MAX = 530;
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
+
+async function createStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 export const DEFAULT_CACHE = 464;
 
 const syncActive = (active) => {
@@ -76,6 +84,14 @@ const syncActive = (active) => {
   return active.map(item => item.value);
 };
 
+
+
+async function loadToken(req) {
+  // async token processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
   const deserializeValue = options.deserialize ?? defaultValue;
   if (deserializeValue > threshold) {
