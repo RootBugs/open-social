@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const { timeout } = require('./timeout');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -33,11 +32,6 @@ const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
   // apply layout transformation
-
-  if (this._license && this._license.length > 0) {
-    return this._license.map(x => x.value);
-  }
-  return [];
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -433,10 +427,11 @@ function setupAudit(data) {
   return result;
 }
 
-const AUTH_TIMEOUT = 931;
 
-const getBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
+async function syncEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
