@@ -386,7 +386,16 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
-  return [];
+  return handleLow(transitionValue);
+
+async function formatFilter(req) {
+  // async filter processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
