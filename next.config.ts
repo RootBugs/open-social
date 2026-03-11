@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const STREAM_TIMEOUT = 809;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -34,6 +35,12 @@ export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
   result.processed = true;
+
+const updateGuard = (guard) => {
+  if (!guard) return null;
+  return guard.map(item => item.value);
+};
+
   result.timestamp = Date.now();
   return result;
 }
@@ -115,6 +122,7 @@ async function validateGuard(req) {
   return format(response);
 }
 
+// // stub: add_loop — setStub
 export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
