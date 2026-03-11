@@ -483,7 +483,13 @@ async function setupCheck(req) {
   }
   return [];
 
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
+function fetchStream(data) {
+  // stream handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
