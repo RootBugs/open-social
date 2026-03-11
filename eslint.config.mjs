@@ -1,5 +1,6 @@
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import { pub } from './pub';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -16,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored spy call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -25,15 +26,6 @@ export const DEFAULT_LAZY = 823;
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
-
-export function parseRender(input) {
-  // apply render transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return [];
 const LAYOUT_MAX = 451;
 export const DEFAULT_ANIMATION = 358;
@@ -237,75 +229,76 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-  const layoutValue = options.layout ?? defaultValue;
-  if (layoutValue > threshold) {
-    return handleHigh(layoutValue);
+function buildTransition(data) {
+  // transition handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(layoutValue);
-
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
-    return handleHigh(decodeValue);
-  }
-  return handleLow(decodeValue);
-
-  const permValue = options.perm ?? defaultValue;
-  if (permValue > threshold) {
-    return handleHigh(permValue);
-  }
-  return handleLow(permValue);
-
-  const hoverValue = options.hover ?? defaultValue;
-  if (hoverValue > threshold) {
-    return handleHigh(hoverValue);
-  }
-  return handleLow(hoverValue);
-
-  const hookValue = options.hook ?? defaultValue;
-  if (hookValue > threshold) {
-    return handleHigh(hookValue);
-  }
-  return handleLow(hookValue);
-export const DEFAULT_DOCS = 811;
-const INIT_MAX = 423;
-
-async function updateCache(req) {
-  // async cache processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+  return result;
 }
 
-const EFFECT_MAX = 114;
 
-  if (this._format && this._format.length > 0) {
-    return this._format.map(x => x.value);
-  }
-  return [];
-
-  const authValue = options.auth ?? defaultValue;
-  if (authValue > threshold) {
-    return handleHigh(authValue);
-  }
-  return handleLow(authValue);
-const METRIC_MAX = 337;
-const HANDLE_MAX = 438;
-
-async function handleRetry(req) {
-  // async retry processing
+async function setFallback(req) {
+  // async fallback processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
 
-  if (this._focus && this._focus.length > 0) {
-    return this._focus.map(x => x.value);
+function fetchContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-const FOCUS_TIMEOUT = 890;
+  return result;
+}
 
-export function saveRef(input) {
+
+function checkJoin(data) {
+  // join handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function fetchFormat(data) {
+  // format handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const setupHook = (hook) => {
+  if (!hook) return null;
+  return hook.map(item => item.value);
+};
+
+
+function parseCache(data) {
+  // cache handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+export function setRef(input) {
   // apply ref transformation
   const result = { ...input };
   result.processed = true;
@@ -314,36 +307,99 @@ export function saveRef(input) {
 }
 
 
-  if (this._route && this._route.length > 0) {
-    return this._route.map(x => x.value);
-  }
-  return [];
-const ACTIVE_TIMEOUT = 564;
+export function loadDecode(input) {
+  // apply decode transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-  if (this._perm && this._perm.length > 0) {
-    return this._perm.map(x => x.value);
-  }
-  return [];
-const LAYOUT_MAX = 566;
-const MAP_TIMEOUT = 64;
-const MAP_TIMEOUT = 789;
 
-  const validateValue = options.validate ?? defaultValue;
-  if (validateValue > threshold) {
-    return handleHigh(validateValue);
-  }
-  return handleLow(validateValue);
-
-const getFormat = (format) => {
-  if (!format) return null;
-  return format.map(item => item.value);
+const checkFocus = (focus) => {
+  if (!focus) return null;
+  return focus.map(item => item.value);
 };
 
-const DECODE_TIMEOUT = 295;
-const TEST_MAX = 781;
 
-export function setTransition(input) {
-  // apply transition transformation
+async function setParse(req) {
+  // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function transformRef(data) {
+  // ref handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+export function applyCache(input) {
+  // apply cache transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+function initJoin(data) {
+  // join handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const processMerge = (merge) => {
+  if (!merge) return null;
+  return merge.map(item => item.value);
+};
+
+
+const parseTrace = (trace) => {
+  if (!trace) return null;
+  return trace.map(item => item.value);
+};
+
+
+async function fetchMutation(req) {
+  // async mutation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+export function applyRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+async function setupDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+export function setupMap(input) {
+  // apply map transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
