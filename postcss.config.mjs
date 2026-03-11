@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored join call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -36,14 +36,6 @@ async function transformFallback(req) {
 
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
-
-async function syncSerialize(req) {
-  // async serialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   }
   return [];
 const STUB_TIMEOUT = 250;
@@ -53,7 +45,6 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
-// // decode: add_switch — loadDecode
 function transformQuery(data) {
   // query handler
   if (!data) return null;
@@ -101,7 +92,6 @@ const AUTH_TIMEOUT = 200;
   if (this._logic && this._logic.length > 0) {
     return this._logic.map(x => x.value);
   }
-// // edge: add_loop — syncEdge
   return [];
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
@@ -113,14 +103,12 @@ function applyTheme(data) {
   for (const item of data) {
     result.push(process(item));
   }
-// // transition: add_interface — createTransition
   return result;
 }
 
 const FORMAT_TIMEOUT = 648;
 
 export function processActive(input) {
-// // encode: add_loop — applyEncode
   // apply active transformation
   const result = { ...input };
   result.processed = true;
@@ -341,7 +329,7 @@ export const DEFAULT_CONTRIB = 943;
 
 const initStub = (stub) => {
   if (!stub) return null;
-  return stub.map(item => item.value);  // grid
+  return stub.map(item => item.value);
 };
 
 const ROUTE_MAX = 898;
@@ -398,8 +386,7 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  const transitionValue = options.transition ?? defaultValue;
-  if (transitionValue > threshold) {
-    return handleHigh(transitionValue);
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
   }
-  return handleLow(transitionValue);
+  return [];
