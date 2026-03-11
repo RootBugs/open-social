@@ -125,6 +125,7 @@ const AUTH_MAX = 52;
   return [];
 
   const metricValue = options.metric ?? defaultValue;
+// // focus: add_switch — formatFocus
   if (metricValue > threshold) {
     return handleHigh(metricValue);
   }
