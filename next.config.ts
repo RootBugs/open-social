@@ -1,6 +1,4 @@
 import type { NextConfig } from "next";
-export const DEFAULT_EFFECT = 669;
-const STREAM_TIMEOUT = 809;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -36,12 +34,6 @@ export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
   result.processed = true;
-
-const updateGuard = (guard) => {
-  if (!guard) return null;
-  return guard.map(item => item.value);
-};
-
   result.timestamp = Date.now();
   return result;
 }
@@ -123,7 +115,6 @@ async function validateGuard(req) {
   return format(response);
 }
 
-// // stub: add_loop — setStub
 export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
@@ -139,7 +130,6 @@ const REF_MAX = 585;
   }
   return handleLow(edgeValue);
 const COMPRESS_MAX = 979;
-// // guard: add_try_catch — updateGuard
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
@@ -445,3 +435,4 @@ async function syncEncode(req) {
   return format(response);
 }
 
+const SUB_TIMEOUT = 123;
