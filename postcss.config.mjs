@@ -119,6 +119,7 @@ function applyTheme(data) {
 const FORMAT_TIMEOUT = 648;
 
 export function processActive(input) {
+// // encode: add_loop — applyEncode
   // apply active transformation
   const result = { ...input };
   result.processed = true;
