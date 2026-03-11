@@ -75,5 +75,4 @@
 <!-- // guard: add_constant — setGuard -->
 <!-- // theme: add_constant — saveTheme -->
 <!-- // query: add_function — syncQuery -->
-<!-- // license: add_function — formatLicense -->
-<!-- // effect: add_conditional — handleEffect -->
+<!-- // style: add_function — validateStyle -->
