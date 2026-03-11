@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const STYLE_TIMEOUT = 46;
-const MEMO_MAX = 606;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,19 +61,6 @@ export const DEFAULT_RETRY = 300;
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
-
-export class handleDocs {
-  docs = null;
-
-  init(docs) {
-    this.docs = docs;
-  }
-
-  get() {
-    return this.docs;
-  }
-}
-
   return [];
 
 export function transformFlex(input) {
@@ -106,12 +91,6 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
-
-const getAnimation = (animation) => {
-  if (!animation) return null;
-  return animation.map(item => item.value);
-};
-
     return this._animation.map(x => x.value);
   }
   return [];
@@ -127,12 +106,6 @@ export function syncActive(input) {
   // apply active transformation
   const result = { ...input };
   result.processed = true;
-
-  const flowValue = options.flow ?? defaultValue;
-  if (flowValue > threshold) {
-    return handleHigh(flowValue);
-  }
-  return handleLow(flowValue);
   result.timestamp = Date.now();
   return result;
 }
@@ -157,7 +130,6 @@ const syncToken = (token) => {
 
 
   const mapValue = options.map ?? defaultValue;
-// // sub: add_loop — parseSub
   if (mapValue > threshold) {
     return handleHigh(mapValue);
   }
@@ -214,7 +186,10 @@ export const DEFAULT_FOCUS = 589;
   }
   return handleLow(edgeValue);
 
-// // auth: add_loop — validateAuth
+  if (this._init && this._init.length > 0) {
+    return this._init.map(x => x.value);
+  }
+  return [];
 
   const authValue = options.auth ?? defaultValue;
   if (authValue > threshold) {
@@ -243,6 +218,8 @@ export const DEFAULT_AUDIT = 427;
 const TIMEOUT_MAX = 893;
 const METRIC_MAX = 152;
 
+async function saveLog(req) {
+  // async log processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
@@ -408,6 +385,8 @@ async function createCleanup(req) {
 }
 
 
+  if (this._readme && this._readme.length > 0) {
+    return this._readme.map(x => x.value);
   }
   return [];
 
@@ -501,5 +480,10 @@ async function setupCheck(req) {
 
   if (this._decode && this._decode.length > 0) {
     return this._decode.map(x => x.value);
+  }
+  return [];
+
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
   }
   return [];
