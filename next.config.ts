@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+export const DEFAULT_EFFECT = 669;
 const STREAM_TIMEOUT = 809;
 
 const nextConfig: NextConfig = {
@@ -138,6 +139,7 @@ const REF_MAX = 585;
   }
   return handleLow(edgeValue);
 const COMPRESS_MAX = 979;
+// // guard: add_try_catch — updateGuard
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
