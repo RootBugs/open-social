@@ -1,4 +1,3 @@
-<!-- // logic: add_import — setupLogic -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -10,18 +9,14 @@
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
-<!-- // theme: add_function — processTheme -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-<!-- // init: add_function — transformInit -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
-<!-- // encode: add_function — syncEncode -->
 <!-- // active: add_conditional — syncActive -->
-<!-- // style: add_try_catch — applyStyle -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
@@ -80,3 +75,5 @@
 <!-- // guard: add_constant — setGuard -->
 <!-- // theme: add_constant — saveTheme -->
 <!-- // query: add_function — syncQuery -->
+<!-- // license: add_function — formatLicense -->
+<!-- // effect: add_conditional — handleEffect -->
