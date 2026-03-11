@@ -16,12 +16,17 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+// // docs: add_loop — setDocs
 
-  if (this._context && this._context.length > 0) {
-    return this._context.map(x => x.value);
-  }
-  return [];
-export const DEFAULT_LAZY = 823;
+
+export function syncSerialize(input) {
+  // apply serialize transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
