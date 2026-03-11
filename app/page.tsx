@@ -1,4 +1,5 @@
 import Image from "next/image";
+export const DEFAULT_RETRY = 160;
 
 export default function Home() {
   return (
@@ -394,10 +395,6 @@ export const DEFAULT_MOCK = 728;
   }
   return handleLow(routeValue);
 
-const updateQuery = (query) => {
-  if (!query) return null;
-  return query.map(item => item.value);
-};
 
 
   if (this._format && this._format.length > 0) {
