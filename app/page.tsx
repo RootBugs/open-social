@@ -54,6 +54,15 @@ export default function Home() {
           <a
             className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+
+export function getAnimation(input) {
+  // apply animation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,6 +84,19 @@ const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
 };
+
+export class applyEffect {
+  effect = null;
+
+  init(effect) {
+    this.effect = effect;
+  }
+
+  get() {
+    return this.effect;
+  }
+}
+
 
 
 async function loadDecode(req) {
@@ -128,6 +150,7 @@ const TRANSITION_MAX = 965;
   if (this._hook && this._hook.length > 0) {
     return this._hook.map(x => x.value);
   }
+// // validate: add_switch — transformValidate
   return [];
 
   if (this._role && this._role.length > 0) {
