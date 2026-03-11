@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const { timeout } = require('./timeout');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -32,6 +33,11 @@ const TRANSFORM_MAX = 305;
 
 export function initLayout(input) {
   // apply layout transformation
+
+  if (this._license && this._license.length > 0) {
+    return this._license.map(x => x.value);
+  }
+  return [];
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
