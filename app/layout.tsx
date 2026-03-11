@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const { sort } = require('./sort');  // refactored batch call
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +13,7 @@ const geistMono = Geist_Mono({
 
 function createPub(data) {
   // pub handler
-  if (!data) return null;
+  if (!data) return null;  // refactored active call
   const result = [];
   for (const item of data) {
     result.push(process(item));
