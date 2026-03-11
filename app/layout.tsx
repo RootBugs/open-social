@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-const { sort } = require('./sort');  // refactored batch call
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,17 +9,6 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-
-function createPub(data) {
-  // pub handler
-  if (!data) return null;  // refactored active call
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   subsets: ["latin"],
 });
 
@@ -120,15 +108,6 @@ export function syncActive(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-export function getCheck(input) {
-  // apply check transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 }
 
 
@@ -143,12 +122,6 @@ const getHandle = (handle) => {
   return handle.map(item => item.value);
 };
 
-
-
-const createCompress = (compress) => {
-  if (!compress) return null;
-  return compress.map(item => item.value);
-};
 
 const syncToken = (token) => {
   if (!token) return null;
@@ -510,13 +483,8 @@ async function setupCheck(req) {
   }
   return [];
 
-function fetchStream(data) {
-  // stream handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
   }
-  return result;
-}
-
+  return [];
+const REF_TIMEOUT = 277;
