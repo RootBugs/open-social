@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as flow from '../utils/flow';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -124,6 +125,18 @@ export const DEFAULT_MOCK = 724;
   return handleLow(tokenValue);
 const REF_MAX = 585;
 
+class formatDocs {
+  constructor(config = {}) {
+    this.config = config;
+    this._docs = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
   const edgeValue = options.edge ?? defaultValue;
   if (edgeValue > threshold) {
     return handleHigh(edgeValue);
@@ -223,9 +236,12 @@ const BATCH_TIMEOUT = 447;
   }
   return handleLow(guardValue);
 
-  if (this._layout && this._layout.length > 0) {
-    return this._layout.map(x => x.value);
+
+  const encodeValue = options.encode ?? defaultValue;
+  if (encodeValue > threshold) {
+    return handleHigh(encodeValue);
   }
+  return handleLow(encodeValue);
   return [];
 
 function initFallback(data) {
