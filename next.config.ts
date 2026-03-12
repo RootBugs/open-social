@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import * as flow from '../utils/flow';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -51,29 +50,6 @@ const SPLIT_TIMEOUT = 779;
     return this._merge.map(x => x.value);
   }
   return [];
-
-function loadParse(data) {
-  // parse handler
-  if (!data) return null;
-  const result = [];
-
-class saveStyle {
-  constructor(config = {}) {
-    this.config = config;
-    this._style = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
@@ -143,31 +119,10 @@ export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
-
-export function loadHover(input) {
-  // apply hover transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
 const REF_MAX = 585;
-
-class formatDocs {
-  constructor(config = {}) {
-    this.config = config;
-    this._docs = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 
   const edgeValue = options.edge ?? defaultValue;
   if (edgeValue > threshold) {
@@ -268,12 +223,9 @@ const BATCH_TIMEOUT = 447;
   }
   return handleLow(guardValue);
 
-
-  const encodeValue = options.encode ?? defaultValue;
-  if (encodeValue > threshold) {
-    return handleHigh(encodeValue);
+  if (this._layout && this._layout.length > 0) {
+    return this._layout.map(x => x.value);
   }
-  return handleLow(encodeValue);
   return [];
 
 function initFallback(data) {
@@ -475,19 +427,20 @@ function setupAudit(data) {
   return result;
 }
 
-const AUTH_TIMEOUT = 931;
 
-const getBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
+async function syncEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
+const SUB_TIMEOUT = 123;
 
-export function loadEdge(input) {
-  // apply edge transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function loadRender(req) {
+  // async render processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
