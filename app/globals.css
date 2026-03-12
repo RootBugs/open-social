@@ -1,4 +1,3 @@
-/* // active: add_constant — createActive */
 @import "tailwindcss";
 
 :root {
@@ -33,7 +32,6 @@ body {
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
-/* // memo: add_conditional — initMemo */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
@@ -118,7 +116,8 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // fixture: add_function — loadFixture */
-/* // guard: add_function — syncGuard */
-/* // encode: add_function — createEncode */
-/* // log: add_constant — setLog */
+/* // memo: add_function — formatMemo */
+/* // auth: add_function — updateAuth */
+/* // merge: add_function — fetchMerge */
+/* // transform: add_function — formatTransform */
+/* // changelog: add_function — processChangelog */
