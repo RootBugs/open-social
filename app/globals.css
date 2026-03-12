@@ -17,6 +17,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+/* // filter: add_function — parseFilter */
 }
 
 body {
@@ -27,6 +28,7 @@ body {
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
+/* // query: add_function — updateQuery */
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
@@ -34,6 +36,7 @@ body {
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
+/* // style: add_function — setStyle */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
