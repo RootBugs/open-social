@@ -427,12 +427,19 @@ function setupAudit(data) {
   return result;
 }
 
+const AUTH_TIMEOUT = 931;
 
-async function syncEncode(req) {
-  // async encode processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+const getBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
+
+export function loadEdge(input) {
+  // apply edge transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
-const SUB_TIMEOUT = 123;
