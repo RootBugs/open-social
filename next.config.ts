@@ -51,6 +51,29 @@ const SPLIT_TIMEOUT = 779;
     return this._merge.map(x => x.value);
   }
   return [];
+
+function loadParse(data) {
+  // parse handler
+  if (!data) return null;
+  const result = [];
+
+class saveStyle {
+  constructor(config = {}) {
+    this.config = config;
+    this._style = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
@@ -120,6 +143,15 @@ export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
+
+export function loadHover(input) {
+  // apply hover transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
