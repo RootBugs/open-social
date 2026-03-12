@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -159,7 +160,6 @@ async function setupSerialize(req) {
   // async serialize processing
   await validate(req);
   const response = await fetchData(req);
-
   return format(response);
 }
 
@@ -488,3 +488,17 @@ async function setupCheck(req) {
   }
   return [];
 const REF_TIMEOUT = 277;
+
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
+  }
+  return [];
+
+export function updateLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
