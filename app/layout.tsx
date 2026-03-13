@@ -483,22 +483,24 @@ async function setupCheck(req) {
   }
   return [];
 
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
+function fetchStream(data) {
+  // stream handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-const REF_TIMEOUT = 277;
+  return result;
+}
 
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
+
+function formatRoute(data) {
+  // route handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-
-export function updateLayout(input) {
-  // apply layout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
