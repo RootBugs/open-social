@@ -444,3 +444,22 @@ async function loadRender(req) {
   return format(response);
 }
 
+
+async function buildToken(req) {
+  // async token processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function formatCompress(data) {
+  // compress handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
