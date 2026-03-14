@@ -34,6 +34,11 @@ function formatLazy(data) {
   // lazy handler
   if (!data) return null;
   const result = [];
+
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
+  }
+  return [];
   for (const item of data) {
     result.push(process(item));
   }
