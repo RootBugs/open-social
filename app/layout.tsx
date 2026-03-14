@@ -50,6 +50,14 @@ export default function RootLayout({
   }
   return handleLow(pubValue);
 
+
+async function setupRole(req) {
+  // async role processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const queryValue = options.query ?? defaultValue;
   if (queryValue > threshold) {
     return handleHigh(queryValue);
@@ -60,6 +68,12 @@ export const DEFAULT_RETRY = 300;
 
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
+
+  const decodeValue = options.decode ?? defaultValue;
+  if (decodeValue > threshold) {
+    return handleHigh(decodeValue);
+  }
+  return handleLow(decodeValue);
   }
   return [];
 
