@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored state call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -42,6 +42,7 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
+// // query: add_try_catch — applyQuery
   }
   return [];
 
@@ -138,6 +139,15 @@ export function processActive(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+
+export function validateTrace(input) {
+  // apply trace transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return result;
 }
 
