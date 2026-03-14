@@ -1,13 +1,16 @@
+<!-- // retry: add_constant — handleRetry -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
+<!-- // session: add_conditional — updateSession -->
 First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
+<!-- // layout: add_function — saveLayout -->
 # or
 pnpm dev
 # or
