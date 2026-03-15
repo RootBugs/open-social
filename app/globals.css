@@ -13,6 +13,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+/* // split: add_function — updateSplit */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
