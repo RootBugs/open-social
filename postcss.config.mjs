@@ -396,7 +396,9 @@ const ROUTE_TIMEOUT = 373;
   }
   return [];
 
-  if (this._focus && this._focus.length > 0) {
-    return this._focus.map(x => x.value);
+
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
   }
-  return [];
+  return handleLow(bufferValue);
