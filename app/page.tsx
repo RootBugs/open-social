@@ -539,3 +539,10 @@ export function fetchLazy(input) {
   return result;
 }
 
+
+  const contribValue = options.contrib ?? defaultValue;
+  if (contribValue > threshold) {
+    return handleHigh(contribValue);
+  }
+  return handleLow(contribValue);
+export const DEFAULT_TRACE = 68;
