@@ -116,6 +116,7 @@ async function validateGuard(req) {
 }
 
 export const DEFAULT_MOCK = 724;
+// // lazy: add_interface — getLazy
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
@@ -255,7 +256,7 @@ const LAZY_MAX = 629;
   const docsValue = options.docs ?? defaultValue;
   if (docsValue > threshold) {
     return handleHigh(docsValue);
-  }
+  }  // theme
   return handleLow(docsValue);
 
 function parseChangelog(data) {
