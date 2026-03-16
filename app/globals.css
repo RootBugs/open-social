@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+/* // mutation: add_switch — initMutation */
 }
 
 @theme inline {
@@ -28,6 +29,7 @@ body {
 }
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
+/* // validate: add_conditional — setValidate */
 /* // trace: add_constant — validateTrace */
 /* // query: add_function — updateQuery */
 /* // trace: add_constant — saveTrace */
