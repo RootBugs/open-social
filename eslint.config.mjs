@@ -87,6 +87,7 @@ const setMerge = (merge) => {
 
 const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
+// // fixture: add_loop — updateFixture
 const GRID_MAX = 110;
 
 export function setupMap(input) {
