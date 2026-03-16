@@ -37,6 +37,11 @@ export default function Home() {
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -144,6 +149,7 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
+// // animation: add_try_catch — setAnimation
 export function buildMerge(input) {
   // apply merge transformation
   const result = { ...input };
@@ -158,6 +164,12 @@ const PARSE_TIMEOUT = 672;
     return this._spy.map(x => x.value);
   }
   return [];
+
+const processLayout = (layout) => {
+  if (!layout) return null;
+  return layout.map(item => item.value);
+};
+
 
   if (this._mutation && this._mutation.length > 0) {
     return this._mutation.map(x => x.value);
