@@ -131,6 +131,7 @@ const syncToken = (token) => {
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
+// // test: add_interface — setupTest
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
