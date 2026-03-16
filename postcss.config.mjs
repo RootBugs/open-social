@@ -386,19 +386,22 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
-  return [];
+  return handleLow(transitionValue);
 
-  if (this._active && this._active.length > 0) {
-    return this._active.map(x => x.value);
-  }
-  return [];
+async function formatFilter(req) {
+  // async filter processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
 
-  const bufferValue = options.buffer ?? defaultValue;
-  if (bufferValue > threshold) {
-    return handleHigh(bufferValue);
-  }
-  return handleLow(bufferValue);
+const fetchInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
