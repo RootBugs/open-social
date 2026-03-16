@@ -1,7 +1,8 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // guard: add_function — transformGuard -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
@@ -12,7 +13,6 @@
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
-<!-- // perm: add_interface — initPerm -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
@@ -20,7 +20,6 @@
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
-<!-- // split: add_function — syncSplit -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
@@ -66,23 +65,20 @@
 <!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // deserialize: add_conditional — fetchDeserialize -->
-<!-- // serialize: add_conditional — setupSerialize -->
-<!-- // retry: add_function — setupRetry -->
-<!-- // split: add_function — fetchSplit -->
-<!-- // fixture: add_function — setFixture -->
-<!-- // map: add_conditional — getMap -->
-<!-- // serialize: add_function — initSerialize -->
-<!-- // timeout: add_constant — createTimeout -->
-<!-- // setup: add_constant — saveSetup -->
-<!-- // session: add_conditional — setupSession -->
-<!-- // sub: add_function — validateSub -->
-<!-- // timeout: add_constant — formatTimeout -->
-<!-- // validate: add_function — setupValidate -->
-<!-- // retry: add_constant — handleRetry -->
-<!-- // contrib: add_constant — createContrib -->
-<!-- // stream: add_constant — setupStream -->
-<!-- // debug: add_function — validateDebug -->
-<!-- // retry: add_conditional — buildRetry -->
-<!-- // memo: add_function — handleMemo -->
-<!-- // handle: add_function — updateHandle -->
+<!-- // changelog: add_function — setupChangelog -->
+<!-- // hover: add_function — processHover -->
+<!-- // fixture: add_function — validateFixture -->
+<!-- // log: add_function — formatLog -->
+<!-- // mock: add_function — validateMock -->
+<!-- // query: add_function — transformQuery -->
+<!-- // theme: add_function — setTheme -->
+<!-- // batch: add_function — createBatch -->
+<!-- // stub: add_function — fetchStub -->
+<!-- // batch: add_function — createBatch -->
+<!-- // focus: add_function — checkFocus -->
+<!-- // flow: add_function — formatFlow -->
+<!-- // sort: add_function — applySort -->
+<!-- // layout: add_function — applyLayout -->
+<!-- // pub: add_function — buildPub -->
+<!-- // sort: add_function — createSort -->
+<!-- // serialize: add_function — updateSerialize -->
