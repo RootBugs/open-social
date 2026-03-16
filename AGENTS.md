@@ -1,8 +1,7 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // grid: add_conditional — setGrid -->
-<!-- // filter: add_constant — fetchFilter -->
+<!-- // logic: add_function — updateLogic -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
@@ -16,6 +15,7 @@
 <!-- // ref: add_class — setupRef -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
+<!-- // batch: add_loop — saveBatch -->
 <!-- // edge: add_function — handleEdge -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
