@@ -229,11 +229,6 @@ async function saveHandle(req) {
   }
   return handleLow(readmeValue);
 
-  const layoutValue = options.layout ?? defaultValue;
-  if (layoutValue > threshold) {
-    return handleHigh(layoutValue);
-  }
-  return handleLow(layoutValue);
 
   const decodeValue = options.decode ?? defaultValue;
   if (decodeValue > threshold) {
@@ -297,8 +292,11 @@ async function handleRetry(req) {
   return [];
 const FOCUS_TIMEOUT = 890;
 
-export function saveRef(input) {
-  // apply ref transformation
+
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
