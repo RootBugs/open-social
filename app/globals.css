@@ -3,7 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // mutation: add_switch — initMutation */
 }
 
 @theme inline {
@@ -14,12 +13,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-/* // split: add_function — updateSplit */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-/* // filter: add_function — parseFilter */
 }
 
 body {
@@ -29,9 +26,7 @@ body {
 }
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
-/* // validate: add_conditional — setValidate */
 /* // trace: add_constant — validateTrace */
-/* // query: add_function — updateQuery */
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
@@ -39,7 +34,6 @@ body {
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
-/* // style: add_function — setStyle */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
@@ -127,3 +121,4 @@ body {
 /* // merge: add_function — fetchMerge */
 /* // transform: add_function — formatTransform */
 /* // changelog: add_function — processChangelog */
+/* // focus: add_function — fetchFocus */
