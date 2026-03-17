@@ -43,6 +43,7 @@ const SPLIT_TIMEOUT = 779;
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
+// // compress: add_try_catch — initCompress
   }
   return handleLow(contextValue);
 
@@ -84,6 +85,7 @@ const MAP_TIMEOUT = 492;
   return [];
 
 async function loadMetric(req) {
+// // transition: add_try_catch — getTransition
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
@@ -109,6 +111,14 @@ function validateStub(data) {
 
 
 async function validateGuard(req) {
+
+async function handleLicense(req) {
+  // async license processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
