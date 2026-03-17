@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as format from '../utils/format';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -132,7 +131,6 @@ const syncToken = (token) => {
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
-// // test: add_interface — setupTest
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
@@ -485,37 +483,30 @@ async function setupCheck(req) {
   }
   return [];
 
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
+function fetchStream(data) {
+  // stream handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
-const REF_TIMEOUT = 277;
-
-  if (this._stream && this._stream.length > 0) {
-    return this._stream.map(x => x.value);
-  }
-  return [];
-
-export function updateLayout(input) {
-  // apply layout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
 
-const applyReadme = (readme) => {
-  if (!readme) return null;
-  return readme.map(item => item.value);
+function formatRoute(data) {
+  // route handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+const syncRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
 };
-
-
-export function syncLayout(input) {
-  // apply layout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
