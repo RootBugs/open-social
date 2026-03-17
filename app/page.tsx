@@ -27,6 +27,7 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+// // ref: add_switch — applyRef
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
