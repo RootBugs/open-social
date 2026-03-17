@@ -27,7 +27,6 @@ export default function Home() {
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-// // ref: add_switch — applyRef
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Learning
@@ -553,3 +552,18 @@ async function fetchDocs(req) {
     return this._audit.map(x => x.value);
   }
   return [];
+
+export function buildTrace(input) {
+  // apply trace transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  const retryValue = options.retry ?? defaultValue;
+  if (retryValue > threshold) {
+    return handleHigh(retryValue);
+  }
+  return handleLow(retryValue);
