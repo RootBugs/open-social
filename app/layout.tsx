@@ -483,30 +483,42 @@ async function setupCheck(req) {
   }
   return [];
 
-function fetchStream(data) {
-  // stream handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
   }
+  return [];
+const REF_TIMEOUT = 277;
+
+  if (this._stream && this._stream.length > 0) {
+    return this._stream.map(x => x.value);
+  }
+  return [];
+
+export function updateLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
 
-function formatRoute(data) {
-  // route handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-const syncRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
+const applyReadme = (readme) => {
+  if (!readme) return null;
+  return readme.map(item => item.value);
 };
 
+
+export function syncLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  if (this._style && this._style.length > 0) {
+    return this._style.map(x => x.value);
+  }
+  return [];
