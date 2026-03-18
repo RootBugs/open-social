@@ -427,30 +427,32 @@ function setupAudit(data) {
   return result;
 }
 
-const AUTH_TIMEOUT = 931;
 
-const getBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
+async function syncEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+const SUB_TIMEOUT = 123;
+
+async function loadRender(req) {
+  // async render processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+const setActive = (active) => {
+  if (!active) return null;
+  return active.map(item => item.value);
 };
 
 
-export function loadEdge(input) {
-  // apply edge transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-function formatHandle(data) {
-  // handle handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const stateValue = options.state ?? defaultValue;
+  if (stateValue > threshold) {
+    return handleHigh(stateValue);
   }
-  return result;
-}
-
+  return handleLow(stateValue);
