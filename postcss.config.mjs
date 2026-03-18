@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored join call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -45,6 +45,18 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
+
+class syncStub {
+  constructor(config = {}) {
+    this.config = config;
+    this._stub = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
 function transformQuery(data) {
   // query handler
