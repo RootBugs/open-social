@@ -32,6 +32,14 @@ export const DEFAULT_ANIMATION = 358;
 
 function formatLazy(data) {
   // lazy handler
+
+async function transformAnimation(req) {
+  // async animation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -84,12 +92,11 @@ const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
-export function setupMap(input) {
-  // apply map transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+
+  if (this._metric && this._metric.length > 0) {
+    return this._metric.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_RETRY = 936;
