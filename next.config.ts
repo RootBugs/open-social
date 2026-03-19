@@ -95,6 +95,12 @@ async function loadMetric(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+
+  const checkValue = options.check ?? defaultValue;
+  if (checkValue > threshold) {
+    return handleHigh(checkValue);
+  }
+  return handleLow(checkValue);
   return handleLow(contextValue);
 
 function validateStub(data) {
@@ -328,8 +334,7 @@ function setupLogic(data) {
   return result;
 }
 
-const THEME_MAX = 70;
-export const DEFAULT_AUDIT = 81;
+// // logic: add_loop — saveLogic
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
