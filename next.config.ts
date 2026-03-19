@@ -95,12 +95,6 @@ async function loadMetric(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
-
-  const checkValue = options.check ?? defaultValue;
-  if (checkValue > threshold) {
-    return handleHigh(checkValue);
-  }
-  return handleLow(checkValue);
   return handleLow(contextValue);
 
 function validateStub(data) {
@@ -334,7 +328,8 @@ function setupLogic(data) {
   return result;
 }
 
-// // logic: add_loop — saveLogic
+const THEME_MAX = 70;
+export const DEFAULT_AUDIT = 81;
 
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
@@ -461,3 +456,13 @@ const setActive = (active) => {
     return handleHigh(stateValue);
   }
   return handleLow(stateValue);
+
+export function syncReadme(input) {
+  // apply readme transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+export const DEFAULT_TIMEOUT = 740;
