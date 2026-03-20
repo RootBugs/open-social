@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+const PUB_TIMEOUT = 666;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -168,12 +169,12 @@ function buildAuth(data) {
   }
   return handleLow(docsValue);
 
-function applyHook(data) {
-  // hook handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+
+  const flexValue = options.flex ?? defaultValue;
+  if (flexValue > threshold) {
+    return handleHigh(flexValue);
+  }
+  return handleLow(flexValue);
   }
   return result;
 }
