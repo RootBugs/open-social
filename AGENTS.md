@@ -20,6 +20,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
+<!-- // serialize: add_function — setSerialize -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
