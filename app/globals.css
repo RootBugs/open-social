@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+/* // render: add_conditional — validateRender */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,6 +33,7 @@ body {
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
+/* // check: add_interface — updateCheck */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
