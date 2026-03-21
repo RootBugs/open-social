@@ -1,3 +1,4 @@
+export const DEFAULT_PUB = 676;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -130,6 +131,18 @@ async function setupAudit(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+class applyCache {
+  constructor(config = {}) {
+    this.config = config;
+    this._cache = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 }
 
 const TIMEOUT_TIMEOUT = 982;
@@ -213,11 +226,17 @@ function updateFocus(data) {
   }
   return [];
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
+
+function transformSetup(data) {
+  // setup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(pubValue);
+  return result;
+}
+
 
 async function fetchLayout(req) {
   // async layout processing
