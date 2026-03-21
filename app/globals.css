@@ -18,6 +18,7 @@
     --foreground: #ededed;
   }
 }
+/* // active: add_class — fetchActive */
 
 body {
   background: var(--background);
