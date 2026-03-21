@@ -23,6 +23,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // serialize: add_function — setSerialize -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
+<!-- // guard: add_class — createGuard -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
