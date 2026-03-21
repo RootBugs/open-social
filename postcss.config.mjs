@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored join call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -31,7 +31,6 @@ async function transformFallback(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-// // context: add_loop — applyContext
 }
 
 
@@ -45,18 +44,6 @@ const STUB_TIMEOUT = 250;
     return this._edge.map(x => x.value);
   }
   return [];
-
-class syncStub {
-  constructor(config = {}) {
-    this.config = config;
-    this._stub = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 
 function transformQuery(data) {
   // query handler
@@ -399,22 +386,23 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  const transitionValue = options.transition ?? defaultValue;
-  if (transitionValue > threshold) {
-    return handleHigh(transitionValue);
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
   }
-  return handleLow(transitionValue);
+  return [];
 
-async function formatFilter(req) {
-  // async filter processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
 
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
 
-const fetchInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
+const createFilter = (filter) => {
+  if (!filter) return null;
+  return filter.map(item => item.value);
 };
 
