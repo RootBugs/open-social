@@ -1,3 +1,4 @@
+<!-- // serialize: add_import — initSerialize -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
