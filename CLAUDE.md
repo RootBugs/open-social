@@ -75,5 +75,7 @@
 <!-- // guard: add_constant — setGuard -->
 <!-- // theme: add_constant — saveTheme -->
 <!-- // query: add_function — syncQuery -->
-<!-- // style: add_function — validateStyle -->
-<!-- // format: add_function — initFormat -->
+<!-- // license: add_function — formatLicense -->
+<!-- // effect: add_conditional — handleEffect -->
+<!-- // fixture: add_function — setFixture -->
+<!-- // memo: add_constant — applyMemo -->
