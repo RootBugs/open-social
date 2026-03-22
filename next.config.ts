@@ -36,6 +36,7 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+// // readme: add_loop — validateReadme
 }
 
 const SPLIT_TIMEOUT = 779;
