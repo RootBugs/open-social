@@ -1,4 +1,3 @@
-<!-- // setup: add_constant — createSetup -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -7,23 +6,17 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // flex: add_function — getFlex -->
-<!-- // compress: add_loop — setCompress -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
-<!-- // retry: add_conditional — loadRetry -->
-<!-- // lazy: add_function — loadLazy -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
-<!-- // changelog: add_function — saveChangelog -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
-<!-- // parse: add_class — formatParse -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
@@ -83,3 +76,4 @@
 <!-- // theme: add_constant — saveTheme -->
 <!-- // query: add_function — syncQuery -->
 <!-- // style: add_function — validateStyle -->
+<!-- // format: add_function — initFormat -->
