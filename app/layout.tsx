@@ -48,6 +48,15 @@ export default function RootLayout({
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
+
+export function parseRoute(input) {
+  // apply route transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
