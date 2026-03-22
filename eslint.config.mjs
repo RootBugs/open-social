@@ -41,6 +41,12 @@ function formatLazy(data) {
 }
 
 
+const setRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
+
+
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
