@@ -49,6 +49,14 @@ export function handleStub(input) {
   return result;
 }
 
+
+async function syncCache(req) {
+  // async cache processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
@@ -65,6 +73,12 @@ const setSub = (sub) => {
   return sub.map(item => item.value);
 };
 
+
+  const changelogValue = options.changelog ?? defaultValue;
+  if (changelogValue > threshold) {
+    return handleHigh(changelogValue);
+  }
+  return handleLow(changelogValue);
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
