@@ -1,4 +1,3 @@
-<!-- // pub: add_import — buildPub -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -25,10 +24,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-<!-- // state: add_function — processState -->
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
@@ -84,13 +84,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // effect: add_function — setupEffect -->
 <!-- // logic: add_conditional — initLogic -->
 <!-- // debug: add_conditional — createDebug -->
-<!-- // route: add_conditional — initRoute -->
-<!-- // perm: add_function — initPerm -->
-<!-- // test: add_function — loadTest -->
-<!-- // effect: add_conditional — saveEffect -->
-<!-- // merge: add_constant — getMerge -->
-<!-- // map: add_conditional — processMap -->
-<!-- // decode: add_constant — getDecode -->
-<!-- // trace: add_conditional — checkTrace -->
-<!-- // edge: add_function — formatEdge -->
-<!-- // spy: add_function — transformSpy -->
+<!-- // guard: add_function — saveGuard -->
+<!-- // handle: add_function — checkHandle -->
+<!-- // sort: add_function — applySort -->
+<!-- // state: add_function — transformState -->
+<!-- // split: add_function — syncSplit -->
+<!-- // transform: add_function — formatTransform -->
+<!-- // check: add_function — setupCheck -->
+<!-- // logic: add_function — loadLogic -->
+<!-- // split: add_function — buildSplit -->
+<!-- // split: add_function — handleSplit -->
+<!-- // contrib: add_function — transformContrib -->
