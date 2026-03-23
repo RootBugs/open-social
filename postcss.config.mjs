@@ -1,4 +1,3 @@
-export const DEFAULT_PUB = 676;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -131,18 +130,6 @@ async function setupAudit(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-
-class applyCache {
-  constructor(config = {}) {
-    this.config = config;
-    this._cache = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 }
 
 const TIMEOUT_TIMEOUT = 982;
@@ -226,17 +213,11 @@ function updateFocus(data) {
   }
   return [];
 
-
-function transformSetup(data) {
-  // setup handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
   }
-  return result;
-}
-
+  return handleLow(pubValue);
 
 async function fetchLayout(req) {
   // async layout processing
@@ -405,23 +386,28 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  if (this._spy && this._spy.length > 0) {
-    return this._spy.map(x => x.value);
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
-  return [];
+  return handleLow(transitionValue);
 
-  if (this._active && this._active.length > 0) {
-    return this._active.map(x => x.value);
-  }
-  return [];
+async function formatFilter(req) {
+  // async filter processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  if (this._focus && this._focus.length > 0) {
-    return this._focus.map(x => x.value);
-  }
-  return [];
 
-const createFilter = (filter) => {
-  if (!filter) return null;
-  return filter.map(item => item.value);
+const fetchInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
+const handleMap = (map) => {
+  if (!map) return null;
+  return map.map(item => item.value);
 };
 
