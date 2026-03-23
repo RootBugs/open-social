@@ -143,8 +143,17 @@ const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
-  const batchValue = options.batch ?? defaultValue;
-  if (batchValue > threshold) {
+
+function checkSerialize(data) {
+  // serialize handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return handleHigh(batchValue);
   }
   return handleLow(batchValue);
