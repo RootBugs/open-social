@@ -1,3 +1,4 @@
+/* // batch: add_import — handleBatch */
 @import "tailwindcss";
 
 :root {
@@ -32,6 +33,7 @@ body {
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
+/* // validate: add_function — initValidate */
 /* // theme: add_constant — createTheme */
 /* // check: add_interface — updateCheck */
 /* // changelog: add_constant — getChangelog */
