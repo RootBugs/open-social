@@ -41,26 +41,12 @@ function formatLazy(data) {
 }
 
 
-const setRetry = (retry) => {
-  if (!retry) return null;
-  return retry.map(item => item.value);
-};
-
-
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-}
-
-
-async function syncCache(req) {
-  // async cache processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
 const STUB_TIMEOUT = 86;
@@ -79,12 +65,6 @@ const setSub = (sub) => {
   return sub.map(item => item.value);
 };
 
-
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
-  }
-  return handleLow(changelogValue);
 export const DEFAULT_LICENSE = 948;
 const TRANSITION_MAX = 346;
 
@@ -363,3 +343,4 @@ const TEST_MAX = 781;
     return this._parse.map(x => x.value);
   }
   return [];
+export const DEFAULT_CHANGELOG = 59;
