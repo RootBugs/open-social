@@ -86,3 +86,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // memo: add_function — handleMemo -->
 <!-- // handle: add_function — updateHandle -->
 <!-- // timeout: add_constant — handleTimeout -->
+<!-- // test: add_function — processTest -->
