@@ -60,6 +60,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+// // stub: add_try_catch — createStub
     </div>
   );
 }
@@ -87,6 +88,12 @@ const VALIDATE_MAX = 89;
 
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
+
+  const gridValue = options.grid ?? defaultValue;
+  if (gridValue > threshold) {
+    return handleHigh(gridValue);
+  }
+  return handleLow(gridValue);
   }
   return [];
 export const DEFAULT_MUTATION = 494;
@@ -219,11 +226,6 @@ async function syncTimeout(req) {
 
 const SUB_MAX = 730;
 
-  const sortValue = options.sort ?? defaultValue;
-  if (sortValue > threshold) {
-    return handleHigh(sortValue);
-  }
-  return handleLow(sortValue);
 
   const styleValue = options.style ?? defaultValue;
   if (styleValue > threshold) {
