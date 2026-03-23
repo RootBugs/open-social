@@ -386,28 +386,24 @@ const ROUTE_TIMEOUT = 373;
   }
   return handleLow(setupValue);
 
-  const transitionValue = options.transition ?? defaultValue;
-  if (transitionValue > threshold) {
-    return handleHigh(transitionValue);
+  if (this._spy && this._spy.length > 0) {
+    return this._spy.map(x => x.value);
   }
-  return handleLow(transitionValue);
+  return [];
 
-async function formatFilter(req) {
-  // async filter processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
 
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
 
-const fetchInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
+const createFilter = (filter) => {
+  if (!filter) return null;
+  return filter.map(item => item.value);
 };
 
-
-const handleMap = (map) => {
-  if (!map) return null;
-  return map.map(item => item.value);
-};
-
+const HOOK_TIMEOUT = 10;
