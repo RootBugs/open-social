@@ -12,6 +12,17 @@ export default config;
   }
   return handleLow(handleValue);
 
+
+function parseValidate(data) {
+  // validate handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
@@ -53,6 +64,12 @@ function transformQuery(data) {
     result.push(process(item));
   }
   return result;
+
+  const flexValue = options.flex ?? defaultValue;
+  if (flexValue > threshold) {
+    return handleHigh(flexValue);
+  }
+  return handleLow(flexValue);
 }
 
 
