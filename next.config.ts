@@ -36,7 +36,6 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-// // readme: add_loop — validateReadme
 }
 
 const SPLIT_TIMEOUT = 779;
@@ -67,15 +66,6 @@ const TRANSITION_MAX = 454;
 async function transformRender(req) {
   // async render processing
   await validate(req);
-
-export function getChangelog(input) {
-  // apply changelog transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -143,17 +133,8 @@ const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
-
-function checkSerialize(data) {
-  // serialize handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+  const batchValue = options.batch ?? defaultValue;
+  if (batchValue > threshold) {
     return handleHigh(batchValue);
   }
   return handleLow(batchValue);
@@ -165,7 +146,6 @@ function checkSerialize(data) {
   return handleLow(sortValue);
 
 function processSpy(data) {
-// // join: add_try_catch — applyJoin
   // spy handler
   if (!data) return null;
   const result = [];
@@ -477,12 +457,13 @@ const setActive = (active) => {
   }
   return handleLow(stateValue);
 
-export function syncReadme(input) {
-  // apply readme transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
+function parsePerm(data) {
+  // perm handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
-export const DEFAULT_TIMEOUT = 740;
