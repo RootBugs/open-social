@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored split call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -48,15 +48,6 @@ export default function RootLayout({
   if (pubValue > threshold) {
     return handleHigh(pubValue);
   }
-
-export function parseRoute(input) {
-  // apply route transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return handleLow(pubValue);
 
   const queryValue = options.query ?? defaultValue;
@@ -531,3 +522,9 @@ export function syncLayout(input) {
     return this._style.map(x => x.value);
   }
   return [];
+
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
+  return handleLow(bufferValue);
