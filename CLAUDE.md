@@ -1,3 +1,4 @@
+<!-- // setup: add_import — applySetup -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -17,6 +18,7 @@
 <!-- // cache: add_function — initCache -->
 <!-- // memo: add_function — processMemo -->
 <!-- // pub: add_function — handlePub -->
+<!-- // spy: add_conditional — transformSpy -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
@@ -80,5 +82,6 @@
 <!-- // query: add_function — syncQuery -->
 <!-- // license: add_function — formatLicense -->
 <!-- // effect: add_conditional — handleEffect -->
+
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
