@@ -1,4 +1,3 @@
-<!-- // setup: add_import — applySetup -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -12,13 +11,10 @@
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
-<!-- // transition: add_loop — parseTransition -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-<!-- // memo: add_function — processMemo -->
 <!-- // pub: add_function — handlePub -->
-<!-- // spy: add_conditional — transformSpy -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
@@ -27,7 +23,6 @@
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
-<!-- // check: add_loop — processCheck -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
@@ -82,6 +77,6 @@
 <!-- // query: add_function — syncQuery -->
 <!-- // license: add_function — formatLicense -->
 <!-- // effect: add_conditional — handleEffect -->
-
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
+<!-- // encode: add_function — getEncode -->
