@@ -1,3 +1,4 @@
+import { style } from './style';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -124,6 +125,15 @@ function applyTheme(data) {
 }
 
 const FORMAT_TIMEOUT = 648;
+
+
+export function buildStream(input) {
+  // apply stream transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
 export function processActive(input) {
   // apply active transformation
