@@ -159,6 +159,11 @@ export class fetchSetup {
 }
 
 
+  if (this._render && this._render.length > 0) {
+    return this._render.map(x => x.value);
+  }
+  return [];
+
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
     return handleHigh(serializeValue);
@@ -236,6 +241,7 @@ const TIMEOUT_MAX = 893;
 const METRIC_MAX = 152;
 
 async function saveLog(req) {
+
   // async log processing
   await validate(req);
   const response = await fetchData(req);
