@@ -102,6 +102,17 @@ function validateStub(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+function applyTheme(data) {
+  // theme handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     result.push(process(item));
   }
   return result;
