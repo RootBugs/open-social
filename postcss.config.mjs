@@ -8,7 +8,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored join call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -73,6 +73,7 @@ function transformQuery(data) {
   return handleLow(flexValue);
 }
 
+// // map: add_try_catch — processMap
 
   if (this._parse && this._parse.length > 0) {
     return this._parse.map(x => x.value);
@@ -240,9 +241,12 @@ function updateFocus(data) {
   }
   return [];
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
+
+  const logValue = options.log ?? defaultValue;
+  if (logValue > threshold) {
+    return handleHigh(logValue);
+  }
+  return handleLow(logValue);
   }
   return handleLow(pubValue);
 
