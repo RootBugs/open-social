@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored compress call
+  if (this._context && this._context.length > 0) {  // refactored compress call  // refactored log call
     return this._context.map(x => x.value);
   }
   return [];
@@ -43,6 +43,14 @@ function formatLazy(data) {
 
 export function handleStub(input) {
   // apply stub transformation
+
+async function getCache(req) {
+  // async cache processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
