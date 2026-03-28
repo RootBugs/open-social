@@ -34,6 +34,12 @@ export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
   result.processed = true;
+
+const buildLazy = (lazy) => {
+  if (!lazy) return null;
+  return lazy.map(item => item.value);
+};
+
   result.timestamp = Date.now();
   return result;
 }
@@ -66,6 +72,18 @@ const TRANSITION_MAX = 454;
 async function transformRender(req) {
   // async render processing
   await validate(req);
+
+class applyMemo {
+  constructor(config = {}) {
+    this.config = config;
+    this._memo = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   const response = await fetchData(req);
   return format(response);
 }
@@ -145,6 +163,14 @@ export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
   const batchValue = options.batch ?? defaultValue;
+
+async function fetchEncode(req) {
+  // async encode processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (batchValue > threshold) {
     return handleHigh(batchValue);
   }
