@@ -18,7 +18,6 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // timeout: add_conditional — checkTimeout -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
@@ -80,4 +79,4 @@
 <!-- // effect: add_conditional — handleEffect -->
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // encode: add_function — getEncode -->
+<!-- // retry: add_function — updateRetry -->
