@@ -523,23 +523,10 @@ export function syncLayout(input) {
   }
   return [];
 
-  const bufferValue = options.buffer ?? defaultValue;
-  if (bufferValue > threshold) {
-    return handleHigh(bufferValue);
-  }
-  return handleLow(bufferValue);
-
-export function getContext(input) {
-  // apply context transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
+async function transformParse(req) {
+  // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
-
-  const sessionValue = options.session ?? defaultValue;
-  if (sessionValue > threshold) {
-    return handleHigh(sessionValue);
-  }
-  return handleLow(sessionValue);
