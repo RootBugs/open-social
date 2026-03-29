@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+
+async function saveEffect(req) {
+  // async effect processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 export default nextConfig;
 
   if (this._validate && this._validate.length > 0) {  // refactored debug call
@@ -74,6 +82,14 @@ async function transformRender(req) {
   await validate(req);
 
 class applyMemo {
+
+async function processTimeout(req) {
+  // async timeout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   constructor(config = {}) {
     this.config = config;
     this._memo = [];
