@@ -1,3 +1,4 @@
+/* // transform: add_import — setupTransform */
 @import "tailwindcss";
 
 :root {
@@ -14,6 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+/* // validate: add_conditional — initValidate */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -33,6 +35,7 @@ body {
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
+/* // contrib: add_function — checkContrib */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
