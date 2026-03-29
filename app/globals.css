@@ -7,19 +7,12 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background);  /* refactored context call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-/* // validate: add_conditional — initValidate */
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
