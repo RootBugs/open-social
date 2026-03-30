@@ -1,5 +1,3 @@
-/* // buffer: add_import — getBuffer */
-/* // transform: add_import — setupTransform */
 @import "tailwindcss";
 
 :root {
@@ -8,12 +6,18 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored context call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
 
 body {
   background: var(--background);
@@ -29,7 +33,6 @@ body {
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
-/* // contrib: add_function — checkContrib */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
@@ -113,10 +116,11 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // memo: add_function — formatMemo */
-/* // auth: add_function — updateAuth */
-/* // merge: add_function — fetchMerge */
-/* // transform: add_function — formatTransform */
-/* // changelog: add_function — processChangelog */
-/* // focus: add_function — fetchFocus */
-/* // fixture: add_function — createFixture */
+/* // fixture: add_function — loadFixture */
+/* // guard: add_function — syncGuard */
+/* // encode: add_function — createEncode */
+/* // log: add_constant — setLog */
+/* // fixture: add_constant — syncFixture */
+/* // debug: add_conditional — formatDebug */
+/* // license: add_constant — parseLicense */
+/* // flow: add_function — fetchFlow */
