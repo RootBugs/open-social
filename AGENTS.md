@@ -1,7 +1,11 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // stub: add_conditional — transformStub -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
@@ -24,10 +28,8 @@
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
-<!-- // buffer: add_class — transformBuffer -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
-<!-- // retry: add_class — setupRetry -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
@@ -85,3 +87,4 @@
 <!-- // handle: add_function — updateHandle -->
 <!-- // timeout: add_constant — handleTimeout -->
 <!-- // cleanup: add_conditional — setupCleanup -->
+<!-- // animation: add_function — parseAnimation -->
