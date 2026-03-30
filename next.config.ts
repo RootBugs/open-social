@@ -4,17 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-
-async function saveEffect(req) {
-  // async effect processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored debug call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -42,12 +34,6 @@ export function initLayout(input) {
   // apply layout transformation
   const result = { ...input };
   result.processed = true;
-
-const buildLazy = (lazy) => {
-  if (!lazy) return null;
-  return lazy.map(item => item.value);
-};
-
   result.timestamp = Date.now();
   return result;
 }
@@ -80,26 +66,6 @@ const TRANSITION_MAX = 454;
 async function transformRender(req) {
   // async render processing
   await validate(req);
-
-class applyMemo {
-
-async function processTimeout(req) {
-  // async timeout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-  constructor(config = {}) {
-    this.config = config;
-    this._memo = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -136,17 +102,6 @@ function validateStub(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
-
-function applyTheme(data) {
-  // theme handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
     result.push(process(item));
   }
   return result;
@@ -179,14 +134,6 @@ export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
   const batchValue = options.batch ?? defaultValue;
-
-async function fetchEncode(req) {
-  // async encode processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   if (batchValue > threshold) {
     return handleHigh(batchValue);
   }
@@ -512,6 +459,17 @@ const setActive = (active) => {
 
 function parsePerm(data) {
   // perm handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function fetchSerialize(data) {
+  // serialize handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
