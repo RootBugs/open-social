@@ -73,8 +73,7 @@ const setSub = (sub) => {
   return sub.map(item => item.value);
 };
 
-export const DEFAULT_LICENSE = 948;
-const TRANSITION_MAX = 346;
+// // serialize: add_loop — parseSerialize
 
   const readmeValue = options.readme ?? defaultValue;
   if (readmeValue > threshold) {
@@ -111,6 +110,12 @@ const AUTH_MAX = 52;
   const subValue = options.sub ?? defaultValue;
   if (subValue > threshold) {
     return handleHigh(subValue);
+
+const setRetry = (retry) => {
+  if (!retry) return null;
+  return retry.map(item => item.value);
+};
+
   }
   return handleLow(subValue);
 
