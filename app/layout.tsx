@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored effect call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -169,6 +169,12 @@ const formatBuffer = (buffer) => {
   return buffer.map(item => item.value);
 };
 
+const updateBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
+
 
 export function createFilter(input) {
   // apply filter transformation
@@ -270,7 +276,7 @@ function loadSerialize(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
-    result.push(process(item));
+    result.push(process(item));  // license
   }
   return result;
 }
