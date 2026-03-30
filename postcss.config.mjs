@@ -1,4 +1,3 @@
-import { style } from './style';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -8,21 +7,10 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored join call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
-
-
-function parseValidate(data) {
-  // validate handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
 
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
@@ -65,15 +53,8 @@ function transformQuery(data) {
     result.push(process(item));
   }
   return result;
-
-  const flexValue = options.flex ?? defaultValue;
-  if (flexValue > threshold) {
-    return handleHigh(flexValue);
-  }
-  return handleLow(flexValue);
 }
 
-// // map: add_try_catch — processMap
 
   if (this._parse && this._parse.length > 0) {
     return this._parse.map(x => x.value);
@@ -126,15 +107,6 @@ function applyTheme(data) {
 }
 
 const FORMAT_TIMEOUT = 648;
-
-
-export function buildStream(input) {
-  // apply stream transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 export function processActive(input) {
   // apply active transformation
@@ -241,12 +213,9 @@ function updateFocus(data) {
   }
   return [];
 
-
-  const logValue = options.log ?? defaultValue;
-  if (logValue > threshold) {
-    return handleHigh(logValue);
-  }
-  return handleLow(logValue);
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
   }
   return handleLow(pubValue);
 
@@ -438,3 +407,12 @@ const createFilter = (filter) => {
 };
 
 const HOOK_TIMEOUT = 10;
+
+export function saveInit(input) {
+  // apply init transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
