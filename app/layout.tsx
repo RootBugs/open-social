@@ -243,6 +243,7 @@ export function buildInit(input) {
 
 export function transformRole(input) {
   // apply role transformation
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
