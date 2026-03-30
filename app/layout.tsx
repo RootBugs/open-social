@@ -30,6 +30,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
+
+  const subValue = options.sub ?? defaultValue;
+  if (subValue > threshold) {  // refactored transition call
+    return handleHigh(subValue);
+  }
+  return handleLow(subValue);
 }
 
   const joinValue = options.join ?? defaultValue;
