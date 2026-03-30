@@ -6,7 +6,6 @@
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // retry: add_loop — processRetry -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -19,7 +18,6 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // retry: add_function — transformRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
@@ -81,4 +79,5 @@
 <!-- // effect: add_conditional — handleEffect -->
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // retry: add_function — updateRetry -->
+<!-- // encode: add_function — getEncode -->
+<!-- // handle: add_conditional — buildHandle -->
