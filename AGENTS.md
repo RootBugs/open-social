@@ -24,8 +24,10 @@
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
+<!-- // buffer: add_class — transformBuffer -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
+<!-- // retry: add_class — setupRetry -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
