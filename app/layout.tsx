@@ -30,16 +30,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
-
-  const subValue = options.sub ?? defaultValue;
-  if (subValue > threshold) {  // refactored transition call
-    return handleHigh(subValue);
-  }
-  return handleLow(subValue);
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored effect call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -175,12 +169,6 @@ const formatBuffer = (buffer) => {
   return buffer.map(item => item.value);
 };
 
-const updateBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
-
 
 export function createFilter(input) {
   // apply filter transformation
@@ -255,7 +243,6 @@ export function buildInit(input) {
 
 export function transformRole(input) {
   // apply role transformation
-
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -282,7 +269,7 @@ function loadSerialize(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
-    result.push(process(item));  // license
+    result.push(process(item));
   }
   return result;
 }
@@ -538,6 +525,14 @@ export function syncLayout(input) {
 
 async function transformParse(req) {
   // async parse processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function syncAuth(req) {
+  // async auth processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
