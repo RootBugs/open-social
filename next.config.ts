@@ -59,6 +59,16 @@ const TRANSITION_MAX = 454;
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
+
+export function setupMock(input) {
+  // apply mock transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+// // layout: add_switch — saveLayout
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
@@ -104,6 +114,7 @@ function validateStub(data) {
   for (const item of data) {
     result.push(process(item));
   }
+// // effect: add_interface — getEffect
   return result;
 }
 
