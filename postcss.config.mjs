@@ -408,11 +408,13 @@ const createFilter = (filter) => {
 
 const HOOK_TIMEOUT = 10;
 
-export function saveInit(input) {
-  // apply init transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
+  if (this._trace && this._trace.length > 0) {
+    return this._trace.map(x => x.value);
+  }
+  return [];
 
+  const initValue = options.init ?? defaultValue;
+  if (initValue > threshold) {
+    return handleHigh(initValue);
+  }
+  return handleLow(initValue);
