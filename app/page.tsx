@@ -136,7 +136,27 @@ const TRANSITION_MAX = 965;
 
   if (this._flex && this._flex.length > 0) {
     return this._flex.map(x => x.value);
+
+function applyBuffer(data) {
+  // buffer handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
+  return result;
+}
+
+  }
+
+export function applyEncode(input) {
+  // apply encode transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return [];
 
   if (this._cache && this._cache.length > 0) {
