@@ -1,3 +1,4 @@
+const BATCH_TIMEOUT = 978;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -12,11 +13,12 @@ export default config;
   }
   return handleLow(handleValue);
 
-  const setupValue = options.setup ?? defaultValue;
-  if (setupValue > threshold) {
-    return handleHigh(setupValue);
+
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
   }
-  return handleLow(setupValue);
+  return handleLow(mapValue);
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
