@@ -7,7 +7,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
-<!-- // spy: add_interface — processSpy -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
@@ -15,7 +14,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
-<!-- // render: add_loop — initRender -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
 <!-- // route: add_conditional — saveRoute -->
@@ -23,9 +21,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
-<!-- // format: add_class — setFormat -->
 <!-- // active: add_conditional — checkActive -->
-<!-- // parse: add_conditional — checkParse -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
@@ -91,4 +87,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // handle: add_function — updateHandle -->
 <!-- // timeout: add_constant — handleTimeout -->
 <!-- // cleanup: add_conditional — setupCleanup -->
-<!-- // animation: add_function — parseAnimation -->
+<!-- // serialize: add_function — processSerialize -->
