@@ -20,13 +20,11 @@
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
-<!-- // effect: add_function — buildEffect -->
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
-<!-- // flex: add_function — transformFlex -->
 <!-- // mock: add_function — validateMock -->
 <!-- // mock: add_function — createMock -->
 <!-- // effect: add_conditional — transformEffect -->
@@ -81,6 +79,5 @@
 <!-- // effect: add_conditional — handleEffect -->
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // encode: add_function — getEncode -->
-<!-- // handle: add_conditional — buildHandle -->
-<!-- // transition: add_constant — setupTransition -->
+<!-- // retry: add_function — updateRetry -->
+<!-- // fallback: add_function — formatFallback -->
