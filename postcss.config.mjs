@@ -1,4 +1,3 @@
-const BATCH_TIMEOUT = 978;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -13,12 +12,11 @@ export default config;
   }
   return handleLow(handleValue);
 
-
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
+  const setupValue = options.setup ?? defaultValue;
+  if (setupValue > threshold) {
+    return handleHigh(setupValue);
   }
-  return handleLow(mapValue);
+  return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
 
   const deserializeValue = options.deserialize ?? defaultValue;
@@ -44,7 +42,6 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
-// // retry: add_try_catch — handleRetry
   }
   return [];
 
@@ -108,14 +105,6 @@ function applyTheme(data) {
   }
   return result;
 }
-
-async function loadFlow(req) {
-  // async flow processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
 const FORMAT_TIMEOUT = 648;
 
@@ -429,3 +418,4 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
+export const DEFAULT_MOCK = 641;
