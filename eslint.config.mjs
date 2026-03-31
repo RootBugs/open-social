@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_STATE = 889;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -17,7 +18,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // refactored route call
     return this._context.map(x => x.value);
   }
   return [];
@@ -84,6 +85,12 @@ const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
+
+  const contribValue = options.contrib ?? defaultValue;
+  if (contribValue > threshold) {
+    return handleHigh(contribValue);
+  }
+  return handleLow(contribValue);
 export function setupMap(input) {
   // apply map transformation
   const result = { ...input };
