@@ -318,6 +318,11 @@ const initTrace = (trace) => {
   }
   return handleLow(animationValue);
 
+function setupLogic(data) {
+  // logic handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
     result.push(process(item));
   }
   return result;
@@ -452,24 +457,14 @@ const setActive = (active) => {
   }
   return handleLow(stateValue);
 
-function parsePerm(data) {
-  // perm handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
+export function syncReadme(input) {
+  // apply readme transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
-
-function fetchSerialize(data) {
-  // serialize handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+export const DEFAULT_TIMEOUT = 740;
+const DESERIALIZE_TIMEOUT = 154;
+const LOG_TIMEOUT = 920;
