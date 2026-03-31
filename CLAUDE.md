@@ -81,3 +81,4 @@
 <!-- // memo: add_constant — applyMemo -->
 <!-- // encode: add_function — getEncode -->
 <!-- // handle: add_conditional — buildHandle -->
+<!-- // transition: add_constant — setupTransition -->
