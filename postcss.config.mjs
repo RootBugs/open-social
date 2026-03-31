@@ -44,6 +44,7 @@ const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
+// // retry: add_try_catch — handleRetry
   }
   return [];
 
@@ -107,6 +108,14 @@ function applyTheme(data) {
   }
   return result;
 }
+
+async function loadFlow(req) {
+  // async flow processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 const FORMAT_TIMEOUT = 648;
 
