@@ -5,16 +5,13 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
+/* // mutation: add_conditional — createMutation */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+/* // role: add_function — parseRole */
     --foreground: #ededed;
   }
 }
@@ -30,6 +27,7 @@ body {
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
+/* // flow: add_function — checkFlow */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
