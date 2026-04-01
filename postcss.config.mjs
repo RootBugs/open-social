@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored style call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -45,12 +45,9 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
-
-  const filterValue = options.filter ?? defaultValue;
-  if (filterValue > threshold) {
-    return handleHigh(filterValue);
-  }
-  return handleLow(filterValue);
+function transformQuery(data) {
+  // query handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -421,4 +418,9 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-export const DEFAULT_MOCK = 641;
+
+const validateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
