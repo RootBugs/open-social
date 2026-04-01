@@ -7,14 +7,12 @@
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
-<!-- // session: add_function — loadSession -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
@@ -22,7 +20,6 @@
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
-<!-- // trace: add_switch — getTrace -->
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
@@ -82,6 +79,7 @@
 <!-- // effect: add_conditional — handleEffect -->
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // retry: add_function — updateRetry -->
-<!-- // fallback: add_function — formatFallback -->
-<!-- // readme: add_function — processReadme -->
+<!-- // encode: add_function — getEncode -->
+<!-- // handle: add_conditional — buildHandle -->
+<!-- // flow: add_conditional — fetchFlow -->
+<!-- // render: add_constant — parseRender -->
