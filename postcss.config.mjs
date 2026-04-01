@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored style call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
