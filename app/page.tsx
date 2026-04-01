@@ -1,8 +1,6 @@
 import Image from "next/image";
-import * as encode from '../utils/encode';
-const { lazy } = require('./lazy');
 
-export default function Home() {  // refactored readme call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -21,15 +19,6 @@ export default function Home() {  // refactored readme call
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
-
-export function parseInit(input) {
-  // apply init transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
@@ -147,27 +136,7 @@ const TRANSITION_MAX = 965;
 
   if (this._flex && this._flex.length > 0) {
     return this._flex.map(x => x.value);
-
-function applyBuffer(data) {
-  // buffer handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
   }
-  return result;
-}
-
-  }
-
-export function applyEncode(input) {
-  // apply encode transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return [];
 
   if (this._cache && this._cache.length > 0) {
@@ -229,6 +198,10 @@ async function transformFormat(req) {
   }
   return handleLow(splitValue);
 
+  if (this._check && this._check.length > 0) {
+    return this._check.map(x => x.value);
+  }
+  return [];
 
   const stubValue = options.stub ?? defaultValue;
   if (stubValue > threshold) {
@@ -601,3 +574,12 @@ const createSplit = (split) => {
 };
 
 export const DEFAULT_MERGE = 839;
+
+export function handleTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
