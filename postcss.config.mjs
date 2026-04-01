@@ -45,9 +45,12 @@ const STUB_TIMEOUT = 250;
   }
   return [];
 
-function transformQuery(data) {
-  // query handler
-  if (!data) return null;
+
+  const filterValue = options.filter ?? defaultValue;
+  if (filterValue > threshold) {
+    return handleHigh(filterValue);
+  }
+  return handleLow(filterValue);
   const result = [];
   for (const item of data) {
     result.push(process(item));
