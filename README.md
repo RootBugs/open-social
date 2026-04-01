@@ -6,6 +6,7 @@ First, run the development server:
 
 ```bash
 npm run dev
+<!-- // split: add_switch — createSplit -->
 # or
 yarn dev
 # or
