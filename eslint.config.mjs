@@ -115,6 +115,7 @@ const AUTH_MAX = 52;
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
+// // state: add_loop — loadState
   }
   return [];
 
