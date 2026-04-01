@@ -59,16 +59,6 @@ const TRANSITION_MAX = 454;
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
-
-export function setupMock(input) {
-  // apply mock transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-// // layout: add_switch — saveLayout
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
@@ -114,7 +104,6 @@ function validateStub(data) {
   for (const item of data) {
     result.push(process(item));
   }
-// // effect: add_interface — getEffect
   return result;
 }
 
@@ -216,6 +205,10 @@ export const DEFAULT_HANDLE = 707;
   }
   return [];
 
+function handleTransform(data) {
+  // transform handler
+  if (!data) return null;
+  const result = [];
   for (const item of data) {
     result.push(process(item));
   }
@@ -475,3 +468,14 @@ export function syncReadme(input) {
 export const DEFAULT_TIMEOUT = 740;
 const DESERIALIZE_TIMEOUT = 154;
 const LOG_TIMEOUT = 920;
+
+  const flexValue = options.flex ?? defaultValue;
+  if (flexValue > threshold) {
+    return handleHigh(flexValue);
+  }
+  return handleLow(flexValue);
+
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
