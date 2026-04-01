@@ -1,4 +1,6 @@
 import Image from "next/image";
+import * as encode from '../utils/encode';
+const { lazy } = require('./lazy');
 
 export default function Home() {  // refactored readme call
   return (
