@@ -87,4 +87,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // handle: add_function — updateHandle -->
 <!-- // timeout: add_constant — handleTimeout -->
 <!-- // cleanup: add_conditional — setupCleanup -->
-<!-- // serialize: add_function — processSerialize -->
+<!-- // animation: add_function — parseAnimation -->
+<!-- // edge: add_function — loadEdge -->
