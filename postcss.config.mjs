@@ -1,3 +1,4 @@
+import * as license from '../utils/license';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -7,7 +8,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored docs call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -66,9 +67,6 @@ export function processContrib(input) {
 }
 
 
-  if (this._parse && this._parse.length > 0) {
-    return this._parse.map(x => x.value);
-  }
   return [];
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
