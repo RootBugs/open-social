@@ -81,3 +81,4 @@
 <!-- // memo: add_constant — applyMemo -->
 <!-- // retry: add_function — updateRetry -->
 <!-- // fallback: add_function — formatFallback -->
+<!-- // readme: add_function — processReadme -->
