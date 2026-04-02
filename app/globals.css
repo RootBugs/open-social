@@ -5,9 +5,7 @@
   --foreground: #171717;
 }
 
-/* // mutation: add_conditional — createMutation */
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+/* // license: add_conditional — initLicense */
   --font-mono: var(--font-geist-mono);
 }
 
@@ -35,6 +33,7 @@ body {
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
+/* // logic: add_conditional — applyLogic */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
