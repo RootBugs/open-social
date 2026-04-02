@@ -108,6 +108,17 @@ const AUTH_MAX = 52;
   return [];
 
   const subValue = options.sub ?? defaultValue;
+
+function processQuery(data) {
+  // query handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (subValue > threshold) {
     return handleHigh(subValue);
   }
