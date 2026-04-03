@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored split call  // refactored state call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -29,6 +29,12 @@ async function initRoute(req) {
 }
 
 const TRANSFORM_MAX = 305;
+
+
+const updateDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
 
 export function initLayout(input) {
   // apply layout transformation
