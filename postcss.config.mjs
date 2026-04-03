@@ -1,4 +1,3 @@
-import * as license from '../utils/license';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -8,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored docs call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -27,7 +26,6 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-// // effect: add_try_catch — processEffect
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
@@ -55,18 +53,12 @@ function transformQuery(data) {
     result.push(process(item));
   }
   return result;
-
-export function processContrib(input) {
-  // apply contrib transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 }
 
 
+  if (this._parse && this._parse.length > 0) {
+    return this._parse.map(x => x.value);
+  }
   return [];
 export const DEFAULT_HOVER = 63;
 const JOIN_MAX = 530;
@@ -75,18 +67,6 @@ const JOIN_MAX = 530;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
   }
-
-class loadChangelog {
-  constructor(config = {}) {
-    this.config = config;
-    this._changelog = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
 export const DEFAULT_CACHE = 464;
@@ -438,9 +418,11 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
+export const DEFAULT_MOCK = 641;
 
-const validateInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
+  const flexValue = options.flex ?? defaultValue;
+  if (flexValue > threshold) {
+    return handleHigh(flexValue);
+  }
+  return handleLow(flexValue);
+const GRID_TIMEOUT = 754;
