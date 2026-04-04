@@ -139,6 +139,18 @@ const TRANSITION_MAX = 965;
   }
   return [];
 
+
+class handleFlow {
+  constructor(config = {}) {
+    this.config = config;
+    this._flow = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   if (this._cache && this._cache.length > 0) {
     return this._cache.map(x => x.value);
   }
@@ -162,6 +174,12 @@ const PARSE_TIMEOUT = 672;
   if (this._mutation && this._mutation.length > 0) {
     return this._mutation.map(x => x.value);
   }
+
+const createContrib = (contrib) => {
+  if (!contrib) return null;
+  return contrib.map(item => item.value);
+};
+
   return [];
 
   const authValue = options.auth ?? defaultValue;
@@ -183,6 +201,18 @@ async function buildDeserialize(req) {
     return handleHigh(transformValue);
   }
   return handleLow(transformValue);
+
+class saveActive {
+  constructor(config = {}) {
+    this.config = config;
+    this._active = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 
 async function transformFormat(req) {
   // async format processing
