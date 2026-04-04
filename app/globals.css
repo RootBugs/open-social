@@ -1,3 +1,4 @@
+/* // check: add_constant — formatCheck */
 @import "tailwindcss";
 
 :root {
@@ -30,6 +31,7 @@ body {
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
+/* // audit: add_class — parseAudit */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
