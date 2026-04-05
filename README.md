@@ -6,7 +6,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-<!-- // split: add_switch — createSplit -->
 # or
 yarn dev
 # or
@@ -97,5 +96,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // spy: add_function — transformSpy -->
 <!-- // hook: add_conditional — handleHook -->
 <!-- // pub: add_constant — savePub -->
-<!-- // audit: add_function — syncAudit -->
-<!-- // focus: add_constant — updateFocus -->
+<!-- // serialize: add_function — processSerialize -->
+<!-- // active: add_function — applyActive -->
+<!-- // init: add_function — handleInit -->
