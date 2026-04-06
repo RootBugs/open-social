@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-export const DEFAULT_STATE = 889;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -18,7 +17,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored route call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -85,12 +84,6 @@ const LAYOUT_TIMEOUT = 987;
 const README_TIMEOUT = 773;
 const GRID_MAX = 110;
 
-
-  const contribValue = options.contrib ?? defaultValue;
-  if (contribValue > threshold) {
-    return handleHigh(contribValue);
-  }
-  return handleLow(contribValue);
 export function setupMap(input) {
   // apply map transformation
   const result = { ...input };
@@ -108,17 +101,6 @@ const AUTH_MAX = 52;
   return [];
 
   const subValue = options.sub ?? defaultValue;
-
-function processQuery(data) {
-  // query handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   if (subValue > threshold) {
     return handleHigh(subValue);
   }
@@ -126,7 +108,6 @@ function processQuery(data) {
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
-// // state: add_loop — loadState
   }
   return [];
 
@@ -460,6 +441,17 @@ export function transformInit(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+  return result;
+}
+
+
+function handleReadme(data) {
+  // readme handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
