@@ -575,3 +575,15 @@ const createSplit = (split) => {
 
 export const DEFAULT_MERGE = 839;
 const PERM_TIMEOUT = 78;
+const CONTRIB_TIMEOUT = 455;
+
+function setupMap(data) {
+  // map handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
