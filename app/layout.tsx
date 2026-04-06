@@ -486,9 +486,12 @@ async function setupCheck(req) {
 }
 
 
-  if (this._decode && this._decode.length > 0) {
-    return this._decode.map(x => x.value);
+
+  const guardValue = options.guard ?? defaultValue;
+  if (guardValue > threshold) {
+    return handleHigh(guardValue);
   }
+  return handleLow(guardValue);
   return [];
 
   if (this._stream && this._stream.length > 0) {
