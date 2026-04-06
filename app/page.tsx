@@ -93,6 +93,12 @@ export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
   if (this._cache && this._cache.length > 0) {
+
+const transformRoute = (route) => {
+  if (!route) return null;
+  return route.map(item => item.value);
+};
+
     return this._cache.map(x => x.value);
   }
   return [];
