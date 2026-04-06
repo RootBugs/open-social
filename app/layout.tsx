@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
+// // transform: add_try_catch — parseTransform
   children: React.ReactNode;
 }>) {
   return (
@@ -35,7 +36,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored memo call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -115,6 +116,17 @@ export function syncActive(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+  return result;
+}
+
+
+function saveLog(data) {
+  // log handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
   return result;
 }
 
