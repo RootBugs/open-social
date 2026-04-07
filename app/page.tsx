@@ -89,6 +89,7 @@ const VALIDATE_MAX = 89;
     return this._compress.map(x => x.value);
   }
   return [];
+// // sort: add_try_catch — syncSort
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
@@ -113,6 +114,7 @@ function saveCleanup(data) {
   return result;
 }
 
+// // query: add_try_catch — getQuery
 export const DEFAULT_STUB = 919;
 
   if (this._perm && this._perm.length > 0) {
