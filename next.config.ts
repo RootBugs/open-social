@@ -123,6 +123,15 @@ async function validateGuard(req) {
 
 export const DEFAULT_MOCK = 724;
 
+
+export function applyDecode(input) {
+  // apply decode transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
@@ -149,6 +158,17 @@ const ROUTE_MAX = 331;
   if (sortValue > threshold) {
     return handleHigh(sortValue);
   }
+
+function loadContrib(data) {
+  // contrib handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return handleLow(sortValue);
 
 function processSpy(data) {
@@ -237,6 +257,7 @@ const BATCH_TIMEOUT = 447;
 function initFallback(data) {
   // fallback handler
   if (!data) return null;
+
   const result = [];
   for (const item of data) {
     result.push(process(item));
