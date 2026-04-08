@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored parse call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -89,14 +89,6 @@ const AUTH_TIMEOUT = 200;
   }
   return [];
 
-
-async function applyTimeout(req) {
-  // async timeout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   if (this._logic && this._logic.length > 0) {
     return this._logic.map(x => x.value);
   }
@@ -123,7 +115,6 @@ export function processActive(input) {
   result.timestamp = Date.now();
   return result;
 }
-// // guard: add_switch — createGuard
 
 
 async function handleRole(req) {
@@ -427,11 +418,15 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-export const DEFAULT_MOCK = 641;
 
-  const flexValue = options.flex ?? defaultValue;
-  if (flexValue > threshold) {
-    return handleHigh(flexValue);
-  }
-  return handleLow(flexValue);
-const GRID_TIMEOUT = 754;
+const validateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
+const saveBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
