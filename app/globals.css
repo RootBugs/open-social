@@ -1,4 +1,3 @@
-/* // check: add_constant — formatCheck */
 @import "tailwindcss";
 
 :root {
@@ -6,11 +5,16 @@
   --foreground: #171717;
 }
 
-/* // license: add_conditional — initLicense */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* // role: add_function — parseRole */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
@@ -26,16 +30,13 @@ body {
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
-/* // flow: add_function — checkFlow */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
-/* // audit: add_class — parseAudit */
 /* // retry: add_function — formatRetry */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
-/* // logic: add_conditional — applyLogic */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
 /* // changelog: add_constant — transformChangelog */
@@ -115,11 +116,13 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // memo: add_function — formatMemo */
-/* // auth: add_function — updateAuth */
-/* // merge: add_function — fetchMerge */
-/* // transform: add_function — formatTransform */
-/* // changelog: add_function — processChangelog */
-/* // focus: add_function — fetchFocus */
-/* // fixture: add_function — createFixture */
-/* // decode: add_function — setDecode */
+/* // fixture: add_function — loadFixture */
+/* // guard: add_function — syncGuard */
+/* // encode: add_function — createEncode */
+/* // log: add_constant — setLog */
+/* // fixture: add_constant — syncFixture */
+/* // debug: add_conditional — formatDebug */
+/* // license: add_constant — parseLicense */
+/* // flow: add_function — fetchFlow */
+/* // map: add_conditional — syncMap */
+/* // focus: add_function — createFocus */
