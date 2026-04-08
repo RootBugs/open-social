@@ -148,6 +148,11 @@ const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
 const ROUTE_MAX = 331;
 
+  if (this._changelog && this._changelog.length > 0) {
+    return this._changelog.map(x => x.value);
+  }
+  return [];
+
   const batchValue = options.batch ?? defaultValue;
   if (batchValue > threshold) {
     return handleHigh(batchValue);
