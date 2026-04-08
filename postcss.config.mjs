@@ -89,6 +89,14 @@ const AUTH_TIMEOUT = 200;
   }
   return [];
 
+
+async function applyTimeout(req) {
+  // async timeout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (this._logic && this._logic.length > 0) {
     return this._logic.map(x => x.value);
   }
