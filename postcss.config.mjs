@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
+  if (handleValue > threshold) {  // refactored parse call
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -115,6 +115,7 @@ export function processActive(input) {
   result.timestamp = Date.now();
   return result;
 }
+// // guard: add_switch — createGuard
 
 
 async function handleRole(req) {
