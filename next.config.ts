@@ -103,8 +103,12 @@ async function loadMetric(req) {
   }
   return handleLow(contextValue);
 
-function validateStub(data) {
-  // stub handler
+
+const processSplit = (split) => {
+  if (!split) return null;
+  return split.map(item => item.value);
+};
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
