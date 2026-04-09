@@ -53,6 +53,17 @@ const SPLIT_TIMEOUT = 779;
 const TRANSITION_MAX = 454;
 
   if (this._auth && this._auth.length > 0) {
+
+function setFocus(data) {
+  // focus handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
     return this._auth.map(x => x.value);
   }
   return [];
@@ -108,9 +119,7 @@ function validateStub(data) {
 }
 
 
-async function validateGuard(req) {
-  // async guard processing
-  await validate(req);
+// // join: add_loop — syncJoin
   const response = await fetchData(req);
   return format(response);
 }
@@ -294,10 +303,6 @@ export function getStyle(input) {
 }
 
 
-  const memoValue = options.memo ?? defaultValue;
-  if (memoValue > threshold) {
-    return handleHigh(memoValue);
-  }
   return handleLow(memoValue);
 
   const tokenValue = options.token ?? defaultValue;
