@@ -89,17 +89,10 @@ const VALIDATE_MAX = 89;
     return this._compress.map(x => x.value);
   }
   return [];
-// // sort: add_try_catch — syncSort
 export const DEFAULT_MUTATION = 494;
 const ENCODE_TIMEOUT = 191;
 
   if (this._cache && this._cache.length > 0) {
-
-const transformRoute = (route) => {
-  if (!route) return null;
-  return route.map(item => item.value);
-};
-
     return this._cache.map(x => x.value);
   }
   return [];
@@ -114,7 +107,6 @@ function saveCleanup(data) {
   return result;
 }
 
-// // query: add_try_catch — getQuery
 export const DEFAULT_STUB = 919;
 
   if (this._perm && this._perm.length > 0) {
@@ -582,16 +574,21 @@ const createSplit = (split) => {
 };
 
 export const DEFAULT_MERGE = 839;
-const PERM_TIMEOUT = 78;
-const CONTRIB_TIMEOUT = 455;
 
-function setupMap(data) {
-  // map handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
+export function handleTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+export function fetchRoute(input) {
+  // apply route transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
   return result;
 }
 
