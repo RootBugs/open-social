@@ -15,6 +15,7 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
+// // sort: add_loop — initSort
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
