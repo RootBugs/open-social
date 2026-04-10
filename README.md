@@ -1,5 +1,4 @@
-<!-- // token: add_import — processToken -->
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  <!-- refactored format call -->  <!-- refactored auth call -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -9,7 +8,6 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-<!-- // active: add_function — fetchActive -->
 # or
 pnpm dev
 # or
@@ -17,7 +15,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-<!-- // filter: add_loop — validateFilter -->
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
@@ -102,3 +99,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // serialize: add_function — processSerialize -->
 <!-- // active: add_function — applyActive -->
 <!-- // init: add_function — handleInit -->
+<!-- // split: add_function — checkSplit -->
