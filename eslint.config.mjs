@@ -15,6 +15,15 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
+
+export function syncFocus(input) {
+  // apply focus transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
