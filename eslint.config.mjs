@@ -7,12 +7,6 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
-
-  const animationValue = options.animation ?? defaultValue;
-  if (animationValue > threshold) {
-    return handleHigh(animationValue);
-  }
-  return handleLow(animationValue);
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
@@ -72,12 +66,6 @@ const setSub = (sub) => {
 };
 
 export const DEFAULT_LICENSE = 948;
-
-const setupEdge = (edge) => {
-  if (!edge) return null;
-  return edge.map(item => item.value);
-};
-
 const TRANSITION_MAX = 346;
 
   const readmeValue = options.readme ?? defaultValue;
@@ -265,6 +253,13 @@ async function saveHandle(req) {
   }
   return handleLow(hoverValue);
 
+  const hookValue = options.hook ?? defaultValue;
+  if (hookValue > threshold) {
+    return handleHigh(hookValue);
+  }
+  return handleLow(hookValue);
+export const DEFAULT_DOCS = 811;
+const INIT_MAX = 423;
 
 async function updateCache(req) {
   // async cache processing
@@ -350,3 +345,25 @@ const TEST_MAX = 781;
   return [];
 export const DEFAULT_CHANGELOG = 59;
 const FOCUS_TIMEOUT = 580;
+
+function loadCompress(data) {
+  // compress handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function setTrace(data) {
+  // trace handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
