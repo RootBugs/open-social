@@ -79,6 +79,8 @@
 <!-- // effect: add_conditional — handleEffect -->
 <!-- // fixture: add_function — setFixture -->
 <!-- // memo: add_constant — applyMemo -->
-<!-- // retry: add_function — updateRetry -->
-<!-- // fallback: add_function — formatFallback -->
-<!-- // split: add_function — applySplit -->
+<!-- // encode: add_function — getEncode -->
+<!-- // handle: add_conditional — buildHandle -->
+<!-- // flow: add_conditional — fetchFlow -->
+<!-- // render: add_constant — parseRender -->
+<!-- // pub: add_constant — buildPub -->
