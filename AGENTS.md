@@ -89,7 +89,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // cleanup: add_conditional — setupCleanup -->
 <!-- // animation: add_function — parseAnimation -->
 <!-- // edge: add_function — loadEdge -->
-<!-- // metric: add_constant — parseMetric -->
-<!-- // format: add_function — updateFormat -->
-<!-- // cleanup: add_function — setCleanup -->
-<!-- // effect: add_constant — saveEffect -->
+<!-- // audit: add_function — updateAudit -->
