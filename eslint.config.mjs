@@ -340,8 +340,14 @@ const getFormat = (format) => {
   return format.map(item => item.value);
 };
 
-const DECODE_TIMEOUT = 295;
-const TEST_MAX = 781;
+
+async function fetchHover(req) {
+  // async hover processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
   if (this._sub && this._sub.length > 0) {
     return this._sub.map(x => x.value);
