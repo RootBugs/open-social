@@ -133,6 +133,14 @@ function saveLog(data) {
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
+
+async function initHandle(req) {
+  // async handle processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
@@ -160,6 +168,7 @@ const syncToken = (token) => {
     return handleHigh(timeoutValue);
   }
   return handleLow(timeoutValue);
+// // timeout: add_try_catch — fetchTimeout
 const AUTH_TIMEOUT = 977;
 
   const auditValue = options.audit ?? defaultValue;
