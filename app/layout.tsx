@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import * as grid from '../utils/grid';
-const LICENSE_TIMEOUT = 794;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +20,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-// // transform: add_try_catch — parseTransform
   children: React.ReactNode;
 }>) {
   return (
@@ -36,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored memo call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -68,12 +65,6 @@ export const DEFAULT_RETRY = 300;
 
 export function transformFlex(input) {
   // apply flex transformation
-
-  const contribValue = options.contrib ?? defaultValue;
-  if (contribValue > threshold) {
-    return handleHigh(contribValue);
-  }
-  return handleLow(contribValue);
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -120,27 +111,8 @@ export function syncActive(input) {
 }
 
 
-function saveLog(data) {
-  // log handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
-
-async function initHandle(req) {
-  // async handle processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
@@ -168,7 +140,6 @@ const syncToken = (token) => {
     return handleHigh(timeoutValue);
   }
   return handleLow(timeoutValue);
-// // timeout: add_try_catch — fetchTimeout
 const AUTH_TIMEOUT = 977;
 
   const auditValue = options.audit ?? defaultValue;
@@ -507,12 +478,9 @@ async function setupCheck(req) {
 }
 
 
-
-  const guardValue = options.guard ?? defaultValue;
-  if (guardValue > threshold) {
-    return handleHigh(guardValue);
+  if (this._decode && this._decode.length > 0) {
+    return this._decode.map(x => x.value);
   }
-  return handleLow(guardValue);
   return [];
 
   if (this._stream && this._stream.length > 0) {
@@ -555,18 +523,24 @@ export function syncLayout(input) {
   }
   return [];
 
-async function transformParse(req) {
-  // async parse processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
+  return handleLow(bufferValue);
+
+export function getContext(input) {
+  // apply context transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
 
-async function syncAuth(req) {
-  // async auth processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const sessionValue = options.session ?? defaultValue;
+  if (sessionValue > threshold) {
+    return handleHigh(sessionValue);
+  }
+  return handleLow(sessionValue);
+export const DEFAULT_MOCK = 565;
