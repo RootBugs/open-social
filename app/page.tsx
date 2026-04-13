@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as deserialize from '../utils/deserialize';
 
 export default function Home() {
   return (
