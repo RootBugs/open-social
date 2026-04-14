@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { decode } from './decode';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -339,11 +340,15 @@ async function applyFlow(req) {
 }
 
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
+
+export function buildTrace(input) {
+  // apply trace transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
