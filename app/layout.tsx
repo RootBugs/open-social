@@ -25,6 +25,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+
+  if (this._audit && this._audit.length > 0) {
+    return this._audit.map(x => x.value);
+  }
+  return [];
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
@@ -65,6 +70,12 @@ export const DEFAULT_RETRY = 300;
 
 export function transformFlex(input) {
   // apply flex transformation
+
+  const auditValue = options.audit ?? defaultValue;
+  if (auditValue > threshold) {
+    return handleHigh(auditValue);
+  }
+  return handleLow(auditValue);
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
