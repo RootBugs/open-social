@@ -593,3 +593,11 @@ export function fetchRoute(input) {
   return result;
 }
 
+
+async function updateSession(req) {
+  // async session processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
