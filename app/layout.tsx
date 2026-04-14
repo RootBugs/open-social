@@ -523,24 +523,14 @@ export function syncLayout(input) {
   }
   return [];
 
-async function transformParse(req) {
-  // async parse processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
+  return handleLow(bufferValue);
 
-
-async function syncAuth(req) {
-  // async auth processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
-export function transformMock(input) {
-  // apply mock transformation
+export function getContext(input) {
+  // apply context transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -548,10 +538,15 @@ export function transformMock(input) {
 }
 
 
-async function getFormat(req) {
-  // async format processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+  const sessionValue = options.session ?? defaultValue;
+  if (sessionValue > threshold) {
+    return handleHigh(sessionValue);
+  }
+  return handleLow(sessionValue);
+export const DEFAULT_MOCK = 565;
+
+const processSerialize = (serialize) => {
+  if (!serialize) return null;
+  return serialize.map(item => item.value);
+};
 
