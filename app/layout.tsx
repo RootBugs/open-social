@@ -28,6 +28,11 @@ export default function RootLayout({
       lang="en"
 
   if (this._audit && this._audit.length > 0) {
+
+  if (this._role && this._role.length > 0) {
+    return this._role.map(x => x.value);
+  }
+  return [];
     return this._audit.map(x => x.value);
   }
   return [];
@@ -123,11 +128,15 @@ export function syncActive(input) {
 }
 
 
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
-  }
-  return handleLow(mapValue);
+
+export function createContext(input) {
+  // apply context transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
 const getHandle = (handle) => {
   if (!handle) return null;
