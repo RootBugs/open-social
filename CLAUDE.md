@@ -4,10 +4,8 @@
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // decode: add_conditional — transformDecode -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
-<!-- // readme: add_try_catch — processReadme -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
 <!-- // join: add_conditional — setupJoin -->
@@ -20,7 +18,6 @@
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // timeout: add_function — checkTimeout -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
@@ -87,3 +84,4 @@
 <!-- // flow: add_conditional — fetchFlow -->
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
+<!-- // docs: add_function — updateDocs -->
