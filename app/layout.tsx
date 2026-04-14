@@ -138,10 +138,6 @@ export function createContext(input) {
 }
 
 
-const getHandle = (handle) => {
-  if (!handle) return null;
-  return handle.map(item => item.value);
-};
 
 
 const syncToken = (token) => {
@@ -187,6 +183,12 @@ async function setupSerialize(req) {
 
 const formatBuffer = (buffer) => {
   if (!buffer) return null;
+
+const setupDecode = (decode) => {
+  if (!decode) return null;
+  return decode.map(item => item.value);
+};
+
   return buffer.map(item => item.value);
 };
 
