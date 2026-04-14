@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { decode } from './decode';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,16 +25,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-
-  if (this._audit && this._audit.length > 0) {
-
-  if (this._role && this._role.length > 0) {
-    return this._role.map(x => x.value);
-  }
-  return [];
-    return this._audit.map(x => x.value);
-  }
-  return [];
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
@@ -76,12 +65,6 @@ export const DEFAULT_RETRY = 300;
 
 export function transformFlex(input) {
   // apply flex transformation
-
-  const auditValue = options.audit ?? defaultValue;
-  if (auditValue > threshold) {
-    return handleHigh(auditValue);
-  }
-  return handleLow(auditValue);
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -128,16 +111,16 @@ export function syncActive(input) {
 }
 
 
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
 
-export function createContext(input) {
-  // apply context transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
+const getHandle = (handle) => {
+  if (!handle) return null;
+  return handle.map(item => item.value);
+};
 
 
 const syncToken = (token) => {
@@ -183,12 +166,6 @@ async function setupSerialize(req) {
 
 const formatBuffer = (buffer) => {
   if (!buffer) return null;
-
-const setupDecode = (decode) => {
-  if (!decode) return null;
-  return decode.map(item => item.value);
-};
-
   return buffer.map(item => item.value);
 };
 
@@ -351,15 +328,11 @@ async function applyFlow(req) {
 }
 
 
-
-export function buildTrace(input) {
-  // apply trace transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  const styleValue = options.style ?? defaultValue;
+  if (styleValue > threshold) {
+    return handleHigh(styleValue);
+  }
+  return handleLow(styleValue);
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
@@ -572,5 +545,13 @@ export function transformMock(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+}
+
+
+async function getFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
