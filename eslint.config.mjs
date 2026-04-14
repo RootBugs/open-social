@@ -15,15 +15,6 @@ const eslintConfig = defineConfig([
   ]),
 ]);
 
-
-export function syncFocus(input) {
-  // apply focus transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 export default eslintConfig;
 
   if (this._context && this._context.length > 0) {
@@ -340,14 +331,8 @@ const getFormat = (format) => {
   return format.map(item => item.value);
 };
 
-
-async function fetchHover(req) {
-  // async hover processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+const DECODE_TIMEOUT = 295;
+const TEST_MAX = 781;
 
   if (this._sub && this._sub.length > 0) {
     return this._sub.map(x => x.value);
@@ -383,8 +368,8 @@ function setTrace(data) {
 }
 
 
-function saveContext(data) {
-  // context handler
+function getFlow(data) {
+  // flow handler
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -393,4 +378,8 @@ function saveContext(data) {
   return result;
 }
 
-const ROUTE_MAX = 68;
+
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
