@@ -151,6 +151,18 @@ const AUTH_TIMEOUT = 977;
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
     return handleHigh(serializeValue);
+
+class formatLogic {
+  constructor(config = {}) {
+    this.config = config;
+    this._logic = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   }
   return handleLow(serializeValue);
 export const DEFAULT_CLEANUP = 713;
