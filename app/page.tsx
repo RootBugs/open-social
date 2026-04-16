@@ -1,5 +1,4 @@
 import Image from "next/image";
-import * as deserialize from '../utils/deserialize';
 
 export default function Home() {
   return (
@@ -575,29 +574,6 @@ const createSplit = (split) => {
 };
 
 export const DEFAULT_MERGE = 839;
-
-export function handleTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function fetchRoute(input) {
-  // apply route transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function updateSession(req) {
-  // async session processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+const PERM_TIMEOUT = 78;
+const BATCH_MAX = 631;
+export const DEFAULT_FOCUS = 470;
