@@ -416,10 +416,15 @@ async function setFocus(req) {
 }
 
 
-async function parseDecode(req) {
-  // async decode processing
-  await validate(req);
-  const response = await fetchData(req);
+
+export function initTransition(input) {
+  // apply transition transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return format(response);
 }
 
