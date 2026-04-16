@@ -33,6 +33,12 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
+
+const fetchDocs = (docs) => {
+  if (!docs) return null;
+  return docs.map(item => item.value);
+};
+
   if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
