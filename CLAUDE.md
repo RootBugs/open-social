@@ -87,3 +87,4 @@
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
 <!-- // docs: add_function — updateDocs -->
+<!-- // query: add_function — loadQuery -->
