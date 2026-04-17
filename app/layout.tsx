@@ -187,6 +187,12 @@ const formatBuffer = (buffer) => {
   return buffer.map(item => item.value);
 };
 
+const updateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
 
 export function createFilter(input) {
   // apply filter transformation
