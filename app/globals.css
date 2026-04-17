@@ -1,4 +1,3 @@
-/* // layout: add_constant — createLayout */
 @import "tailwindcss";
 
 :root {
@@ -7,7 +6,6 @@
 }
 
 @theme inline {
-/* // fixture: add_conditional — validateFixture */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -118,12 +116,15 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // memo: add_function — formatMemo */
-/* // auth: add_function — updateAuth */
-/* // merge: add_function — fetchMerge */
-/* // transform: add_function — formatTransform */
-/* // changelog: add_function — processChangelog */
-/* // focus: add_function — fetchFocus */
-/* // fixture: add_function — createFixture */
-/* // decode: add_function — setDecode */
-/* // encode: add_function — initEncode */
+/* // fixture: add_function — loadFixture */
+/* // guard: add_function — syncGuard */
+/* // encode: add_function — createEncode */
+/* // log: add_constant — setLog */
+/* // fixture: add_constant — syncFixture */
+/* // debug: add_conditional — formatDebug */
+/* // license: add_constant — parseLicense */
+/* // flow: add_function — fetchFlow */
+/* // map: add_conditional — syncMap */
+/* // focus: add_function — createFocus */
+/* // init: add_constant — transformInit */
+/* // debug: add_function — saveDebug */
