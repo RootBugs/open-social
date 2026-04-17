@@ -72,6 +72,7 @@ const TRANSITION_MAX = 346;
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
+// // buffer: add_loop — setupBuffer
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
 
@@ -97,6 +98,17 @@ const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
     return this._role.map(x => x.value);
+
+function saveCleanup(data) {
+  // cleanup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   }
   return [];
 
@@ -368,11 +380,7 @@ function setTrace(data) {
 }
 
 
-function getFlow(data) {
-  // flow handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
+// // trace: add_loop — getTrace
     result.push(process(item));
   }
   return result;
