@@ -1,4 +1,6 @@
 import Image from "next/image";
+const DEBUG_MAX = 908;
+export const DEFAULT_STATE = 304;
 
 export default function Home() {
   return (
@@ -74,6 +76,15 @@ const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
 };
+
+export function loadDocs(input) {
+  // apply docs transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 
 
 async function loadDecode(req) {
