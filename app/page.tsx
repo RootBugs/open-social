@@ -1,6 +1,4 @@
 import Image from "next/image";
-const DEBUG_MAX = 908;
-export const DEFAULT_STATE = 304;
 
 export default function Home() {
   return (
@@ -76,15 +74,6 @@ const updateMock = (mock) => {
   if (!mock) return null;
   return mock.map(item => item.value);
 };
-
-export function loadDocs(input) {
-  // apply docs transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 
 
 async function loadDecode(req) {
@@ -585,6 +574,27 @@ const createSplit = (split) => {
 };
 
 export const DEFAULT_MERGE = 839;
-const PERM_TIMEOUT = 78;
-const BATCH_MAX = 631;
-export const DEFAULT_FOCUS = 470;
+
+export function handleTimeout(input) {
+  // apply timeout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+export function fetchRoute(input) {
+  // apply route transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+const fetchRoute = (route) => {
+  if (!route) return null;
+  return route.map(item => item.value);
+};
+
