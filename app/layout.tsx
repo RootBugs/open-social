@@ -33,12 +33,6 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-
-const fetchDocs = (docs) => {
-  if (!docs) return null;
-  return docs.map(item => item.value);
-};
-
   if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
@@ -157,18 +151,6 @@ const AUTH_TIMEOUT = 977;
   const serializeValue = options.serialize ?? defaultValue;
   if (serializeValue > threshold) {
     return handleHigh(serializeValue);
-
-class formatLogic {
-  constructor(config = {}) {
-    this.config = config;
-    this._logic = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   }
   return handleLow(serializeValue);
 export const DEFAULT_CLEANUP = 713;
@@ -186,12 +168,6 @@ const formatBuffer = (buffer) => {
   if (!buffer) return null;
   return buffer.map(item => item.value);
 };
-
-const updateInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
-
 
 
 export function createFilter(input) {
@@ -422,15 +398,10 @@ async function setFocus(req) {
 }
 
 
-
-export function initTransition(input) {
-  // apply transition transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+async function parseDecode(req) {
+  // async decode processing
+  await validate(req);
+  const response = await fetchData(req);
   return format(response);
 }
 
@@ -578,4 +549,12 @@ const processSerialize = (serialize) => {
   if (!serialize) return null;
   return serialize.map(item => item.value);
 };
+
+
+async function initMutation(req) {
+  // async mutation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
