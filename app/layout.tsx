@@ -91,6 +91,7 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
+// // animation: add_interface — checkAnimation
     return this._animation.map(x => x.value);
   }
   return [];
@@ -141,6 +142,14 @@ const syncToken = (token) => {
   }
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
+
+
+async function formatSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
   const auditValue = options.audit ?? defaultValue;
   if (auditValue > threshold) {
