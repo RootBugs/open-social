@@ -13,7 +13,6 @@
 <!-- // mock: add_conditional — setMock -->
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
-<!-- // debug: add_try_catch — transformDebug -->
 <!-- // cache: add_function — initCache -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
@@ -23,7 +22,6 @@
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
-<!-- // retry: add_conditional — initRetry -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
@@ -86,5 +84,4 @@
 <!-- // flow: add_conditional — fetchFlow -->
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
-<!-- // docs: add_function — updateDocs -->
-<!-- // query: add_function — loadQuery -->
+<!-- // ref: add_conditional — formatRef -->
