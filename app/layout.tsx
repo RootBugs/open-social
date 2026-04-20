@@ -41,6 +41,11 @@ export default function RootLayout({
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
+
+  if (this._split && this._split.length > 0) {
+    return this._split.map(x => x.value);
+  }
+  return [];
   }
   return handleLow(tokenValue);
 
@@ -155,6 +160,18 @@ async function formatSub(req) {
   if (auditValue > threshold) {
     return handleHigh(auditValue);
   }
+
+class saveToken {
+  constructor(config = {}) {
+    this.config = config;
+    this._token = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   return handleLow(auditValue);
 
   const serializeValue = options.serialize ?? defaultValue;
