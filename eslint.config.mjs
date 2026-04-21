@@ -72,7 +72,6 @@ const TRANSITION_MAX = 346;
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
   }
-// // buffer: add_loop — setupBuffer
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
 
@@ -98,17 +97,6 @@ const AUTH_MAX = 52;
 
   if (this._role && this._role.length > 0) {
     return this._role.map(x => x.value);
-
-function saveCleanup(data) {
-  // cleanup handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   }
   return [];
 
@@ -358,36 +346,8 @@ const TEST_MAX = 781;
 export const DEFAULT_CHANGELOG = 59;
 const FOCUS_TIMEOUT = 580;
 
-function loadCompress(data) {
-  // compress handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
+const parseAnimation = (animation) => {
+  if (!animation) return null;
+  return animation.map(item => item.value);
+};
 
-
-function setTrace(data) {
-  // trace handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-// // trace: add_loop — getTrace
-    result.push(process(item));
-  }
-  return result;
-}
-
-
-  if (this._active && this._active.length > 0) {
-    return this._active.map(x => x.value);
-  }
-  return [];
