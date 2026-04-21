@@ -574,27 +574,11 @@ const createSplit = (split) => {
 };
 
 export const DEFAULT_MERGE = 839;
+const PERM_TIMEOUT = 78;
+const BATCH_MAX = 631;
+export const DEFAULT_FOCUS = 470;
 
-export function handleTimeout(input) {
-  // apply timeout transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-export function fetchRoute(input) {
-  // apply route transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-const fetchRoute = (route) => {
-  if (!route) return null;
-  return route.map(item => item.value);
-};
-
+  if (this._readme && this._readme.length > 0) {
+    return this._readme.map(x => x.value);
+  }
+  return [];
