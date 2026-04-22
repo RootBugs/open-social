@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* // check: add_function — updateCheck */
 
 @theme inline {
   --color-background: var(--background);  /* refactored map call */
@@ -21,11 +22,7 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* // render: add_function — buildRender */
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
@@ -37,6 +34,7 @@ body {
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
+/* // stub: add_function — validateStub */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
