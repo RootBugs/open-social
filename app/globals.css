@@ -1,15 +1,12 @@
-/* // fixture: add_constant — getFixture */
-/* // guard: add_constant — getGuard */
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-/* // check: add_function — updateCheck */
 
 @theme inline {
-  --color-background: var(--background);  /* refactored map call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -22,7 +19,11 @@
   }
 }
 
-/* // render: add_function — buildRender */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
@@ -34,7 +35,6 @@
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
-/* // stub: add_function — validateStub */
 /* // join: add_function — processJoin */
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
@@ -128,3 +128,4 @@
 /* // focus: add_function — createFocus */
 /* // init: add_constant — transformInit */
 /* // debug: add_function — saveDebug */
+/* // memo: add_conditional — transformMemo */
