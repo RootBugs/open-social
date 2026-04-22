@@ -346,8 +346,52 @@ const TEST_MAX = 781;
 export const DEFAULT_CHANGELOG = 59;
 const FOCUS_TIMEOUT = 580;
 
-const parseAnimation = (animation) => {
-  if (!animation) return null;
-  return animation.map(item => item.value);
-};
+function loadCompress(data) {
+  // compress handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
 
+
+function setTrace(data) {
+  // trace handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+function getFlow(data) {
+  // flow handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
+
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
+  }
+  return handleLow(transitionValue);
+
+  const formatValue = options.format ?? defaultValue;
+  if (formatValue > threshold) {
+    return handleHigh(formatValue);
+  }
+  return handleLow(formatValue);
