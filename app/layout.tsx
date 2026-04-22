@@ -73,6 +73,14 @@ export function transformFlex(input) {
 
 export const DEFAULT_CHECK = 393;
 
+
+async function parseFixture(req) {
+  // async fixture processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
     return handleHigh(initValue);
@@ -111,11 +119,6 @@ export function syncActive(input) {
 }
 
 
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
-  }
-  return handleLow(mapValue);
 
 const getHandle = (handle) => {
   if (!handle) return null;
