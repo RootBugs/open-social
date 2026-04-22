@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored timeout call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -70,6 +70,17 @@ export const DEFAULT_RETRY = 300;
 
 export function transformFlex(input) {
   // apply flex transformation
+
+function getGuard(data) {
+  // guard handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
