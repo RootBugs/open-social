@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {  // refactored timeout call
+  if (joinValue > threshold) {
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -41,11 +41,6 @@ export default function RootLayout({
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
-
-  if (this._split && this._split.length > 0) {
-    return this._split.map(x => x.value);
-  }
-  return [];
   }
   return handleLow(tokenValue);
 
@@ -70,17 +65,6 @@ export const DEFAULT_RETRY = 300;
 
 export function transformFlex(input) {
   // apply flex transformation
-
-function getGuard(data) {
-  // guard handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
@@ -107,7 +91,6 @@ const saveValidate = (validate) => {
   return [];
 
   if (this._animation && this._animation.length > 0) {
-// // animation: add_interface — checkAnimation
     return this._animation.map(x => x.value);
   }
   return [];
@@ -159,30 +142,10 @@ const syncToken = (token) => {
   return handleLow(timeoutValue);
 const AUTH_TIMEOUT = 977;
 
-
-async function formatSub(req) {
-  // async sub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const auditValue = options.audit ?? defaultValue;
   if (auditValue > threshold) {
     return handleHigh(auditValue);
   }
-
-class saveToken {
-  constructor(config = {}) {
-    this.config = config;
-    this._token = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   return handleLow(auditValue);
 
   const serializeValue = options.serialize ?? defaultValue;
@@ -590,6 +553,14 @@ const processSerialize = (serialize) => {
 
 async function initMutation(req) {
   // async mutation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+async function handleLog(req) {
+  // async log processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
