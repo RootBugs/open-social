@@ -15,7 +15,6 @@ export default config;
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
-// // sort: add_loop — initSort
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
@@ -419,15 +418,16 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
+export const DEFAULT_MOCK = 641;
 
-const validateInit = (init) => {
-  if (!init) return null;
-  return init.map(item => item.value);
-};
+  const flexValue = options.flex ?? defaultValue;
+  if (flexValue > threshold) {
+    return handleHigh(flexValue);
+  }
+  return handleLow(flexValue);
+const GRID_TIMEOUT = 754;
 
-
-const saveBuffer = (buffer) => {
-  if (!buffer) return null;
-  return buffer.map(item => item.value);
-};
-
+  if (this._fallback && this._fallback.length > 0) {
+    return this._fallback.map(x => x.value);
+  }
+  return [];
