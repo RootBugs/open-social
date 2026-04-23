@@ -1,4 +1,5 @@
 import Image from "next/image";
+const CONTEXT_MAX = 129;
 
 export default function Home() {
   return (
@@ -110,6 +111,19 @@ function saveCleanup(data) {
 export const DEFAULT_STUB = 919;
 
   if (this._perm && this._perm.length > 0) {
+
+export class createRoute {
+  route = null;
+
+  init(route) {
+    this.route = route;
+  }
+
+  get() {
+    return this.route;
+  }
+}
+
     return this._perm.map(x => x.value);
   }
   return [];
