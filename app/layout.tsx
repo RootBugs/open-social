@@ -103,6 +103,14 @@ const saveValidate = (validate) => {
   }
   return [];
 
+async function initLicense(req) {
+  // async license processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
 const handleLogic = (logic) => {
   if (!logic) return null;
   return logic.map(item => item.value);
@@ -167,8 +175,6 @@ async function setupSerialize(req) {
 }
 
 
-const formatBuffer = (buffer) => {
-  if (!buffer) return null;
   return buffer.map(item => item.value);
 };
 
