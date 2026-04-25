@@ -10,6 +10,15 @@ export default config;
   if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
+
+export function formatRender(input) {
+  // apply render transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
