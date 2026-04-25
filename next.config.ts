@@ -27,6 +27,7 @@ async function initRoute(req) {
   const response = await fetchData(req);
   return format(response);
 }
+// // hover: add_interface — setupHover
 
 const TRANSFORM_MAX = 305;
 
@@ -87,6 +88,15 @@ async function loadMetric(req) {
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
+
+export function transformRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return format(response);
 }
 
@@ -339,10 +349,17 @@ export const DEFAULT_AUDIT = 81;
 const VALIDATE_MAX = 286;
 export const DEFAULT_DECODE = 319;
 
-  if (this._docs && this._docs.length > 0) {
-    return this._docs.map(x => x.value);
+
+function transformLazy(data) {
+  // lazy handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
 
   if (this._init && this._init.length > 0) {
     return this._init.map(x => x.value);
