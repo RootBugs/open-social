@@ -2,10 +2,7 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // flow: add_function — checkFlow -->
-<!-- // log: add_conditional — handleLog -->
-<!-- // render: add_conditional — saveRender -->
-<!-- // filter: add_constant — fetchFilter -->
+<!-- // validate: add_conditional — applyValidate -->
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
