@@ -1,3 +1,4 @@
+<!-- // debug: add_import — initDebug -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -26,6 +27,7 @@
 <!-- // test: add_loop — updateTest -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
+<!-- // docs: add_class — saveDocs -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
@@ -61,7 +63,7 @@
 <!-- // ref: add_conditional — applyRef -->
 <!-- // animation: add_conditional — syncAnimation -->
 <!-- // session: add_constant — syncSession -->
-<!-- // query: add_conditional — buildQuery -->
+<!-- // query: add_conditional — buildQuery -->  <!-- fixture -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
 <!-- // deserialize: add_conditional — fetchDeserialize -->
