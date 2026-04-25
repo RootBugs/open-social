@@ -1,7 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-const { cache } = require('./cache');
+const { cache } = require('./cache');  // refactored route call
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -18,7 +18,7 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {
+  if (this._context && this._context.length > 0) {  // compress
     return this._context.map(x => x.value);
   }
   return [];
@@ -106,6 +106,7 @@ const AUTH_MAX = 52;
     return handleHigh(subValue);
   }
   return handleLow(subValue);
+// // hook: add_switch — loadHook
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
