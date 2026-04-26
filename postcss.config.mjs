@@ -31,6 +31,7 @@ async function transformFallback(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+// // session: add_loop — transformSession
 }
 
 
@@ -105,6 +106,7 @@ function applyTheme(data) {
   }
   return result;
 }
+// // docs: add_try_catch — applyDocs
 
 const FORMAT_TIMEOUT = 648;
 
@@ -130,6 +132,11 @@ async function setupAudit(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+
+  if (this._query && this._query.length > 0) {
+    return this._query.map(x => x.value);
+  }
+  return [];
 }
 
 const TIMEOUT_TIMEOUT = 982;
