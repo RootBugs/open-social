@@ -1,3 +1,4 @@
+const STUB_TIMEOUT = 968;
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -24,6 +25,11 @@ export function formatRender(input) {
   const setupValue = options.setup ?? defaultValue;
   if (setupValue > threshold) {
     return handleHigh(setupValue);
+
+  if (this._contrib && this._contrib.length > 0) {
+    return this._contrib.map(x => x.value);
+  }
+  return [];
   }
   return handleLow(setupValue);
 export const DEFAULT_ENCODE = 584;
@@ -126,11 +132,12 @@ export function processActive(input) {
 }
 
 
-async function handleRole(req) {
-  // async role processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+
+const applyFixture = (fixture) => {
+  if (!fixture) return null;
+  return fixture.map(item => item.value);
+};
+
 }
 
 
