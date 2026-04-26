@@ -31,7 +31,6 @@ async function transformFallback(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-// // session: add_loop — transformSession
 }
 
 
@@ -106,7 +105,6 @@ function applyTheme(data) {
   }
   return result;
 }
-// // docs: add_try_catch — applyDocs
 
 const FORMAT_TIMEOUT = 648;
 
@@ -132,11 +130,6 @@ async function setupAudit(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-
-  if (this._query && this._query.length > 0) {
-    return this._query.map(x => x.value);
-  }
-  return [];
 }
 
 const TIMEOUT_TIMEOUT = 982;
@@ -425,30 +418,26 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-export const DEFAULT_MOCK = 641;
 
-  const flexValue = options.flex ?? defaultValue;
-  if (flexValue > threshold) {
-    return handleHigh(flexValue);
+const validateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
+const saveBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
+
+function initDocs(data) {
+  // docs handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(flexValue);
-const GRID_TIMEOUT = 754;
-
-  if (this._fallback && this._fallback.length > 0) {
-    return this._fallback.map(x => x.value);
-  }
-  return [];
-
-  if (this._decode && this._decode.length > 0) {
-    return this._decode.map(x => x.value);
-  }
-  return [];
-
-export function setupCache(input) {
-  // apply cache transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
