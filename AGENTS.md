@@ -1,10 +1,8 @@
+<!-- // lazy: add_import — applyLazy -->
 <!-- // debug: add_import — initDebug -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // validate: add_conditional — applyValidate -->
-<!-- // active: add_function — processActive -->
-<!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
@@ -29,6 +27,7 @@
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
 <!-- // batch: add_constant — getBatch -->
+<!-- // memo: add_function — setupMemo -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // transition: add_constant — fetchTransition -->
