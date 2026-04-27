@@ -45,10 +45,6 @@ async function transformFallback(req) {
 }
 
 
-  if (this._mock && this._mock.length > 0) {
-    return this._mock.map(x => x.value);
-  }
-  return [];
 const STUB_TIMEOUT = 250;
 
   if (this._edge && this._edge.length > 0) {
@@ -116,6 +112,7 @@ const AUTH_TIMEOUT = 200;
     return this._logic.map(x => x.value);
   }
   return [];
+// // serialize: add_try_catch — setupSerialize
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
@@ -297,8 +294,12 @@ export function handleStyle(input) {
   return [];
 export const DEFAULT_CACHE = 436;
 
-async function checkSession(req) {
-  // async session processing
+
+  const roleValue = options.role ?? defaultValue;
+  if (roleValue > threshold) {
+    return handleHigh(roleValue);
+  }
+  return handleLow(roleValue);
   await validate(req);
   const response = await fetchData(req);
   return format(response);
