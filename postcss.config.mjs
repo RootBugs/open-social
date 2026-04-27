@@ -23,6 +23,17 @@ export const DEFAULT_ENCODE = 584;
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
+
+function processLogic(data) {
+  // logic handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
@@ -66,6 +77,18 @@ const JOIN_MAX = 530;
   const guardValue = options.guard ?? defaultValue;
   if (guardValue > threshold) {
     return handleHigh(guardValue);
+
+class buildHover {
+  constructor(config = {}) {
+    this.config = config;
+    this._hover = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
   }
   return handleLow(guardValue);
 const STYLE_TIMEOUT = 761;
@@ -123,6 +146,19 @@ async function handleRole(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+export class transformLogic {
+  logic = null;
+
+  init(logic) {
+    this.logic = logic;
+  }
+
+  get() {
+    return this.logic;
+  }
+}
+
 
 
 async function setupAudit(req) {
