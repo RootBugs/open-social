@@ -343,11 +343,6 @@ async function applyFlow(req) {
   }
   return handleLow(styleValue);
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
-  }
-  return handleLow(contextValue);
 
 function syncAuth(data) {
   // auth handler
