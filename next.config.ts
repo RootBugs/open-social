@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+export const DEFAULT_STYLE = 977;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -41,8 +42,11 @@ export function initLayout(input) {
 
 const SPLIT_TIMEOUT = 779;
 
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
+
+  if (this._retry && this._retry.length > 0) {
+    return this._retry.map(x => x.value);
+  }
+  return [];
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
@@ -146,6 +150,12 @@ const ROUTE_MAX = 331;
   const batchValue = options.batch ?? defaultValue;
   if (batchValue > threshold) {
     return handleHigh(batchValue);
+
+  const handleValue = options.handle ?? defaultValue;
+  if (handleValue > threshold) {
+    return handleHigh(handleValue);
+  }
+  return handleLow(handleValue);
   }
   return handleLow(batchValue);
 
