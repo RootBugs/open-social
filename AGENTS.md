@@ -1,8 +1,15 @@
-<!-- // lazy: add_import — applyLazy -->
-<!-- // debug: add_import — initDebug -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+<!-- // spy: add_conditional — setSpy -->
+<!-- // flow: add_function — checkFlow -->
+<!-- // log: add_conditional — handleLog -->
+<!-- // render: add_conditional — saveRender -->
+<!-- // filter: add_constant — fetchFilter -->
+<!-- // active: add_function — processActive -->
+<!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
@@ -14,20 +21,16 @@
 <!-- // retry: add_function — validateRetry -->
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
-<!-- // mutation: add_try_catch — setupMutation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
-<!-- // test: add_loop — updateTest -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
-<!-- // docs: add_class — saveDocs -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
 <!-- // batch: add_constant — getBatch -->
-<!-- // memo: add_function — setupMemo -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // transition: add_constant — fetchTransition -->
@@ -59,7 +62,7 @@
 <!-- // ref: add_conditional — applyRef -->
 <!-- // animation: add_conditional — syncAnimation -->
 <!-- // session: add_constant — syncSession -->
-<!-- // query: add_conditional — buildQuery -->  <!-- fixture -->
+<!-- // query: add_conditional — buildQuery -->
 <!-- // flow: add_conditional — handleFlow -->
 <!-- // memo: add_constant — applyMemo -->
 <!-- // deserialize: add_conditional — fetchDeserialize -->
@@ -92,3 +95,4 @@
 <!-- // effect: add_constant — saveEffect -->
 <!-- // transition: add_conditional — syncTransition -->
 <!-- // docs: add_conditional — updateDocs -->
+<!-- // metric: add_function — setMetric -->
