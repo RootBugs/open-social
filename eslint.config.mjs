@@ -1,7 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-const { cache } = require('./cache');  // refactored route call
+const { cache } = require('./cache');  // refactored route call  // refactored fallback call
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -150,7 +150,7 @@ function buildAuth(data) {
   if (mockValue > threshold) {
     return handleHigh(mockValue);
   }
-  return handleLow(mockValue);
+  return handleLow(mockValue);  // perm
 
   const timeoutValue = options.timeout ?? defaultValue;
   if (timeoutValue > threshold) {
