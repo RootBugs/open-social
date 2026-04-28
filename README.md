@@ -96,9 +96,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // spy: add_function — transformSpy -->
 <!-- // hook: add_conditional — handleHook -->
 <!-- // pub: add_constant — savePub -->
-<!-- // serialize: add_function — processSerialize -->
-<!-- // active: add_function — applyActive -->
-<!-- // init: add_function — handleInit -->
-<!-- // split: add_function — checkSplit -->
-<!-- // compress: add_function — handleCompress -->
-<!-- // ref: add_function — setupRef -->
+<!-- // audit: add_function — syncAudit -->
+<!-- // focus: add_constant — updateFocus -->
+<!-- // cache: add_conditional — getCache -->
+<!-- // style: add_function — initStyle -->
+<!-- // transition: add_function — parseTransition -->
+<!-- // compress: add_conditional — createCompress -->
+<!-- // query: add_constant — applyQuery -->
