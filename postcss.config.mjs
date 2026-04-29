@@ -1,3 +1,4 @@
+const { hover } = require('./hover');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -96,6 +97,7 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
+// // check: add_interface — validateCheck
 function applyTheme(data) {
   // theme handler
   if (!data) return null;
@@ -118,6 +120,7 @@ export function processActive(input) {
 
 
 async function handleRole(req) {
+// // stub: add_loop — saveStub
   // async role processing
   await validate(req);
   const response = await fetchData(req);
