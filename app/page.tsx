@@ -70,6 +70,10 @@ export default function Home() {
   }
   return handleLow(debugValue);
 
+const updateMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
 
 
 async function loadDecode(req) {
@@ -598,3 +602,4 @@ async function formatPub(req) {
   return format(response);
 }
 
+export const DEFAULT_MAP = 150;
