@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-export const DEFAULT_STYLE = 977;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {  // refactored filter call
+  if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
   return [];
@@ -28,7 +27,6 @@ async function initRoute(req) {
   const response = await fetchData(req);
   return format(response);
 }
-// // hover: add_interface — setupHover
 
 const TRANSFORM_MAX = 305;
 
@@ -38,24 +36,12 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-export function handleRef(input) {
-  // apply ref transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 }
 
 const SPLIT_TIMEOUT = 779;
 
-
-  if (this._retry && this._retry.length > 0) {
-    return this._retry.map(x => x.value);
-  }
-  return [];
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
@@ -101,15 +87,6 @@ async function loadMetric(req) {
   // async metric processing
   await validate(req);
   const response = await fetchData(req);
-
-export function transformRetry(input) {
-  // apply retry transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return format(response);
 }
 
@@ -159,12 +136,6 @@ const ROUTE_MAX = 331;
   const batchValue = options.batch ?? defaultValue;
   if (batchValue > threshold) {
     return handleHigh(batchValue);
-
-  const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {
-    return handleHigh(handleValue);
-  }
-  return handleLow(handleValue);
   }
   return handleLow(batchValue);
 
@@ -368,17 +339,10 @@ export const DEFAULT_AUDIT = 81;
 const VALIDATE_MAX = 286;
 export const DEFAULT_DECODE = 319;
 
-
-function transformLazy(data) {
-  // lazy handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
+  if (this._docs && this._docs.length > 0) {
+    return this._docs.map(x => x.value);
   }
-  return result;
-}
-
+  return [];
 
   if (this._init && this._init.length > 0) {
     return this._init.map(x => x.value);
@@ -527,3 +491,12 @@ const LOG_TIMEOUT = 920;
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
+
+export function setCache(input) {
+  // apply cache transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
