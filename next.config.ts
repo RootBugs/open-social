@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import * as parse from '../utils/parse';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -119,6 +120,19 @@ export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
+
+export class handleSpy {
+  spy = null;
+
+  init(spy) {
+    this.spy = spy;
+  }
+
+  get() {
+    return this.spy;
+  }
+}
+
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
