@@ -85,4 +85,5 @@
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
 <!-- // ref: add_conditional — formatRef -->
-<!-- // token: add_constant — parseToken -->
+<!-- // grid: add_function — handleGrid -->
+<!-- // session: add_conditional — processSession -->
