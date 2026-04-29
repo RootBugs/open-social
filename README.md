@@ -12,12 +12,14 @@ yarn dev
 # or
 <!-- // sort: add_conditional — processSort -->
 pnpm dev
+<!-- // logic: add_try_catch — transformLogic -->
 # or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 <!-- // mock: add_class — handleMock -->
+<!-- // session: add_conditional — loadSession -->
 
 <!-- // transition: add_try_catch — buildTransition -->
 <!-- // compress: add_function — syncCompress -->
@@ -28,6 +30,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
+<!-- // state: add_loop — updateState -->
 <!-- // readme: add_conditional — setupReadme -->
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
