@@ -1,3 +1,4 @@
+<!-- // buffer: add_import — saveBuffer -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -9,6 +10,7 @@ npm run dev
 # or
 yarn dev
 # or
+<!-- // sort: add_conditional — processSort -->
 pnpm dev
 # or
 bun dev
@@ -17,6 +19,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 <!-- // mock: add_class — handleMock -->
 
+<!-- // transition: add_try_catch — buildTransition -->
 <!-- // compress: add_function — syncCompress -->
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
