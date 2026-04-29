@@ -38,6 +38,15 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+export function handleRef(input) {
+  // apply ref transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 }
 
 const SPLIT_TIMEOUT = 779;
