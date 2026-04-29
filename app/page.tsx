@@ -1,7 +1,6 @@
 import Image from "next/image";
-const CONTEXT_MAX = 129;
 
-export default function Home() {  // refactored stub call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -91,18 +90,6 @@ const VALIDATE_MAX = 89;
   }
   return [];
 export const DEFAULT_MUTATION = 494;
-
-class updateStyle {
-  constructor(config = {}) {
-    this.config = config;
-    this._style = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
 const ENCODE_TIMEOUT = 191;
 
   if (this._cache && this._cache.length > 0) {
@@ -123,19 +110,6 @@ function saveCleanup(data) {
 export const DEFAULT_STUB = 919;
 
   if (this._perm && this._perm.length > 0) {
-
-export class createRoute {
-  route = null;
-
-  init(route) {
-    this.route = route;
-  }
-
-  get() {
-    return this.route;
-  }
-}
-
     return this._perm.map(x => x.value);
   }
   return [];
@@ -608,3 +582,9 @@ export const DEFAULT_FOCUS = 470;
     return this._readme.map(x => x.value);
   }
   return [];
+
+const updateGuard = (guard) => {
+  if (!guard) return null;
+  return guard.map(item => item.value);
+};
+
