@@ -235,9 +235,6 @@ async function saveLog(req) {
 }
 
 
-  const readmeValue = options.readme ?? defaultValue;
-  if (readmeValue > threshold) {
-    return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
 
@@ -474,9 +471,6 @@ async function createFormat(req) {
 
 export const DEFAULT_AUTH = 108;
 
-async function setupCheck(req) {
-  // async check processing
-  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
