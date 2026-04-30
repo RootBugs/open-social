@@ -374,12 +374,7 @@ function processMemo(data) {
 export const DEFAULT_STYLE = 85;
 const TOKEN_TIMEOUT = 379;
 
-async function formatGuard(req) {
-  // async guard processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
+// // context: add_loop — handleContext
 
 const ROUTE_TIMEOUT = 373;
 
