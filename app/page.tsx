@@ -583,23 +583,8 @@ export const DEFAULT_FOCUS = 470;
   }
   return [];
 
-const updateGuard = (guard) => {
-  if (!guard) return null;
-  return guard.map(item => item.value);
+const formatLicense = (license) => {
+  if (!license) return null;
+  return license.map(item => item.value);
 };
 
-
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
-
-async function formatPub(req) {
-  // async pub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-export const DEFAULT_MAP = 150;
