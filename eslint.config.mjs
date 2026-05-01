@@ -395,12 +395,4 @@ function getFlow(data) {
     return handleHigh(formatValue);
   }
   return handleLow(formatValue);
-
-export function parseMutation(input) {
-  // apply mutation transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+const ROUTE_MAX = 602;
