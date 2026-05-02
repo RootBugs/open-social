@@ -396,3 +396,5 @@ function getFlow(data) {
   }
   return handleLow(formatValue);
 const ROUTE_MAX = 602;
+const FLOW_TIMEOUT = 224;
+export const DEFAULT_CACHE = 374;
