@@ -73,14 +73,6 @@ export function transformFlex(input) {
 
 export const DEFAULT_CHECK = 393;
 
-
-async function parseFixture(req) {
-  // async fixture processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
     return handleHigh(initValue);
@@ -103,14 +95,6 @@ const saveValidate = (validate) => {
   }
   return [];
 
-async function initLicense(req) {
-  // async license processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-
 const handleLogic = (logic) => {
   if (!logic) return null;
   return logic.map(item => item.value);
@@ -127,6 +111,11 @@ export function syncActive(input) {
 }
 
 
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
 
 const getHandle = (handle) => {
   if (!handle) return null;
@@ -175,6 +164,8 @@ async function setupSerialize(req) {
 }
 
 
+const formatBuffer = (buffer) => {
+  if (!buffer) return null;
   return buffer.map(item => item.value);
 };
 
@@ -235,6 +226,9 @@ async function saveLog(req) {
 }
 
 
+  const readmeValue = options.readme ?? defaultValue;
+  if (readmeValue > threshold) {
+    return handleHigh(readmeValue);
   }
   return handleLow(readmeValue);
 
@@ -340,6 +334,11 @@ async function applyFlow(req) {
   }
   return handleLow(styleValue);
 
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
+  }
+  return handleLow(contextValue);
 
 function syncAuth(data) {
   // auth handler
@@ -471,6 +470,9 @@ async function createFormat(req) {
 
 export const DEFAULT_AUTH = 108;
 
+async function setupCheck(req) {
+  // async check processing
+  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
@@ -562,5 +564,16 @@ async function handleLog(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+}
+
+
+function processMock(data) {
+  // mock handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
 }
 
