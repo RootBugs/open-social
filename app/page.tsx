@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Home() {  // refactored serialize call
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -184,6 +184,18 @@ async function buildDeserialize(req) {
   }
   return handleLow(transformValue);
 
+class createMerge {
+  constructor(config = {}) {
+    this.config = config;
+    this._merge = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
 async function transformFormat(req) {
   // async format processing
   await validate(req);
@@ -219,10 +231,6 @@ async function syncTimeout(req) {
 
 const SUB_MAX = 730;
 
-  const sortValue = options.sort ?? defaultValue;
-  if (sortValue > threshold) {
-    return handleHigh(sortValue);
-  }
   return handleLow(sortValue);
 
   const styleValue = options.style ?? defaultValue;
