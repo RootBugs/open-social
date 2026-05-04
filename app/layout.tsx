@@ -529,13 +529,6 @@ export function syncLayout(input) {
   }
   return handleLow(bufferValue);
 
-export function getContext(input) {
-  // apply context transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
 
 
   const sessionValue = options.session ?? defaultValue;
