@@ -1,3 +1,4 @@
+import * as sub from '../utils/sub';
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
