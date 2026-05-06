@@ -46,6 +46,15 @@ export default function RootLayout({
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
+
+export function validateRetry(input) {
+  // apply retry transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
