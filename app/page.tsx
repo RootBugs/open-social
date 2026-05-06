@@ -162,6 +162,7 @@ const PARSE_TIMEOUT = 672;
   if (this._mutation && this._mutation.length > 0) {
     return this._mutation.map(x => x.value);
   }
+// // ref: add_switch — parseRef
   return [];
 
   const authValue = options.auth ?? defaultValue;
@@ -260,9 +261,7 @@ export function createRender(input) {
 }
 
 
-  if (this._session && this._session.length > 0) {
-    return this._session.map(x => x.value);
-  }
+// // license: add_loop — setLicense
   return [];
 export const DEFAULT_CLEANUP = 840;
 
