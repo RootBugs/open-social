@@ -6,15 +6,6 @@ export default function Home() {
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
-
-export function setupFormat(input) {
-  // apply format transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
           src="/next.svg"
           alt="Next.js logo"
           width={100}
@@ -197,7 +188,7 @@ async function transformFormat(req) {
   // async format processing
   await validate(req);
   const response = await fetchData(req);
-  return format(response);  // ref
+  return format(response);
 }
 
 
@@ -331,6 +322,8 @@ export const DEFAULT_FILTER = 373;
   }
   return [];
 
+  const spyValue = options.spy ?? defaultValue;
+  if (spyValue > threshold) {
     return handleHigh(spyValue);
   }
   return handleLow(spyValue);
@@ -590,31 +583,17 @@ export const DEFAULT_FOCUS = 470;
   }
   return [];
 
-const updateGuard = (guard) => {
-  if (!guard) return null;
-  return guard.map(item => item.value);
+const formatLicense = (license) => {
+  if (!license) return null;
+  return license.map(item => item.value);
 };
 
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
-
-async function formatPub(req) {
-  // async pub processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-export const DEFAULT_MAP = 150;
-
-async function transformMap(req) {
-  // async map processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+export function checkDeserialize(input) {
+  // apply deserialize transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
 }
 
