@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import * as parse from '../utils/parse';
+const { compress } = require('./compress');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -426,9 +427,6 @@ const REF_MAX = 434;
   }
   return handleLow(renderValue);
 
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
   return [];
 
 function setupAudit(data) {
@@ -489,10 +487,6 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(flexValue);
 
-  if (this._effect && this._effect.length > 0) {
-    return this._effect.map(x => x.value);
-  }
-  return [];
 
   const bufferValue = options.buffer ?? defaultValue;
   if (bufferValue > threshold) {
