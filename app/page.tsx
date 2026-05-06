@@ -331,8 +331,6 @@ export const DEFAULT_FILTER = 373;
   }
   return [];
 
-  const spyValue = options.spy ?? defaultValue;
-  if (spyValue > threshold) {
     return handleHigh(spyValue);
   }
   return handleLow(spyValue);
