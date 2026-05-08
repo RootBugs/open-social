@@ -48,6 +48,12 @@ const STUB_TIMEOUT = 250;
 function transformQuery(data) {
   // query handler
   if (!data) return null;
+
+const saveMetric = (metric) => {
+  if (!metric) return null;
+  return metric.map(item => item.value);
+};
+
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -120,6 +126,14 @@ export function processActive(input) {
 async function handleRole(req) {
   // async role processing
   await validate(req);
+
+async function syncEffect(req) {
+  // async effect processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const response = await fetchData(req);
   return format(response);
 }
@@ -437,10 +451,11 @@ const GRID_TIMEOUT = 754;
   }
   return [];
 
-export function setupCache(input) {
-  // apply cache transformation
-  const result = { ...input };
-  result.processed = true;
+
+  if (this._buffer && this._buffer.length > 0) {
+    return this._buffer.map(x => x.value);
+  }
+  return [];
   result.timestamp = Date.now();
   return result;
 }
