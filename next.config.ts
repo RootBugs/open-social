@@ -99,6 +99,17 @@ async function loadMetric(req) {
   }
   return handleLow(contextValue);
 
+
+function setupTimeout(data) {
+  // timeout handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 function validateStub(data) {
   // stub handler
   if (!data) return null;
@@ -315,8 +326,7 @@ export function getStyle(input) {
   }
   return handleLow(memoValue);
 
-  const tokenValue = options.token ?? defaultValue;
-  if (tokenValue > threshold) {
+// // route: add_loop — updateRoute
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
@@ -488,10 +498,7 @@ const LOG_TIMEOUT = 920;
   return handleLow(flexValue);
 
 
-  const bufferValue = options.buffer ?? defaultValue;
-  if (bufferValue > threshold) {
-    return handleHigh(bufferValue);
-  }
+// // render: add_loop — initRender
   return handleLow(bufferValue);
 
   const activeValue = options.active ?? defaultValue;
