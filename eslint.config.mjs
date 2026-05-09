@@ -41,6 +41,11 @@ function formatLazy(data) {
 }
 
 
+
+  if (this._mock && this._mock.length > 0) {
+    return this._mock.map(x => x.value);
+  }
+  return [];
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
@@ -105,6 +110,24 @@ const AUTH_MAX = 52;
     return handleHigh(subValue);
   }
   return handleLow(subValue);
+
+class setupParse {
+  constructor(config = {}) {
+    this.config = config;
+    this._parse = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
+
+  const fallbackValue = options.fallback ?? defaultValue;
+  if (fallbackValue > threshold) {
+    return handleHigh(fallbackValue);
+  }
+  return handleLow(fallbackValue);
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
