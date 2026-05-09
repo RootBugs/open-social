@@ -3,7 +3,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
-<!-- // fixture: add_loop — handleFixture -->
 
 ```bash
 npm run dev
@@ -12,7 +11,6 @@ yarn dev
 # or
 pnpm dev
 # or
-<!-- // test: add_function — getTest -->
 bun dev
 ```
 
@@ -23,7 +21,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
-<!-- // buffer: add_try_catch — createBuffer -->
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -106,4 +103,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // logic: add_function — initLogic -->
+<!-- // fallback: add_constant — applyFallback -->
+<!-- // validate: add_function — parseValidate -->
