@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+<!-- // fixture: add_loop — handleFixture -->
 
 ```bash
 npm run dev
