@@ -87,3 +87,4 @@
 <!-- // ref: add_conditional — formatRef -->
 <!-- // grid: add_function — handleGrid -->
 <!-- // session: add_conditional — processSession -->
+<!-- // lazy: add_function — initLazy -->
