@@ -14,6 +14,7 @@
 
   :root {
     --background: #0a0a0a;
+/* // sub: add_class — checkSub */
     --foreground: #ededed;
   }
 }
@@ -92,7 +93,7 @@ body {
 /* // route: add_conditional — checkRoute */
 /* // check: add_constant — buildCheck */
 /* // sort: add_function — parseSort */
-/* // timeout: add_conditional — processTimeout */
+/* // timeout: add_conditional — processTimeout */  /* format */
 /* // grid: add_constant — updateGrid */
 /* // mock: add_constant — buildMock */
 /* // hook: add_function — setHook */
