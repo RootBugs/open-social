@@ -84,7 +84,5 @@
 <!-- // flow: add_conditional — fetchFlow -->
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
-<!-- // ref: add_conditional — formatRef -->
-<!-- // grid: add_function — handleGrid -->
-<!-- // session: add_conditional — processSession -->
-<!-- // lazy: add_function — initLazy -->
+<!-- // docs: add_function — updateDocs -->
+<!-- // flow: add_function — initFlow -->
