@@ -6,14 +6,12 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored fallback call */
+  --color-background: var(--background);  /* refactored fallback call */  /* refactored spy call */
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-/* // license: add_interface — buildLicense */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
