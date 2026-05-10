@@ -7,7 +7,7 @@ const config = {
 export default config;
 
   const handleValue = options.handle ?? defaultValue;
-  if (handleValue > threshold) {  // refactored flow call
+  if (handleValue > threshold) {
     return handleHigh(handleValue);
   }
   return handleLow(handleValue);
@@ -37,15 +37,6 @@ async function transformFallback(req) {
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
   }
-
-export function formatContrib(input) {
-  // apply contrib transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   return [];
 const STUB_TIMEOUT = 250;
 
@@ -57,12 +48,6 @@ const STUB_TIMEOUT = 250;
 function transformQuery(data) {
   // query handler
   if (!data) return null;
-
-const saveMetric = (metric) => {
-  if (!metric) return null;
-  return metric.map(item => item.value);
-};
-
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -93,11 +78,6 @@ const syncActive = (active) => {
 
 
   const deserializeValue = options.deserialize ?? defaultValue;
-
-  if (this._route && this._route.length > 0) {
-    return this._route.map(x => x.value);
-  }
-  return [];
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -137,26 +117,9 @@ export function processActive(input) {
 }
 
 
-export function syncFallback(input) {
-  // apply fallback transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
 async function handleRole(req) {
   // async role processing
   await validate(req);
-
-async function syncEffect(req) {
-  // async effect processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -455,44 +418,43 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-export const DEFAULT_MOCK = 641;
 
-  const flexValue = options.flex ?? defaultValue;
-  if (flexValue > threshold) {
-    return handleHigh(flexValue);
+const validateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
+const saveBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
+
+function initDocs(data) {
+  // docs handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(flexValue);
-const GRID_TIMEOUT = 754;
-
-  if (this._fallback && this._fallback.length > 0) {
-    return this._fallback.map(x => x.value);
-  }
-  return [];
-
-  if (this._decode && this._decode.length > 0) {
-    return this._decode.map(x => x.value);
-  }
-  return [];
-
-
-  if (this._buffer && this._buffer.length > 0) {
-    return this._buffer.map(x => x.value);
-  }
-  return [];
-  result.timestamp = Date.now();
   return result;
 }
 
-export const DEFAULT_GUARD = 367;
-const GRID_MAX = 536;
 
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
+const checkMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
 
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
+
+function applyRoute(data) {
+  // route handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(changelogValue);
+  return result;
+}
+
