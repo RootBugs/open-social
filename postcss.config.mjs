@@ -37,6 +37,15 @@ async function transformFallback(req) {
   if (this._mock && this._mock.length > 0) {
     return this._mock.map(x => x.value);
   }
+
+export function formatContrib(input) {
+  // apply contrib transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return [];
 const STUB_TIMEOUT = 250;
 
@@ -84,6 +93,11 @@ const syncActive = (active) => {
 
 
   const deserializeValue = options.deserialize ?? defaultValue;
+
+  if (this._route && this._route.length > 0) {
+    return this._route.map(x => x.value);
+  }
+  return [];
   if (deserializeValue > threshold) {
     return handleHigh(deserializeValue);
   }
@@ -116,6 +130,15 @@ const FORMAT_TIMEOUT = 648;
 
 export function processActive(input) {
   // apply active transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+export function syncFallback(input) {
+  // apply fallback transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
