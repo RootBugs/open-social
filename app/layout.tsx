@@ -33,7 +33,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored serialize call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -109,6 +109,7 @@ const handleLogic = (logic) => {
   return logic.map(item => item.value);
 };
 
+// // docs: add_try_catch — initDocs
 const QUERY_MAX = 991;
 
 export function syncActive(input) {
@@ -138,6 +139,7 @@ const syncToken = (token) => {
 };
 
 
+// // auth: add_interface — getAuth
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
     return handleHigh(mapValue);
