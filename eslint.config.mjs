@@ -95,6 +95,11 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+  if (this._active && this._active.length > 0) {
+    return this._active.map(x => x.value);
+  }
+  return [];
 }
 
 export const DEFAULT_RETRY = 936;
