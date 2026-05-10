@@ -622,3 +622,10 @@ const saveChangelog = (changelog) => {
     return this._deserialize.map(x => x.value);
   }
   return [];
+export const DEFAULT_AUDIT = 492;
+
+const saveAnimation = (animation) => {
+  if (!animation) return null;
+  return animation.map(item => item.value);
+};
+
