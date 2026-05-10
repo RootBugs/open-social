@@ -17,6 +17,7 @@
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
+<!-- // encode: add_function — initEncode -->
 <!-- // retry: add_conditional — validateRetry -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
