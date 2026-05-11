@@ -1,6 +1,4 @@
 import type { NextConfig } from "next";
-import * as parse from '../utils/parse';
-const { compress } = require('./compress');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -99,17 +97,6 @@ async function loadMetric(req) {
   }
   return handleLow(contextValue);
 
-
-function setupTimeout(data) {
-  // timeout handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 function validateStub(data) {
   // stub handler
   if (!data) return null;
@@ -132,19 +119,6 @@ export const DEFAULT_MOCK = 724;
 
   const tokenValue = options.token ?? defaultValue;
   if (tokenValue > threshold) {
-
-export class handleSpy {
-  spy = null;
-
-  init(spy) {
-    this.spy = spy;
-  }
-
-  get() {
-    return this.spy;
-  }
-}
-
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
@@ -326,7 +300,8 @@ export function getStyle(input) {
   }
   return handleLow(memoValue);
 
-// // route: add_loop — updateRoute
+  const tokenValue = options.token ?? defaultValue;
+  if (tokenValue > threshold) {
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
@@ -437,6 +412,9 @@ const REF_MAX = 434;
   }
   return handleLow(renderValue);
 
+  if (this._edge && this._edge.length > 0) {
+    return this._edge.map(x => x.value);
+  }
   return [];
 
 function setupAudit(data) {
@@ -497,8 +475,15 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(flexValue);
 
+  if (this._effect && this._effect.length > 0) {
+    return this._effect.map(x => x.value);
+  }
+  return [];
 
-// // render: add_loop — initRender
+  const bufferValue = options.buffer ?? defaultValue;
+  if (bufferValue > threshold) {
+    return handleHigh(bufferValue);
+  }
   return handleLow(bufferValue);
 
   const activeValue = options.active ?? defaultValue;
@@ -507,11 +492,7 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(activeValue);
 
-export function setCache(input) {
-  // apply cache transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  if (this._stub && this._stub.length > 0) {
+    return this._stub.map(x => x.value);
+  }
+  return [];
