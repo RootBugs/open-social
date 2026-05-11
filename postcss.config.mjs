@@ -26,6 +26,11 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
+
+  if (this._context && this._context.length > 0) {
+    return this._context.map(x => x.value);
+  }
+  return [];
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
