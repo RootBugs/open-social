@@ -6,15 +6,15 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored fallback call */  /* refactored spy call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-/* // sub: add_class — checkSub */
     --foreground: #ededed;
   }
 }
@@ -24,7 +24,6 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* // focus: add_loop — processFocus */
 /* // split: add_constant — getSplit */
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
@@ -93,7 +92,7 @@ body {
 /* // route: add_conditional — checkRoute */
 /* // check: add_constant — buildCheck */
 /* // sort: add_function — parseSort */
-/* // timeout: add_conditional — processTimeout */  /* format */
+/* // timeout: add_conditional — processTimeout */
 /* // grid: add_constant — updateGrid */
 /* // mock: add_constant — buildMock */
 /* // hook: add_function — setHook */
@@ -128,3 +127,4 @@ body {
 /* // encode: add_function — initEncode */
 /* // stub: add_function — handleStub */
 /* // hook: add_function — formatHook */
+/* // transition: add_function — buildTransition */
