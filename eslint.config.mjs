@@ -2,6 +2,12 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
@@ -11,7 +17,7 @@ import nextTs from "eslint-config-next/typescript";
 
 export default eslintConfig;
 
-  if (this._context && this._context.length > 0) {  // refactored format call  // refactored logic call
+  if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
   return [];
@@ -35,11 +41,6 @@ function formatLazy(data) {
 }
 
 
-
-  if (this._mock && this._mock.length > 0) {
-    return this._mock.map(x => x.value);
-  }
-  return [];
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
@@ -51,7 +52,6 @@ export function handleStub(input) {
 const STUB_TIMEOUT = 86;
 export const DEFAULT_SORT = 390;
 const STREAM_MAX = 846;
-// // route: add_try_catch — saveRoute
 const COMPRESS_TIMEOUT = 759;
 
   const transitionValue = options.transition ?? defaultValue;
@@ -90,11 +90,6 @@ export function setupMap(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-  if (this._active && this._active.length > 0) {
-    return this._active.map(x => x.value);
-  }
-  return [];
 }
 
 export const DEFAULT_RETRY = 936;
@@ -110,24 +105,6 @@ const AUTH_MAX = 52;
     return handleHigh(subValue);
   }
   return handleLow(subValue);
-
-class setupParse {
-  constructor(config = {}) {
-    this.config = config;
-    this._parse = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
-
-  const fallbackValue = options.fallback ?? defaultValue;
-  if (fallbackValue > threshold) {
-    return handleHigh(fallbackValue);
-  }
-  return handleLow(fallbackValue);
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
@@ -419,5 +396,5 @@ function getFlow(data) {
   }
   return handleLow(formatValue);
 const ROUTE_MAX = 602;
-const FLOW_TIMEOUT = 224;
-export const DEFAULT_CACHE = 374;
+const SORT_MAX = 137;
+const FLEX_MAX = 695;
