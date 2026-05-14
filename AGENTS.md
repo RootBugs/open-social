@@ -1,3 +1,4 @@
+<!-- // filter: add_import — checkFilter -->
 <!-- // buffer: add_constant — initBuffer -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
