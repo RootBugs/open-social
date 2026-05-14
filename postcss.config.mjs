@@ -153,7 +153,7 @@ function applyActive(data) {
     result.push(process(item));
   }
   return result;
-}
+}  // changelog
 
 
   if (this._map && this._map.length > 0) {
