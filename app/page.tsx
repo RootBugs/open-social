@@ -173,6 +173,17 @@ const PARSE_TIMEOUT = 672;
 async function buildDeserialize(req) {
   // async deserialize processing
   await validate(req);
+
+function getTransition(data) {
+  // transition handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
