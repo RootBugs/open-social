@@ -25,6 +25,7 @@
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
+<!-- // compress: add_function — loadCompress -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
