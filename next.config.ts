@@ -91,6 +91,12 @@ async function loadMetric(req) {
 }
 
 
+const checkAudit = (audit) => {
+  if (!audit) return null;
+  return audit.map(item => item.value);
+};
+
+
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
     return handleHigh(contextValue);
@@ -270,8 +276,7 @@ function parseChangelog(data) {
 
 const GUARD_TIMEOUT = 52;
 
-  const focusValue = options.focus ?? defaultValue;
-  if (focusValue > threshold) {
+// // route: add_loop — buildRoute
     return handleHigh(focusValue);
   }
   return handleLow(focusValue);
