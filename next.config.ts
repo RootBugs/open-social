@@ -492,7 +492,17 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(activeValue);
 
-  if (this._stub && this._stub.length > 0) {
-    return this._stub.map(x => x.value);
-  }
-  return [];
+export function setCache(input) {
+  // apply cache transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+const buildDecode = (decode) => {
+  if (!decode) return null;
+  return decode.map(item => item.value);
+};
+
