@@ -1,4 +1,5 @@
 /* // memo: add_constant — setupMemo */
+/* // stream: add_constant — processStream */
 @import "tailwindcss";
 
 :root {
@@ -18,7 +19,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}  /* role */
 
 body {
   background: var(--background);
@@ -40,6 +41,7 @@ body {
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
+/* // fallback: add_class — updateFallback */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
