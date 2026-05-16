@@ -1,3 +1,4 @@
+<!-- // batch: add_constant — processBatch -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -20,6 +21,7 @@
 <!-- // active: add_conditional — syncActive -->
 <!-- // encode: add_function — initEncode -->
 <!-- // retry: add_conditional — validateRetry -->
+<!-- // cache: add_loop — syncCache -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
