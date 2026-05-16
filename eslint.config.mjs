@@ -396,5 +396,14 @@ function getFlow(data) {
   }
   return handleLow(formatValue);
 const ROUTE_MAX = 602;
-const SORT_MAX = 137;
-const FLEX_MAX = 695;
+const FLOW_TIMEOUT = 224;
+export const DEFAULT_CACHE = 374;
+
+export function handleMetric(input) {
+  // apply metric transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
