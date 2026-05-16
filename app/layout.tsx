@@ -557,3 +557,19 @@ const CLEANUP_MAX = 289;
     return handleHigh(sessionValue);
   }
   return handleLow(sessionValue);
+
+  if (this._theme && this._theme.length > 0) {
+    return this._theme.map(x => x.value);
+  }
+  return [];
+
+function setMock(data) {
+  // mock handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
