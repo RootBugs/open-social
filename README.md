@@ -103,9 +103,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // fallback: add_constant — applyFallback -->
-<!-- // validate: add_function — parseValidate -->
-<!-- // map: add_conditional — updateMap -->
-<!-- // license: add_conditional — getLicense -->
-<!-- // hover: add_function — getHover -->
-<!-- // contrib: add_constant — checkContrib -->
+<!-- // logic: add_function — initLogic -->
+<!-- // init: add_function — loadInit -->
