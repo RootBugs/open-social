@@ -3,6 +3,7 @@
 @import "tailwindcss";
 
 :root {
+/* // stub: add_function — processStub */
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -16,6 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+/* // deserialize: add_function — processDeserialize */
     --background: #0a0a0a;
     --foreground: #ededed;
 /* // fixture: add_interface — syncFixture */
