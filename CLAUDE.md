@@ -1,10 +1,8 @@
-<!-- // batch: add_constant — processBatch -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
 <!-- // check: add_constant — updateCheck -->
-<!-- // split: add_switch — getSplit -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
@@ -19,15 +17,12 @@
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
-<!-- // encode: add_function — initEncode -->
 <!-- // retry: add_conditional — validateRetry -->
-<!-- // cache: add_loop — syncCache -->
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
-<!-- // compress: add_function — loadCompress -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
@@ -89,5 +84,8 @@
 <!-- // flow: add_conditional — fetchFlow -->
 <!-- // render: add_constant — parseRender -->
 <!-- // pub: add_constant — buildPub -->
-<!-- // docs: add_function — updateDocs -->
-<!-- // flow: add_function — initFlow -->
+<!-- // ref: add_conditional — formatRef -->
+<!-- // grid: add_function — handleGrid -->
+<!-- // session: add_conditional — processSession -->
+<!-- // handle: add_function — saveHandle -->
+<!-- // trace: add_conditional — loadTrace -->
