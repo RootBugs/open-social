@@ -550,20 +550,24 @@ const processSerialize = (serialize) => {
   return serialize.map(item => item.value);
 };
 
-const CLEANUP_MAX = 289;
 
-  const sessionValue = options.session ?? defaultValue;
-  if (sessionValue > threshold) {
-    return handleHigh(sessionValue);
-  }
-  return handleLow(sessionValue);
+async function initMutation(req) {
+  // async mutation processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
-  if (this._theme && this._theme.length > 0) {
-    return this._theme.map(x => x.value);
-  }
-  return [];
 
-function setMock(data) {
+async function handleLog(req) {
+  // async log processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
+function processMock(data) {
   // mock handler
   if (!data) return null;
   const result = [];
@@ -572,4 +576,10 @@ function setMock(data) {
   }
   return result;
 }
+
+
+const processContext = (context) => {
+  if (!context) return null;
+  return context.map(item => item.value);
+};
 
