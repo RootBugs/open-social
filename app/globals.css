@@ -1,15 +1,12 @@
-/* // memo: add_constant — setupMemo */
-/* // stream: add_constant — processStream */
 @import "tailwindcss";
 
 :root {
-/* // stub: add_function — processStub */
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored metric call */
+  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -17,12 +14,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-/* // deserialize: add_function — processDeserialize */
     --background: #0a0a0a;
     --foreground: #ededed;
-/* // fixture: add_interface — syncFixture */
   }
-}  /* role */
+}
 
 body {
   background: var(--background);
@@ -44,7 +39,6 @@ body {
 /* // cache: add_conditional — loadCache */
 /* // mutation: add_function — formatMutation */
 /* // init: add_conditional — saveInit */
-/* // fallback: add_class — updateFallback */
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
@@ -134,3 +128,4 @@ body {
 /* // stub: add_function — handleStub */
 /* // hook: add_function — formatHook */
 /* // transition: add_function — buildTransition */
+/* // auth: add_function — applyAuth */
