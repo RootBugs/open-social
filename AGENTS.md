@@ -23,6 +23,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // perm: add_conditional — createPerm -->
+<!-- // memo: add_try_catch — loadMemo -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
