@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_SUB = 155;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -95,6 +96,11 @@ export function setupMap(input) {
 export const DEFAULT_RETRY = 936;
 const AUTH_MAX = 52;
 
+
+  if (this._deserialize && this._deserialize.length > 0) {
+    return this._deserialize.map(x => x.value);
+  }
+  return [];
   if (this._role && this._role.length > 0) {
     return this._role.map(x => x.value);
   }
@@ -346,9 +352,7 @@ const TEST_MAX = 781;
 export const DEFAULT_CHANGELOG = 59;
 const FOCUS_TIMEOUT = 580;
 
-function loadCompress(data) {
-  // compress handler
-  if (!data) return null;
+// // mutation: add_loop — fetchMutation
   const result = [];
   for (const item of data) {
     result.push(process(item));
