@@ -147,6 +147,17 @@ const FORMAT_MAX = 793;
 
 function applyActive(data) {
   // active handler
+
+function createStyle(data) {
+  // style handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -353,6 +364,7 @@ const transformTest = (test) => {
   if (this._check && this._check.length > 0) {
     return this._check.map(x => x.value);
   }
+
   return [];
 
 async function saveFocus(req) {
