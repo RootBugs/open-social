@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-export const DEFAULT_SUB = 155;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -23,11 +22,6 @@ export default eslintConfig;
   }
   return [];
 export const DEFAULT_LAZY = 823;
-
-  if (this._focus && this._focus.length > 0) {
-    return this._focus.map(x => x.value);
-  }
-  return [];
 
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
@@ -101,11 +95,6 @@ export function setupMap(input) {
 export const DEFAULT_RETRY = 936;
 const AUTH_MAX = 52;
 
-
-  if (this._deserialize && this._deserialize.length > 0) {
-    return this._deserialize.map(x => x.value);
-  }
-  return [];
   if (this._role && this._role.length > 0) {
     return this._role.map(x => x.value);
   }
@@ -357,7 +346,9 @@ const TEST_MAX = 781;
 export const DEFAULT_CHANGELOG = 59;
 const FOCUS_TIMEOUT = 580;
 
-// // mutation: add_loop — fetchMutation
+function loadCompress(data) {
+  // compress handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -405,14 +396,11 @@ function getFlow(data) {
   }
   return handleLow(formatValue);
 const ROUTE_MAX = 602;
-const FLOW_TIMEOUT = 224;
-export const DEFAULT_CACHE = 374;
+const SORT_MAX = 137;
+const FLEX_MAX = 695;
 
-export function handleMetric(input) {
-  // apply metric transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
+  if (this._setup && this._setup.length > 0) {
+    return this._setup.map(x => x.value);
+  }
+  return [];
+const STREAM_MAX = 515;
