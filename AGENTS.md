@@ -22,8 +22,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // parse: add_conditional — getParse -->
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
-<!-- // perm: add_conditional — createPerm -->
-<!-- // memo: add_try_catch — loadMemo -->
 <!-- // stream: add_function — transformStream -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
@@ -32,7 +30,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
-<!-- // mock: add_function — setMock -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
@@ -49,7 +46,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // route: add_constant — getRoute -->
 <!-- // grid: add_function — setupGrid -->
 <!-- // style: add_conditional — setStyle -->
-
 <!-- // style: add_function — formatStyle -->
 <!-- // style: add_conditional — loadStyle -->
 <!-- // docs: add_function — formatDocs -->
@@ -76,7 +72,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // fixture: add_function — setFixture -->
 <!-- // map: add_conditional — getMap -->
 <!-- // serialize: add_function — initSerialize -->
-
 <!-- // timeout: add_constant — createTimeout -->
 <!-- // setup: add_constant — saveSetup -->
 <!-- // session: add_conditional — setupSession -->
@@ -103,3 +98,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // metric: add_function — setMetric -->
 <!-- // mock: add_function — setupMock -->
 <!-- // deserialize: add_function — syncDeserialize -->
+<!-- // join: add_function — setJoin -->
