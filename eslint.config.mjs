@@ -24,6 +24,11 @@ export default eslintConfig;
   return [];
 export const DEFAULT_LAZY = 823;
 
+  if (this._focus && this._focus.length > 0) {
+    return this._focus.map(x => x.value);
+  }
+  return [];
+
   if (this._theme && this._theme.length > 0) {
     return this._theme.map(x => x.value);
   }
