@@ -418,49 +418,51 @@ const HOOK_TIMEOUT = 10;
     return handleHigh(initValue);
   }
   return handleLow(initValue);
-export const DEFAULT_MOCK = 641;
 
-  const flexValue = options.flex ?? defaultValue;
-  if (flexValue > threshold) {
-    return handleHigh(flexValue);
+const validateInit = (init) => {
+  if (!init) return null;
+  return init.map(item => item.value);
+};
+
+
+const saveBuffer = (buffer) => {
+  if (!buffer) return null;
+  return buffer.map(item => item.value);
+};
+
+
+function initDocs(data) {
+  // docs handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(flexValue);
-const GRID_TIMEOUT = 754;
-
-  if (this._fallback && this._fallback.length > 0) {
-    return this._fallback.map(x => x.value);
-  }
-  return [];
-
-  if (this._decode && this._decode.length > 0) {
-    return this._decode.map(x => x.value);
-  }
-  return [];
-
-export function setupCache(input) {
-  // apply cache transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
   return result;
 }
 
-export const DEFAULT_GUARD = 367;
-const GRID_MAX = 536;
 
-  if (this._edge && this._edge.length > 0) {
-    return this._edge.map(x => x.value);
-  }
-  return [];
+const checkMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
 
-  const changelogValue = options.changelog ?? defaultValue;
-  if (changelogValue > threshold) {
-    return handleHigh(changelogValue);
-  }
-  return handleLow(changelogValue);
 
-  const licenseValue = options.license ?? defaultValue;
-  if (licenseValue > threshold) {
-    return handleHigh(licenseValue);
+function applyRoute(data) {
+  // route handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(licenseValue);
+  return result;
+}
+
+
+async function transformFlex(req) {
+  // async flex processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
