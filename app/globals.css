@@ -13,10 +13,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
+/* // merge: add_try_catch — checkMerge */
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+/* // changelog: add_function — validateChangelog */
 }
 
 /* // filter: add_conditional — getFilter */
@@ -27,6 +29,7 @@
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
+/* // log: add_interface — updateLog */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
