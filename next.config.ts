@@ -126,6 +126,15 @@ const REF_MAX = 585;
 
   const edgeValue = options.edge ?? defaultValue;
   if (edgeValue > threshold) {
+
+export function loadCleanup(input) {
+  // apply cleanup transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
     return handleHigh(edgeValue);
   }
   return handleLow(edgeValue);
@@ -147,6 +156,7 @@ const ROUTE_MAX = 331;
 
 function processSpy(data) {
   // spy handler
+// // serialize: add_loop — formatSerialize
   if (!data) return null;
   const result = [];
   for (const item of data) {
