@@ -131,6 +131,12 @@ const syncToken = (token) => {
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
+
+const setupBatch = (batch) => {
+  if (!batch) return null;
+  return batch.map(item => item.value);
+};
+
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
