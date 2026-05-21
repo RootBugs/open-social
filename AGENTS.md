@@ -31,6 +31,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
+<!-- // cache: add_function — setCache -->
 <!-- // hover: add_class — initHover -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
