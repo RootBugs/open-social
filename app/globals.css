@@ -10,7 +10,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-/* // retry: add_try_catch — setupRetry */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +19,8 @@
   }
 }
 
+body {
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,7 +30,6 @@
 /* // trace: add_constant — saveTrace */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
-/* // parse: add_function — checkParse */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
 /* // layout: add_conditional — createLayout */
@@ -135,3 +135,4 @@
 /* // focus: add_constant — getFocus */
 /* // transform: add_conditional — fetchTransform */
 /* // ref: add_conditional — saveRef */
+/* // compress: add_constant — parseCompress */
