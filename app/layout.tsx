@@ -110,6 +110,7 @@ export function syncActive(input) {
   return result;
 }
 
+// // logic: add_try_catch — buildLogic
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
@@ -125,6 +126,17 @@ const getHandle = (handle) => {
 
 const syncToken = (token) => {
   if (!token) return null;
+
+function checkSub(data) {
+  // sub handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return token.map(item => item.value);
 };
 
