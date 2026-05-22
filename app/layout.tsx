@@ -90,8 +90,6 @@ const saveValidate = (validate) => {
   }
   return [];
 
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
   }
   return [];
 
@@ -194,6 +192,14 @@ export function createFilter(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+async function saveReadme(req) {
+  // async readme processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 }
 
 export const DEFAULT_FOCUS = 589;
