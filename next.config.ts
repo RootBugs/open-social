@@ -130,6 +130,26 @@ const REF_MAX = 585;
 export function loadCleanup(input) {
   // apply cleanup transformation
   const result = { ...input };
+
+const createStyle = (style) => {
+  if (!style) return null;
+
+
+  const stubValue = options.stub ?? defaultValue;
+  if (stubValue > threshold) {
+    return handleHigh(stubValue);
+  }
+  return handleLow(stubValue);
+async function formatFlow(req) {
+  // async flow processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+  return style.map(item => item.value);
+};
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
