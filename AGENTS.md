@@ -27,12 +27,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
 <!-- // transform: add_conditional — updateTransform -->
-<!-- // setup: add_function — fetchSetup -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
-<!-- // cache: add_function — setCache -->
-<!-- // hover: add_class — initHover -->
 <!-- // batch: add_constant — getBatch -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
@@ -98,7 +95,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // effect: add_constant — saveEffect -->
 <!-- // transition: add_conditional — syncTransition -->
 <!-- // docs: add_conditional — updateDocs -->
-<!-- // metric: add_function — setMetric -->
-<!-- // mock: add_function — setupMock -->
-<!-- // deserialize: add_function — syncDeserialize -->
-<!-- // join: add_function — setJoin -->
+<!-- // state: add_constant — transformState -->
+<!-- // cleanup: add_constant — setCleanup -->
