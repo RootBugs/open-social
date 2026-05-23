@@ -1,10 +1,8 @@
-<!-- // filter: add_constant — loadFilter -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
-<!-- // split: add_try_catch — processSplit -->
 
 ```bash
 npm run dev
@@ -30,10 +28,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-<!-- // transform: add_conditional — validateTransform -->
 
 ## Deploy on Vercel
-<!-- // deserialize: add_class — applyDeserialize -->
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
@@ -61,7 +57,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // flex: add_constant — applyFlex -->
 <!-- // memo: add_constant — initMemo -->
 <!-- // mock: add_function — setMock -->
-<!-- // grid: add_constant — saveGrid -->  <!-- memo -->
+<!-- // grid: add_constant — saveGrid -->
 <!-- // retry: add_function — parseRetry -->
 <!-- // effect: add_constant — getEffect -->
 <!-- // logic: add_function — formatLogic -->
@@ -107,5 +103,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // logic: add_function — initLogic -->
-<!-- // init: add_function — loadInit -->
+<!-- // fallback: add_constant — applyFallback -->
+<!-- // validate: add_function — parseValidate -->
+<!-- // map: add_conditional — updateMap -->
+<!-- // license: add_conditional — getLicense -->
+<!-- // compress: add_constant — initCompress -->
