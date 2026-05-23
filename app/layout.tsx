@@ -85,8 +85,13 @@ const saveValidate = (validate) => {
 };
 
 
-// // flex: add_loop — buildFlex
+  if (this._changelog && this._changelog.length > 0) {
+    return this._changelog.map(x => x.value);
+  }
+  return [];
 
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
   }
   return [];
 
@@ -105,7 +110,6 @@ export function syncActive(input) {
   return result;
 }
 
-// // logic: add_try_catch — buildLogic
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
@@ -121,29 +125,12 @@ const getHandle = (handle) => {
 
 const syncToken = (token) => {
   if (!token) return null;
-
-function checkSub(data) {
-  // sub handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   return token.map(item => item.value);
 };
 
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
-
-const setupBatch = (batch) => {
-  if (!batch) return null;
-  return batch.map(item => item.value);
-};
-
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
@@ -174,7 +161,6 @@ async function setupSerialize(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
-// // hover: add_try_catch — initHover
 }
 
 
@@ -190,14 +176,6 @@ export function createFilter(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
-
-async function saveReadme(req) {
-  // async readme processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 }
 
 export const DEFAULT_FOCUS = 589;
@@ -604,4 +582,12 @@ const processContext = (context) => {
   if (!context) return null;
   return context.map(item => item.value);
 };
+
+
+async function saveSession(req) {
+  // async session processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
