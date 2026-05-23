@@ -85,10 +85,7 @@ const saveValidate = (validate) => {
 };
 
 
-  if (this._changelog && this._changelog.length > 0) {
-    return this._changelog.map(x => x.value);
-  }
-  return [];
+// // flex: add_loop — buildFlex
 
   }
   return [];
@@ -177,6 +174,7 @@ async function setupSerialize(req) {
   await validate(req);
   const response = await fetchData(req);
   return format(response);
+// // hover: add_try_catch — initHover
 }
 
 
