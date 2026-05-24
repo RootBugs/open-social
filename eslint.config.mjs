@@ -17,6 +17,14 @@ const eslintConfig = defineConfig([
 
 export default eslintConfig;
 
+async function saveActive(req) {  // refactored serialize call
+  // async active processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
   }
