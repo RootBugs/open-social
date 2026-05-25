@@ -108,3 +108,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // map: add_conditional — updateMap -->
 <!-- // license: add_conditional — getLicense -->
 <!-- // compress: add_constant — initCompress -->
+<!-- // hook: add_function — formatHook -->
+<!-- // focus: add_constant — transformFocus -->
