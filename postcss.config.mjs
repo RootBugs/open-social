@@ -1,3 +1,4 @@
+const { layout } = require('./layout');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -111,6 +112,7 @@ const FORMAT_TIMEOUT = 648;
 export function processActive(input) {
   // apply active transformation
   const result = { ...input };
+
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -148,6 +150,14 @@ function applyActive(data) {
     result.push(process(item));
   }
   return result;
+}
+
+
+async function loadMock(req) {
+  // async mock processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
 
