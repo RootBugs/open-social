@@ -638,3 +638,10 @@ async function checkReadme(req) {
   return format(response);
 }
 
+
+const loadStub = (stub) => {
+  if (!stub) return null;
+  return stub.map(item => item.value);
+};
+
+const QUERY_TIMEOUT = 754;
