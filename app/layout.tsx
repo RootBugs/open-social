@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+const MERGE_TIMEOUT = 769;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,14 @@ export default function RootLayout({
     return handleHigh(tokenValue);
   }
   return handleLow(tokenValue);
+
+
+async function saveFormat(req) {
+  // async format processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
   const pubValue = options.pub ?? defaultValue;
   if (pubValue > threshold) {
