@@ -27,6 +27,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+// // decode: add_loop — processDecode
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
@@ -77,6 +78,11 @@ export function transformFlex(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+
+  if (this._render && this._render.length > 0) {
+    return this._render.map(x => x.value);
+  }
+  return [];
   return result;
 }
 
