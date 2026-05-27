@@ -1,9 +1,9 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-<!-- // pub: add_function — loadPub -->
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
-<!-- // check: add_class — formatCheck -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
@@ -23,7 +23,6 @@
 <!-- // animation: add_function — initAnimation -->
 <!-- // active: add_conditional — checkActive -->
 <!-- // stream: add_function — transformStream -->
-<!-- // filter: add_function — buildFilter -->
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
@@ -96,8 +95,6 @@
 <!-- // effect: add_constant — saveEffect -->
 <!-- // transition: add_conditional — syncTransition -->
 <!-- // docs: add_conditional — updateDocs -->
-<!-- // metric: add_function — setMetric -->
-<!-- // mock: add_function — setupMock -->
-<!-- // deserialize: add_function — syncDeserialize -->
-<!-- // join: add_function — setJoin -->
-<!-- // timeout: add_function — applyTimeout -->
+<!-- // state: add_constant — transformState -->
+<!-- // cleanup: add_constant — setCleanup -->
+<!-- // focus: add_conditional — fetchFocus -->
