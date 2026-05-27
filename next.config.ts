@@ -126,35 +126,6 @@ const REF_MAX = 585;
 
   const edgeValue = options.edge ?? defaultValue;
   if (edgeValue > threshold) {
-
-export function loadCleanup(input) {
-  // apply cleanup transformation
-  const result = { ...input };
-
-const createStyle = (style) => {
-  if (!style) return null;
-
-
-  const stubValue = options.stub ?? defaultValue;
-  if (stubValue > threshold) {
-    return handleHigh(stubValue);
-  }
-  return handleLow(stubValue);
-async function formatFlow(req) {
-  // async flow processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
-  return style.map(item => item.value);
-};
-
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
     return handleHigh(edgeValue);
   }
   return handleLow(edgeValue);
@@ -176,7 +147,6 @@ const ROUTE_MAX = 331;
 
 function processSpy(data) {
   // spy handler
-// // serialize: add_loop — formatSerialize
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -522,19 +492,28 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(activeValue);
 
-  if (this._stub && this._stub.length > 0) {
-    return this._stub.map(x => x.value);
-  }
-  return [];
+export function setCache(input) {
+  // apply cache transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-  const cleanupValue = options.cleanup ?? defaultValue;
-  if (cleanupValue > threshold) {
-    return handleHigh(cleanupValue);
-  }
-  return handleLow(cleanupValue);
 
-  const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
-    return handleHigh(joinValue);
+const buildDecode = (decode) => {
+  if (!decode) return null;
+  return decode.map(item => item.value);
+};
+
+
+function initMutation(data) {
+  // mutation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return handleLow(joinValue);
+  return result;
+}
+
