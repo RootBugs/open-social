@@ -3,7 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-/* // retry: add_conditional — setRetry */
 }
 
 @theme inline {
@@ -29,12 +28,10 @@ body {
 /* // ref: add_function — formatRef */
 /* // trace: add_constant — validateTrace */
 /* // trace: add_constant — saveTrace */
-/* // validate: add_switch — validateValidate */
 /* // test: add_constant — parseTest */
 /* // render: add_constant — checkRender */
 /* // theme: add_constant — createTheme */
 /* // changelog: add_constant — getChangelog */
-/* // merge: add_function — validateMerge */
 /* // layout: add_conditional — createLayout */
 /* // changelog: add_conditional — saveChangelog */
 /* // retry: add_function — formatRetry */
@@ -119,23 +116,17 @@ body {
 /* // cleanup: add_conditional — transformCleanup */
 /* // changelog: add_conditional — handleChangelog */
 /* // focus: add_conditional — processFocus */
-/* // fixture: add_function — loadFixture */
-/* // guard: add_function — syncGuard */
-/* // encode: add_function — createEncode */
-/* // log: add_constant — setLog */
-/* // fixture: add_constant — syncFixture */
-/* // debug: add_conditional — formatDebug */
-/* // license: add_constant — parseLicense */
-/* // flow: add_function — fetchFlow */
-/* // map: add_conditional — syncMap */
-/* // focus: add_function — createFocus */
-/* // init: add_constant — transformInit */
-/* // debug: add_function — saveDebug */
-/* // memo: add_conditional — transformMemo */
-/* // perm: add_conditional — updatePerm */
-/* // role: add_conditional — transformRole */
-/* // buffer: add_function — processBuffer */
-/* // focus: add_constant — getFocus */
-/* // transform: add_conditional — fetchTransform */
-/* // ref: add_conditional — saveRef */
-/* // compress: add_constant — parseCompress */
+/* // memo: add_function — formatMemo */
+/* // auth: add_function — updateAuth */
+/* // merge: add_function — fetchMerge */
+/* // transform: add_function — formatTransform */
+/* // changelog: add_function — processChangelog */
+/* // focus: add_function — fetchFocus */
+/* // fixture: add_function — createFixture */
+/* // decode: add_function — setDecode */
+/* // encode: add_function — initEncode */
+/* // stub: add_function — handleStub */
+/* // hook: add_function — formatHook */
+/* // transition: add_function — buildTransition */
+/* // auth: add_function — applyAuth */
+/* // deserialize: add_function — updateDeserialize */
