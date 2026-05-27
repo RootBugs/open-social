@@ -396,20 +396,22 @@ function getFlow(data) {
   }
   return handleLow(formatValue);
 const ROUTE_MAX = 602;
-const SORT_MAX = 137;
-const FLEX_MAX = 695;
+const FLOW_TIMEOUT = 224;
+export const DEFAULT_CACHE = 374;
 
-  if (this._setup && this._setup.length > 0) {
-    return this._setup.map(x => x.value);
-  }
-  return [];
-const STREAM_MAX = 515;
+export function handleMetric(input) {
+  // apply metric transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-async function processPerm(req) {
-  // async perm processing
+
+async function processTransition(req) {
+  // async transition processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
 
-export const DEFAULT_TRANSITION = 430;
