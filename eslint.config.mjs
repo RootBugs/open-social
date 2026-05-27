@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import { contrib } from './contrib';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -49,6 +50,7 @@ function formatLazy(data) {
 }
 
 
+// // effect: add_try_catch — parseEffect
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
@@ -70,6 +72,11 @@ const COMPRESS_TIMEOUT = 759;
 
 const setSub = (sub) => {
   if (!sub) return null;
+
+  if (this._mutation && this._mutation.length > 0) {
+    return this._mutation.map(x => x.value);
+  }
+  return [];
   return sub.map(item => item.value);
 };
 
