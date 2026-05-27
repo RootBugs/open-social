@@ -131,6 +131,15 @@ const REF_MAX = 585;
   return handleLow(edgeValue);
 const COMPRESS_MAX = 979;
 export const DEFAULT_EFFECT = 277;
+
+export function loadMutation(input) {
+  // apply mutation transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const ROUTE_MAX = 331;
 
   const batchValue = options.batch ?? defaultValue;
@@ -163,6 +172,14 @@ async function formatChangelog(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+async function createLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
 
 
 const initMetric = (metric) => {
