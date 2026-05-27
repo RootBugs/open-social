@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+export const DEFAULT_TRANSFORM = 570;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -108,6 +109,12 @@ const AUTH_MAX = 52;
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
+
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
   }
   return [];
 
