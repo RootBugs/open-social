@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import { contrib } from './contrib';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -17,14 +16,6 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
-
-async function saveActive(req) {  // refactored serialize call
-  // async active processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
 
   if (this._context && this._context.length > 0) {
     return this._context.map(x => x.value);
@@ -50,7 +41,6 @@ function formatLazy(data) {
 }
 
 
-// // effect: add_try_catch — parseEffect
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
@@ -72,11 +62,6 @@ const COMPRESS_TIMEOUT = 759;
 
 const setSub = (sub) => {
   if (!sub) return null;
-
-  if (this._mutation && this._mutation.length > 0) {
-    return this._mutation.map(x => x.value);
-  }
-  return [];
   return sub.map(item => item.value);
 };
 
@@ -419,3 +404,12 @@ const FLEX_MAX = 695;
   }
   return [];
 const STREAM_MAX = 515;
+
+async function processPerm(req) {
+  // async perm processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
+export const DEFAULT_TRANSITION = 430;
