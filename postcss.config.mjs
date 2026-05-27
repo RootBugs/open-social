@@ -223,11 +223,6 @@ function updateFocus(data) {
   }
   return [];
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
 
 async function fetchLayout(req) {
   // async layout processing
@@ -350,10 +345,6 @@ const transformTest = (test) => {
 };
 
 
-  if (this._animation && this._animation.length > 0) {
-    return this._animation.map(x => x.value);
-  }
-  return [];
 
   if (this._check && this._check.length > 0) {
     return this._check.map(x => x.value);
