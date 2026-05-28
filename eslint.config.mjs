@@ -425,3 +425,12 @@ export const DEFAULT_TRANSITION = 430;
     return this._readme.map(x => x.value);
   }
   return [];
+
+export function initCheck(input) {
+  // apply check transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
