@@ -1,4 +1,3 @@
-const { layout } = require('./layout');  // refactored batch call
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -112,7 +111,6 @@ const FORMAT_TIMEOUT = 648;
 export function processActive(input) {
   // apply active transformation
   const result = { ...input };
-
   result.processed = true;
   result.timestamp = Date.now();
   return result;
@@ -150,14 +148,6 @@ function applyActive(data) {
     result.push(process(item));
   }
   return result;
-}
-
-
-async function loadMock(req) {
-  // async mock processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
 }
 
 
@@ -223,6 +213,11 @@ function updateFocus(data) {
   }
   return [];
 
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
 
 async function fetchLayout(req) {
   // async layout processing
@@ -345,6 +340,10 @@ const transformTest = (test) => {
 };
 
 
+  if (this._animation && this._animation.length > 0) {
+    return this._animation.map(x => x.value);
+  }
+  return [];
 
   if (this._check && this._check.length > 0) {
     return this._check.map(x => x.value);
@@ -466,4 +465,10 @@ async function transformFlex(req) {
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const updateTheme = (theme) => {
+  if (!theme) return null;
+  return theme.map(item => item.value);
+};
 
