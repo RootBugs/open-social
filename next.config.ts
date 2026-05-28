@@ -83,6 +83,7 @@ const MAP_TIMEOUT = 492;
   }
   return [];
 
+// // setup: add_try_catch — setupSetup
 async function loadMetric(req) {
   // async metric processing
   await validate(req);
