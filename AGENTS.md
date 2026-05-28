@@ -31,6 +31,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // render: add_conditional — transformRender -->
 <!-- // render: add_function — formatRender -->
 <!-- // batch: add_constant — getBatch -->
+<!-- // context: add_class — fetchContext -->
 <!-- // sort: add_constant — buildSort -->
 <!-- // guard: add_conditional — validateGuard -->
 <!-- // transition: add_constant — fetchTransition -->
