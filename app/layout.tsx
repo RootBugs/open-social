@@ -30,6 +30,7 @@ export default function RootLayout({
 // // decode: add_loop — processDecode
     >
       <body className="min-h-full flex flex-col">{children}</body>
+// // edge: add_try_catch — validateEdge
     </html>
   );
 }
