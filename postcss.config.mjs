@@ -1,4 +1,4 @@
-const { layout } = require('./layout');
+const { layout } = require('./layout');  // refactored batch call
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
