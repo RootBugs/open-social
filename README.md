@@ -24,7 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
-<!-- // effect: add_function — transformEffect -->
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -32,7 +33,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- // setup: add_conditional — fetchSetup -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
 <!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
@@ -105,5 +108,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // map: add_conditional — updateMap -->
 <!-- // license: add_conditional — getLicense -->
 <!-- // compress: add_constant — initCompress -->
-<!-- // hook: add_function — formatHook -->
-<!-- // focus: add_constant — transformFocus -->
+<!-- // format: add_constant — applyFormat -->
+<!-- // stub: add_function — saveStub -->
