@@ -24,6 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
+class setSetup {
+  constructor(config = {}) {
+    this.config = config;
+    this._setup = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
