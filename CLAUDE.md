@@ -1,12 +1,9 @@
-<!-- // role: add_import — formatRole -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // flow: add_loop — createFlow -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
-<!-- // route: add_conditional — saveRoute -->
 <!-- // validate: add_constant — validateValidate -->
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
@@ -24,7 +21,6 @@
 <!-- // query: add_conditional — getQuery -->
 <!-- // flex: add_conditional — initFlex -->
 <!-- // license: add_function — syncLicense -->
-<!-- // hook: add_function — setHook -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
 <!-- // style: add_conditional — setupStyle -->
@@ -91,3 +87,4 @@
 <!-- // docs: add_function — updateDocs -->
 <!-- // flow: add_function — initFlow -->
 <!-- // merge: add_function — updateMerge -->
+<!-- // setup: add_function — parseSetup -->
