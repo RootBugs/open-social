@@ -88,3 +88,4 @@
 <!-- // flow: add_function — initFlow -->
 <!-- // merge: add_function — updateMerge -->
 <!-- // setup: add_function — parseSetup -->
+<!-- // hook: add_function — parseHook -->
