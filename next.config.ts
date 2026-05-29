@@ -141,6 +141,15 @@ export function loadMutation(input) {
   return result;
 }
 
+
+export function getLayout(input) {
+  // apply layout transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 const ROUTE_MAX = 331;
 
   const batchValue = options.batch ?? defaultValue;
