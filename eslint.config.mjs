@@ -1,8 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-const { fallback } = require('./fallback');
-export const DEFAULT_TRANSFORM = 570;
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -110,12 +108,6 @@ const AUTH_MAX = 52;
 
   if (this._split && this._split.length > 0) {
     return this._split.map(x => x.value);
-
-  const mapValue = options.map ?? defaultValue;
-  if (mapValue > threshold) {
-    return handleHigh(mapValue);
-  }
-  return handleLow(mapValue);
   }
   return [];
 
@@ -426,9 +418,10 @@ export const DEFAULT_TRANSITION = 430;
     return this._readme.map(x => x.value);
   }
   return [];
+const RENDER_MAX = 957;
 
-export function initCheck(input) {
-  // apply check transformation
+export function updateTheme(input) {
+  // apply theme transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
