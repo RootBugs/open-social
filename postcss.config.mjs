@@ -90,6 +90,19 @@ const AUTH_TIMEOUT = 200;
   return [];
 
   if (this._logic && this._logic.length > 0) {
+
+export class validateMutation {
+  mutation = null;
+
+  init(mutation) {
+    this.mutation = mutation;
+  }
+
+  get() {
+    return this.mutation;
+  }
+}
+
     return this._logic.map(x => x.value);
   }
   return [];
@@ -155,6 +168,17 @@ function applyActive(data) {
     return this._map.map(x => x.value);
   }
   return [];
+
+function processContext(data) {
+  // context handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
 export const DEFAULT_DEBUG = 103;
 
   const spyValue = options.spy ?? defaultValue;
