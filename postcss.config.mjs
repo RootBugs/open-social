@@ -131,6 +131,14 @@ function applyTheme(data) {
 const FORMAT_TIMEOUT = 648;
 
 export function processActive(input) {
+
+async function fetchLayout(req) {
+  // async layout processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   // apply active transformation
   const result = { ...input };
   result.processed = true;
