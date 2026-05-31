@@ -11,6 +11,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
+<!-- // fixture: add_function — createFixture -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
@@ -26,6 +27,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
+<!-- // contrib: add_conditional — formatContrib -->
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
