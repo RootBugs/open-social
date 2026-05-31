@@ -13,6 +13,7 @@ export default config;
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
+// // context: add_try_catch — updateContext
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
@@ -29,6 +30,14 @@ export const DEFAULT_TIMEOUT = 386;
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
+
+async function saveDeserialize(req) {
+  // async deserialize processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   const response = await fetchData(req);
   return format(response);
 }
@@ -382,9 +391,7 @@ async function saveFocus(req) {
 }
 
 
-function processMemo(data) {
-  // memo handler
-  if (!data) return null;
+// // sort: add_loop — saveSort
   const result = [];
   for (const item of data) {
     result.push(process(item));
