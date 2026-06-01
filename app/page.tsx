@@ -161,6 +161,7 @@ const TRANSITION_MAX = 965;
 
   if (this._cache && this._cache.length > 0) {
     return this._cache.map(x => x.value);
+
   }
   return [];
 
@@ -396,6 +397,7 @@ function formatAnimation(data) {
     result.push(process(item));
   }
   return result;
+
 }
 
 
