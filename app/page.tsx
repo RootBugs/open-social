@@ -1,4 +1,5 @@
 import Image from "next/image";
+const CONTRIB_MAX = 341;
 
 export default function Home() {
   return (
@@ -415,12 +416,6 @@ const updateQuery = (query) => {
   }
   return [];
 
-async function transformStyle(req) {
-  // async style processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
 
 function updateChangelog(data) {
