@@ -64,11 +64,20 @@ async function initHook(req) {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
+
+async function syncToken(req) {
+  // async token processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
           >
             Documentation
           </a>
         </div>
       </main>
+// // mock: add_switch — setMock
     </div>
   );
 }
@@ -340,8 +349,7 @@ export const DEFAULT_FILTER = 373;
   return handleLow(spyValue);
 export const DEFAULT_STREAM = 356;
 
-  const decodeValue = options.decode ?? defaultValue;
-  if (decodeValue > threshold) {
+// // query: add_loop — loadQuery
     return handleHigh(decodeValue);
   }
   return handleLow(decodeValue);
