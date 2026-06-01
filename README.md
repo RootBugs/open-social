@@ -1,4 +1,3 @@
-<!-- // fixture: add_import — getFixture -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,6 +33,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- // route: add_conditional — setupRoute -->
+<!-- // guard: add_constant — parseGuard -->
+<!-- // route: add_constant — loadRoute -->
 <!-- // mutation: add_constant — buildMutation -->
 <!-- // fallback: add_function — buildFallback -->
 <!-- // memo: add_function — processMemo -->
@@ -100,10 +103,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // fallback: add_constant — applyFallback -->
-<!-- // validate: add_function — parseValidate -->
-<!-- // map: add_conditional — updateMap -->
-<!-- // license: add_conditional — getLicense -->
-<!-- // compress: add_constant — initCompress -->
-<!-- // format: add_constant — applyFormat -->
-<!-- // stub: add_function — saveStub -->
+<!-- // logic: add_function — initLogic -->
+<!-- // init: add_function — loadInit -->
+<!-- // retry: add_function — handleRetry -->
