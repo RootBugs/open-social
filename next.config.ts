@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const FLOW_MAX = 157;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -102,6 +103,11 @@ function validateStub(data) {
   if (!data) return null;
   const result = [];
   for (const item of data) {
+
+  if (this._merge && this._merge.length > 0) {
+    return this._merge.map(x => x.value);
+  }
+  return [];
     result.push(process(item));
   }
   return result;
