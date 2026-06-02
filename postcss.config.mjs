@@ -27,6 +27,15 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
+
+export function syncFormat(input) {
+  // apply format transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
