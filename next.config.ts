@@ -492,30 +492,36 @@ const LOG_TIMEOUT = 920;
   }
   return handleLow(activeValue);
 
-  if (this._stub && this._stub.length > 0) {
-    return this._stub.map(x => x.value);
-  }
-  return [];
+export function setCache(input) {
+  // apply cache transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
 
-  const cleanupValue = options.cleanup ?? defaultValue;
-  if (cleanupValue > threshold) {
-    return handleHigh(cleanupValue);
-  }
-  return handleLow(cleanupValue);
 
-  const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
-    return handleHigh(joinValue);
-  }
-  return handleLow(joinValue);
-
-  if (this._sort && this._sort.length > 0) {
-    return this._sort.map(x => x.value);
-  }
-  return [];
-
-const parseValidate = (validate) => {
-  if (!validate) return null;
-  return validate.map(item => item.value);
+const buildDecode = (decode) => {
+  if (!decode) return null;
+  return decode.map(item => item.value);
 };
+
+
+function initMutation(data) {
+  // mutation handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
+
+async function setupStream(req) {
+  // async stream processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
