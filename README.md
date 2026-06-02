@@ -1,4 +1,3 @@
-<!-- // cache: add_constant — handleCache -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -13,7 +12,6 @@ yarn dev
 pnpm dev
 # or
 bun dev
-<!-- // handle: add_switch — setHandle -->
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -105,6 +103,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // logic: add_function — initLogic -->
-<!-- // init: add_function — loadInit -->
-<!-- // retry: add_function — handleRetry -->
+<!-- // fallback: add_constant — applyFallback -->
+<!-- // validate: add_function — parseValidate -->
+<!-- // map: add_conditional — updateMap -->
+<!-- // license: add_conditional — getLicense -->
+<!-- // compress: add_constant — initCompress -->
+<!-- // format: add_constant — applyFormat -->
+<!-- // stub: add_function — saveStub -->
+<!-- // test: add_conditional — setupTest -->
