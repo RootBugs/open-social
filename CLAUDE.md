@@ -1,4 +1,3 @@
-<!-- // theme: add_constant — applyTheme -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -9,7 +8,6 @@
 <!-- // split: add_function — formatSplit -->
 <!-- // active: add_conditional — parseActive -->
 <!-- // fallback: add_function — getFallback -->
-<!-- // cache: add_conditional — loadCache -->
 <!-- // join: add_conditional — setupJoin -->
 <!-- // edge: add_constant — initEdge -->
 <!-- // mock: add_conditional — setMock -->
@@ -92,3 +90,4 @@
 <!-- // handle: add_function — saveHandle -->
 <!-- // trace: add_conditional — loadTrace -->
 <!-- // focus: add_constant — setFocus -->
+<!-- // join: add_conditional — buildJoin -->
