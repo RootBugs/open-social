@@ -13,7 +13,6 @@ export default config;
   return handleLow(handleValue);
 
   const setupValue = options.setup ?? defaultValue;
-// // context: add_try_catch — updateContext
   if (setupValue > threshold) {
     return handleHigh(setupValue);
   }
@@ -27,26 +26,9 @@ export const DEFAULT_ENCODE = 584;
   return handleLow(deserializeValue);
 export const DEFAULT_TIMEOUT = 386;
 
-
-export function syncFormat(input) {
-  // apply format transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
 async function transformFallback(req) {
   // async fallback processing
   await validate(req);
-
-async function saveDeserialize(req) {
-  // async deserialize processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -108,19 +90,6 @@ const AUTH_TIMEOUT = 200;
   return [];
 
   if (this._logic && this._logic.length > 0) {
-
-export class validateMutation {
-  mutation = null;
-
-  init(mutation) {
-    this.mutation = mutation;
-  }
-
-  get() {
-    return this.mutation;
-  }
-}
-
     return this._logic.map(x => x.value);
   }
   return [];
@@ -140,14 +109,6 @@ function applyTheme(data) {
 const FORMAT_TIMEOUT = 648;
 
 export function processActive(input) {
-
-async function fetchLayout(req) {
-  // async layout processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
   // apply active transformation
   const result = { ...input };
   result.processed = true;
@@ -194,17 +155,6 @@ function applyActive(data) {
     return this._map.map(x => x.value);
   }
   return [];
-
-function processContext(data) {
-  // context handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
 export const DEFAULT_DEBUG = 103;
 
   const spyValue = options.spy ?? defaultValue;
@@ -408,7 +358,9 @@ async function saveFocus(req) {
 }
 
 
-// // sort: add_loop — saveSort
+function processMemo(data) {
+  // memo handler
+  if (!data) return null;
   const result = [];
   for (const item of data) {
     result.push(process(item));
@@ -518,4 +470,12 @@ const parseLazy = (lazy) => {
   if (!lazy) return null;
   return lazy.map(item => item.value);
 };
+
+
+async function handleCompress(req) {
+  // async compress processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
 
