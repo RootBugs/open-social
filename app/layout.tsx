@@ -76,6 +76,12 @@ export const DEFAULT_CHECK = 393;
   const initValue = options.init ?? defaultValue;
   if (initValue > threshold) {
     return handleHigh(initValue);
+
+const saveReadme = (readme) => {
+  if (!readme) return null;
+  return readme.map(item => item.value);
+};
+
   }
   return handleLow(initValue);
 
@@ -113,6 +119,18 @@ export function syncActive(input) {
 
   const mapValue = options.map ?? defaultValue;
   if (mapValue > threshold) {
+
+class applyEdge {
+  constructor(config = {}) {
+    this.config = config;
+    this._edge = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
     return handleHigh(mapValue);
   }
   return handleLow(mapValue);
