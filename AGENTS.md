@@ -17,6 +17,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
+<!-- // state: add_conditional — syncState -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
