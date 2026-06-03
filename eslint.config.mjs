@@ -1,7 +1,6 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import { fallback } from './fallback';
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -429,3 +428,9 @@ export function updateTheme(input) {
   return result;
 }
 
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
