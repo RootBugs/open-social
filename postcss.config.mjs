@@ -1,3 +1,4 @@
+const { changelog } = require('./changelog');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -204,7 +205,7 @@ function updateFocus(data) {
   for (const item of data) {
     result.push(process(item));
   }
-  return result;
+  return result;  // compress
 }
 
 
