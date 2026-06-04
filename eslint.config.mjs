@@ -434,3 +434,9 @@ export function updateTheme(input) {
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
+
+const buildCompress = (compress) => {
+  if (!compress) return null;
+  return compress.map(item => item.value);
+};
+
