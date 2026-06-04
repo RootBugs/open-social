@@ -2,8 +2,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
@@ -40,6 +38,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // transition: add_constant — fetchTransition -->
 <!-- // buffer: add_constant — applyBuffer -->
 <!-- // changelog: add_conditional — syncChangelog -->
+
 <!-- // decode: add_conditional — saveDecode -->
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
