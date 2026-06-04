@@ -1,4 +1,3 @@
-import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -90,6 +89,12 @@ async function loadMetric(req) {
   return format(response);
 }
 
+
+  const testValue = options.test ?? defaultValue;
+  if (testValue > threshold) {
+    return handleHigh(testValue);
+  }
+  return handleLow(testValue);
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
