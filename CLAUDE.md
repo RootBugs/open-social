@@ -1,3 +1,4 @@
+<!-- // stub: add_constant — initStub -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
@@ -23,6 +24,7 @@
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
+<!-- // mutation: add_loop — processMutation -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
