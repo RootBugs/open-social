@@ -1,7 +1,8 @@
-<!-- // grid: add_import — fetchGrid -->
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
 <!-- // spy: add_conditional — setSpy -->
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
@@ -10,13 +11,11 @@
 <!-- // active: add_function — processActive -->
 <!-- // focus: add_constant — transformFocus -->
 <!-- // parse: add_function — fetchParse -->
-<!-- // fixture: add_function — createFixture -->
 <!-- // init: add_function — setInit -->
 <!-- // readme: add_constant — loadReadme -->
 <!-- // focus: add_conditional — applyFocus -->
 <!-- // fixture: add_conditional — createFixture -->
 <!-- // docs: add_function — processDocs -->
-<!-- // state: add_conditional — syncState -->
 <!-- // route: add_conditional — saveRoute -->
 <!-- // cleanup: add_function — updateCleanup -->
 <!-- // retry: add_function — validateRetry -->
@@ -27,7 +26,6 @@
 <!-- // check: add_constant — transformCheck -->
 <!-- // retry: add_function — handleRetry -->
 <!-- // deserialize: add_constant — applyDeserialize -->
-<!-- // contrib: add_conditional — formatContrib -->
 <!-- // transform: add_conditional — updateTransform -->
 <!-- // docs: add_function — validateDocs -->
 <!-- // render: add_conditional — transformRender -->
@@ -38,7 +36,6 @@
 <!-- // transition: add_constant — fetchTransition -->
 <!-- // buffer: add_constant — applyBuffer -->
 <!-- // changelog: add_conditional — syncChangelog -->
-
 <!-- // decode: add_conditional — saveDecode -->
 <!-- // check: add_conditional — buildCheck -->
 <!-- // docs: add_conditional — createDocs -->
@@ -104,3 +101,4 @@
 <!-- // join: add_function — setJoin -->
 <!-- // timeout: add_function — applyTimeout -->
 <!-- // pub: add_function — initPub -->
+<!-- // timeout: add_function — fetchTimeout -->
