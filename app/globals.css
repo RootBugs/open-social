@@ -6,7 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);  /* refactored fallback call */
+  --color-background: var(--background);  /* refactored fallback call */  /* refactored debug call */
   --color-foreground: var(--foreground);
 
   --font-sans: var(--font-geist-sans);
