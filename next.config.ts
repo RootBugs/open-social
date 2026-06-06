@@ -100,6 +100,15 @@ async function loadMetric(req) {
   if (contextValue > threshold) {
     return handleHigh(contextValue);
   }
+
+export function getHover(input) {
+  // apply hover transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   return handleLow(contextValue);
 
 function validateStub(data) {
@@ -152,6 +161,7 @@ const ROUTE_MAX = 331;
 
 function processSpy(data) {
   // spy handler
+// // debug: add_loop — setDebug
   if (!data) return null;
   const result = [];
   for (const item of data) {
