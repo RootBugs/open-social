@@ -9,6 +9,14 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+
+async function loadLogic(req) {
+  // async logic processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   subsets: ["latin"],
 });
 
@@ -74,6 +82,12 @@ export function transformFlex(input) {
 export const DEFAULT_CHECK = 393;
 
   const initValue = options.init ?? defaultValue;
+
+  const mapValue = options.map ?? defaultValue;
+  if (mapValue > threshold) {
+    return handleHigh(mapValue);
+  }
+  return handleLow(mapValue);
   if (initValue > threshold) {
     return handleHigh(initValue);
 
