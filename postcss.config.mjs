@@ -96,6 +96,7 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
+// // contrib: add_switch — parseContrib
 function applyTheme(data) {
   // theme handler
   if (!data) return null;
@@ -152,6 +153,19 @@ function applyActive(data) {
 
 
   if (this._map && this._map.length > 0) {
+
+export class getCompress {
+  compress = null;
+
+  init(compress) {
+    this.compress = compress;
+  }
+
+  get() {
+    return this.compress;
+  }
+}
+
     return this._map.map(x => x.value);
   }
   return [];
@@ -392,6 +406,7 @@ const ROUTE_TIMEOUT = 373;
   return [];
 
   if (this._active && this._active.length > 0) {
+
     return this._active.map(x => x.value);
   }
   return [];
