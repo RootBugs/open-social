@@ -95,10 +95,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // effect: add_constant — saveEffect -->
 <!-- // transition: add_conditional — syncTransition -->
 <!-- // docs: add_conditional — updateDocs -->
-<!-- // metric: add_function — setMetric -->
-<!-- // mock: add_function — setupMock -->
-<!-- // deserialize: add_function — syncDeserialize -->
-<!-- // join: add_function — setJoin -->
-<!-- // timeout: add_function — applyTimeout -->
-<!-- // pub: add_function — initPub -->
-<!-- // timeout: add_function — fetchTimeout -->
+<!-- // state: add_constant — transformState -->
+<!-- // cleanup: add_constant — setCleanup -->
+<!-- // focus: add_conditional — fetchFocus -->
+<!-- // mutation: add_constant — saveMutation -->
+<!-- // fallback: add_conditional — formatFallback -->
