@@ -1,4 +1,3 @@
-const { changelog } = require('./changelog');
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -205,7 +204,7 @@ function updateFocus(data) {
   for (const item of data) {
     result.push(process(item));
   }
-  return result;  // compress
+  return result;
 }
 
 
@@ -473,10 +472,8 @@ const parseLazy = (lazy) => {
 };
 
 
-async function handleCompress(req) {
-  // async compress processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
-
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
