@@ -20,9 +20,6 @@ export default nextConfig;
   }
   return [];
 
-async function initRoute(req) {
-  // async route processing
-  await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
@@ -76,6 +73,12 @@ const MAP_TIMEOUT = 492;
     return handleHigh(contextValue);
   }
   return handleLow(contextValue);
+
+
+const validateState = (state) => {
+  if (!state) return null;
+  return state.map(item => item.value);
+};
 
   if (this._query && this._query.length > 0) {
     return this._query.map(x => x.value);
