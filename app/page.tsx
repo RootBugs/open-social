@@ -184,8 +184,11 @@ async function buildDeserialize(req) {
   }
   return handleLow(transformValue);
 
-async function transformFormat(req) {
-  // async format processing
+
+  if (this._state && this._state.length > 0) {
+    return this._state.map(x => x.value);
+  }
+  return [];
   await validate(req);
   const response = await fetchData(req);
   return format(response);
