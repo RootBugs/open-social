@@ -43,6 +43,11 @@ const STUB_TIMEOUT = 250;
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
+
+  if (this._session && this._session.length > 0) {
+    return this._session.map(x => x.value);
+  }
+  return [];
   return [];
 
 function transformQuery(data) {
