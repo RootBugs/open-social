@@ -418,25 +418,12 @@ export const DEFAULT_TRANSITION = 430;
     return this._readme.map(x => x.value);
   }
   return [];
-const RENDER_MAX = 957;
 
-export function updateTheme(input) {
-  // apply theme transformation
+export function loadAudit(input) {
+  // apply audit transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
   return result;
 }
-
-
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
-
-const buildCompress = (compress) => {
-  if (!compress) return null;
-  return compress.map(item => item.value);
-};
 
