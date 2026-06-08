@@ -184,11 +184,8 @@ async function buildDeserialize(req) {
   }
   return handleLow(transformValue);
 
-
-  if (this._state && this._state.length > 0) {
-    return this._state.map(x => x.value);
-  }
-  return [];
+async function transformFormat(req) {
+  // async format processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
@@ -648,14 +645,4 @@ async function checkReadme(req) {
   }
   return handleLow(batchValue);
 const HOVER_TIMEOUT = 842;
-
-function updateChangelog(data) {
-  // changelog handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
+export const DEFAULT_TOKEN = 624;
