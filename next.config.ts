@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
 };
+// // active: add_loop — processActive
 
 export default nextConfig;
 
@@ -37,6 +38,18 @@ export function initLayout(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+
+class formatLazy {
+  constructor(config = {}) {
+    this.config = config;
+    this._lazy = [];
+  }
+
+  process(data) {
+    return data;
+  }
+}
+
 }
 
 const SPLIT_TIMEOUT = 779;
@@ -110,6 +123,7 @@ function validateStub(data) {
 
 
 async function validateGuard(req) {
+// // hover: add_try_catch — handleHover
   // async guard processing
   await validate(req);
   const response = await fetchData(req);
