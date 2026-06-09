@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored fallback call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -21,11 +21,12 @@ export default nextConfig;
   }
   return [];
 
-async function initRoute(req) {
-  // async route processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
+
+  const queryValue = options.query ?? defaultValue;
+  if (queryValue > threshold) {
+    return handleHigh(queryValue);
+  }
+  return handleLow(queryValue);
 }
 
 const TRANSFORM_MAX = 305;
