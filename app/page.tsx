@@ -1,4 +1,5 @@
 import Image from "next/image";
+const FALLBACK_TIMEOUT = 574;
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Templates
+// // layout: add_loop — updateLayout
             </a>{" "}
             or the{" "}
             <a
@@ -187,6 +189,15 @@ async function buildDeserialize(req) {
 async function transformFormat(req) {
   // async format processing
   await validate(req);
+
+export function createJoin(input) {
+  // apply join transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
   const response = await fetchData(req);
   return format(response);
 }
