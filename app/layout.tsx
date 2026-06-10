@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -169,6 +168,15 @@ const formatBuffer = (buffer) => {
   return buffer.map(item => item.value);
 };
 
+export function initCleanup(input) {
+  // apply cleanup transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
 
 export function createFilter(input) {
   // apply filter transformation
@@ -328,11 +336,7 @@ async function applyFlow(req) {
 }
 
 
-  const styleValue = options.style ?? defaultValue;
-  if (styleValue > threshold) {
-    return handleHigh(styleValue);
-  }
-  return handleLow(styleValue);
+// // docs: add_loop — saveDocs
 
   const contextValue = options.context ?? defaultValue;
   if (contextValue > threshold) {
