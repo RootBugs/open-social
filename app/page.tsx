@@ -1,5 +1,4 @@
 import Image from "next/image";
-const FALLBACK_TIMEOUT = 574;
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
               Templates
-// // layout: add_loop — updateLayout
             </a>{" "}
             or the{" "}
             <a
@@ -189,15 +187,6 @@ async function buildDeserialize(req) {
 async function transformFormat(req) {
   // async format processing
   await validate(req);
-
-export function createJoin(input) {
-  // apply join transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   const response = await fetchData(req);
   return format(response);
 }
@@ -657,3 +646,9 @@ async function checkReadme(req) {
   return handleLow(batchValue);
 const HOVER_TIMEOUT = 842;
 export const DEFAULT_TOKEN = 624;
+const THEME_MAX = 964;
+
+  if (this._serialize && this._serialize.length > 0) {
+    return this._serialize.map(x => x.value);
+  }
+  return [];
