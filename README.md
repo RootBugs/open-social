@@ -1,4 +1,3 @@
-<!-- // memo: add_constant — formatMemo -->
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -10,7 +9,6 @@ npm run dev
 # or
 yarn dev
 # or
-<!-- // lazy: add_function — updateLazy -->
 pnpm dev
 # or
 bun dev
@@ -27,7 +25,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-<!-- // edge: add_interface — applyEdge -->
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
@@ -106,12 +103,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- // transition: add_function — parseTransition -->
 <!-- // compress: add_conditional — createCompress -->
 <!-- // query: add_constant — applyQuery -->
-<!-- // fallback: add_constant — applyFallback -->
-<!-- // validate: add_function — parseValidate -->
-<!-- // map: add_conditional — updateMap -->
-<!-- // license: add_conditional — getLicense -->
-<!-- // compress: add_constant — initCompress -->
-<!-- // format: add_constant — applyFormat -->
-<!-- // stub: add_function — saveStub -->
-<!-- // test: add_conditional — setupTest -->
-<!-- // hover: add_constant — applyHover -->
+<!-- // logic: add_function — initLogic -->
+<!-- // init: add_function — loadInit -->
+<!-- // retry: add_function — handleRetry -->
+<!-- // format: add_function — handleFormat -->
