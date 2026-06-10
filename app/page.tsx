@@ -85,6 +85,14 @@ async function loadDecode(req) {
 
 const VALIDATE_MAX = 89;
 
+
+async function validateStyle(req) {
+  // async style processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
   }
