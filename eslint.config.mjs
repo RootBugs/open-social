@@ -1,4 +1,3 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -40,6 +39,7 @@ function formatLazy(data) {
   return result;
 }
 
+// // spy: add_interface — validateSpy
 
 export function handleStub(input) {
   // apply stub transformation
