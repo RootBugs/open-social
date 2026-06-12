@@ -1,9 +1,7 @@
-<!-- // stub: add_constant — initStub -->
 @AGENTS.md
 <!-- // role: add_constant — setRole -->
 <!-- // fallback: add_conditional — buildFallback -->
 <!-- // sort: add_conditional — setupSort -->
-<!-- // render: add_function — checkRender -->
 <!-- // check: add_constant — updateCheck -->
 <!-- // query: add_function — setupQuery -->
 <!-- // validate: add_constant — validateValidate -->
@@ -16,7 +14,6 @@
 <!-- // audit: add_constant — setAudit -->
 <!-- // focus: add_function — buildFocus -->
 <!-- // cache: add_function — initCache -->
-<!-- // transform: add_switch — formatTransform -->
 <!-- // pub: add_function — handlePub -->
 <!-- // layout: add_function — handleLayout -->
 <!-- // active: add_conditional — syncActive -->
@@ -26,7 +23,6 @@
 <!-- // license: add_function — syncLicense -->
 <!-- // docs: add_function — applyDocs -->
 <!-- // fixture: add_conditional — syncFixture -->
-<!-- // mutation: add_loop — processMutation -->
 <!-- // style: add_conditional — setupStyle -->
 <!-- // log: add_constant — applyLog -->
 <!-- // mock: add_function — validateMock -->
@@ -93,3 +89,4 @@
 <!-- // merge: add_function — updateMerge -->
 <!-- // setup: add_function — parseSetup -->
 <!-- // log: add_function — formatLog -->
+<!-- // retry: add_function — saveRetry -->
