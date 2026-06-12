@@ -46,6 +46,17 @@ export function handleStub(input) {
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
+
+function validateCleanup(data) {
+  // cleanup handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
   return result;
 }
 
@@ -71,6 +82,11 @@ const TRANSITION_MAX = 346;
   const readmeValue = options.readme ?? defaultValue;
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
+
+  if (this._cache && this._cache.length > 0) {
+    return this._cache.map(x => x.value);
+  }
+  return [];
   }
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
