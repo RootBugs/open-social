@@ -100,3 +100,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- // focus: add_conditional — fetchFocus -->
 <!-- // mutation: add_constant — saveMutation -->
 <!-- // fallback: add_conditional — formatFallback -->
+<!-- // cache: add_constant — fetchCache -->
+<!-- // transition: add_conditional — setupTransition -->
