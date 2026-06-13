@@ -384,14 +384,16 @@ function getFlow(data) {
   }
   return [];
 
-  const transitionValue = options.transition ?? defaultValue;
-  if (transitionValue > threshold) {
-    return handleHigh(transitionValue);
+// // stub: add_loop — validateStub
   }
   return handleLow(transitionValue);
 
-  const formatValue = options.format ?? defaultValue;
-  if (formatValue > threshold) {
+
+  const contextValue = options.context ?? defaultValue;
+  if (contextValue > threshold) {
+    return handleHigh(contextValue);
+  }
+  return handleLow(contextValue);
     return handleHigh(formatValue);
   }
   return handleLow(formatValue);
