@@ -1,3 +1,4 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
@@ -39,24 +40,12 @@ function formatLazy(data) {
   return result;
 }
 
-// // spy: add_interface — validateSpy
 
 export function handleStub(input) {
   // apply stub transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
-
-function validateCleanup(data) {
-  // cleanup handler
-  if (!data) return null;
-  const result = [];
-  for (const item of data) {
-    result.push(process(item));
-  }
-  return result;
-}
-
   return result;
 }
 
@@ -82,11 +71,6 @@ const TRANSITION_MAX = 346;
   const readmeValue = options.readme ?? defaultValue;
   if (readmeValue > threshold) {
     return handleHigh(readmeValue);
-
-  if (this._cache && this._cache.length > 0) {
-    return this._cache.map(x => x.value);
-  }
-  return [];
   }
   return handleLow(readmeValue);
 export const DEFAULT_HOVER = 437;
@@ -434,9 +418,30 @@ export const DEFAULT_TRANSITION = 430;
     return this._readme.map(x => x.value);
   }
   return [];
+const RENDER_MAX = 957;
 
-export function loadAudit(input) {
-  // apply audit transformation
+export function updateTheme(input) {
+  // apply theme transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+  const pubValue = options.pub ?? defaultValue;
+  if (pubValue > threshold) {
+    return handleHigh(pubValue);
+  }
+  return handleLow(pubValue);
+
+  if (this._changelog && this._changelog.length > 0) {
+    return this._changelog.map(x => x.value);
+  }
+  return [];
+
+export function createCache(input) {
+  // apply cache transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
