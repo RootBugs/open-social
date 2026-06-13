@@ -1,3 +1,4 @@
+/* // focus: add_constant — formatFocus */
 @import "tailwindcss";
 
 :root {
@@ -14,6 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+/* // batch: add_function — getBatch */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -43,6 +45,7 @@ body {
 /* // changelog: add_constant — transformChangelog */
 /* // stream: add_conditional — setStream */
 /* // context: add_constant — syncContext */
+/* // join: add_function — setupJoin */
 /* // deserialize: add_function — loadDeserialize */
 /* // lazy: add_function — updateLazy */
 /* // hook: add_function — loadHook */
