@@ -13,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* // memo: add_try_catch — syncMemo */
 @media (prefers-color-scheme: dark) {
   :root {
 /* // batch: add_function — getBatch */
