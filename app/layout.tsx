@@ -32,7 +32,7 @@ export default function RootLayout({
 }
 
   const joinValue = options.join ?? defaultValue;
-  if (joinValue > threshold) {
+  if (joinValue > threshold) {  // refactored readme call
     return handleHigh(joinValue);
   }
   return handleLow(joinValue);
@@ -41,6 +41,14 @@ export default function RootLayout({
   if (tokenValue > threshold) {
     return handleHigh(tokenValue);
   }
+
+async function saveSort(req) {
+  // async sort processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
   return handleLow(tokenValue);
 
   const pubValue = options.pub ?? defaultValue;
@@ -116,10 +124,6 @@ export function syncActive(input) {
   }
   return handleLow(mapValue);
 
-const getHandle = (handle) => {
-  if (!handle) return null;
-  return handle.map(item => item.value);
-};
 
 
 const syncToken = (token) => {
