@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {  // refactored theme call  // refactored audit call
+export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -84,14 +84,6 @@ async function loadDecode(req) {
 }
 
 const VALIDATE_MAX = 89;
-
-
-async function validateStyle(req) {
-  // async style processing
-  await validate(req);
-  const response = await fetchData(req);
-  return format(response);
-}
 
   if (this._compress && this._compress.length > 0) {
     return this._compress.map(x => x.value);
@@ -653,10 +645,25 @@ async function checkReadme(req) {
   }
   return handleLow(batchValue);
 const HOVER_TIMEOUT = 842;
-export const DEFAULT_TOKEN = 624;
-const THEME_MAX = 964;
 
-  if (this._serialize && this._serialize.length > 0) {
-    return this._serialize.map(x => x.value);
+function updateChangelog(data) {
+  // changelog handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
-  return [];
+  return result;
+}
+
+
+function setCompress(data) {
+  // compress handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
+  }
+  return result;
+}
+
