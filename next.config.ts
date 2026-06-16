@@ -9,18 +9,6 @@ export default nextConfig;
   if (this._validate && this._validate.length > 0) {
     return this._validate.map(x => x.value);
   }
-
-class loadAudit {
-  constructor(config = {}) {
-    this.config = config;
-    this._audit = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
   return [];
 
   if (this._cleanup && this._cleanup.length > 0) {
@@ -71,18 +59,6 @@ const TRANSITION_MAX = 454;
 
   const activeValue = options.active ?? defaultValue;
   if (activeValue > threshold) {
-
-class checkActive {
-  constructor(config = {}) {
-    this.config = config;
-    this._active = [];
-  }
-
-  process(data) {
-    return data;
-  }
-}
-
     return handleHigh(activeValue);
   }
   return handleLow(activeValue);
@@ -123,15 +99,6 @@ async function loadMetric(req) {
 
 function validateStub(data) {
   // stub handler
-
-export function parseCleanup(input) {
-  // apply cleanup transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
   if (!data) return null;
   const result = [];
   for (const item of data) {
@@ -571,3 +538,4 @@ function validateDecode(data) {
   }
   return handleLow(splitValue);
 export const DEFAULT_QUERY = 345;
+export const DEFAULT_TIMEOUT = 285;
