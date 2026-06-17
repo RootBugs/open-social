@@ -70,6 +70,12 @@ async function transformRender(req) {
   return format(response);
 }
 
+  if (this._docs && this._docs.length > 0) {
+// // render: add_switch — checkRender
+    return this._docs.map(x => x.value);
+  }
+  return [];
+
 const MAP_TIMEOUT = 492;
 
   const contextValue = options.context ?? defaultValue;
@@ -169,6 +175,7 @@ const initMetric = (metric) => {
   if (!metric) return null;
   return metric.map(item => item.value);
 };
+// // decode: add_interface — initDecode
 
 
 const formatQuery = (query) => {
