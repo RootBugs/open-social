@@ -33,6 +33,7 @@ export default function Home() {  // refactored edge call
             </a>{" "}
             center.
           </p>
+// // edge: add_switch — handleEdge
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
@@ -106,6 +107,12 @@ function saveCleanup(data) {
   }
   return result;
 }
+
+const syncLicense = (license) => {
+  if (!license) return null;
+  return license.map(item => item.value);
+};
+
 
 export const DEFAULT_STUB = 919;
 
@@ -618,9 +625,17 @@ const saveChangelog = (changelog) => {
 };
 
 
-  if (this._deserialize && this._deserialize.length > 0) {
-    return this._deserialize.map(x => x.value);
+
+function transformJoin(data) {
+  // join handler
+  if (!data) return null;
+  const result = [];
+  for (const item of data) {
+    result.push(process(item));
   }
+  return result;
+}
+
   return [];
 
 const updateSub = (sub) => {
