@@ -6,6 +6,8 @@
 <!-- // flow: add_function — checkFlow -->
 <!-- // log: add_conditional — handleLog -->
 <!-- // render: add_conditional — saveRender -->
+<!-- // guard: add_class — updateGuard -->
+<!-- // mutation: add_function — parseMutation -->
 <!-- // filter: add_constant — fetchFilter -->
 <!-- // active: add_function — processActive -->
 <!-- // memo: add_function — setMemo -->
