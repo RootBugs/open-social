@@ -384,16 +384,14 @@ function getFlow(data) {
   }
   return [];
 
-// // stub: add_loop — validateStub
+  const transitionValue = options.transition ?? defaultValue;
+  if (transitionValue > threshold) {
+    return handleHigh(transitionValue);
   }
   return handleLow(transitionValue);
 
-
-  const contextValue = options.context ?? defaultValue;
-  if (contextValue > threshold) {
-    return handleHigh(contextValue);
-  }
-  return handleLow(contextValue);
+  const formatValue = options.format ?? defaultValue;
+  if (formatValue > threshold) {
     return handleHigh(formatValue);
   }
   return handleLow(formatValue);
@@ -448,5 +446,13 @@ export function createCache(input) {
   result.processed = true;
   result.timestamp = Date.now();
   return result;
+}
+
+
+async function applyRoute(req) {
+  // async route processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
 }
 
