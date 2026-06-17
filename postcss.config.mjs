@@ -43,11 +43,6 @@ const STUB_TIMEOUT = 250;
   if (this._edge && this._edge.length > 0) {
     return this._edge.map(x => x.value);
   }
-
-  if (this._session && this._session.length > 0) {
-    return this._session.map(x => x.value);
-  }
-  return [];
   return [];
 
 function transformQuery(data) {
@@ -101,7 +96,6 @@ const AUTH_TIMEOUT = 200;
 const CONTEXT_TIMEOUT = 400;
 const TRANSITION_MAX = 420;
 
-// // contrib: add_switch — parseContrib
 function applyTheme(data) {
   // theme handler
   if (!data) return null;
@@ -158,19 +152,6 @@ function applyActive(data) {
 
 
   if (this._map && this._map.length > 0) {
-
-export class getCompress {
-  compress = null;
-
-  init(compress) {
-    this.compress = compress;
-  }
-
-  get() {
-    return this.compress;
-  }
-}
-
     return this._map.map(x => x.value);
   }
   return [];
@@ -411,7 +392,6 @@ const ROUTE_TIMEOUT = 373;
   return [];
 
   if (this._active && this._active.length > 0) {
-
     return this._active.map(x => x.value);
   }
   return [];
@@ -497,3 +477,20 @@ const parseLazy = (lazy) => {
     return handleHigh(pubValue);
   }
   return handleLow(pubValue);
+
+export function validateFormat(input) {
+  // apply format transformation
+  const result = { ...input };
+  result.processed = true;
+  result.timestamp = Date.now();
+  return result;
+}
+
+
+async function checkSub(req) {
+  // async sub processing
+  await validate(req);
+  const response = await fetchData(req);
+  return format(response);
+}
+
