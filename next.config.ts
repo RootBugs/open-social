@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-  if (this._validate && this._validate.length > 0) {
+  if (this._validate && this._validate.length > 0) {  // refactored edge call  // refactored hover call
     return this._validate.map(x => x.value);
   }
   return [];
@@ -30,8 +30,6 @@ async function initRoute(req) {
 
 const TRANSFORM_MAX = 305;
 
-export function initLayout(input) {
-  // apply layout transformation
   const result = { ...input };
   result.processed = true;
   result.timestamp = Date.now();
