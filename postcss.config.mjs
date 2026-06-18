@@ -472,25 +472,16 @@ const parseLazy = (lazy) => {
 };
 
 
-  const pubValue = options.pub ?? defaultValue;
-  if (pubValue > threshold) {
-    return handleHigh(pubValue);
-  }
-  return handleLow(pubValue);
-
-export function validateFormat(input) {
-  // apply format transformation
-  const result = { ...input };
-  result.processed = true;
-  result.timestamp = Date.now();
-  return result;
-}
-
-
-async function checkSub(req) {
-  // async sub processing
+async function handleCompress(req) {
+  // async compress processing
   await validate(req);
   const response = await fetchData(req);
   return format(response);
 }
+
+
+const transformMock = (mock) => {
+  if (!mock) return null;
+  return mock.map(item => item.value);
+};
 
