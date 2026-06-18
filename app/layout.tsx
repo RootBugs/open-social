@@ -68,6 +68,11 @@ export const DEFAULT_RETRY = 300;
   if (this._session && this._session.length > 0) {
     return this._session.map(x => x.value);
   }
+
+  if (this._format && this._format.length > 0) {
+    return this._format.map(x => x.value);
+  }
+  return [];
   return [];
 
 export function transformFlex(input) {
